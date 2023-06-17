@@ -1,0 +1,50 @@
+{
+  "name": "salvatori/alma",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "WordPress starter theme with a modern development workflow",
+  "homepage": "https://movidagrafica.co/",
+  "authors": [
+    {
+      "name": "Adrián Salvatori",
+      "email": "adriansalvatori@gmail.com",
+      "homepage": "https://github.com/adriansalvatori"
+    },
+    {
+      "name": "Richar Arenas",
+      "email": "emyerbetharenas@gmail.com",
+      "homepage": "https://github.com/ErAo"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "php": "^7.3|^8.0",
+    "generoi/sage-woocommerce": "^0.1.4",
+    "log1x/sage-directives": "^1.1",
+    "log1x/sage-svg": "^1.0",
+    "roots/acorn": "2.0.0-alpha.0"
+  },
+  "require-dev": {
+    "filp/whoops": "^2.12",
+    "squizlabs/php_codesniffer": "^3.6"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "lint": [
+      "phpcs --extensions=php --standard=PSR12 app config"
+    ],
+    "post-autoload-dump": [
+      "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+    ]
+  }
+}
