@@ -1,33 +1,56 @@
 {
-  "name": "roots/bedrock",
+  "name": "salvatori/alma-one",
   "type": "project",
   "license": "MIT",
   "description": "WordPress boilerplate with Composer, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
+  "homepage": "https://movida.company/",
   "authors": [
     {
-      "name": "Scott Walkinshaw",
-      "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
-    },
-    {
-      "name": "Ben Word",
-      "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
+      "name": "Adrián Salvatori",
+      "email": "adriansalvatori@gmail.com",
+      "homepage": "https://github.com/adriansalvatori"
     }
   ],
   "keywords": [
     "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
   ],
-  "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
-  },
   "repositories": [
     {
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:adriansalvatori/acf-pro.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:adriansalvatori/checkout.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:adriansalvatori/learndash.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:adriansalvatori/supportboard.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:adriansalvatori/uipress-pro.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:adriansalvatori/wishlists.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:adriansalvatori/woocommerce-search-engine.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:adriansalvatori/wp-optimize.git"
     }
   ],
   "require": {
@@ -61,8 +84,18 @@
     "wpackagist-plugin/wp-user-avatars": "^1.4",
     "wpackagist-plugin/wp-user-profiles": "^2.6",
     "wpackagist-plugin/acf-extended": "0.8.9.3",
-    "wpackagist-plugin/advanced-custom-fields": "^6.1",
-    "salvatori/alma": "dev-master"
+    "salvatori/alma": "dev-master",
+    "roots/acorn": "^2.0@alpha",
+    "wpackagist-plugin/web-stories": "^1.32",
+    "wpackagist-plugin/google-site-kit": "^1.102",
+    "adriansalvatori/acf-pro" : "*",
+    "adriansalvatori/checkout" : "*",
+    "adriansalvatori/learndash" : "*",
+    "adriansalvatori/supportboard" : "*",
+    "adriansalvatori/uipress-pro" : "*",
+    "adriansalvatori/wishlists" : "*",
+    "adriansalvatori/woocommerce-search-engine" : "*",
+    "adriansalvatori/wp-optimize" : "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
@@ -82,7 +115,6 @@
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
-        "wpackagist-plugin/uipress-lite", 
         "roots/soil", 
         "roots/wp-stage-switcher", 
         "wpackagist-plugin/autodescription", 
@@ -91,15 +123,16 @@
         "wpackagist-plugin/opengraph", 
         "wpackagist-plugin/indieauth", 
         "wpackagist-plugin/vibes", 
-        "wpackagist-plugin/wpsustainable", 
         "wpackagist-plugin/duplicate-post", 
         "wpackagist-plugin/safe-svg", 
         "wpackagist-plugin/simple-page-ordering", 
         "wpackagist-plugin/wp-term-order", 
         "wpackagist-plugin/wp-user-avatars", 
-        "wpackagist-plugin/wp-user-profiles", 
+        "wpackagist-plugin/wp-user-profiles",
+        "adriansalvatori/acf-pro", 
         "wpackagist-plugin/acf-extended", 
-        "wpackagist-plugin/advanced-custom-fields"
+        "wpackagist-plugin/advanced-custom-fields",
+        "adriansalvatori/wp-optimize"
       ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]

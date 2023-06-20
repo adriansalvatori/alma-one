@@ -4,8 +4,310 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14d2e23a93a421ac8638c3ae0e149094",
+    "content-hash": "01f87d5d7ab75d6801f5a1e8ea78f2b3",
     "packages": [
+        {
+            "name": "adriansalvatori/acf-pro",
+            "version": "6.1.5",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:adriansalvatori/acf-pro.git",
+                "reference": "c2409c4464f5cb719f6317a212b61c7a086cd07a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adriansalvatori/acf-pro/zipball/c2409c4464f5cb719f6317a212b61c7a086cd07a",
+                "reference": "c2409c4464f5cb719f6317a212b61c7a086cd07a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "WP Engine",
+                    "homepage": "https://advancedcustomfields.com"
+                }
+            ],
+            "description": "Constantly (manually) updated copy of ACF Pro",
+            "homepage": "https://github.com/adriansalvatori/acf-pro",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/adriansalvatori/acf-pro/tree/6.1.5",
+                "issues": "https://github.com/adriansalvatori/acf-pro/issues"
+            },
+            "time": "2023-06-20T00:00:00+00:00"
+        },
+        {
+            "name": "adriansalvatori/checkout",
+            "version": "8.1.10",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:adriansalvatori/checkout.git",
+                "reference": "f4e3f68b4759de8f750f39d96276fb7229b43c83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adriansalvatori/checkout/zipball/f4e3f68b4759de8f750f39d96276fb7229b43c83",
+                "reference": "f4e3f68b4759de8f750f39d96276fb7229b43c83",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.2.0",
+                "smartystreets/phpsdk": "*",
+                "symfony/css-selector": "^4.4.44",
+                "tijsverkoyen/css-to-inline-styles": "^2.2",
+                "woocommerce/action-scheduler": "^3.5"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "*",
+                "kint-php/kint": "*",
+                "phpcompatibility/php-compatibility": "*",
+                "phpunit/phpunit": "^9.3",
+                "squizlabs/php_codesniffer": "*",
+                "woocommerce/woocommerce-sniffs": "0.1.3",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Objectiv\\Plugins\\Checkout\\": "includes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Clifton Griffin",
+                    "email": "clif@checkoutwc.com"
+                }
+            ],
+            "description": "Beautiful, responsive, and conversion optimized checkout templates for WooCommerce.",
+            "support": {
+                "source": "https://github.com/adriansalvatori/checkout/tree/8.1.10",
+                "issues": "https://github.com/adriansalvatori/checkout/issues"
+            },
+            "time": "2023-06-20T00:41:53+00:00"
+        },
+        {
+            "name": "adriansalvatori/learndash",
+            "version": "4.6.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:adriansalvatori/learndash.git",
+                "reference": "a95215d929a02bd68c0d547f0e0f167f7cd9e9e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adriansalvatori/learndash/zipball/a95215d929a02bd68c0d547f0e0f167f7cd9e9e2",
+                "reference": "a95215d929a02bd68c0d547f0e0f167f7cd9e9e2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Stellar WP",
+                    "homepage": "https://stellarwp.com"
+                }
+            ],
+            "description": "Constantly (manually) updated copy of learndash",
+            "homepage": "https://github.com/adriansalvatori/learndash",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/adriansalvatori/learndash/tree/4.6.0",
+                "issues": "https://github.com/adriansalvatori/learndash/issues"
+            },
+            "time": "2023-06-20T01:06:38+00:00"
+        },
+        {
+            "name": "adriansalvatori/supportboard",
+            "version": "3.5.9",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:adriansalvatori/supportboard.git",
+                "reference": "ee8d6e4faa8e5b583baadf5fd7a5341161133d79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adriansalvatori/supportboard/zipball/ee8d6e4faa8e5b583baadf5fd7a5341161133d79",
+                "reference": "ee8d6e4faa8e5b583baadf5fd7a5341161133d79",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "schiocco",
+                    "homepage": "https://board.support"
+                }
+            ],
+            "description": "Constantly (manually) updated copy of supportboard",
+            "homepage": "https://github.com/adriansalvatori/supportboard",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/adriansalvatori/supportboard/tree/3.5.9",
+                "issues": "https://github.com/adriansalvatori/supportboard/issues"
+            },
+            "time": "2023-06-20T01:22:38+00:00"
+        },
+        {
+            "name": "adriansalvatori/uipress-pro",
+            "version": "3.0.9.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:adriansalvatori/uipress-pro.git",
+                "reference": "879117b22c4eb8dfdabc14356d9ebda97ebf4011"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adriansalvatori/uipress-pro/zipball/879117b22c4eb8dfdabc14356d9ebda97ebf4011",
+                "reference": "879117b22c4eb8dfdabc14356d9ebda97ebf4011",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "UIPress",
+                    "homepage": "https://uipress.com"
+                }
+            ],
+            "description": "Constantly (manually) updated copy of uipress-pro",
+            "homepage": "https://github.com/adriansalvatori/uipress-pro",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/adriansalvatori/uipress-pro/tree/3.0.9.1",
+                "issues": "https://github.com/adriansalvatori/uipress-pro/issues"
+            },
+            "time": "2023-06-20T01:26:14+00:00"
+        },
+        {
+            "name": "adriansalvatori/wishlists",
+            "version": "2.2.9",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:adriansalvatori/wishlists.git",
+                "reference": "3ce2cf4ea44ba0d2321b88b7e3e4ed7e844a6fea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adriansalvatori/wishlists/zipball/3ce2cf4ea44ba0d2321b88b7e3e4ed7e844a6fea",
+                "reference": "3ce2cf4ea44ba0d2321b88b7e3e4ed7e844a6fea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "WooCommerce Wishlist",
+                    "homepage": "https://woocommerce.com"
+                }
+            ],
+            "description": "Constantly (manually) updated copy of WooCommerce Wishlist Changelog",
+            "homepage": "https://github.com/adriansalvatori/wishlists",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/adriansalvatori/wishlists/tree/2.2.9",
+                "issues": "https://github.com/adriansalvatori/wishlists/issues"
+            },
+            "time": "2023-06-20T01:37:06+00:00"
+        },
+        {
+            "name": "adriansalvatori/woocommerce-search-engine",
+            "version": "2.2.15",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:adriansalvatori/woocommerce-search-engine.git",
+                "reference": "c35c1e681f367d3ce4f18fd982f60c71826d5e5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adriansalvatori/woocommerce-search-engine/zipball/c35c1e681f367d3ce4f18fd982f60c71826d5e5c",
+                "reference": "c35c1e681f367d3ce4f18fd982f60c71826d5e5c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Guaven Labs",
+                    "homepage": "https://guaven.com"
+                }
+            ],
+            "description": "Constantly (manually) updated copy of woocommerce-search-engine",
+            "homepage": "https://github.com/adriansalvatori/woocommerce-search-engine",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/adriansalvatori/woocommerce-search-engine/tree/2.2.15",
+                "issues": "https://github.com/adriansalvatori/woocommerce-search-engine/issues"
+            },
+            "time": "2023-06-20T01:40:59+00:00"
+        },
+        {
+            "name": "adriansalvatori/wp-optimize",
+            "version": "3.2.15",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:adriansalvatori/wp-optimize.git",
+                "reference": "e159c8666321ca8c33a2cc710253cb2d1151ebbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adriansalvatori/wp-optimize/zipball/e159c8666321ca8c33a2cc710253cb2d1151ebbc",
+                "reference": "e159c8666321ca8c33a2cc710253cb2d1151ebbc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Team Updraft",
+                    "homepage": "https://updraftplus.com"
+                }
+            ],
+            "description": "Constantly (manually) updated copy of wp-optimize",
+            "homepage": "https://github.com/adriansalvatori/wp-optimize",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/adriansalvatori/wp-optimize/tree/3.2.15",
+                "issues": "https://github.com/adriansalvatori/wp-optimize/issues"
+            },
+            "time": "2023-06-20T01:54:46+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.9.3",
@@ -3063,6 +3365,54 @@
             "time": "2023-06-06T22:04:31+00:00"
         },
         {
+            "name": "smartystreets/phpsdk",
+            "version": "4.16.28",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/smartystreets/smartystreets-php-sdk.git",
+                "reference": "e5fd7fec3d93922d0dc56b67c21760a78878bdf9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/smartystreets/smartystreets-php-sdk/zipball/e5fd7fec3d93922d0dc56b67c21760a78878bdf9",
+                "reference": "e5fd7fec3d93922d0dc56b67c21760a78878bdf9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9",
+                "psr/log": "^1.0.1"
+            },
+            "suggest": {
+                "psr/log": "^1.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SmartyStreets\\PhpSdk\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "SmartyStreets SDK Team",
+                    "email": "support@smarty.com"
+                }
+            ],
+            "description": "The official PHP client library from SmartyStreets.",
+            "homepage": "https://github.com/smartystreets/smartystreets-php-sdk",
+            "support": {
+                "issues": "https://github.com/smartystreets/smartystreets-php-sdk/issues",
+                "source": "https://github.com/smartystreets/smartystreets-php-sdk/tree/4.16.28"
+            },
+            "time": "2023-03-13T17:27:05+00:00"
+        },
+        {
             "name": "symfony/console",
             "version": "v5.4.24",
             "source": {
@@ -3160,6 +3510,72 @@
                 }
             ],
             "time": "2023-05-26T05:13:16+00:00"
+        },
+        {
+            "name": "symfony/css-selector",
+            "version": "v4.4.44",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "bd0a6737e48de45b4b0b7b6fc98c78404ddceaed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/bd0a6737e48de45b4b0b7b6fc98c78404ddceaed",
+                "reference": "bd0a6737e48de45b4b0b7b6fc98c78404ddceaed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Converts CSS selectors to XPath expressions",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/css-selector/tree/v4.4.44"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-06-27T13:16:42+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -5027,6 +5443,59 @@
             "time": "2023-05-25T13:05:00+00:00"
         },
         {
+            "name": "tijsverkoyen/css-to-inline-styles",
+            "version": "2.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
+                "reference": "c42125b83a4fa63b187fdf29f9c93cb7733da30c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/c42125b83a4fa63b187fdf29f9c93cb7733da30c",
+                "reference": "c42125b83a4fa63b187fdf29f9c93cb7733da30c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^5.5 || ^7.0 || ^8.0",
+                "symfony/css-selector": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^7.5 || ^8.5.21 || ^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TijsVerkoyen\\CssToInlineStyles\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tijs Verkoyen",
+                    "email": "css_to_inline_styles@verkoyen.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
+            "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
+            "support": {
+                "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
+                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.6"
+            },
+            "time": "2023-01-03T09:29:04+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.5.0",
             "source": {
@@ -5185,6 +5654,46 @@
             "time": "2022-01-24T18:55:24+00:00"
         },
         {
+            "name": "woocommerce/action-scheduler",
+            "version": "3.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woocommerce/action-scheduler.git",
+                "reference": "7fd383cad3d64b419ec81bcd05bab44355a6e6ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woocommerce/action-scheduler/zipball/7fd383cad3d64b419ec81bcd05bab44355a6e6ef",
+                "reference": "7fd383cad3d64b419ec81bcd05bab44355a6e6ef",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5",
+                "woocommerce/woocommerce-sniffs": "0.1.0",
+                "wp-cli/wp-cli": "~2.5.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "scripts-description": {
+                    "test": "Run unit tests",
+                    "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+                    "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "Action Scheduler for WordPress and WooCommerce",
+            "homepage": "https://actionscheduler.org/",
+            "support": {
+                "issues": "https://github.com/woocommerce/action-scheduler/issues",
+                "source": "https://github.com/woocommerce/action-scheduler/tree/3.6.1"
+            },
+            "time": "2023-06-14T19:23:12+00:00"
+        },
+        {
             "name": "wpackagist-plugin/acf-extended",
             "version": "0.8.9.3",
             "source": {
@@ -5201,24 +5710,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/acf-extended/"
-        },
-        {
-            "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "6.1.6",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/6.1.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.6.1.6.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         },
         {
             "name": "wpackagist-plugin/autodescription",
@@ -5273,6 +5764,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/duplicate-post/"
+        },
+        {
+            "name": "wpackagist-plugin/google-site-kit",
+            "version": "1.102.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-site-kit/",
+                "reference": "tags/1.102.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.102.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-site-kit/"
         },
         {
             "name": "wpackagist-plugin/imsanity",
@@ -5435,6 +5944,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/vibes/"
+        },
+        {
+            "name": "wpackagist-plugin/web-stories",
+            "version": "1.32.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/web-stories/",
+                "reference": "tags/1.32.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/web-stories.1.32.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/web-stories/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",
@@ -6218,6 +6745,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "salvatori/alma": 20,
+        "roots/acorn": 15,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
