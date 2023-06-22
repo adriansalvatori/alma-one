@@ -15,8 +15,6 @@
   EnqueueAssets: path/to/asset
 --}}
 
-{{--https://github.com/MWDelaney/sage-acf-wp-blocks--}}
-
 <blockquote data-{{ $block['id'] }} class="{{ $block['classes'] }}">
     <p>{{ get_field('testimonial') }}</p>
     <cite>

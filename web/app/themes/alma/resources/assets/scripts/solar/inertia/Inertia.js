@@ -5,6 +5,14 @@ import Gravity from "../gravity/Gravity";
 import gsap from "gsap";
 import feather from 'feather-icons';
 
+const start = () => {
+  JarallaxSetup();
+  feather.replace({
+    class: 'feather',
+    'stroke-width': 1.5,
+  });
+}
+
 const JarallaxSetup = () => {
   jarallaxVideo();
   jarallax(document.querySelectorAll('.is-parallax-contain'), {
@@ -96,11 +104,7 @@ const ScrollSetup = () => {
     barba.wrapper.classList.add('is-animating');
   });
   barba.hooks.beforeEnter(() => {
-    JarallaxSetup();
-    feather.replace({
-      class: 'feather',
-      'stroke-width': 1.5
-    });
+    start();
   })
   barba.hooks.after(() => {
     scroll.destroy();
@@ -130,7 +134,7 @@ const ScrollSetup = () => {
       },
       enter(data) {
         return Swipe(data.next.container, 'enter', 'right')
-      }
+      },
     },{
       name: 'swipe-orbit-left',
       sync: true,
@@ -140,7 +144,7 @@ const ScrollSetup = () => {
       },
       enter(data) {
         return Swipe(data.next.container, 'enter', 'left')
-      }
+      },
     },{
       name: 'fade-orbit',
       sync: true,
@@ -150,7 +154,7 @@ const ScrollSetup = () => {
       },
       enter(data) {
         return Fade(data.next.container, 'enter', 'left')
-      }
+      },
     }],
   }
 
@@ -160,10 +164,6 @@ const ScrollSetup = () => {
 export const Inertia = {
   init: () => {
     ScrollSetup();
-    JarallaxSetup();
-    feather.replace({
-      class: 'feather',
-      'stroke-width': 1.5
-    });
+    start();
   },
 }
