@@ -22,6 +22,10 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/afragen/git-updater"
+    },
+    {
+      "type": "vcs",
       "url": "git@github.com:adriansalvatori/acf-pro.git"
     },
     {
@@ -54,6 +58,7 @@
     }
   ],
   "require": {
+    "afragen/git-updater": "^9 || ^10",
     "php": ">=7.4",
     "composer/installers": "^2.2",
     "vlucas/phpdotenv": "^5.5",
@@ -138,6 +143,11 @@
   "scripts": {
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
+    ],
+    "post-autoload-dump": [
+      "php -r \"copy('.env.example', '.env');\"",
+      "cd ./web/app/themes/alma && composer install",
+      "cd ./web/app/themes/alma && yarn && yarn prod"
     ],
     "test": [
       "phpcs"
