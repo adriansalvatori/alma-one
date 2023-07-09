@@ -145,7 +145,6 @@
       "php -r \"copy('.env.example', '.env');\""
     ],
     "post-autoload-dump": [
-      "php -r \"copy('.env.example', '.env');\"",
       "cd ./web/app/themes/alma && composer install",
       "cd ./web/app/themes/alma && yarn && yarn prod"
     ],

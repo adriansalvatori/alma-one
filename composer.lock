@@ -4181,12 +4181,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/adriansalvatori/alma.git",
-                "reference": "684feefcd3a73c7767bee8c305afbe66e97625d9"
+                "reference": "ab1a7ce2d5ac33441eadfc386d0ca0d9eb346f85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adriansalvatori/alma/zipball/684feefcd3a73c7767bee8c305afbe66e97625d9",
-                "reference": "684feefcd3a73c7767bee8c305afbe66e97625d9",
+                "url": "https://api.github.com/repos/adriansalvatori/alma/zipball/ab1a7ce2d5ac33441eadfc386d0ca0d9eb346f85",
+                "reference": "ab1a7ce2d5ac33441eadfc386d0ca0d9eb346f85",
                 "shasum": ""
             },
             "require": {
@@ -4244,9 +4244,9 @@
             "homepage": "https://movidagrafica.co/",
             "support": {
                 "issues": "https://github.com/adriansalvatori/alma/issues",
-                "source": "https://github.com/adriansalvatori/alma/tree/4.0.61"
+                "source": "https://github.com/adriansalvatori/alma/tree/4.0.62"
             },
-            "time": "2023-07-09T03:33:23+00:00"
+            "time": "2023-07-09T04:53:03+00:00"
         },
         {
             "name": "smartystreets/phpsdk",
