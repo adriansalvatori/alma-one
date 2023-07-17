@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://roots.io/bedrock/">
-    <img alt="Bedrock" src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="100">
+  <a href="https://movidagrafica.co/">
+    <img alt="Bedrock" src="https://movidagrafica.co/formatos2/img/Nlogo1.png" height="100">
   </a>
 </p>
 
@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  <a href="https://roots.io/"><strong><code>Website</code></strong></a> &nbsp;&nbsp; <a href="https://docs.roots.io/bedrock/master/installation/"><strong><code>Documentation</code></strong></a> &nbsp;&nbsp; <a href="https://github.com/roots/bedrock/releases"><strong><code>Releases</code></strong></a> &nbsp;&nbsp; <a href="https://discourse.roots.io/"><strong><code>Support</code></strong></a>
+  <a href="https://roots.io/"><strong><code>public_htmlsite</code></strong></a> &nbsp;&nbsp; <a href="https://docs.roots.io/bedrock/master/installation/"><strong><code>Documentation</code></strong></a> &nbsp;&nbsp; <a href="https://github.com/roots/bedrock/releases"><strong><code>Releases</code></strong></a> &nbsp;&nbsp; <a href="https://discourse.roots.io/"><strong><code>Support</code></strong></a>
 </p>
 
 ## Sponsors
@@ -55,7 +55,7 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
 - Easy WordPress configuration with environment specific files
 - Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
 - Autoloader for mu-plugins (use regular plugins as mu-plugins)
-- Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
+- Enhanced security (separated public_html root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
 
 ## Requirements
 
@@ -66,7 +66,7 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
 
 1. Create a new project:
    ```sh
-   $ composer create-project roots/bedrock
+   $ composer create-project salvatori/alma-one
    ```
    By default, this installs the `dist` version of all dependent packages.  To install the `source` versions instead, update `composer.json` as follows:
    ```json
@@ -90,8 +90,8 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
   - Generate with [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command)
   - Generate with [our WordPress salts generator](https://roots.io/salts.html)
 
-3. Add theme(s) in `web/app/themes/` as you would for a normal WordPress site
-4. Set the document root on your webserver to Bedrock's `web` folder: `/path/to/site/web/`
+3. Add theme(s) in `public_html/app/themes/` as you would for a normal WordPress site
+4. Set the document root on your public_htmlserver to Bedrock's `public_html` folder: `/path/to/site/public_html/`
 5. Access WordPress admin at `https://example.com/wp/wp-admin/`
 
 ## Community

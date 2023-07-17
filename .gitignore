@@ -1,17 +1,17 @@
 # Application
-web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
-web/app/themes/twentytwentythree/
-web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/2023/06/*
-!web/app/uploads/.gitkeep
-web/app/cache/*
+public_html/app/plugins/*
+!public_html/app/plugins/.gitkeep
+public_html/app/mu-plugins/*/
+public_html/app/themes/twentytwentythree/
+public_html/app/upgrade
+public_html/app/uploads/*
+!public_html/app/uploads/2023/06/*
+!public_html/app/uploads/.gitkeep
+public_html/app/cache/*
 
 # WordPress
-web/wp
-web/.htaccess
+public_html/wp
+public_html/.htaccess
 
 # Logs
 *.log
