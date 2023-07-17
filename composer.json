@@ -65,7 +65,7 @@
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "6.1.1",
+    "roots/wordpress": "6.2.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-theme/twentytwentythree": "^1.0",
@@ -87,7 +87,7 @@
     "wpackagist-plugin/wp-user-avatars": "^1.4",
     "wpackagist-plugin/wp-user-profiles": "^2.6",
     "wpackagist-plugin/acf-extended": "0.8.9.3",
-    "salvatori/alma": "dev-master",
+    "salvatori/alma": "4.0.63",
     "wpackagist-plugin/web-stories": "^1.32",
     "wpackagist-plugin/google-site-kit": "^1.102",
     "adriansalvatori/acf-pro" : "*",
@@ -116,7 +116,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "public_htmlapp/mu-plugins/{$name}/": [
+      "public_html/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "roots/soil", 
         "wpackagist-plugin/two-factor", 
@@ -135,18 +135,18 @@
         "wpackagist-plugin/advanced-custom-fields",
         "adriansalvatori/wp-optimize"
       ],
-      "public_htmlapp/plugins/{$name}/": ["type:wordpress-plugin"],
-      "public_htmlapp/themes/{$name}/": ["type:wordpress-theme"]
+      "public_html/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public_html/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "public_htmlwp"
+    "wordpress-install-dir": "public_html/wp"
   },
   "scripts": {
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ],
     "post-autoload-dump": [
-      "cd ./public_htmlapp/themes/alma && composer install",
-      "cd ./public_htmlapp/themes/alma && yarn && yarn prod"
+      "cd ./public_html/app/themes/alma && composer install",
+      "cd ./public_html/app/themes/alma && yarn && yarn prod"
     ],
     "test": [
       "phpcs"
