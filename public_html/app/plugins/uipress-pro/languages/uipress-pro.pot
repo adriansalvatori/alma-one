@@ -1,0 +1,4083 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: UiPress Pro\n"
+"POT-Creation-Date: 2023-04-04 15:52+0100\n"
+"PO-Revision-Date: 2022-11-17 22:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: uipress-pro.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: admin/classes/uip-pro-ajax.php:76
+msgid "No details given to test"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:82
+msgid "Please fill in all database details"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:98
+msgid "Unable to connect to database"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:99
+msgid "Double check you have enetered your details correctly and try again"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:111
+msgid "Connection successful"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:132
+msgid "No order given to update"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:138
+msgid "No status given to update order to"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:144
+msgid "You don't have the correct priveledges to edit this order"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:158
+msgid "Unable to locate order"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:207 admin/classes/uip-pro-ajax.php:338
+msgid "Woocommerce is not active on this site"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:292 admin/classes/uip-pro-ajax.php:368
+#: admin/extensions/menu-creator/menu-creator.php:903
+msgid "ago"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:414
+msgid "No post to delete"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:420 admin/classes/uip-pro-ajax.php:469
+#: admin/classes/uip-pro-ajax.php:2450
+msgid "Post does not exist"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:426
+msgid "You do not have the correct capabilities to delete this post"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:436
+msgid "Unable to delete the post right now"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:463 admin/classes/uip-pro-ajax.php:2444
+msgid "No post to duplicate"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:477
+#: admin/extensions/menu-creator/menu-creator.php:1074
+#: admin/extensions/user-management/user-management.php:383
+msgid "copy"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:550 admin/extensions/folders/folders.php:257
+msgid "No folder to update"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:556 admin/classes/uip-pro-ajax.php:621
+#: admin/extensions/folders/folders.php:263
+#: admin/extensions/folders/folders.php:328
+msgid "Folder does not exist"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:562 admin/extensions/folders/folders.php:269
+msgid "You do not have the correct capabilities to update this folder"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:569 admin/extensions/folders/folders.php:276
+msgid "Folder title is required"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:584 admin/extensions/folders/folders.php:291
+msgid "Unable to update the folder right now"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:615 admin/extensions/folders/folders.php:322
+msgid "No folder to delete"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:627 admin/extensions/folders/folders.php:334
+msgid "You do not have the correct capabilities to delete this folder"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:636 admin/extensions/folders/folders.php:343
+msgid "Unable to delete the folder right now"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:727 admin/extensions/folders/folders.php:437
+msgid "No item to update"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:786 admin/extensions/folders/folders.php:597
+msgid "No folder given to fetch content for"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:888 admin/classes/uip-pro-ajax.php:908
+#: admin/extensions/folders/folders.php:373
+#: admin/extensions/folders/folders.php:393
+msgid "Unable to create content folder right now"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:894 admin/extensions/folders/folders.php:379
+msgid "Folder name is required"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:953
+msgid "No post type to fetch content for"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:959
+msgid "Post type does not exist"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1198 admin/classes/uip-pro-ajax.php:1255
+msgid "You don't have sufficent priviledges to manage capabilities"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1204 admin/classes/uip-pro-ajax.php:1261
+msgid "No role name receieved to edit"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1209 admin/classes/uip-pro-ajax.php:1266
+msgid "No role label receieved to edit"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1214
+msgid "No cap name receieved to create"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1229 admin/classes/uip-pro-ajax.php:1286
+#: admin/classes/uip-pro-ajax.php:1354 admin/classes/uip-pro-ajax.php:1457
+#: admin/extensions/user-management/uip-users-ajax.php:742
+msgid "Something has gone wrong"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1234
+#: admin/extensions/user-management/uip-users-ajax.php:1020
+msgid "Capability added"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1271
+msgid "No cap receieved to remove"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1291
+msgid "Capability removed"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1311 admin/classes/uip-pro-ajax.php:1425
+#: admin/extensions/user-management/uip-users-ajax.php:710
+#: admin/extensions/user-management/uip-users-ajax.php:806
+#: admin/extensions/user-management/uip-users-ajax.php:883
+#: admin/extensions/user-management/uip-users-ajax.php:923
+msgid "You don't have sufficent priviledges to manage roles"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1317
+msgid "No role data receieved to create"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1323
+#: admin/extensions/user-management/uip-users-ajax.php:812
+#: admin/extensions/user-management/uip-users-ajax.php:830
+msgid "Role label is required"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1329 admin/classes/uip-pro-ajax.php:1437
+#: admin/extensions/user-management/uip-users-ajax.php:722
+#: admin/extensions/user-management/uip-users-ajax.php:818
+#: admin/extensions/user-management/uip-users-ajax.php:889
+#: admin/extensions/user-management/uip-users-ajax.php:940
+#: admin/extensions/user-management/uip-users-ajax.php:983
+#: admin/extensions/user-management/uip-users-ajax.php:989
+#: admin/extensions/user-management/uip-users-ajax.php:1047
+#: admin/extensions/user-management/uip-users-ajax.php:1053
+msgid "Role name is required"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1335
+msgid "A role with that name already exists"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1359
+#: admin/extensions/user-management/uip-users-ajax.php:864
+msgid "Role created"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1378
+msgid "You don't have sufficent priviledges to delete roles"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1384
+msgid "No role data receieved to delete"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1390
+msgid "Role name is required to perform delete"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1399
+msgid "You can't delete a role that is currenty assigned to yourself"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1406
+msgid "Role removed"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1431
+msgid "No role data receieved to save"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1462
+#: admin/extensions/user-management/uip-users-ajax.php:757
+msgid "Role updated"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1578
+msgid "You don't have necessary permissions to activate plugins"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1603
+msgid "Unable to activate this plugin"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1608
+#: admin/extensions/user-management/js/modules/activity-status-select.js:52
+#: admin/extensions/user-management/user-management.php:1021
+#: admin/extensions/user-management/user-management.php:1465
+#: assets/js/uip/settings/global-settings-groups.js:328
+msgid "Plugin activated"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1624
+msgid "Unable to run shortcode"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1654
+msgid "You don't have necessary permissions to install plugins"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1666
+msgid "Unable to install this plugin"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1671
+msgid "Plugin installed"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1727
+msgid "Plugins found"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1746
+msgid "You don't have necessary permissions to update plugins"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1760
+msgid "Unable to upgrade this plugin"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1765
+msgid "Plugin updated"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1838
+msgid "Inccorrect token sent to server"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1872 admin/classes/uip-pro-ajax.php:1878
+msgid "Inccorrect data passed to server"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1928 admin/classes/uip-pro-ajax.php:2047
+msgid "You need a licence key to use analytics blocks"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:1936 admin/classes/uip-pro-ajax.php:1950
+msgid "You need to connect a google analytics account to display data"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:2055
+msgid "Woocommerce needs to be active on this site to use these blocks"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:2255
+msgid "orders"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:2259
+msgid "failed"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:2263
+msgid "refunds"
+msgstr ""
+
+#: admin/classes/uip-pro-ajax.php:2267
+msgid "revenue"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:39
+msgctxt "post type general name"
+msgid "Content Folder"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:40
+msgctxt "post type singular name"
+msgid "Content Folder"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:41
+msgctxt "admin menu"
+msgid "Content Folders"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:42
+msgctxt "add new on admin bar"
+msgid "Content Folder"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:43
+msgctxt "Template"
+msgid "Add New"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:44
+msgid "Add New Content Folder"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:45
+msgid "New Content Folder"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:46
+msgid "Edit Content Folders"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:47
+msgid "View Content Folders"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:48
+msgid "All Content Folders"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:49
+msgid "Search Content Folders"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:50
+msgid "No Content Folders found."
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:51
+msgid "No Content Folders found in Trash."
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:55
+msgid "Post type used for the uipress uipress folders"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:86
+msgid "uiBuilder"
+msgstr ""
+
+#: admin/classes/uip-pro-app.php:138 admin/uipress-pro-compiler.php:66
+msgid "UiPress Pro requires UiPress lite to be installed before activating"
+msgstr ""
+
+#: admin/classes/uip-pro-site-settings.php:184
+msgid "All"
+msgstr ""
+
+#: admin/classes/uip-pro-site-settings.php:192
+#: admin/extensions/user-management/user-management.php:611
+msgid "Publish"
+msgstr ""
+
+#: admin/classes/uip-pro-site-settings.php:201
+#: admin/extensions/menu-creator/js/modules/menu-list.js:22
+msgid "Draft"
+msgstr ""
+
+#: admin/classes/uip-pro-site-settings.php:210
+msgid "Pending"
+msgstr ""
+
+#: admin/classes/uip-pro-site-settings.php:219
+msgid "Trash"
+msgstr ""
+
+#: admin/extensions/folders/folders.php:496
+msgid "No items to update"
+msgstr ""
+
+#: admin/extensions/folders/folders.php:538
+msgid "Item moved to folder"
+msgstr ""
+
+#: admin/extensions/folders/folders.php:540
+msgid "Items moved to folder"
+msgstr ""
+
+#: admin/extensions/folders/folders.php:952
+msgctxt "media modal menu actions"
+msgid "Actions"
+msgstr ""
+
+#: admin/extensions/folders/folders.php:954
+msgctxt "media modal menu"
+msgid "Menu"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:20
+#: assets/js/uip/blocks/dynamic/content-navigator.js:24
+#: assets/js/uip/blocks/dynamic/content-navigator.js:557
+#: assets/js/uip/blocks/dynamic/group-date-range.js:29
+#: assets/js/uip/blocks/dynamic/media-library.js:30
+#: assets/js/uip/blocks/dynamic/plugin-search.js:25
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:16
+#: assets/js/uip/blocks/dynamic/user-meta.js:14
+#: assets/js/uip/blocks/inputs/checkbox-input.js:17
+#: assets/js/uip/blocks/inputs/colour-select-input.js:19
+#: assets/js/uip/blocks/inputs/date-range.js:27
+#: assets/js/uip/blocks/inputs/image-select-input.js:18
+#: assets/js/uip/blocks/inputs/radio-input.js:17
+msgid "Input placeholder..."
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:21
+#: assets/js/uip/blocks/dynamic/content-navigator.js:25
+#: assets/js/uip/blocks/dynamic/content-navigator.js:558
+msgid "New"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:22
+#: assets/js/uip/blocks/dynamic/content-navigator.js:26
+#: assets/js/uip/blocks/dynamic/content-navigator.js:559
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:27
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:221
+msgid "Load more"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:23
+#: assets/js/uip/blocks/dynamic/content-navigator.js:27
+#: assets/js/uip/blocks/dynamic/content-navigator.js:560
+#: assets/js/uip/plugins/uip-conditions.js:18
+msgid "Search"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:24
+#: admin/extensions/user-management/user-management.php:436
+#: admin/extensions/user-management/user-management.php:629
+#: assets/js/uip/blocks/dynamic/content-navigator.js:28
+#: assets/js/uip/blocks/dynamic/content-navigator.js:561
+msgid "View"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:25
+#: admin/extensions/folders/js/modules/content-folder.js:32
+#: admin/extensions/user-management/user-management.php:437
+#: admin/extensions/user-management/user-management.php:448
+#: admin/extensions/user-management/user-management.php:605
+#: assets/js/uip/blocks/dynamic/content-navigator.js:29
+#: assets/js/uip/blocks/dynamic/content-navigator.js:562
+#: assets/js/uip/blocks/dynamic/content-navigator.js:569
+msgid "Edit"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:26
+#: admin/extensions/menu-creator/js/modules/menu-list.js:283
+#: admin/extensions/menu-creator/js/modules/menu-list.js:291
+#: admin/extensions/user-management/user-management.php:449
+#: admin/extensions/user-management/user-management.php:623
+#: assets/js/uip/blocks/dynamic/content-navigator.js:31
+#: assets/js/uip/blocks/dynamic/content-navigator.js:563
+#: assets/js/uip/tools/role-editor.js:22
+msgid "Delete"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:27
+#: admin/extensions/folders/js/modules/folder-app.js:27
+#: assets/js/uip/blocks/dynamic/content-navigator.js:32
+#: assets/js/uip/blocks/dynamic/content-navigator.js:564
+msgid "Folders"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:28
+#: assets/js/uip/blocks/dynamic/content-navigator.js:30
+#: assets/js/uip/blocks/dynamic/content-navigator.js:565
+#: assets/js/uip/tools/role-editor.js:21
+msgid "Duplicate"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:29
+#: admin/extensions/folders/js/modules/folder-app.js:23
+#: admin/extensions/folders/js/modules/new-folder.js:17
+#: assets/js/uip/blocks/dynamic/content-navigator.js:34
+#: assets/js/uip/blocks/dynamic/content-navigator.js:463
+#: assets/js/uip/blocks/dynamic/content-navigator.js:566
+msgid "Folder name"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:30
+#: admin/extensions/folders/js/modules/folder-app.js:24
+#: admin/extensions/folders/js/modules/new-folder.js:18
+#: assets/js/uip/blocks/dynamic/content-navigator.js:35
+#: assets/js/uip/blocks/dynamic/content-navigator.js:464
+#: assets/js/uip/blocks/dynamic/content-navigator.js:567
+msgid "Folder colour"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:31
+#: assets/js/uip/blocks/dynamic/content-navigator.js:568
+#: assets/js/uip/blocks/dynamic/plugin-search.js:26
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:17
+msgid "Update"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:142
+#: assets/js/uip/blocks/dynamic/content-navigator.js:660
+msgid "Folder deleted"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/content-folder.js:162
+#: assets/js/uip/blocks/dynamic/content-navigator.js:680
+msgid "Folder updated"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:22
+#: admin/extensions/folders/js/modules/new-folder.js:16
+#: assets/js/uip/blocks/dynamic/content-navigator.js:33
+#: assets/js/uip/blocks/dynamic/content-navigator.js:462
+msgid "New folder"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:25
+#: admin/extensions/folders/js/modules/new-folder.js:19
+#: admin/extensions/user-management/user-management.php:617
+#: assets/js/uip/blocks/dynamic/content-navigator.js:36
+#: assets/js/uip/blocks/dynamic/content-navigator.js:465
+msgid "Create"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:26
+msgid "All items"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:28
+msgid "Remove from folder"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:112
+msgid "Uploading "
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:112
+msgid "files"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:165
+msgid "item"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:167
+msgid "items"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/folder-app.js:234
+#: admin/extensions/folders/js/modules/folder-app.js:310
+#: assets/js/uip/blocks/dynamic/content-navigator.js:223
+msgid "Item removed from folder"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/new-folder.js:31
+#: assets/js/uip/blocks/dynamic/content-navigator.js:477
+msgid "Folder name can not be blank"
+msgstr ""
+
+#: admin/extensions/folders/js/modules/new-folder.js:52
+#: assets/js/uip/blocks/dynamic/content-navigator.js:496
+msgid "Folder created"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/menu-creator.js:60
+#: admin/extensions/user-management/js/uip-user-app.js:65
+msgid "List View"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/menu-creator.js:65
+msgid "Menu creator"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:13
+msgid "Menu items"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:17
+msgid "Settings"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:21
+#: admin/extensions/menu-creator/js/modules/menu-list.js:21
+msgid "Active"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:22
+#: admin/extensions/menu-creator/js/modules/menu-list.js:19
+#: admin/extensions/user-management/user-management.php:330
+#: admin/extensions/user-management/user-management.php:410
+#: admin/extensions/user-management/user-management.php:1281
+#: assets/js/uip/plugins/uip-activity-database.js:14
+msgid "Name"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:23
+msgid "Auto update"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:24
+msgid ""
+"Enabling this option will allow the menu to update automatically as you add "
+"or remove plugins"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:25
+msgid "Applies to"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:26
+#: admin/extensions/menu-creator/js/modules/menu-list.js:17
+msgid "Excludes"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:27
+msgid "Select users and roles"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:28
+msgid "Search users and roles"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:29
+msgid "Save menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:30
+#: admin/extensions/user-management/user-management.php:348
+msgid "Cancel"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:31
+msgid "Menu name"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:32
+#: admin/extensions/menu-creator/menu-creator.php:1178
+msgid "Menu saved"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:33
+msgid "Who you want the menu to load for"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/editor.js:34
+msgid "Who you would like the menu to not load for (optional)"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:16
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:14
+msgid "Rename item"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:17
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:15
+msgid "Open menu editor"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:18
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:143
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:16
+msgid "Item name"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:19
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:24
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:17
+msgid "Separator"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:20
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:18
+msgid "Item visibiity"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:21
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:19
+msgid "Show submenu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:22
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:20
+msgid "Add to menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:23
+msgid "Add to submenu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:25
+msgid "Link"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:26
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:23
+msgid "Delete item"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:27
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:24
+msgid "Advanced menu editor"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:28
+#: assets/js/uip/blocks/analytics/loader.js:165
+#: assets/js/uip/blocks/analytics/loader.js:292
+#: assets/js/uip/blocks/analytics/loader.js:388
+#: assets/js/uip/blocks/analytics/loader.js:491
+#: assets/js/uip/blocks/dynamic/loader.js:83
+#: assets/js/uip/blocks/dynamic/loader.js:143
+#: assets/js/uip/blocks/dynamic/loader.js:192
+#: assets/js/uip/blocks/dynamic/loader.js:257
+#: assets/js/uip/blocks/dynamic/loader.js:335
+#: assets/js/uip/blocks/dynamic/loader.js:403
+#: assets/js/uip/blocks/dynamic/loader.js:497
+#: assets/js/uip/blocks/dynamic/loader.js:564
+#: assets/js/uip/blocks/elements/loader.js:45
+#: assets/js/uip/blocks/elements/loader.js:102
+#: assets/js/uip/blocks/elements/loader.js:190
+#: assets/js/uip/blocks/elements/loader.js:247
+#: assets/js/uip/blocks/inputs/loader.js:88
+#: assets/js/uip/blocks/inputs/loader.js:176
+#: assets/js/uip/blocks/inputs/loader.js:263
+#: assets/js/uip/blocks/inputs/loader.js:345
+#: assets/js/uip/blocks/inputs/loader.js:436
+#: assets/js/uip/blocks/layout/loader.js:108
+#: assets/js/uip/blocks/storeanalytics/loader.js:139
+#: assets/js/uip/blocks/storeanalytics/loader.js:248
+#: assets/js/uip/blocks/storeanalytics/loader.js:354
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:25
+#: assets/js/uip/settings/global-settings-groups.js:7
+msgid "Advanced"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:29
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:26
+msgid "Custom classes"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:30
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:27
+msgid "Reset to default"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:31
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:28
+msgid "Open in a new tab?"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:32
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:29
+msgid "Open outside frame"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:33
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:30
+msgid "Open without UiPress"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:34
+msgid "Custom URL"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:35
+msgid "Capability"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:36
+msgid "Replaces capability required for viewing this menu item"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:37
+msgid "Add classes seperated by a space"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:78
+#: admin/extensions/menu-creator/js/modules/menu-editor.js:85
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:103
+msgid "Custom menu item"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:15
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:24
+#: assets/js/uip/blocks/dynamic/recent-orders.js:23
+msgid "Status"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:16
+msgid "Roles and users"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:18
+msgid "Modified"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:20
+#: assets/js/uip/plugins/uip-conditions.js:16
+msgid "Type"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:23
+#: admin/extensions/user-management/user-management.php:307
+msgid "results"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:24
+msgid "Search templates"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:25
+msgid "Template duplicated"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:26
+msgid "Template deleted"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:27
+#: admin/extensions/user-management/user-management.php:390
+msgid "Delete selected"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:28
+#: admin/extensions/menu-creator/menu-creator.php:1415
+msgid "Menu Builder"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:29
+msgid "New menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:30
+msgid "It's a little quiet!"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:31
+msgid "Create a new menu to get started with menu creator"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:32
+msgid "View docs"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:33
+msgid "Edit menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:34
+msgid "Duplicate menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:35
+msgid "Export menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:36
+msgid "Import menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:37
+msgid "Delete menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:38
+msgid "version"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:39
+msgid "Tools"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:40
+msgid "Site settings"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:41
+msgid "PHP error log"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:42
+#: assets/js/uip/tools/role-editor.js:13
+msgid "Role editor"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:43
+msgid "pro"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:44
+msgid "Ui Template"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:45
+msgid "Admin page"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:46
+msgid "Login page"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:47
+msgid "Frontend toolbar"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:48
+msgid "Setup wizard"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:49
+msgid "Export selected"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:50
+msgid "Import menus"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:259
+msgid "Menu exported"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:283
+msgid "Are you sure you want to delete this menu?"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:283
+#: admin/extensions/menu-creator/js/modules/menu-list.js:291
+msgid "Deleted menus can't be recovered"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:291
+msgid "Are you sure you want to multiple menus?"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:357
+msgid "Importing menus"
+msgstr ""
+
+#: admin/extensions/menu-creator/js/modules/menu-list.js:422
+msgid "Menus imported succesfully"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:596
+msgid "Menu Creator"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:597
+msgid "Creates custom admin menus."
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:601
+msgid "Disable Menu Creator?"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:602
+msgid "If disabled, the menu creator will not be available to any users."
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:848
+msgctxt "post type general name"
+msgid "Admin Menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:849
+msgctxt "post type singular name"
+msgid "admin menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:850
+msgctxt "admin menu"
+msgid "Admin Menus"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:851
+msgctxt "add new on admin bar"
+msgid "Admin Menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:852
+msgctxt "Admin Menu"
+msgid "Add New"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:853
+msgid "Add New Admin Menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:854
+msgid "New Admin Menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:855
+msgid "Edit Admin Menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:856
+msgid "View Admin Menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:857
+msgid "All Admin Menus"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:858
+msgid "Search Admin Menus"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:859
+msgid "No Admin Menus found."
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:860
+msgid "No Admin Menus found in Trash."
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:864
+#: admin/extensions/user-management/uip-history.php:376
+msgid "Description."
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:943
+msgid "You don't have the correct permissions to delete menus"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:951
+msgid "Menu deleted"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:962
+msgid "Menus deleted"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:981
+#: admin/extensions/menu-creator/menu-creator.php:1019
+msgid "Uanble to load menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1001
+#: admin/extensions/menu-creator/menu-creator.php:1030
+msgid "Menu fetched"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1069
+#: admin/extensions/menu-creator/menu-creator.php:1109
+#: admin/extensions/menu-creator/menu-creator.php:1330
+msgid "You don't have the correct permissions to edit this menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1090
+msgid "Menu duplicated"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1196
+msgid "You don't have the correct permissions to edit this post type"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1202
+msgid "No menus found to import"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1274
+msgid "Menus imported"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1288
+msgid "Admin menu (Draft)"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1300
+msgid "Menu created"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1304
+msgid "Unable to create menu"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1324
+#: admin/extensions/menu-creator/menu-creator.php:1362
+msgid "Unable to update menu status"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1368
+msgid "Menu status updated"
+msgstr ""
+
+#: admin/extensions/menu-creator/menu-creator.php:1415
+msgid "UIP Menu Builder"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:19
+#: admin/extensions/user-management/user-management.php:854
+#: admin/extensions/user-management/user-management.php:1432
+#: assets/js/uip/settings/global-settings-groups.js:295
+msgid "Page view"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:23
+#: admin/extensions/user-management/user-management.php:865
+#: admin/extensions/user-management/user-management.php:1436
+#: assets/js/uip/settings/global-settings-groups.js:299
+msgid "Post created"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:27
+#: admin/extensions/user-management/user-management.php:1440
+#: assets/js/uip/settings/global-settings-groups.js:303
+msgid "Post updated"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:31
+#: admin/extensions/user-management/user-management.php:1444
+#: assets/js/uip/settings/global-settings-groups.js:307
+msgid "Post trashed"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:35
+#: admin/extensions/user-management/user-management.php:921
+#: admin/extensions/user-management/user-management.php:1448
+#: assets/js/uip/settings/global-settings-groups.js:311
+msgid "Post deleted"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:39
+#: admin/extensions/user-management/user-management.php:932
+#: admin/extensions/user-management/user-management.php:1452
+#: assets/js/uip/settings/global-settings-groups.js:315
+msgid "Post status change"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:43
+#: admin/extensions/user-management/user-management.php:1456
+#: assets/js/uip/settings/global-settings-groups.js:319
+msgid "Trashed comment"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:47
+#: admin/extensions/user-management/user-management.php:1460
+#: assets/js/uip/settings/global-settings-groups.js:323
+msgid "Deelete comment"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:56
+#: admin/extensions/user-management/user-management.php:1029
+#: admin/extensions/user-management/user-management.php:1469
+#: assets/js/uip/settings/global-settings-groups.js:332
+msgid "Plugin deactivated"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:60
+#: admin/extensions/user-management/user-management.php:1037
+#: admin/extensions/user-management/user-management.php:1473
+#: assets/js/uip/settings/global-settings-groups.js:336
+msgid "Plugin deleted"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:64
+#: admin/extensions/user-management/user-management.php:1477
+#: assets/js/uip/plugins/uip-conditions.js:28
+#: assets/js/uip/settings/global-settings-groups.js:340
+msgid "User login"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:68
+#: admin/extensions/user-management/user-management.php:1481
+#: assets/js/uip/settings/global-settings-groups.js:344
+msgid "User logout"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:72
+#: admin/extensions/user-management/user-management.php:1066
+#: admin/extensions/user-management/user-management.php:1489
+#: assets/js/uip/settings/global-settings-groups.js:348
+msgid "Site option added"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:76
+#: admin/extensions/user-management/user-management.php:1493
+#: assets/js/uip/settings/global-settings-groups.js:352
+msgid "Attachmnet uploaded"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:80
+#: admin/extensions/user-management/user-management.php:1497
+#: assets/js/uip/settings/global-settings-groups.js:356
+msgid "Attachmnet deleted"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:84
+#: admin/extensions/user-management/uip-users-ajax.php:1170
+#: admin/extensions/user-management/user-management.php:1105
+#: admin/extensions/user-management/user-management.php:1324
+#: admin/extensions/user-management/user-management.php:1501
+#: assets/js/uip/settings/global-settings-groups.js:360
+msgid "User created"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:88
+#: admin/extensions/user-management/user-management.php:1113
+#: admin/extensions/user-management/user-management.php:1505
+#: assets/js/uip/settings/global-settings-groups.js:364
+msgid "User deleted"
+msgstr ""
+
+#: admin/extensions/user-management/js/modules/activity-status-select.js:92
+#: admin/extensions/user-management/user-management.php:1150
+#: admin/extensions/user-management/user-management.php:1509
+#: assets/js/uip/settings/global-settings-groups.js:368
+msgid "User updated"
+msgstr ""
+
+#: admin/extensions/user-management/js/uip-user-app.js:70
+msgid "View user"
+msgstr ""
+
+#: admin/extensions/user-management/js/uip-user-app.js:75
+#: admin/extensions/user-management/user-management.php:441
+msgid "Edit user"
+msgstr ""
+
+#: admin/extensions/user-management/js/uip-user-app.js:80
+#: admin/extensions/user-management/user-management.php:363
+msgid "New user"
+msgstr ""
+
+#: admin/extensions/user-management/js/uip-user-app.js:85
+msgid "Message user"
+msgstr ""
+
+#: admin/extensions/user-management/js/uip-user-app.js:90
+msgid "Batch update roles"
+msgstr ""
+
+#: admin/extensions/user-management/js/uip-user-app.js:95
+#: admin/extensions/user-management/user-management.php:368
+msgid "Edit role"
+msgstr ""
+
+#: admin/extensions/user-management/js/uip-user-app.js:100
+#: admin/extensions/user-management/user-management.php:380
+#: assets/js/uip/tools/role-editor.js:31
+msgid "New role"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:343
+msgid "Once every 1 minutes"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:347
+msgid "Once every 1 hour"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:360
+msgctxt "post type general name"
+msgid "History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:361
+msgctxt "post type singular name"
+msgid "history"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:362
+msgctxt "admin menu"
+msgid "History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:363
+msgctxt "add new on admin bar"
+msgid "History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:364
+msgctxt "history"
+msgid "Add New"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:365
+msgid "Add New History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:366
+msgid "New History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:367
+msgid "Edit History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:368
+msgid "View History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:369
+msgid "All History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:370
+msgid "Search History"
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:371
+msgid "No History found."
+msgstr ""
+
+#: admin/extensions/user-management/uip-history.php:372
+msgid "No History found in Trash."
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:37
+msgctxt "post type general name"
+msgid "Group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:38
+msgctxt "post type singular name"
+msgid "Group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:39
+msgctxt "admin menu"
+msgid "Groups"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:40
+msgctxt "add new on admin bar"
+msgid "Group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:41
+msgctxt "Group"
+msgid "Add New"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:42
+#: admin/extensions/user-management/uip-user-groups.php:53
+msgid "Add New Group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:43
+msgid "New Group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:44
+msgid "Edit Group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:45
+msgid "View Group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:46
+msgid "All Groups"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:47
+msgid "Search Groups"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:48
+msgid "No Groups found."
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:49
+msgid "No Groups found in Trash."
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:76
+msgid "No group to delete"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:86
+msgid "Unable to delete the group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:143
+msgid "Group deleted"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:162
+msgid "Unable to move folder group itself"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:176
+msgid "Unable to move group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:204
+msgid "Group moved"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:223
+msgid "No item to move"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:237
+msgid "Item moved"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:255
+msgid "No users to move"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:273
+msgid "User moved"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:305
+msgid "Something went wrong"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:314
+msgid "Group updated"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:335
+msgid "Title is required"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:341
+msgid "Colour is required"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:356
+msgid "Unable to create group"
+msgstr ""
+
+#: admin/extensions/user-management/uip-user-groups.php:368
+msgid "Group created"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:344
+msgid "No role given"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:496
+msgid "Unknown"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:593
+#: admin/extensions/user-management/uip-users-ajax.php:658
+msgid "You don't have sufficent priviledges to edit users"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:599
+#: admin/extensions/user-management/uip-users-ajax.php:1125
+msgid "Email is not valid"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:610
+#: admin/extensions/user-management/uip-users-ajax.php:1118
+msgid "Email already exists"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:638
+msgid "User saved"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:664
+msgid "No users sent to update"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:670
+msgid "No roles sent to update"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:690
+msgid "User roles updated"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:716
+msgid "Original role name required"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:777
+msgid "You don't have access to this action"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:787
+msgid "User logged out everywhere"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:824
+#: admin/extensions/user-management/uip-users-ajax.php:995
+#: admin/extensions/user-management/uip-users-ajax.php:1059
+msgid "Role name cannot contain spaces"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:860
+msgid "Unable to add role. Make sure role name is unique"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:898
+#: admin/extensions/user-management/uip-users-ajax.php:947
+msgid "You can't delete a role that is currently assigned to yourself"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:904
+msgid "Role deleted"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:929
+msgid "No roles to delete"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:956
+msgid "Roles deleted"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:977
+#: admin/extensions/user-management/uip-users-ajax.php:1041
+msgid "You don't have sufficent priviledges to add this capability"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1001
+msgid "Capability name cannot contain spaces"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1016
+msgid "Unable to add capability. Make sure role name is unique"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1074
+msgid "Unable to delete capability. Make sure role name is unique"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1078
+msgid "Capability deleted"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1098
+msgid "You don't have sufficent priviledges to create users"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1105
+msgid "Username already exists"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1111
+msgid "Username is not valid"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1131
+msgid "Password is required"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1190
+#: admin/extensions/user-management/uip-users-ajax.php:1230
+msgid "You don't have sufficent priviledges to edit this user"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1200
+msgid "Password reset link sent"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1204
+msgid "Unable to send password reset email at the moment"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1224
+msgid "No users sent to reset passwords!"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1243
+msgid "Unable to send password reset email"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1244
+#: admin/extensions/user-management/uip-users-ajax.php:1395
+#: admin/extensions/user-management/uip-users-ajax.php:1405
+#, php-format
+msgid "User ID: %s"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1250
+msgid "Password reset links succesfully sent"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1271
+msgid "Subject is required"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1277
+msgid "Reply to email is required"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1283
+msgid "Message is required"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1313
+msgid "Unable to send mail at this time"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1317
+msgid "Message sent"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1341
+msgid "You can't delete yourself!"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1350
+msgid "User successfully deleted"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1354
+#: admin/extensions/user-management/uip-users-ajax.php:1359
+#: admin/extensions/user-management/uip-users-ajax.php:1385
+msgid "You don't have sufficent priviledges to delete this user"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1379
+msgid "No users sent to delete!"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1394
+msgid "You can't delete yourself"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1404
+msgid "Unable to delete this user"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1411
+msgid "Users successfully deleted"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1431
+msgid "No actions sent to delete!"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1437
+msgid "You don't have sufficent priviledges to delete these actions"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1457
+#: admin/extensions/user-management/uip-users-ajax.php:1493
+msgid "Actions successfully deleted"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1476
+msgid "You don't have sufficent priviledges to delete all actions"
+msgstr ""
+
+#: admin/extensions/user-management/uip-users-ajax.php:1498
+msgid "Unable to delete all histroy items"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:49
+msgid "Profile Image"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:52
+msgid "Image"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:55
+msgid "Choose Image"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:62
+msgid "Remove"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:193
+#: admin/extensions/user-management/user-management.php:194
+msgid "User Management"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:283
+#: admin/extensions/user-management/user-management.php:397
+#: admin/extensions/user-management/user-management.php:1353
+#: assets/js/uip/blocks/analytics/loader.js:41
+#: assets/js/uip/tools/role-editor.js:16
+msgid "Users"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:287
+#: admin/extensions/user-management/user-management.php:346
+#: admin/extensions/user-management/user-management.php:1312
+msgid "Roles"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:291
+msgid "Activity"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:308
+#: admin/extensions/user-management/user-management.php:335
+#: assets/js/uip/blocks/analytics/google-analytics-map.js:57
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-map.js:52
+msgid "Previous"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:309
+#: admin/extensions/user-management/user-management.php:334
+msgid "Next"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:310
+msgid "Search users"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:311
+msgid "Filter by role"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:312
+msgid "Filter by status"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:313
+#: assets/js/uip/tools/role-editor.js:14
+msgid "Search roles"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:314
+msgid "Search statuses"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:315
+msgid "Table options"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:316
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:23
+#: assets/js/uip/blocks/dynamic/recent-orders.js:22
+msgid "Order"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:317
+msgid "Ascending"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:318
+msgid "Descending"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:319
+msgid "Sort By"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:320
+msgid "Per page"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:321
+msgid "Fields"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:322
+msgid "Date created"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:323
+msgid "On"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:324
+msgid "After"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:325
+msgid "Before"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:326
+#: admin/extensions/user-management/user-management.php:327
+msgid "Date filters"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:328
+#: assets/js/uip/blocks/dynamic/plugin-search.js:28
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:18
+msgid "Details"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:329
+msgid "Account created"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:331
+#: admin/extensions/user-management/user-management.php:344
+#: admin/extensions/user-management/user-management.php:1287
+msgid "Email"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:332
+msgid "Recent page views"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:333
+msgid "Recent activity"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:336
+msgid "Last login"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:337
+msgid "Login location"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:338
+msgid "No recent activity"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:339
+msgid "Total posts"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:340
+msgid "Total comments"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:341
+msgid "User Options"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:342
+msgid "First name"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:343
+msgid "Last name"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:345
+msgid "Assign roles"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:347
+msgid "User notes"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:349
+msgid "Update user"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:350
+msgid "Send password reset"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:351
+#: admin/extensions/user-management/user-management.php:361
+msgid "Send message"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:352
+msgid "Delete user"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:353
+msgid "Are you sure you want to delete this user?"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:354
+msgid "Are you sure you want to the selected users?"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:355
+msgid "Are you sure you want to the selected actions?"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:356
+msgid "Are you sure you want to delete all history?"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:357
+msgid ""
+"Are you sure you want to send password reset links to the selected users?"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:358
+#: admin/extensions/user-management/user-management.php:395
+msgid "Recipients"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:359
+msgid "Subject"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:360
+msgid "Message"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:362
+msgid "Reply to email"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:364
+msgid "Save user"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:365
+#: assets/js/uip/plugins/uip-activity-database.js:15
+msgid "Password"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:366
+#: admin/extensions/user-management/user-management.php:1275
+#: assets/js/uip/plugins/uip-activity-database.js:13
+msgid "Username"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:367
+#: admin/extensions/user-management/user-management.php:1341
+#: assets/js/uip/tools/role-editor.js:32
+msgid "Role name"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:369
+msgid "Save role"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:370
+#: assets/js/uip/tools/role-editor.js:20
+msgid "Capabilities"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:372
+#: assets/js/uip/tools/role-editor.js:25
+msgid ""
+"You are currently editing the administrator role. This is usually the most "
+"important role on the site so please make sure not to remove nessecary "
+"capabilities."
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:375
+#: admin/extensions/user-management/user-management.php:445
+msgid "Delete role"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:376
+msgid "Are you sure you want to delete this role?"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:377
+msgid "Are you sure you want to delete these roles?"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:378
+msgid "Role options"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:379
+msgid "Clone"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:381
+#: assets/js/uip/tools/role-editor.js:33
+msgid "Role label"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:382
+msgid "Single word, no spaces. Underscores and dashes allowed"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:384
+msgid "search roles"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:385
+msgid "Search history"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:386
+msgid "All actions"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:387
+msgid "Add custom capability (Single word, no spaces)"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:388
+msgid "Add capability"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:389
+msgid "roles selected"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:391
+msgid "Deselect"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:392
+msgid "Delete users"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:393
+msgid "Delete actions"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:394
+msgid "Clear selection"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:396
+#: assets/js/uip/blocks/analytics/google-analytics-map.js:58
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-map.js:53
+msgid "users"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:398
+msgid "Replace existing roles"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:399
+msgid "Update roles"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:400
+msgid "users selected"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:401
+msgid "actions selected"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:402
+#: admin/extensions/user-management/user-management.php:438
+msgid "Choose image"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:403
+msgid "Profile image"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:404
+#: admin/extensions/user-management/user-management.php:408
+msgid "Groups"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:405
+msgid "All users"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:406
+msgid "No group"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:407
+msgid "No groups created yet."
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:409
+msgid "New group"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:411
+msgid "Color"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:412
+msgid "Create group"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:413
+msgid "Group name"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:414
+msgid "Edit group"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:415
+msgid "Update group"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:416
+msgid "Remove from group"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:417
+msgid "User groups"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:418
+msgid "Assign groups"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:419
+msgid "Search groups"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:420
+msgid "Pro feature"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:421
+msgid "Upgrade to UiPress Pro to unlock the user management and activity logs"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:422
+msgid "View Uipress Pro plans"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:423
+msgid "Group icon"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:424
+msgid "Logout everywhere else"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:425
+msgid "Open profile"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:426
+msgid ""
+"Are you sure you want to delete this capability? This will remove the "
+"capability sitewide. Please note not all capabilities can be deleted."
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:427
+msgid "Activity Log is very big"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:429
+msgid ""
+"Your activity log now has over 20,000 entries, consider reducing how long "
+"entries are stored for, the total amount of logs that can be kept or delete "
+"all of your entries below."
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:432
+msgid "Dismiss"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:433
+msgid "Delete all"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:434
+msgid "Delete all actions"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:435
+msgid "Are you sure you want to delete all history items? This can't be undone"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:439
+msgid "Change image"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:440
+msgid "Image url"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:442
+msgid "View user profile"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:443
+msgid "Others"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:444
+msgid "New message"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:446
+#: assets/js/uip/blocks/dynamic/loader.js:64
+#: assets/js/uip/blocks/inputs/loader.js:28
+#: assets/js/uip/blocks/inputs/loader.js:79
+#: assets/js/uip/blocks/inputs/loader.js:118
+#: assets/js/uip/blocks/inputs/loader.js:167
+#: assets/js/uip/blocks/inputs/loader.js:205
+#: assets/js/uip/blocks/inputs/loader.js:254
+#: assets/js/uip/blocks/inputs/loader.js:293
+#: assets/js/uip/blocks/inputs/loader.js:336
+#: assets/js/uip/blocks/inputs/loader.js:375
+#: assets/js/uip/blocks/inputs/loader.js:427
+#: assets/js/uip/tools/role-editor.js:19
+msgid "Label"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:447
+#: assets/js/uip/tools/role-editor.js:36
+msgid "Toggle all"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:450
+msgid "Login redirect"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:451
+msgid "Search capabilities"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:452
+#: assets/js/uip/tools/role-editor.js:18
+msgid "No users with this role"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:599
+msgid "Read"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:635
+msgid "Manage"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:641
+msgid "Export"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:647
+msgid "Import"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:653
+msgid "Custom"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:838
+msgid "User no longer exists"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:843
+#: admin/extensions/user-management/user-management.php:1174
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:856
+msgid "Viewed page"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:867
+msgid "Created post"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:870
+#: admin/extensions/user-management/user-management.php:891
+#: admin/extensions/user-management/user-management.php:939
+msgid "View page"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:874
+#: admin/extensions/user-management/user-management.php:895
+#: admin/extensions/user-management/user-management.php:912
+#: admin/extensions/user-management/user-management.php:943
+msgid "Edit page"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:886
+msgid "Post modified"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:888
+msgid "Modified post"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:907
+msgid "Post moved to trash"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:909
+msgid "Moved post to trash"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:923
+msgid "Deleted post"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:935
+#, php-format
+msgid "Post status changed from %s to %s"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:956
+msgid "Posted a comment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:958
+msgid "Posted a comment on post"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:969
+#: admin/extensions/user-management/user-management.php:999
+msgid "View comment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:973
+#: admin/extensions/user-management/user-management.php:1003
+msgid "Edit comment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:985
+msgid "Trashed a comment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:987
+msgid "Moved a comment to the trash"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1013
+msgid "Deleted a comment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1015
+msgid "Permanently deleted a comment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1023
+#, php-format
+msgid "A plugin called %s was activated"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1031
+#, php-format
+msgid "A plugin called %s was deactivated"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1039
+#, php-format
+msgid "A plugin called %s was deleted"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1045
+msgid "User logged in"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1047
+#, php-format
+msgid "Logged in with ip address %s. Country: %s"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1053
+msgid "User logged out"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1055
+#, php-format
+msgid "Logged out with ip address %s. Country: %s"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1068
+#, php-format
+msgid "Site option (%s) was added with a value of (%s)"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1078
+msgid "Uploaded attachment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1080
+#, php-format
+msgid "Attachment called (%s) was uploaded to (%s). Attachment ID: %s"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1089
+msgid "View attachment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1097
+msgid "Deleted attachment"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1099
+#, php-format
+msgid "Attachment called (%s) was deleted. Attachment ID: %s"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1107
+#, php-format
+msgid "New user created with username (%s) and email (%s)"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1115
+#, php-format
+msgid "A user with username (%s) and email (%s) was deleted"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1152
+#, php-format
+msgid "A user with username (%s) and email (%s) was updated from (%s) to (%s)"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1294
+msgid "First Name"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1300
+msgid "Last Name"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1306
+msgid "Last Login"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1318
+#: assets/js/uip/plugins/uip-conditions.js:32
+msgid "User ID"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1347
+msgid "Role"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1360
+msgid "Permissions granted"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1377
+msgid "ID"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1383
+msgid "User"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1389
+msgid "IP Address"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1396
+msgid "Action"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1402
+msgid "Description"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1408
+msgid "Date"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1415
+msgid "Time"
+msgstr ""
+
+#: admin/extensions/user-management/user-management.php:1485
+msgid "Option change"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-charts.js:44
+#: assets/js/uip/blocks/analytics/google-analytics-map.js:51
+#: assets/js/uip/blocks/analytics/google-analytics-realtime.js:45
+#: assets/js/uip/blocks/analytics/google-analytics-tables.js:47
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-charts.js:39
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-map.js:46
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-tables.js:42
+msgid "last period"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-charts.js:45
+#: assets/js/uip/blocks/analytics/google-analytics-map.js:52
+#: assets/js/uip/blocks/analytics/google-analytics-realtime.js:46
+#: assets/js/uip/blocks/analytics/google-analytics-tables.js:48
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-charts.js:40
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-map.js:47
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-tables.js:43
+msgid ""
+"Please select a chart metric in this block's options to show chart data."
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-charts.js:46
+#: assets/js/uip/blocks/analytics/google-analytics-map.js:53
+#: assets/js/uip/blocks/analytics/google-analytics-realtime.js:47
+#: assets/js/uip/blocks/analytics/google-analytics-tables.js:49
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-charts.js:41
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-map.js:48
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-tables.js:44
+msgid "Switch account"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-map.js:54
+#: assets/js/uip/blocks/analytics/google-analytics-tables.js:50
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-map.js:49
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-tables.js:45
+msgid "Count"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-map.js:55
+#: assets/js/uip/blocks/analytics/google-analytics-tables.js:51
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-map.js:50
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-tables.js:46
+msgid "Change"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-map.js:56
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-map.js:51
+msgid "Current"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-realtime.js:48
+msgid "minutes ago"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-realtime.js:49
+msgid "Thirty minutes ago"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-analytics-realtime.js:50
+msgid "Now"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-connect-account.js:70
+msgid "Connection failed"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-connect-account.js:70
+msgid "Incorrect credentials returned from account. Please try again"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/google-connect-account.js:82
+msgid "Unable to save account"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:10
+msgid "GA charts"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:12
+msgid "Outputs your choice of charts and options on what data to display"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:13
+#: assets/js/uip/blocks/analytics/loader.js:179
+#: assets/js/uip/blocks/analytics/loader.js:303
+#: assets/js/uip/blocks/analytics/loader.js:403
+#: assets/js/uip/settings/template-settings-groups.js:12
+msgid "Analytics"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:22
+#: assets/js/uip/blocks/analytics/loader.js:188
+#: assets/js/uip/blocks/analytics/loader.js:312
+#: assets/js/uip/blocks/analytics/loader.js:412
+#: assets/js/uip/blocks/dynamic/loader.js:23
+#: assets/js/uip/blocks/dynamic/loader.js:107
+#: assets/js/uip/blocks/dynamic/loader.js:167
+#: assets/js/uip/blocks/dynamic/loader.js:216
+#: assets/js/uip/blocks/dynamic/loader.js:281
+#: assets/js/uip/blocks/dynamic/loader.js:357
+#: assets/js/uip/blocks/dynamic/loader.js:426
+#: assets/js/uip/blocks/dynamic/loader.js:520
+#: assets/js/uip/blocks/elements/loader.js:22
+#: assets/js/uip/blocks/elements/loader.js:69
+#: assets/js/uip/blocks/elements/loader.js:125
+#: assets/js/uip/blocks/elements/loader.js:214
+#: assets/js/uip/blocks/inputs/loader.js:22
+#: assets/js/uip/blocks/inputs/loader.js:112
+#: assets/js/uip/blocks/inputs/loader.js:199
+#: assets/js/uip/blocks/inputs/loader.js:287
+#: assets/js/uip/blocks/inputs/loader.js:369
+#: assets/js/uip/blocks/layout/loader.js:23
+#: assets/js/uip/blocks/storeanalytics/loader.js:21
+#: assets/js/uip/blocks/storeanalytics/loader.js:161
+#: assets/js/uip/blocks/storeanalytics/loader.js:267
+msgid "Block options"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:28
+#: assets/js/uip/blocks/analytics/loader.js:194
+#: assets/js/uip/blocks/analytics/loader.js:318
+#: assets/js/uip/blocks/analytics/loader.js:418
+#: assets/js/uip/blocks/storeanalytics/loader.js:27
+#: assets/js/uip/blocks/storeanalytics/loader.js:167
+#: assets/js/uip/blocks/storeanalytics/loader.js:273
+msgid "Chart title"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:30
+msgid "Analytics chart"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:36
+#: assets/js/uip/blocks/analytics/loader.js:202
+#: assets/js/uip/blocks/analytics/loader.js:326
+#: assets/js/uip/blocks/analytics/loader.js:426
+#: assets/js/uip/blocks/storeanalytics/loader.js:35
+#: assets/js/uip/blocks/storeanalytics/loader.js:175
+#: assets/js/uip/blocks/storeanalytics/loader.js:281
+msgid "Chart metric"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:45
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-tables.js:48
+msgid "Revenue"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:49
+msgid "Sessions"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:53
+msgid "Page views"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:57
+msgid "Conversion rate"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:61
+msgid "Engagement rate"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:65
+msgid "Purchases"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:69
+msgid "Checkouts"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:73
+msgid "Add to carts"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:77
+msgid "Average engagement time"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:86
+#: assets/js/uip/blocks/storeanalytics/loader.js:61
+msgid "Chart type"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:91
+#: assets/js/uip/blocks/storeanalytics/loader.js:66
+msgid "Line"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:95
+#: assets/js/uip/blocks/storeanalytics/loader.js:70
+msgid "Bar"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:103
+#: assets/js/uip/blocks/analytics/loader.js:233
+#: assets/js/uip/blocks/analytics/loader.js:337
+#: assets/js/uip/blocks/storeanalytics/loader.js:78
+#: assets/js/uip/blocks/storeanalytics/loader.js:190
+#: assets/js/uip/blocks/storeanalytics/loader.js:304
+msgid "Default date range (days)"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:104
+#: assets/js/uip/blocks/analytics/loader.js:441
+#: assets/js/uip/blocks/storeanalytics/loader.js:79
+msgid "Line colour"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:105
+#: assets/js/uip/blocks/storeanalytics/loader.js:80
+msgid "Comparison line colour"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:106
+#: assets/js/uip/blocks/storeanalytics/loader.js:81
+msgid "Hide chart"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:107
+#: assets/js/uip/blocks/analytics/loader.js:234
+#: assets/js/uip/blocks/analytics/loader.js:339
+#: assets/js/uip/blocks/analytics/loader.js:442
+msgid "Disable change account option"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:113
+#: assets/js/uip/blocks/analytics/loader.js:240
+#: assets/js/uip/blocks/analytics/loader.js:345
+#: assets/js/uip/blocks/analytics/loader.js:448
+#: assets/js/uip/blocks/dynamic/loader.js:39
+#: assets/js/uip/blocks/dynamic/loader.js:117
+#: assets/js/uip/blocks/dynamic/loader.js:174
+#: assets/js/uip/blocks/dynamic/loader.js:232
+#: assets/js/uip/blocks/dynamic/loader.js:310
+#: assets/js/uip/blocks/dynamic/loader.js:387
+#: assets/js/uip/blocks/dynamic/loader.js:436
+#: assets/js/uip/blocks/dynamic/loader.js:530
+#: assets/js/uip/blocks/elements/loader.js:29
+#: assets/js/uip/blocks/elements/loader.js:86
+#: assets/js/uip/blocks/elements/loader.js:165
+#: assets/js/uip/blocks/elements/loader.js:231
+#: assets/js/uip/blocks/inputs/loader.js:54
+#: assets/js/uip/blocks/inputs/loader.js:142
+#: assets/js/uip/blocks/inputs/loader.js:229
+#: assets/js/uip/blocks/inputs/loader.js:311
+#: assets/js/uip/blocks/inputs/loader.js:402
+#: assets/js/uip/blocks/layout/loader.js:56
+#: assets/js/uip/blocks/storeanalytics/loader.js:87
+#: assets/js/uip/blocks/storeanalytics/loader.js:196
+#: assets/js/uip/blocks/storeanalytics/loader.js:311
+msgid "Block container"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:121
+#: assets/js/uip/blocks/analytics/loader.js:248
+#: assets/js/uip/blocks/analytics/loader.js:353
+#: assets/js/uip/blocks/analytics/loader.js:456
+#: assets/js/uip/blocks/dynamic/loader.js:47
+#: assets/js/uip/blocks/dynamic/loader.js:125
+#: assets/js/uip/blocks/dynamic/loader.js:182
+#: assets/js/uip/blocks/dynamic/loader.js:240
+#: assets/js/uip/blocks/dynamic/loader.js:318
+#: assets/js/uip/blocks/dynamic/loader.js:395
+#: assets/js/uip/blocks/dynamic/loader.js:444
+#: assets/js/uip/blocks/dynamic/loader.js:538
+#: assets/js/uip/blocks/elements/loader.js:37
+#: assets/js/uip/blocks/elements/loader.js:94
+#: assets/js/uip/blocks/elements/loader.js:173
+#: assets/js/uip/blocks/elements/loader.js:239
+#: assets/js/uip/blocks/inputs/loader.js:62
+#: assets/js/uip/blocks/inputs/loader.js:150
+#: assets/js/uip/blocks/inputs/loader.js:237
+#: assets/js/uip/blocks/inputs/loader.js:319
+#: assets/js/uip/blocks/inputs/loader.js:410
+#: assets/js/uip/blocks/storeanalytics/loader.js:95
+#: assets/js/uip/blocks/storeanalytics/loader.js:204
+#: assets/js/uip/blocks/storeanalytics/loader.js:319
+msgid "Style"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:129
+#: assets/js/uip/blocks/analytics/loader.js:256
+#: assets/js/uip/blocks/analytics/loader.js:361
+#: assets/js/uip/blocks/analytics/loader.js:464
+#: assets/js/uip/blocks/storeanalytics/loader.js:103
+#: assets/js/uip/blocks/storeanalytics/loader.js:212
+#: assets/js/uip/blocks/storeanalytics/loader.js:327
+msgid "Table title"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:138
+#: assets/js/uip/blocks/storeanalytics/loader.js:112
+msgid "Chart canvas"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:147
+#: assets/js/uip/blocks/analytics/loader.js:473
+#: assets/js/uip/blocks/storeanalytics/loader.js:121
+msgid "Chart labels"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:156
+#: assets/js/uip/blocks/analytics/loader.js:283
+#: assets/js/uip/blocks/analytics/loader.js:482
+#: assets/js/uip/blocks/storeanalytics/loader.js:130
+#: assets/js/uip/blocks/storeanalytics/loader.js:239
+msgid "Percentage change"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:176
+msgid "GA tables"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:178
+msgid "Outputs your choice of tables and options on what data to display"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:196
+#: assets/js/uip/blocks/analytics/loader.js:320
+msgid "Analytics table"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:207
+msgid "Visits by City"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:211
+#: assets/js/uip/blocks/analytics/loader.js:331
+msgid "Visits by Country"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:215
+msgid "Visits by source"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:219
+msgid "Visits by page"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:223
+msgid "Events"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:227
+msgid "Devices"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:265
+#: assets/js/uip/blocks/analytics/loader.js:370
+#: assets/js/uip/blocks/storeanalytics/loader.js:221
+#: assets/js/uip/blocks/storeanalytics/loader.js:336
+msgid "Dates"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:274
+#: assets/js/uip/blocks/storeanalytics/loader.js:230
+msgid "Table"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:300
+msgid "GA map"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:302
+msgid "Outputs your visitor data to a interactive map"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:338
+#: assets/js/uip/blocks/storeanalytics/loader.js:305
+msgid "Use dark theme for map"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:379
+#: assets/js/uip/blocks/storeanalytics/loader.js:345
+msgid "Map"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:400
+msgid "GA realtime"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:402
+msgid "Displays live visitor data about your site"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:420
+msgid "Analytics realtime"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:431
+msgid "Active users"
+msgstr ""
+
+#: assets/js/uip/blocks/analytics/loader.js:435
+msgid "Conversions"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/content-navigator.js:189
+#: assets/js/uip/blocks/dynamic/content-navigator.js:699
+msgid "Item duplicated"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/content-navigator.js:212
+#: assets/js/uip/blocks/dynamic/content-navigator.js:721
+msgid "Item deleted"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:10
+msgid "Grouped Date range"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:12
+msgid ""
+"Outputs a grouped date picker. This date picker is used for controlling it's "
+"siblings range such as analytic blocks."
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:13
+#: assets/js/uip/blocks/dynamic/loader.js:98
+#: assets/js/uip/blocks/dynamic/loader.js:158
+#: assets/js/uip/blocks/dynamic/loader.js:207
+#: assets/js/uip/blocks/dynamic/loader.js:272
+#: assets/js/uip/blocks/dynamic/loader.js:348
+#: assets/js/uip/blocks/elements/loader.js:13
+#: assets/js/uip/blocks/elements/loader.js:60
+#: assets/js/uip/blocks/elements/loader.js:117
+msgid "Dynamic"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:29
+#: assets/js/uip/blocks/dynamic/loader.js:222
+#: assets/js/uip/blocks/inputs/loader.js:42
+#: assets/js/uip/blocks/inputs/loader.js:390
+msgid "Placeholder"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:31
+#: assets/js/uip/blocks/inputs/loader.js:44
+msgid "Placeholder text..."
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:55
+#: assets/js/uip/blocks/inputs/loader.js:70
+msgid "Input style"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:73
+msgid "Group area"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:95
+msgid "Media library"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:97
+msgid "Outputs a media library, with upload, delete and folder features"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:110
+#: assets/js/uip/blocks/dynamic/loader.js:360
+msgid "Only show users own content?"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:111
+msgid "Photos per page"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:133
+msgid "Image area"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:155
+msgid "Plugin updates"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:157
+msgid ""
+"Outputs a list of available plugin updates and allows you update from the "
+"block"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:204
+msgid "Plugin search"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:206
+msgid ""
+"Search the plugin directory with quick filters, discover new plugins and "
+"install all from one block"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:224
+msgid "Search plugins..."
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:248
+msgid "Search Input"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:269
+msgid "User meta"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:271
+msgid "Outputs selected user meta, either as a string or an list of values"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:284
+msgid "Meta to output"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:288
+msgid "List direction (for array values)"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:293
+#: assets/js/uip/blocks/elements/loader.js:147
+msgid "Vertical"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:297
+#: assets/js/uip/blocks/elements/loader.js:151
+msgid "Horizontal"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:326
+msgid "Meta value"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:345
+msgid "Content Navigator"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:347
+msgid ""
+"Creates a navigatable file tree of all your site content like posts, pages "
+"and media. Allows for creation of new folders and organisation of content"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:361
+msgid "Post types available in navigator "
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:365
+msgid "Default link"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:370
+msgid "Edit post"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:374
+msgid "View post"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:415
+msgid "Recent orders"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:417
+msgid "Create a list of recent woocommerce orders"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:429
+#: assets/js/uip/blocks/dynamic/loader.js:523
+msgid "Hide search"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:430
+#: assets/js/uip/blocks/dynamic/loader.js:524
+msgid "Orders per page"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:452
+msgid "Posts list"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:461
+msgid "Item title"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:470
+msgid "Item meta"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:479
+msgid "Pagination buttons"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:488
+msgid "Post type label"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:509
+msgid "Orders kanban"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:511
+msgid ""
+"Creates a kanban view of recent woocommerce orders and allows for drag and "
+"drop management"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:546
+msgid "Status titles"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/loader.js:555
+msgid "Order item"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:21
+#: assets/js/uip/blocks/dynamic/recent-orders.js:20
+msgid "No posts found"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:22
+#: assets/js/uip/blocks/dynamic/recent-orders.js:21
+msgid "By"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:25
+#: assets/js/uip/blocks/dynamic/recent-orders.js:24
+msgid "Total"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:26
+msgid "Search by customer name or email"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:35
+msgid "On hold"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:44
+msgid "Payment pending"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:53
+msgid "Processing"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:62
+msgid "Completed"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:222
+msgid "Cancel order"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:223
+msgid "Cancellation notes"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:224
+msgid "No orders found with this status"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/orders-kanban.js:289
+msgid "Order updated"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:27
+msgid "Install"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:29
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:19
+msgid "New verasion"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:30
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:20
+msgid "Watch out"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:31
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:21
+msgid "This plugin has not been tested with your platform version"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:32
+msgid "No plugins found for query"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:33
+msgid "Results"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:34
+msgid "Activate"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:35
+msgid "Rating"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:36
+msgid "Last updated"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:37
+msgid "Downloads"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:38
+msgid "Active installs"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:39
+msgid "Requires wp"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:40
+msgid "Requires PHP"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:41
+msgid "or higher"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:42
+msgid "Images"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:226
+#: assets/js/uip/blocks/dynamic/plugin-search.js:248
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:94
+msgid "Success"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:226
+msgid "was succesfully installed"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-search.js:249
+msgid ""
+"was succesfully activated. You may need to refresh the page for any menu "
+"links to update"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:22
+msgid "Plugins are all up to date"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/plugin-updates.js:94
+msgid "was succesfully updated"
+msgstr ""
+
+#: assets/js/uip/blocks/dynamic/recent-orders.js:25
+msgid "Search orders"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:10
+msgid "iFrame"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:12
+msgid "Outputs a iframe block"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:24
+msgid "Iframe URL"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:57
+msgid "HTML"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:59
+msgid "This block allows you to output your own HTML into the template"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:75
+#: assets/js/uip/settings/global-settings-groups.js:143
+msgid "Custom HTML"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:114
+msgid "Icon list"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:116
+msgid "Creates a list with icons"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:131
+msgid "List items"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:134
+msgid "List item one"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:135
+msgid "List item two"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:142
+msgid "List direction"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:181
+msgid "Icons"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:202
+#: assets/js/uip/blocks/elements/loader.js:220
+msgid "Shortcode"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:204
+msgid "This block allows you to output custom shortcodes into the template"
+msgstr ""
+
+#: assets/js/uip/blocks/elements/loader.js:205
+msgid "Elements"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/colour-select-input.js:20
+#: assets/js/uip/blocks/inputs/image-select-input.js:19
+msgid "Replace"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/colour-select-input.js:21
+#: assets/js/uip/blocks/inputs/image-select-input.js:20
+msgid "Add image"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:10
+#: assets/js/uip/blocks/inputs/loader.js:47
+msgid "Date range"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:12
+msgid "Outputs a date picker that can be either a single date or date range."
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:13
+#: assets/js/uip/blocks/inputs/loader.js:103
+#: assets/js/uip/blocks/inputs/loader.js:190
+#: assets/js/uip/blocks/inputs/loader.js:278
+#: assets/js/uip/blocks/inputs/loader.js:360
+msgid "Form"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:30
+msgid "Text input"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:36
+#: assets/js/uip/blocks/inputs/loader.js:126
+#: assets/js/uip/blocks/inputs/loader.js:213
+#: assets/js/uip/blocks/inputs/loader.js:301
+#: assets/js/uip/blocks/inputs/loader.js:383
+msgid "Meta key"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:48
+#: assets/js/uip/blocks/inputs/loader.js:136
+#: assets/js/uip/blocks/inputs/loader.js:223
+#: assets/js/uip/blocks/inputs/loader.js:305
+#: assets/js/uip/blocks/inputs/loader.js:396
+msgid "Required field"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:100
+msgid "Checkbox"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:102
+msgid ""
+"A checkbox block with support for multiple options. For use with the form "
+"block"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:120
+#: assets/js/uip/blocks/inputs/loader.js:207
+#: assets/js/uip/blocks/inputs/loader.js:295
+#: assets/js/uip/blocks/inputs/loader.js:377
+msgid "Select"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:133
+#: assets/js/uip/blocks/inputs/loader.js:220
+msgid "Select options"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:158
+#: assets/js/uip/blocks/inputs/loader.js:245
+msgid "Select style"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:187
+msgid "Radio"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:189
+msgid ""
+"A radio block with support for multiple options. For use with the form block"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:275
+msgid "Image select"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:277
+msgid "Outputs a image select input. For use with the form block"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:327
+#: assets/js/uip/blocks/inputs/loader.js:418
+msgid "Select area"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:357
+msgid "Colour select"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:359
+msgid "Outputs a colour select input. For use with the form block"
+msgstr ""
+
+#: assets/js/uip/blocks/inputs/loader.js:392
+msgid "Select colour..."
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:10
+msgid "Modal"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:12
+msgid "Outputs a modal block with customisable content"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:13
+msgid "Layout"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:29
+msgid "Trigger text"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:31
+msgid "Press me"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:37
+msgid "Icon"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:38
+msgid "Icon position"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:42
+#: assets/js/uip/blocks/layout/loader.js:44
+#: assets/js/uip/blocks/layout/loader.js:91
+msgid "Modal title"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:50
+msgid "Keyboard shortcut to open"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:64
+msgid "Trigger style"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:73
+msgid "Trigger hover styles"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:82
+msgid "Trigger active styles"
+msgstr ""
+
+#: assets/js/uip/blocks/layout/loader.js:99
+msgid "Modal body"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:10
+msgid "WC charts"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:12
+msgid "Outputs your choice of order data from woocommerce as a chart"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:29
+msgid "Sales chart"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:40
+#: assets/js/uip/blocks/storeanalytics/loader.js:286
+msgid "Total orders"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:44
+#: assets/js/uip/blocks/storeanalytics/loader.js:290
+msgid "Total revenue"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:48
+#: assets/js/uip/blocks/storeanalytics/loader.js:294
+msgid "Failed orders"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:52
+#: assets/js/uip/blocks/storeanalytics/loader.js:298
+msgid "Refunded orders"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:150
+msgid "WC tables"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:152
+msgid "Outputs your choice of order data from woocommerce as a table"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:169
+msgid "Store products"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:180
+msgid "Top products by revenue"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:184
+msgid "Top products by quantity"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:256
+msgid "WC map"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:258
+msgid "Outputs order data from woocommerce as a interactive map"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/loader.js:275
+msgid "Sales map"
+msgstr ""
+
+#: assets/js/uip/blocks/storeanalytics/woocommerce-analytics-tables.js:47
+msgid "Sold"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-activity-database.js:16
+msgid "Test connection"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-activity-database.js:17
+msgid "Host"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-activity-database.js:18
+msgid "Enabled"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:21
+msgid "New separator"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-advanced-menu-editor.js:22
+msgid "New link"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-conditions.js:14
+msgid "New condition"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-conditions.js:15
+msgid ""
+"Conditions allow you to control who sees this block. If all conditions are "
+"not met then this block will not be loaded for the user."
+msgstr ""
+
+#: assets/js/uip/plugins/uip-conditions.js:17
+msgid "Operator"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-conditions.js:24
+msgid "User role"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-conditions.js:36
+msgid "User email"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-conditions.js:42
+msgid "Is"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-conditions.js:46
+msgid "Is not"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-google-analytics.js:129
+msgid "No google account connected"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-google-analytics.js:140
+msgid ""
+"No pro licence found. Please add a valid pro licence to use google analytics"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-google-analytics.js:249
+#: assets/js/uip/plugins/uip-woocommerce.js:216
+msgid "Unable to fetch analytic data"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-keyboard-shortcut.js:14
+msgid "Enable keybaord shortcut?"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-keyboard-shortcut.js:15
+msgid "Type your custom shortcut below"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-keyboard-shortcut.js:16
+msgid "Display shortcut in trigger"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-list-creator.js:12
+msgid "New item"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-list-creator.js:35
+msgid "List item"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-pro-plugin.js:29
+msgid "Thank you for installing UiPress 3 Pro!"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-pro-plugin.js:30
+msgid "For pro features to work correctly, please add your pro licence below"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-pro-plugin.js:31
+msgid "Register"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-pro-plugin.js:181
+#: assets/js/uip/plugins/uip-pro-plugin.js:197
+msgid "Check failed"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-pro-plugin.js:181
+msgid "Unable to contact licencing servers. Please try again later"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-pro-plugin.js:191
+msgid "Thank you!"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-pro-plugin.js:191
+msgid "Your key is valid and you can now use pro features"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-pro-plugin.js:197
+msgid "Something went wrong. Please try again later"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-search-post-type-select.js:13
+msgid "Select post types"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-search-post-type-select.js:14
+msgid "Seach post types"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-user-meta-select.js:14
+msgid "Choose meta key"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-user-meta-select.js:15
+msgid "Search keys"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-user-meta-select.js:16
+msgid "Change key"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-woocommerce.js:103
+msgid ""
+"No pro licence found. Please add a valid pro licence to use woocommerce "
+"analytics"
+msgstr ""
+
+#: assets/js/uip/plugins/uip-woocommerce.js:111
+msgid ""
+"Woocommerce needs to be active on this site to use woocommerce analytics "
+"blocks"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:12
+#: assets/js/uip/settings/template-settings-groups.js:7
+msgid "White label"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:18
+msgid "Login"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:23
+#: assets/js/uip/settings/global-settings-groups.js:207
+msgid "Content folders"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:37
+msgid "Activity log"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:51
+msgid "Extensions"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:64
+msgid "Hide UiPress from plugin table"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:65
+msgid ""
+"If enabled, both UiPress lite and pro (if installed) will be hidden from the "
+"plugins table"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:74
+msgid "Add user roles as body class"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:75
+msgid ""
+"If enabled, the current user roles will be added as classes to the admin "
+"body tag. This can give you more flexibility in your css for role based "
+"conditions"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:83
+msgid "Enqueue styles"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:84
+msgid "Add stylesheets to the head of every admin page"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:93
+msgid "Enqueue scripts"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:94
+msgid "Add scripts to the head of every admin page"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:104
+msgid "HTML for head"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:105
+msgid "Add HTML here to be added to every admin page head section"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:118
+msgid "Dark mode"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:119
+msgid "Forces dark mode on the login page"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:127
+msgid "Disable language selector"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:128
+msgid "Disables the language selector on the login page"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:135
+msgid "Remove UiPress link"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:136
+msgid "Removes the powered by uipress link"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:144
+msgid ""
+"HTML to be added to the side panel of the login page. Only works when the "
+"login theme is enabled and not using the centered form."
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:155
+msgid "Custom CSS"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:156
+msgid "CSS to be added to the login page"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:169
+msgid "Private library"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:170
+msgid ""
+"If enabled, users will only be able to view their own media in the media "
+"library. This does not apply to administrators"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:179
+msgid "Private posts"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:180
+msgid ""
+"If enabled, users will only be able to view their own posts and pages in the "
+"post tables. This does not apply to administrators"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:189
+msgid "Menu builder"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:190
+msgid ""
+"The menu builder allows you to create custom admin menus for roles and users"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:198
+msgid "User management"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:199
+msgid ""
+"The user management page allows you manage your users, roles and user "
+"activity all in one place"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:208
+msgid "Enables a folder system for posts, pages, custom post types and media"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:216
+msgid "Enable activity log"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:217
+msgid ""
+"If enabled, actions taken by all users, posts changes, comments, post "
+"creation etc in the activity log."
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:224
+msgid "Anonymize user IP addresses"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:225
+msgid ""
+"Each history item logs the users IP address, enable this to anonymize the "
+"address."
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:241
+msgid "Max number of history items to keep"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:243
+msgid ""
+"Changing this will ensure you database doesn't get overloaded with entries, "
+"the default is 20,000. The optimum number will depend on your hosting, disk "
+"space and other factors but no more than 50,000 is recomended."
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:261
+msgid "How long to keep history"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:262
+msgid ""
+"History items will be deleted after 60 days, enter the amount of days to "
+"keep items to change this"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:279
+msgid "Actions not to track"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:280
+msgid "Select actions you don't want uipress to log in the activity log."
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:377
+msgid "Use remote database"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:378
+msgid ""
+"Instead of storing history in your default WordPress database you can use an "
+"alternate database by adding the details below"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:396
+msgid "Folders per user"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:397
+msgid "If enabled, users will only see their own folders"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:405
+msgid "Folders per type"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:406
+msgid ""
+"If enabled, created folders will be unique to the current post type and "
+"won't show on all post types"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:414
+msgid "Enabled for post types"
+msgstr ""
+
+#: assets/js/uip/settings/global-settings-groups.js:415
+msgid "Choose the post types you wish to use folders with"
+msgstr ""
+
+#: assets/js/uip/settings/template-settings-groups.js:27
+msgid "Template favicon"
+msgstr ""
+
+#: assets/js/uip/settings/template-settings-groups.js:37
+msgid "Replace Wordpress in site title"
+msgstr ""
+
+#: assets/js/uip/settings/template-settings-groups.js:48
+msgid "Google Analtics account set on user level"
+msgstr ""
+
+#: assets/js/uip/settings/template-settings-groups.js:49
+msgid ""
+"By default, accounts are set site wide. So whoever logs in sees the same "
+"account data. Setting this on a user level allows each user to sync their "
+"own account"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:7
+msgid "Border Width"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:14
+msgid "Border Radius"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:21
+msgid "Border Colour"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:29
+msgid "Margin xxs"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:36
+msgid "Margin xs"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:43
+msgid "Margin s"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:50
+msgid "Margin m"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:57
+msgid "Margin l"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:65
+msgid "Padding xxs"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:72
+msgid "Padding xs"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:79
+msgid "Padding s"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:86
+msgid "Padding m"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:93
+msgid "Padding l"
+msgstr ""
+
+#: assets/js/uip/styles/pro-styles.js:100
+msgid "Font family"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:15
+msgid "Permissions"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:17
+msgid "others"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:23
+msgid "Save"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:28
+msgid "Are you sure?"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:29
+msgid ""
+"Please double check the role you are deleting and ensure you no longer "
+"require it"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:30
+msgid "Yes, delete role"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:34
+msgid "Create role"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:35
+msgid "Clone role"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:37
+msgid "New capability"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:38
+msgid "Create capability"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:39
+msgid "Capability name"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:209
+msgid "Role name can not be emtpty"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:214
+msgid "Role label can not be emtpty"
+msgstr ""
+
+#: assets/js/uip/tools/role-editor.js:275
+msgid "Capability name can not be emtpty"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "UiPress Pro"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://uipress.co"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"UiPress is an all in one solution for tailoring your WordPress admin "
+"interactions. UiPress pro expands the uipress lite plugins with new blocks "
+"and extra features"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Admin 2020"
+msgstr ""

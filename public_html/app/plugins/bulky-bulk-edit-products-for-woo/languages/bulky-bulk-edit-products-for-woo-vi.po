@@ -1,0 +1,773 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bulky - Bulk Edit Products fo Woo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 08:46+0000\n"
+"PO-Revision-Date: 2022-09-16 01:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: Tiếng Việt\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0.2\n"
+"X-Domain: woocommerce-bulk-editor"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:19
+msgid "Add"
+msgstr "Thêm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:31
+msgid "Add file"
+msgstr "Thêm tệp"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:27
+msgid "Add image"
+msgstr "Thêm ảnh"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:84
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:37
+msgid "Add new"
+msgstr "Thêm mới"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:43
+msgid "Add variation"
+msgstr "Thêm biến thể"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:448
+msgid "All fields"
+msgstr "Tất cả trường"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:202
+msgid "Allow backorder"
+msgstr "Cho phép đặt hàng trước"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:788
+msgid "And"
+msgstr "Và"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:11
+msgid "Any..."
+msgstr "Bất kỳ..."
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:15
+msgid "Attribute"
+msgstr "Thuộc tính"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:125
+msgid "Attributes"
+msgstr "Thuộc tính"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:51
+msgid "Author"
+msgstr "Tác giả"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/support.php:50
+msgid "Auto update key"
+msgstr "Mã tự động cập nhật"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:370
+msgid "Backorders"
+msgstr "Đặt hàng trước"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:766
+msgid "Begin"
+msgstr "Bắt đầu với"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/admin.php:22
+msgid "Bulky"
+msgstr "Bulky"
+
+#. Name of the plugin
+#, fuzzy
+#| msgid "Bulky - Bulk Edit Products for WooCommerce Premium"
+msgid "Bulky - Bulk Edit Products for WooCommerce"
+msgstr "Bulky - Bulk Edit Products for WooCommerce Premium"
+
+#. Description of the plugin
+msgid ""
+"Bulky - Bulk Edit Products for WooCommerce helps easily work with products "
+"in bulk. The plugin offers sufficient simple and advanced tools to help "
+"filter various available attributes of simple and variable products such as  "
+"ID, Title, Content, Excerpt, Slugs, SKU, Post date, range of regular price "
+"and sale price, Sale date, range of stock quantity, Product type, Categories."
+"... Users can quickly search for wanted products fields and work with the "
+"product fields in bulk. The plugin promises to help users to save time and "
+"optimize manipulation when working with products in bulk."
+msgstr ""
+"Bulky - Bulk Edit Products for WooCommerce giúp dễ dàng quản lý và chỉnh sửa "
+"các sản phẩm hàng loạt. Plugin cung cấp các công cụ đơn giản và nâng cao để "
+"giúp lọc các thuộc tính có sẵn khác nhau của các sản phẩm đơn giản và biến "
+"thể như ID, Tiêu đề, Nội dung, Đoạn trích, Slug, Mã hàng, Ngày đăng, khoảng "
+"giá thông thường và giá ưu đãi, Ngày bán, Số lượng, Loại sản phẩm, Danh mục ."
+"... Người dùng có thể nhanh chóng tìm kiếm các trường sản phẩm mong muốn và "
+"tiến hành chỉnh sửa/quản lý với số lượng lớn. Plugin tiềm năng sẽ giúp người "
+"dùng tiết kiệm thời gian và tối ưu hóa thao tác khi làm việc với nhiều sản "
+"phẩm."
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:152
+msgid "Button text"
+msgstr "Tiêu đề nút"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:47
+msgid "Calculator"
+msgstr "Máy tính"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:385
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:281
+msgid "Catalog visibility"
+msgstr "Mức độ hiển thị catalog"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:391
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:209
+msgid "Categories"
+msgstr "Danh mục"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:26
+msgid "Choose file"
+msgstr "Chọn tệp"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:433
+msgid "Clear"
+msgstr "Xóa"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:140
+msgid "Content"
+msgstr "Nội dung"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:44
+msgid "Create variations from all attributes"
+msgstr "Tạo biến thể từ tất cả thuộc tính"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:231
+msgid "Cross-sells"
+msgstr "Bán chéo"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:38
+msgid "Custom attribute name"
+msgstr "Tên thuộc tính tùy chỉnh"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:12
+msgid "Custom product attribute"
+msgstr "Thuộc tính sản phẩm tùy chỉnh"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:504
+msgid "day(s)"
+msgstr "ngày"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:132
+msgid "Default attributes"
+msgstr "Thuộc tính mặc định"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:41
+msgid "Delete selected rows"
+msgstr "Xóa hàng đã chọn"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:118
+msgid "Description"
+msgstr "Mô tả"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:162
+msgid "Disable"
+msgstr "Tắt"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:242
+msgid "Download expiry"
+msgstr "Giới hạn ngày tải xuống"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:237
+msgid "Download file"
+msgstr "Tệp để tải"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:241
+msgid "Download limit"
+msgstr "Giới hạn tải xuống"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:348
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:233
+msgid "Downloadable"
+msgstr "Có thể tải xuống"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:314
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:68
+msgid "Draft"
+msgstr "Nháp"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:13
+msgid "Edit attributes"
+msgstr "Chỉnh sửa thuộc tính"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:40
+msgid "Edit metadata"
+msgstr "Chỉnh sửa metadata"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo.php:96
+msgid "Editor"
+msgstr "Trình chỉnh sửa"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:768
+msgid "Empty"
+msgstr "Trống"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:161
+msgid "Enable"
+msgstr "Bật"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:274
+msgid "Enable reviews"
+msgstr "Cho phép bình luận"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:767
+msgid "End"
+msgstr "Kết thúc với"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:34
+msgid "Enter a name for the new attribute term:"
+msgstr "Điền tên cho giá trị thuộc tính mới:"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:39
+msgid "Enter some text, or some attributes by \"|\" separating values."
+msgstr "Điền giá trị, hoặc một vài thuộc tính được ngăn cách bởi dấu \"|\"."
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:764
+msgid "Exact"
+msgstr "Chính xác"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:147
+msgid "Excerpt"
+msgstr "Tóm tắt"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:456
+msgid "Exclude fields to edit"
+msgstr "Loại trừ các trường để chỉnh sửa"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:334
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:167
+msgid "Featured"
+msgstr "Nổi bật"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:447
+msgid "Fields to edit"
+msgstr "Trường để chỉnh sửa"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:30
+msgid "File URL"
+msgstr "Liên kết tệp"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:69
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:115
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:430
+msgid "Filter"
+msgstr "Lọc"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:54
+msgid "Find"
+msgstr "Tìm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:48
+msgid "Find and Replace"
+msgstr "Tìm và Thay thế"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:120
+msgid "Gallery"
+msgstr "Thư viện ảnh"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/enqueue.php:143
+msgid "Go to Bulk Editor page"
+msgstr "Đến trang Chỉnh sửa hàng loạt"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:49
+msgid "Go to edit product page"
+msgstr "Đến trang chỉnh sửa sản phẩm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:139
+msgid "Grouped"
+msgstr "Nhóm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:228
+msgid "Height"
+msgstr "Chiều cao"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:262
+msgid "Height from"
+msgstr "Chiều cao từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:267
+msgid "Height to"
+msgstr "Chiều cao đến"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:80
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:118
+msgid "History"
+msgstr "Lịch sử"
+
+#. Author URI of the plugin
+msgid "https://villatheme.com"
+msgstr "https://villatheme.com"
+
+#. URI of the plugin
+msgid "https://villatheme.com/extensions/bulky-woocommerce-bulk-edit-products/"
+msgstr ""
+"https://villatheme.com/extensions/bulky-woocommerce-bulk-edit-products/"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:127
+msgid "ID"
+msgstr "ID"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:107
+msgid "Image"
+msgstr "Ảnh"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:53
+msgid "Invalid or duplicated SKU"
+msgstr "Không khả dụng hoặc trùng SKU"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:277
+#, fuzzy
+#| msgid "Length from"
+msgid "Lenght from"
+msgstr "Chiều dài từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:282
+#, fuzzy
+#| msgid "Length to"
+msgid "Lenght to"
+msgstr "Chiều dài đến"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:226
+msgid "Length"
+msgstr "Chiều dài"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:763
+msgid "Like"
+msgstr "Giống"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:472
+msgid "Load variations"
+msgstr "Tải biến thể"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:199
+msgid "Manage stock"
+msgstr "Quản lý kho hàng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:273
+msgid "Menu order"
+msgstr "Thứ tự ưu tiên"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:77
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:117
+msgid "Meta fields"
+msgstr "Trường Meta"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/ajax.php:62
+msgid "Method is not exist"
+msgstr "Phương thức không tồn tại"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:29
+msgid "Name"
+msgstr "Tên"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:336
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:350
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:359
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:475
+msgid "No"
+msgstr "Không"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:457
+msgid "No field"
+msgstr "Không có trường"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/ajax.php:480
+msgid "No history id"
+msgstr "Không có lịch sử id"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:21
+msgid "No round"
+msgstr "Không làm tròn"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:255
+msgid "None"
+msgstr "Không có"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:765
+msgid "Not"
+msgstr "Không bao gồm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:789
+msgid "Not in"
+msgstr "Không bao gồm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:52
+msgid "Nothing change to save"
+msgstr "Không có thay đổi để lưu"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:25
+msgid "OK"
+msgstr "OK"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:16
+msgid "Option"
+msgstr "Tùy chọn"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:787
+msgid "Or"
+msgstr "Hoặc"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:494
+msgid "Order"
+msgstr "Đơn hàng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:482
+msgid "Order by"
+msgstr "Sắp xếp theo"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:166
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:315
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:67
+msgid "Pending"
+msgstr "Đang duyệt"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:51
+msgid "Please enter new product name"
+msgstr "Vui lòng điền tên sản phẩm mới"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:172
+msgid "Post date from"
+msgstr "Ngày đăng bài từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:177
+msgid "Post date to"
+msgstr "Ngày đăng bài đến "
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:486
+msgid "Price"
+msgstr "Giá"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:316
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:69
+msgid "Private"
+msgstr "Riêng tư"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/support.php:62
+msgid "Pro version"
+msgstr ""
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/ajax.php:468
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/ajax.php:494
+msgid "Product is not exist"
+msgstr ""
+"Sản phẩm không tồn tại\n"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:313
+msgid "Product status"
+msgstr "Trạng thái sản phẩm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:307
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:106
+msgid "Product type"
+msgstr "Loại sản phẩm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:146
+msgid "Product URL"
+msgstr "Liên kết sản phẩm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/admin.php:31
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/admin.php:32
+msgid "Products Bulk Editor"
+msgstr ""
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:466
+msgid "Products per page (default: 10)"
+msgstr "Số lượng sản phẩm trên một trang (Mặc định: 10)"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:317
+msgid "Publish"
+msgstr "Đăng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:65
+msgid "Published"
+msgstr "Đã đăng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:272
+msgid "Purchase note"
+msgstr "Ghi chú mua hàng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:172
+msgid "Regular price"
+msgstr "Giá bán thường"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:187
+msgid "Regular price from"
+msgstr "Giá bán thường từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:192
+msgid "Regular price to"
+msgstr "Giá bán thường đến"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:91
+msgid "Reload this page"
+msgstr "Tải lại trang"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:28
+msgid "Remove all"
+msgstr "Xóa tất cả"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:55
+msgid "Replace"
+msgstr "Thay thế"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo.php:104
+msgid "require PHP version at least 7.0"
+msgstr "yêu cầu PHP phiên bản 7.0 trở lên"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo.php:113
+msgid "require WooCommerce is activated"
+msgstr "cần WooCommerce được kích hoạt"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo.php:118
+#| msgid "require WooCommerce version at least 4.0"
+msgid "require WooCommerce version at least 5.0"
+msgstr "cần WooCommerce phiên bản 5.0 trở lên"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo.php:109
+msgid "require WordPress version at least 5.0"
+msgstr "cần WordPress phiên bản 5.0 trở lên"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:56
+msgid "Revert all product in this point"
+msgstr "Hoàn nguyên tất cả sản phẩm trong điểm này"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:24
+msgid "Round down"
+msgstr "Làm tròn xuống"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:23
+msgid "Round up"
+msgstr "Làm tròn lên"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:22
+msgid "Round with decimal"
+msgstr "Làm tròn với số thập phân"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:217
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:188
+msgid "Sale date from"
+msgstr "Ngày giảm giá từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:222
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:195
+msgid "Sale date to"
+msgstr "Ngày giảm giá đến"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:180
+msgid "Sale price"
+msgstr "Giá khuyến mãi"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:202
+msgid "Sale price from"
+msgstr "Giá khuyến mãi từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:207
+msgid "Sale price to"
+msgstr "Giá khuyến mãi đến"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:80
+msgid "Same as parent"
+msgstr "Như bản gốc"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:87
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:525
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:568
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:14
+msgid "Save"
+msgstr "Lưu"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:571
+msgid "Save & Close"
+msgstr "Lưu & Đóng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:510
+msgid "Save filter when reload page"
+msgstr "Lưu bộ lọc khi tải lại trang"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:45
+msgid "Save new attributes before"
+msgstr "Lưu thuộc tính mới trước đó"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:66
+msgid "Scheduled"
+msgstr "Đã lên lịch"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:33
+msgid "Search products..."
+msgstr "Tìm sản phẩm..."
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:32
+msgid "Search tags..."
+msgstr "Tìm thẻ..."
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:35
+msgid "Select all"
+msgstr "Chọn tất cả"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:36
+msgid "Select none"
+msgstr "Không chọn"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:20
+msgid "Set default attributes"
+msgstr "Đặt thuộc tính mặc định"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:73
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:116
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:288
+msgid "Shipping class"
+msgstr "Loại hình giao hàng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:254
+msgid "Shipping only"
+msgstr "Chỉ giao hàng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:119
+msgid "Short Desc"
+msgstr "Mô Tả Ngắn"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:161
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:487
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:108
+msgid "SKU"
+msgstr "SKU"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:154
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:109
+msgid "Slug"
+msgstr "Slug"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:357
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:203
+msgid "Sold individually"
+msgstr "Bán riêng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:158
+msgid "Status"
+msgstr "Trạng thái"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:200
+msgid "Stock"
+msgstr "Kho hàng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:232
+msgid "Stock quantity from"
+msgstr "Số lượng trong kho từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:237
+msgid "Stock quantity to"
+msgstr "Số lượng trong kho đến"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:328
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:201
+msgid "Stock status"
+msgstr "Trạng thái kho hàng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:399
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:218
+msgid "Tags"
+msgstr "Thẻ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:263
+msgid "Tax class"
+msgstr "Loại hình thuế"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:251
+msgid "Tax status"
+msgstr "Tình trạng thuế"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:253
+msgid "Taxable"
+msgstr "Có thuế"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:503
+msgid "Time to delete revision"
+msgstr "Thời gian xóa lịch sử"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:133
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:485
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:105
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:230
+msgid "Upsells"
+msgstr "Upsells"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:18
+msgid "Used for variations"
+msgstr "Sử dụng cho biến thể"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:46
+msgid "variations are added"
+msgstr "Biến thể đã được thêm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:42
+msgid "Variations cannot revert after save"
+msgstr "Biến thể không thể hoàn nguyên sau khi lưu"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:50
+msgid "View on Single product page"
+msgstr "Xem trên Trang sản phẩm đơn lẻ"
+
+#. Author of the plugin
+msgid "VillaTheme"
+msgstr "VillaTheme"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:204
+msgid "Virtual"
+msgstr "Sản phẩm ảo"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/i18n.php:17
+msgid "Visible on the product page"
+msgstr "Hiển thị trên trang sản phẩm"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:225
+msgid "Weight"
+msgstr "Khối lượng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:292
+msgid "Weight from"
+msgstr "Khối lượng từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:297
+msgid "Weight to"
+msgstr "Khối lượng đến"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/includes/data.php:227
+msgid "Width"
+msgstr "Chiều rộng"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:247
+msgid "Width from"
+msgstr "Chiều rộng từ"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:252
+msgid "Width to"
+msgstr "Chiều rộng đến"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/admin.php:21
+msgid "WooCommerce Bulk Editor"
+msgstr "WooCommerce Bulk Editor"
+
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:335
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:349
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:358
+#: D:/Git/free-version/bulky-bulk-edit-products-for-woo/bulky-bulk-edit-products-for-woo/admin/editor.php:474
+msgid "Yes"
+msgstr "Có"

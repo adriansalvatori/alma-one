@@ -1,0 +1,16 @@
+{
+    "name": "adriansalvatori/learndash",
+    "description": "Constantly (manually) updated copy of learndash",
+    "keywords": ["wordpress", "plugin"],
+    "homepage": "https://github.com/adriansalvatori/learndash",
+    "authors": [
+        {
+        "name": "Stellar WP",
+        "homepage": "https://stellarwp.com"
+        }
+    ],
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4"
+    }
+}

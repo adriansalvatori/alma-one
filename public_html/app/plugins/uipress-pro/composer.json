@@ -1,0 +1,16 @@
+{
+    "name": "adriansalvatori/uipress-pro",
+    "description": "Constantly (manually) updated copy of uipress-pro",
+    "keywords": ["wordpress", "plugin"],
+    "homepage": "https://github.com/adriansalvatori/uipress-pro",
+    "authors": [
+        {
+        "name": "UIPress",
+        "homepage": "https://uipress.com"
+        }
+    ],
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4"
+    }
+}

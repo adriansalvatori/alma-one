@@ -1,0 +1,1416 @@
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/Pickup.php
+-----------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------
+ 434 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+-----------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/FetchifyAddressAutocomplete.php
+--------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------------------------------------------------------------
+ 8 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/GoogleAddressAutocomplete.php
+------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+------------------------------------------------------------------------------------------------------------------------------------
+ 9 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/OrderBumps.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 7 ERRORS AFFECTING 6 LINES
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  97 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+  97 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_displayed_order_bump'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 177 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '"<div id=\"cfw_order_bumps_{$location}\" class=\"cfw-order-bumps {$container_class} {$has_bumps_class}\">"'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 178 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$bump_content'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 338 | ERROR | Detected usage of a non-sanitized input variable: $_GET['cfw_order_bump_filter'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 339 | ERROR | Detected usage of a non-sanitized input variable: $_GET['cfw_order_bump_filter'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 358 | ERROR | Detected usage of a non-sanitized input variable: $_GET['cfw_order_bump_filter'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/FeaturesAbstract.php
+---------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+---------------------------------------------------------------------------------------------------------------------------
+  7 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 16 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 44 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+---------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/InternationalPhoneField.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 9 ERRORS AFFECTING 7 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   8 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  34 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  43 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 102 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 103 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 103 | ERROR | Detected usage of a non-sanitized input variable: $_POST['shipping_phone_formatted'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 106 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 107 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 107 | ERROR | Detected usage of a non-sanitized input variable: $_POST['billing_phone_formatted'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/HideOptionalAddressFields.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 6 ERRORS AFFECTING 6 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  7 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 17 | ERROR | Visibility must be declared on method "hide_optional_billing_address_fields" (Squiz.Scope.MethodScope.Missing)
+ 21 | ERROR | Visibility must be declared on method "hide_optional_shipping_address_fields" (Squiz.Scope.MethodScope.Missing)
+ 25 | ERROR | Visibility must be declared on method "hide_optional_address_fields" (Squiz.Scope.MethodScope.Missing)
+ 33 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 40 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/TrustBadges.php
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 10 ERRORS AFFECTING 8 LINES
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   9 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  55 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$this'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  67 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$image'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 111 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$image_source'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 114 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$field_name'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 114 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$index'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 114 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$badge_attachment_id'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 120 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$index'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 128 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$index'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 197 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$this'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/PhpSnippets.php
+----------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------------------------------
+ 36 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 57 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+----------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/SideCart.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 40 ERRORS AFFECTING 40 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  30 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 101 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 134 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 153 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$this'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 161 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'self'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 171 | ERROR | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'. (WordPress.Security.EscapeOutput.UnsafePrintingFunction)
+ 177 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'self'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 178 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 184 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 185 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 187 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_get_side_cart_item_summary_table'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 188 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 195 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 220 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 262 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$output'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 268 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$promo_code_button_label'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 279 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 286 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 290 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'WC'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 307 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 314 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 315 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 353 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 367 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 381 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 395 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 424 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 434 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 442 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 480 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 489 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 537 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$free_shipping_message'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 539 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$amount_remaining_message'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 544 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$fill_percent'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 623 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'self'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 633 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$additional_class'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 634 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'self'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 636 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'self'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 649 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$quantity'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 668 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_get_cart_item_quantity_control'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Features/OnePageCheckout.php
+--------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+--------------------------------------------------------------------------------------------------------------------------
+ 37 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 47 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 64 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+--------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/AdminPluginsPageManager.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 45 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$wp_list_table'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/DataUpgrader.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  36 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 276 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/Support.php
+---------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------------------------
+ 5 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+---------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/PickupLocations.php
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 21 ERRORS AFFECTING 17 LINES
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   7 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  11 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+  69 | ERROR | Overriding WordPress globals is prohibited. Found assignment to $submenu (WordPress.WP.GlobalVariablesOverride.Prohibited)
+  76 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 153 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 157 | ERROR | Detected usage of a non-sanitized input variable: $_POST[$this->nonce_field] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 175 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_pl_address']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 175 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_pl_address'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 176 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_pl_instructions']. Use isset() or empty() to check the index exists before using it
+     |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 176 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_pl_instructions'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 177 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_pl_estimated_time']. Use isset() or empty() to check the index exists before using it
+     |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 177 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_pl_estimated_time'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 198 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 207 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 210 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'file_get_contents'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 228 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$this'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 235 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 243 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$this'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 247 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 254 | ERROR | Detected usage of a possibly undefined superglobal array index: $_SERVER['REQUEST_URI']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 254 | ERROR | Detected usage of a non-sanitized input variable: $_SERVER['REQUEST_URI'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/CartSummary.php
+-------------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+-------------------------------------------------------------------------------------------------------------------------
+  5 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 39 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+-------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/OrderBumps.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 54 ERRORS AFFECTING 35 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   5 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+   9 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+  68 | ERROR | Overriding WordPress globals is prohibited. Found assignment to $submenu (WordPress.WP.GlobalVariablesOverride.Prohibited)
+  76 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 102 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$option_value'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 103 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$option_label'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 192 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$option_value'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 192 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$option_label'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 231 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 351 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$option_value'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 351 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$option_label'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 425 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$option_value'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 425 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$option_label'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 440 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 444 | ERROR | Detected usage of a non-sanitized input variable: $_POST[$this->nonce_field] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 463 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_display_for']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 463 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_display_for'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 464 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_products']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 464 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_products'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 465 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_exclude_products']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 465 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_exclude_products'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 466 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_categories']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 466 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_categories'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 467 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_any_product']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 467 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_any_product'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 468 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_display_location']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 468 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_display_location'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 469 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_item_removal_behavior']. Use isset() or empty() to check the index exists before using it
+     |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 469 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_item_removal_behavior'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 472 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_discount_type']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 472 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_discount_type'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 473 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_offer_product']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 473 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_offer_product'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 474 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_offer_discount']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 474 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_offer_discount'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 475 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_offer_language']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 475 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_offer_language'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 476 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_offer_description']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 476 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_offer_description'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 477 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_upsell']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 477 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_upsell'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 478 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_offer_quantity']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 478 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_offer_quantity'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 479 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cfw_ob_enable_quantity_updates']. Use isset() or empty() to check the index exists before using it
+     |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 479 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cfw_ob_enable_quantity_updates'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 500 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 509 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 512 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'file_get_contents'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 530 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$this'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 537 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 545 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$this'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 549 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 556 | ERROR | Detected usage of a possibly undefined superglobal array index: $_SERVER['REQUEST_URI']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 556 | ERROR | Detected usage of a non-sanitized input variable: $_SERVER['REQUEST_URI'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/Checkout.php
+----------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------------------------------------------------------
+ 8 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+----------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/LocalPickup.php
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   8 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  12 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+  29 | ERROR | Visibility must be declared on method "get_pickup_fields" (Squiz.Scope.MethodScope.Missing)
+ 121 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'admin_url'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/TrustBadges.php
+-------------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+-------------------------------------------------------------------------------------------------------------------------
+ 5 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 9 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+-------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/SideCart.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  9 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 13 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+ 43 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$notice'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/OrderPay.php
+----------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------------------------------
+  7 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 11 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+----------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/ThankYou.php
+----------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------------------------------
+  8 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 12 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+----------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/PageAbstract.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  80 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 114 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 593 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/Advanced.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 10 ERRORS AFFECTING 6 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   8 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 223 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$tracking_field_name'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 224 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$tracking_field_name'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 224 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'md5'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 224 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$tracking_field_name'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 228 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$tracking_field_name'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 238 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 248 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$_SERVER['REQUEST_URI']'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 248 | ERROR | Detected usage of a possibly undefined superglobal array index: $_SERVER['REQUEST_URI']. Use isset() or empty() to check the index exists before using it
+     |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 248 | ERROR | Detected usage of a non-sanitized input variable: $_SERVER['REQUEST_URI'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/Integrations.php
+--------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------------------------------------------------
+ 7 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+--------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/General.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 110 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 270 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/Pages/Appearance.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 21 ERRORS AFFECTING 18 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   9 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  50 | ERROR | Resource version not set in call to wp_enqueue_script(). This means new versions of the script will not always be loaded due to browser caching. (WordPress.WP.EnqueuedResourceParameters.MissingVersion)
+ 119 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$screenshot'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 123 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$template'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 125 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw__'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 128 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$template'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 129 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$preview_url'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 132 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$_SERVER['REQUEST_URI']'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 132 | ERROR | Detected usage of a possibly undefined superglobal array index: $_SERVER['REQUEST_URI']. Use isset() or empty() to check the index exists before using it
+     |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 132 | ERROR | Detected usage of a non-sanitized input variable: $_SERVER['REQUEST_URI'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 133 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$settings'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 133 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$template'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 237 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$settings'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 241 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$font'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 242 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$font'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 252 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$settings'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 256 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$font'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 257 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$font'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 323 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 415 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 418 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Admin/ShippingPhoneController.php
+-------------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+-------------------------------------------------------------------------------------------------------------------------------
+ 59 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 63 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 65 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Customizer.php
+------------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 2 LINES
+------------------------------------------------------------------------------------------------------------------------------
+ 16 | ERROR | The var keyword must not be used to declare a property (PSR2.Classes.PropertyDeclaration.VarUsed)
+ 16 | ERROR | Visibility must be declared on property "$theme_color_settings"
+    |       | (PSR2.Classes.PropertyDeclaration.ScopeMissing)
+ 46 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Adapters/CartItemFactory.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 19 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 20 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 24 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Adapters/OrderItemFactory.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 13 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/ValidatePostcodeAction.php
+-------------------------------------------------------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 4 LINES
+-------------------------------------------------------------------------------------------------------------------------------
+  5 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 16 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 16 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 25 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 26 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/UpdatePaymentMethodAction.php
+----------------------------------------------------------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 16 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 26 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 29 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 29 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/UpdateCheckoutAction.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 207 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 237 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/AccountExistsAction.php
+----------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------------------------------------------------------------
+ 18 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 28 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 31 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+----------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/CompleteOrderAction.php
+----------------------------------------------------------------------------------------------------------------------------
+FOUND 10 ERRORS AFFECTING 9 LINES
+----------------------------------------------------------------------------------------------------------------------------
+ 16 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 18 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 31 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 37 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 37 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 66 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 70 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 71 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 74 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 75 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+----------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/LogInAction.php
+--------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+--------------------------------------------------------------------------------------------------------------------
+ 18 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 28 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 32 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 33 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+--------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/UpdateSideCart.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 4 LINES
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  8 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 12 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+ 27 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['cart_data']. Use isset() or empty() to check the index exists before using it
+    |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 27 | ERROR | Detected usage of a non-sanitized input variable: $_POST['cart_data'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 33 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/CFWAction.php
+----------------------------------------------------------------------------------------------------------------------------------------
+FOUND 11 ERRORS AFFECTING 11 LINES
+----------------------------------------------------------------------------------------------------------------------------------------
+ 13 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 15 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 25 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 31 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 33 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 40 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 42 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 66 | ERROR | ini_set('display_errors', 'Off') found. Use `WP_DEBUG_DISPLAY` instead.
+    |       | (WordPress.PHP.IniSet.display_errors_Blacklisted)
+ 79 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 83 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 86 | ERROR | ini_set('display_errors', 'Off') found. Use `WP_DEBUG_DISPLAY` instead.
+    |       | (WordPress.PHP.IniSet.display_errors_Blacklisted)
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/AddToCartAction.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 9 ERRORS AFFECTING 7 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  5 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  9 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+ 21 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 21 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 21 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['product_id']. Use isset() or empty() to check the index exists before using it (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 24 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 29 | ERROR | Detected usage of a possibly undefined superglobal array index: $_REQUEST['add-to-cart']. Use isset() or empty() to check the index exists before using it
+    |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+ 32 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 41 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/RemoveCouponAction.php
+---------------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------------------------------
+ 18 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 28 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+---------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/ValidateEmailDomainAction.php
+-----------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+-----------------------------------------------------------------------------------------------------------------------------------
+  5 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 16 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 25 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 30 | ERROR | A "hook" comment must be a "/**" style docblock comment.
+    |       | (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/SmartyStreetsAddressValidationAction.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 9 ERRORS AFFECTING 7 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  25 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  27 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  37 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+  37 | ERROR | Detected usage of a possibly undefined superglobal array index: $_POST['address']. Use isset() or empty() to check the index exists before using it
+     |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidated)
+  37 | ERROR | Detected usage of a non-sanitized input variable: $_POST['address'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 148 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 172 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 192 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 247 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Action/LostPasswordAction.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 16 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 74 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Factories/BumpFactory.php
+-----------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------
+ 42 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+-----------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Model/Bumps/BumpAbstract.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 24 ERRORS AFFECTING 23 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  28 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 142 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 145 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 159 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 202 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 222 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 290 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 331 | ERROR | Visibility must be declared on method "is_excluded" (Squiz.Scope.MethodScope.Missing)
+ 342 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 349 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 356 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 363 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 370 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 377 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 393 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 412 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 457 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 512 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 519 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 594 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'BumpFactory'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 600 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '==='. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 600 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'wc_price'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 612 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 625 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Model/Bumps/CategoriesBump.php
+----------------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------------------------------------
+ 38 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 58 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+----------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Model/Bumps/SpecificProductsBump.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  92 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 146 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 149 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 175 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Model/CartItem.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 10 ERRORS AFFECTING 10 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 26 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 27 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 30 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 31 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 33 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 35 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 36 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 59 | ERROR | A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+ 76 | ERROR | A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+ 97 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Model/OrderItem.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 5 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  23 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  31 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  36 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  72 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 103 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Model/Template.php
+-----------------------------------------------------------------------------------------------------------------------
+FOUND 27 ERRORS AFFECTING 27 LINES
+-----------------------------------------------------------------------------------------------------------------------
+  30 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  32 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 152 | ERROR | Visibility must be declared on method "get_default_settings" (Squiz.Scope.MethodScope.Missing)
+ 164 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 169 | ERROR | Visibility must be declared on method "get_default_setting" (Squiz.Scope.MethodScope.Missing)
+ 175 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 178 | ERROR | Visibility must be declared on method "get_standard_default_settings"
+     |       | (Squiz.Scope.MethodScope.Missing)
+ 238 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 247 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 265 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 276 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 283 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 290 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 297 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 304 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 311 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 318 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 325 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 332 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 339 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 346 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 353 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 360 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 367 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 374 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 381 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 388 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+-----------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/DefaultSettingsSetter.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ 20 | ERROR | [x] String "_cfwlite__settings" does not require double quotes; use single quotes instead
+    |       |     (Squiz.Strings.DoubleQuoteUsage.NotRequired)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Loaders/Content.php
+-----------------------------------------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 5 LINES
+-----------------------------------------------------------------------------------------------------------------
+  12 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+  15 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  18 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 118 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 126 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+-----------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Loaders/Redirect.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 14 ERRORS AFFECTING 14 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  15 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  18 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  39 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  68 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  70 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 109 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 116 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 118 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 166 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 168 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 222 | ERROR | Doc comment short description must start with a capital letter (Generic.Commenting.DocComment.ShortNotCapital)
+ 276 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 278 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 315 | ERROR | ini_set('display_errors', 'Off') found. Use `WP_DEBUG_DISPLAY` instead. (WordPress.PHP.IniSet.display_errors_Blacklisted)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Loaders/LoaderAbstract.php
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 19 ERRORS AFFECTING 19 LINES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  21 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  51 | ERROR | A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+  58 | ERROR | A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+  73 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  90 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  98 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 163 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 232 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 275 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 285 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 287 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 314 | ERROR | Doc comment is empty (Generic.Commenting.DocComment.Empty)
+ 328 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'SettingsManager'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 335 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'SettingsManager'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 339 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'SettingsManager'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 347 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'SettingsManager'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 354 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'SettingsManager'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 358 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'SettingsManager'.
+     |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 374 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/Stats/StatCollection.php
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 53 ERRORS AFFECTING 52 LINES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  20 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  28 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  36 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  44 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  52 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  60 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  64 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  66 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  70 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  72 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  76 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  78 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  82 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  84 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  88 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  90 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+  94 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  96 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 100 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 102 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 106 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 108 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 112 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 114 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 198 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 260 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 275 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 321 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 321 | ERROR | Detected usage of a non-sanitized, non-validated input variable $_GET: "cfw_{$_GET[$this->tracking_action_param]}"
+     |       | (WordPress.Security.ValidatedSanitizedInput.InputNotValidatedNotSanitized)
+ 330 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 340 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 364 | ERROR | Detected usage of a non-sanitized input variable: $_SERVER['SERVER_SOFTWARE'] (WordPress.Security.ValidatedSanitizedInput.InputNotSanitized)
+ 388 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 434 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 458 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 578 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 623 | ERROR | @author tags are prohibited (WooCommerce.Commenting.CommentTags.AuthorTag)
+ 679 | ERROR | @access tags are prohibited (WooCommerce.Commenting.CommentTags.AccessTag)
+ 719 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw__'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 722 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw__'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 723 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw__'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 730 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 739 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 770 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 804 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 812 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 819 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 826 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 833 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 840 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 847 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 854 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 861 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/includes/PhpErrorOutputSuppressor.php
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 20 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 21 | ERROR | ini_set('display_errors', 'Off') found. Use `WP_DEBUG_DISPLAY` instead. (WordPress.PHP.IniSet.display_errors_Blacklisted)
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/sources/php/functions.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 105 ERRORS AFFECTING 100 LINES
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   18 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+   40 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+   57 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+   78 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+   97 | ERROR | [ ] Doc comment is empty (Generic.Commenting.DocComment.Empty)
+  100 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  124 | ERROR | [ ] Doc comment is empty (Generic.Commenting.DocComment.Empty)
+  130 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  137 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  175 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  186 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  206 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  241 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  271 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  284 | ERROR | [ ] Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+  285 | ERROR | [ ] Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+  289 | ERROR | [ ] Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+  313 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  329 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  344 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  370 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  385 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  403 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  472 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  549 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  568 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  577 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  619 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  666 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  667 | ERROR | [ ] A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+  670 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$price'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  692 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  724 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  733 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  737 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  737 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  741 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item_thumb'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  744 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  762 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  763 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  766 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  782 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  786 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  787 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  804 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  807 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  816 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  818 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  823 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  823 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  827 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$link_pattern'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  827 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item_thumb'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  827 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item_thumb'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  830 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  839 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$link_pattern'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  839 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  853 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  854 | ERROR | [ ] A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+  856 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$price'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  874 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  878 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  879 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$item'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  887 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  896 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  902 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_get_order_item_summary_table'.
+      |       |     (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  905 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  917 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1126 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1135 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1206 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1210 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_get_order_totals_html'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1213 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1232 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$order_totals_list_element_id'.
+      |       |     (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1250 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$total['label']'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1251 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$total['value']'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1255 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1543 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1604 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1611 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1643 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1680 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1798 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1945 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1970 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1989 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2009 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2029 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2105 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2134 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2138 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2147 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2148 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2160 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2167 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2174 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2292 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2318 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2325 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2335 | ERROR | [ ] Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2357 | ERROR | [ ] A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+ 2364 | ERROR | [ ] A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+ 2394 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2506 | ERROR | [ ] A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2542 | ERROR | [ ] Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 2651 | ERROR | [x] File must end with a newline character (Generic.Files.EndFileNewline.NotFound)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/sources/php/init.php
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 7 ERRORS AFFECTING 7 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 257 | ERROR | Overriding WordPress globals is prohibited. Found assignment to $pages (WordPress.WP.GlobalVariablesOverride.Prohibited)
+ 683 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 699 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 706 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+     |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 782 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 810 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+ 826 | ERROR | Processing form data without nonce verification. (WordPress.Security.NonceVerification.Missing)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/sources/php/language-wrapper-functions.php
+--------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 18 ERRORS AFFECTING 13 LINES
+--------------------------------------------------------------------------------------------------------------------------------------------
+  22 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  32 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  42 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  50 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  58 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  66 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  77 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  86 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  97 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 108 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 117 | ERROR | The $single arg must be a single string literal, not "$single". (WordPress.WP.I18n.NonSingularStringLiteralSingle)
+ 117 | ERROR | The $plural arg must be a single string literal, not "$plural". (WordPress.WP.I18n.NonSingularStringLiteralPlural)
+ 117 | ERROR | The $domain arg must be a single string literal, not "$domain='default'".
+     |       | (WordPress.WP.I18n.NonSingularStringLiteralDomain)
+ 120 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 130 | ERROR | The $single arg must be a single string literal, not "$single". (WordPress.WP.I18n.NonSingularStringLiteralSingle)
+ 130 | ERROR | The $plural arg must be a single string literal, not "$plural". (WordPress.WP.I18n.NonSingularStringLiteralPlural)
+ 130 | ERROR | The $context arg must be a single string literal, not "$context". (WordPress.WP.I18n.NonSingularStringLiteralContext)
+ 130 | ERROR | The $domain arg must be a single string literal, not "$domain='default'".
+     |       | (WordPress.WP.I18n.NonSingularStringLiteralDomain)
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/sources/php/hook-wrapper-functions.php
+---------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------------------------------
+ 19 | ERROR | [x] File must end with a newline character (Generic.Files.EndFileNewline.NotFound)
+---------------------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+---------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/sources/php/api.php
+--------------------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+--------------------------------------------------------------------------------------------------------
+  6 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 13 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+--------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/sources/php/template-hooks.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 35 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 36 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 44 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 45 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook.
+    |       | (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/sources/php/template-functions.php
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 88 ERRORS AFFECTING 79 LINES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   42 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '"<section class=\"{$class}\">"'.
+      |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+   69 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$output'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+   92 | ERROR | Assignments must be the first block of code on a line (Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure)
+   93 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$cart_summary_mobile_label'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  168 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  182 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  192 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  316 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+  417 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  425 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  510 | ERROR | A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+  588 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  629 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  642 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  654 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+  818 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+  831 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1087 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1216 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1361 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1363 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1366 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1373 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1406 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1423 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1456 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1535 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1551 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1673 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1726 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1738 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1738 | ERROR | A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+ 1738 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$order'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1751 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1751 | ERROR | A "hook" comment must be a "/**" style docblock comment. (WooCommerce.Commenting.CommentHooks.HookCommentWrongStyle)
+ 1751 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$order'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1765 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$class'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1797 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$order_status'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1800 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'wc_get_order_status_name'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1808 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'date_i18n'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1810 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'date_i18n'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1833 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$thank_you_status_icon'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1836 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'wc_get_order_status_name'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1844 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'date_i18n'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1846 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'date_i18n'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1855 | ERROR | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'. (WordPress.Security.EscapeOutput.UnsafePrintingFunction)
+ 1856 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'wc_get_order_status_name'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1886 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1886 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1895 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'wpautop'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1905 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 1930 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 1948 | ERROR | date() is affected by runtime timezone changes which can cause date/time to be incorrectly displayed. Use gmdate() instead. (WordPress.DateTime.RestrictedFunctions.date_date)
+ 1971 | ERROR | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'. (WordPress.Security.EscapeOutput.UnsafePrintingFunction)
+ 1985 | ERROR | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'. (WordPress.Security.EscapeOutput.UnsafePrintingFunction)
+ 1986 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$order'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 1989 | ERROR | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'. (WordPress.Security.EscapeOutput.UnsafePrintingFunction)
+ 1990 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$order'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2001 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2001 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 2008 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2008 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 2024 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2024 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 2037 | ERROR | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'. (WordPress.Security.EscapeOutput.UnsafePrintingFunction)
+ 2039 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$order'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2048 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2049 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2068 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2073 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$message'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2085 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_get_order_item_summary_table'.
+      |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2094 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw__'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2106 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2132 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2147 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2168 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2180 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2184 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2194 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2217 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_get_order_item_summary_table'.
+      |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2225 | ERROR | Missing short description in doc comment (Generic.Commenting.DocComment.MissingShort)
+ 2265 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2280 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2294 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2349 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2367 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 2394 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'apply_filters'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 2394 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/futurist/functions.php
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 17 | ERROR | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'.
+    |       | (WordPress.Security.EscapeOutput.UnsafePrintingFunction)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/futurist/thank-you.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 57 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 58 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 60 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/futurist/content.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/futurist/footer.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 22 | ERROR | Assignments must be the first block of code on a line (Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure)
+ 25 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'date'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 25 | ERROR | date() is affected by runtime timezone changes which can cause date/time to be incorrectly displayed. Use gmdate() instead. (WordPress.DateTime.RestrictedFunctions.date_date)
+ 25 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'get_bloginfo'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/futurist/order-pay.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/copify/functions.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 50 | ERROR | Assignments must be the first block of code on a line (Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure)
+ 53 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'date'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 53 | ERROR | date() is affected by runtime timezone changes which can cause date/time to be incorrectly displayed. Use gmdate() instead. (WordPress.DateTime.RestrictedFunctions.date_date)
+ 53 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'get_bloginfo'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/copify/thank-you.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 57 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 58 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 60 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/copify/content.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/copify/order-pay.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/default/thank-you.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 57 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 58 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 60 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/default/footer.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 22 | ERROR | Assignments must be the first block of code on a line (Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure)
+ 25 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'date'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 25 | ERROR | date() is affected by runtime timezone changes which can cause date/time to be incorrectly displayed. Use gmdate() instead. (WordPress.DateTime.RestrictedFunctions.date_date)
+ 25 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'get_bloginfo'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/default/order-pay.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/glass/functions.php
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 10 ERRORS AFFECTING 6 LINES
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 13 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$settings_manager'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 13 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$template_slug'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$settings_manager'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$template_slug'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 18 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$settings_manager'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 18 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$template_slug'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 22 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$settings_manager'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 22 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$template_slug'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 38 | ERROR | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'. (WordPress.Security.EscapeOutput.UnsafePrintingFunction)
+ 84 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$accent_color'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/glass/thank-you.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 57 | ERROR | Docblock comment was found for the hook but does not contain a "@since" versioning. (WooCommerce.Commenting.CommentHooks.MissingSinceComment)
+ 58 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+ 60 | ERROR | A hook was found, but was not accompanied by a docblock comment on the line above to clarify the meaning of the hook. (WooCommerce.Commenting.CommentHooks.MissingHookComment)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/glass/content.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/glass/footer.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 22 | ERROR | Assignments must be the first block of code on a line (Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure)
+ 25 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'date'. (WordPress.Security.EscapeOutput.OutputNotEscaped)
+ 25 | ERROR | date() is affected by runtime timezone changes which can cause date/time to be incorrectly displayed. Use gmdate() instead. (WordPress.DateTime.RestrictedFunctions.date_date)
+ 25 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'get_bloginfo'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/cliftongriffin/Sites/cfwdev/wp-content/plugins/checkout-for-woocommerce/templates/glass/order-pay.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 14 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found 'cfw_main_container_classes'.
+    |       | (WordPress.Security.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+

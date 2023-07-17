@@ -1,0 +1,16 @@
+{
+    "name": "adriansalvatori/supportboard",
+    "description": "Constantly (manually) updated copy of supportboard",
+    "keywords": ["wordpress", "plugin"],
+    "homepage": "https://github.com/adriansalvatori/supportboard",
+    "authors": [
+        {
+        "name": "schiocco",
+        "homepage": "https://board.support"
+        }
+    ],
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4"
+    }
+}

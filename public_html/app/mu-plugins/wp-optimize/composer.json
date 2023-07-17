@@ -1,0 +1,16 @@
+{
+    "name": "adriansalvatori/wp-optimize",
+    "description": "Constantly (manually) updated copy of wp-optimize",
+    "keywords": ["wordpress", "plugin"],
+    "homepage": "https://github.com/adriansalvatori/wp-optimize",
+    "authors": [
+        {
+        "name": "Team Updraft",
+        "homepage": "https://updraftplus.com"
+        }
+    ],
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4"
+    }
+}

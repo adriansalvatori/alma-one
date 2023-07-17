@@ -1,0 +1,853 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Search Engine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-04 09:14+0000\n"
+"PO-Revision-Date: 2023-02-11 22:40+0400\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Loco-Version: 2.6.3; wp-6.1\n"
+"X-Domain: guaven_woo_search\n"
+
+#: admin/view.php:170
+msgid "  Type 0(zero) if you don't want to use this block yet. Also, note that trending data isn't being collected while you don't use this block."
+msgstr " Enter 0 (a digit) if you don't want to use this feature at this time. Please note that trend data will not be collected while this feature is inactive."
+
+#: admin/view.php:130
+msgid "\"No match\" text"
+msgstr "Text for 'Not found'\""
+
+#: admin/view.php:142
+msgid "\"Show all results\" link text below live results"
+msgstr "Link text for \"Show all results\" below live search results"
+
+#: admin/view.php:186
+msgid "\"Trending Products\" criterions:"
+msgstr "Criteria for Trending Products:"
+
+#: admin/view.php:223
+msgid "(Comma-separated term_IDs. Leave empty if you don't want to use this yet)"
+msgstr "(Enter comma-separated term IDs. Leave blank if you don't want to use this feature at this time.)"
+
+#: admin/view.php:214
+msgid "(Comma-separated: f.e.  12,23,1,34. Leave empty if you don't want to use this yet)"
+msgstr "(Enter comma-separated values, for example 12,23,1,34. Leave empty if you don't want to use this feature at this time.)"
+
+#: admin/view.php:1054
+msgid "(default engine)"
+msgstr ""
+
+#: admin/view.php:261
+msgid "(e.g.  Recently viewed products.)"
+msgstr ""
+
+#: admin/view.php:236
+msgid "(f.e.  Featured products.)"
+msgstr ""
+
+#: admin/view.php:181
+msgid "(f.e.  Trending products.)"
+msgstr ""
+
+#: admin/view.php:304
+msgid "(f.e. total_sales, view_count, views etc. You should check your products custom fields if you don't know its exact name)"
+msgstr "(For example, total_sales, view_count, views, etc. If you don't know the exact name, check your product's custom fields.)"
+
+#: admin/view.php:952
+msgid "(recommended: thumbnail, other values: medium, large or custom size name)"
+msgstr ""
+
+#: admin/view.php:790
+msgid "1 st option: at endusers' browser - transliterated data would be generated in each user session - recommended for the websites with < 1000 products;"
+msgstr "Option 1: At end user's browser - Transliterated data is generated in each user session. Recommended for websites with less than 1000 products;"
+
+#: admin/view.php:791
+msgid "2nd option: in cache rebuilding - transliterated cache data would be generated during cache rebuild, at once, for all;"
+msgstr "Option 2: In cache rebuilding - Transliterated cache data is generated during cache rebuild, all at once, for all users;"
+
+#: admin/view.php:792
+msgid "3rd option: disable by default - no any transliteration data would be used in search process - recommended for English language websites;"
+msgstr "Option 3: Disabled by default - No transliteration data is used in the search process. Recommended for English language websites;"
+
+#: admin/view.php:54
+msgid "Advanced Settings"
+msgstr ""
+
+#: admin/view.php:576
+msgid ""
+"Although descriptions will be hidden in search suggestions, the plugin will give the results based on descriptions.<br>\n"
+"  Check this only if it is very important for your store."
+msgstr "Description information will not be displayed in search suggestions, but the plugin will use the description data to generate search results. Only enable this option if it is critical for your store."
+
+#: admin/view.php:565
+msgid ""
+"Although short descriptions will be hidden in search suggestions, the plugin will give the results based on short descriptions.<br>\n"
+"  Check this only if it is very important for your store."
+msgstr "Short descriptions will not be shown in search suggestions, but the plugin will use the short descriptions in generating search results. Only enable this option if it is critical for your store."
+
+#: admin/view.php:8
+msgid "Analytics"
+msgstr ""
+
+#: admin/view.php:742
+#, php-format
+msgid "And any meta fields %s etc."
+msgstr ""
+
+#: admin/view.php:1285
+msgid "Are you sure to reset all settings to default?"
+msgstr "Are you sure you want to reset all settings to their default values?"
+
+#: admin/view.php:781
+msgid "at endusers' browser sessions"
+msgstr ""
+
+#: admin/view.php:73
+msgid "Automatic Correction feature    (usually should be checked)"
+msgstr "Auto Correction feature (should be enabled for optimal use)"
+
+#: admin/view.php:930
+msgid "Avaliable tags:"
+msgstr ""
+
+#: admin/view.php:52 admin/view.php:439
+msgid "Backend Search"
+msgstr ""
+
+#: admin/view.php:1063
+msgid "Beta version."
+msgstr ""
+
+#: admin/view.php:386
+msgid "by default our engine understands abreviation and currency symbol (f.e. USD and $, GBP and £ and so on). But you can also set oftently used spellings (f.e. dollar)"
+msgstr "by default, our engine recognizes abbreviations and currency symbols (e.g. USD and $, GBP and £, etc.). However, you can also set frequently used spellings (e.g. dollar)"
+
+#: admin/view.php:965
+msgid "By default plugin uses ?p=N format in search results to make the cache size smaller. You can easily disable it and let the plugin use the full permalink for products."
+msgstr "By default, the plugin uses the \"?p=N\" format in search results to minimize cache size. You can easily disable this and allow the plugin to use the full product permalink."
+
+#: admin/view.php:1040
+msgid "By default, the feature is available only for administrators."
+msgstr ""
+
+#: admin/view.php:1146
+msgid "Bypass Static Page Cache when there is new search indexed data."
+msgstr "Bypass Static Page Cache for New Search Indexed Data."
+
+#: admin/view.php:919
+msgid "Cache Layout/Structure"
+msgstr ""
+
+#: admin/view.php:30
+msgid "Cache re/builder"
+msgstr ""
+
+#: admin/view.php:584
+msgid "Cache Size"
+msgstr ""
+
+#: admin/view.php:833
+msgid "Category filter selector of the search box:"
+msgstr ""
+
+#: admin/view.php:371
+msgid "Comma separated values for \"under,around,above\" segmentators."
+msgstr "Comma-separated values for \"under, around, above\" separators."
+
+#: admin/view.php:878
+msgid "Comma-separated <b>product</b> IDs which should be excluded from the search"
+msgstr "Comma-separated <b>product</b> IDs for exclusion from search results"
+
+#: admin/view.php:867
+msgid "Comma-separated IDs of product <b>categories</b> which should be excluded from the search"
+msgstr "The IDs of product categories that should be excluded from the search results. The IDs should be separated by a comma"
+
+#: admin/view.php:540
+msgid "Custom attribute name should start with pa_. If any questions, just write to our support"
+msgstr "Custom attribute names starting with \"pa_\". If you have any questions or need further clarification, you can reach out to the support team for assistance"
+
+#: admin/view.php:801
+msgid "Custom CSS for plugin elements (don't use style tag, just directly put custom CSS code)"
+msgstr "Custom CSS for plugin elements (do not include the \"style\" tag, just enter the CSS code directly)."
+
+#: admin/view.php:808
+msgid "Custom JS (don't use script tag, just directly put custom JavaScript code)"
+msgstr "Custom JavaScript (do not include the \"script\" tag, just enter the JavaScript code directly)."
+
+#: admin/view.php:798
+msgid "Customization"
+msgstr ""
+
+#: admin/view.php:53
+msgid "Data Building"
+msgstr ""
+
+#: admin/view.php:826
+#, php-format
+msgid "Default selector is %s. You can change it if you want to exclude some search forms."
+msgstr "The default selector is %s. You can change it if you want to exclude certain search forms."
+
+#: admin/view.php:1118
+msgid "Delay duration between a visitor finishes typing and search results appear (in milliseconds)."
+msgstr "Duration (in milliseconds) between when a visitor stops typing and the search results appear."
+
+#: admin/view.php:454
+msgid ""
+"Deprecated: Display live smart results in the Theme's Search Results Page (replaces default search results of your theme.\n"
+"          It doesn't change UI of the theme's search results page)"
+msgstr ""
+"Deprecated: Display real-time smart search results on the theme's search results page, replacing the default results from your theme. This option does not alter the appearance of the theme's search results page."
+
+#: admin/view.php:751
+msgid "Disable relevancy in ordering"
+msgstr "Turn off relevance in ordering the search results"
+
+#: admin/view.php:962
+msgid "Disable short links in cache data."
+msgstr "Don't use shortened links in the cache data."
+
+#: admin/view.php:628
+msgid "Disable top rebuild button / disable auto-rebuild"
+msgstr ""
+
+#: admin/view.php:625
+msgid "Disable top rebuild button / enable auto-rebuild"
+msgstr ""
+
+#: admin/view.php:466
+msgid ""
+"Display  live smart results in the Theme's Search Results Page (replaces default search results of your theme.\n"
+"            It doesn't change UI of the theme's search results page)"
+msgstr "Display the live smart search results in the theme's search results page, replacing the default search results of your theme. It does not change the UI of the theme's search results page."
+
+#: admin/view.php:615
+msgid "Do the Cache Auto-Rebuild after each time when you edit any product / show manual rebuilder button in admin top bar:"
+msgstr "Rebuild Cache Automatically after every product edit / Manually rebuild cache button in top admin bar:"
+
+#: admin/view.php:446
+msgid "Don't affect default search results of my theme's search page"
+msgstr ""
+
+#: admin/view.php:1134
+msgid "Don't close the search box after unfocus event."
+msgstr ""
+
+#: admin/view.php:903
+msgid "Each pair should be in A-B format, Comma-separated. For example: car-auto, lbs-pound, footgear-shoes. If you want to use \"-\" inside any word, use _ instead. F.e.  casing-t_shirt"
+msgstr "Enter each pair in the format A-B, separated by commas. E.g. car-auto, lbs-pound, footgear-shoes. If you need to include a dash within a word, use an underscore instead, for example casing-t_shirt"
+
+#: admin/view.php:936
+msgid "Each search result is displayed with <i>li</i> container. If you want to edit this container, just create wp_option called \"guaven_woos_results_layout\" with this default value:"
+msgstr ""
+
+#: admin/view.php:1016
+msgid "Enable \"first letter rule\" (just for special cases - not recommended)"
+msgstr ""
+"\"Enable First Letter Rule\" means allowing the search results to be determined by the first letter of a product's title. This is not recommended as it may not provide accurate results and is generally not "
+"recommended for use."
+
+#: admin/view.php:1072
+msgid "Enable API endpoint for Pure Backend Search Engine"
+msgstr "Enable API Endpoint for Pure Backend Search Engine"
+
+#: admin/view.php:248
+msgid "Enable cookie-based personalized initial suggestions (will be shown when cursor is in the search box, but user has not pressed enter yet)"
+msgstr "Enable Personalized Initial Suggestions using Cookies. These suggestions will be displayed when the cursor is in the search box, but the user has not pressed enter yet"
+
+#: admin/view.php:353
+msgid "Enable Full-Screen Mobile Search Popup"
+msgstr ""
+
+#: admin/view.php:1087
+msgid "Enable Google Analytics events in live search"
+msgstr ""
+
+#: admin/view.php:364
+msgid "Enable Smart Expressions with prices"
+msgstr ""
+
+#: admin/view.php:1039
+msgid "Enable this CACHE REBUILDER for \"shop manager\" users"
+msgstr ""
+
+#: admin/view.php:619
+msgid "Enable top rebuild button / disable auto-rebuild"
+msgstr ""
+
+#: admin/view.php:622
+msgid "Enable top rebuild button / enable auto-rebuil"
+msgstr ""
+
+#: admin/view.php:1095
+msgid "Enable UTM parameters on live search product URL-s"
+msgstr ""
+
+#: admin/view.php:1164
+msgid "Enter your purchase code and get the plugin's updates through Plugins page:"
+msgstr ""
+
+#: admin/view.php:1004
+msgid "Exact match search (just for special cases - not recommended)"
+msgstr ""
+
+#: admin/view.php:341
+msgid "Examples."
+msgstr ""
+
+#: admin/view.php:992
+msgid "Exclude product metadata from autocorrection."
+msgstr ""
+
+#: admin/view.php:864
+msgid "Exclude products"
+msgstr ""
+
+#: admin/view.php:384
+msgid "f.e. dollars"
+msgstr ""
+
+#: admin/view.php:550
+msgid "F.e: _wc_average_rating,_stock_status etc."
+msgstr ""
+
+#: admin/view.php:537
+msgid "F.e: product_tag,product_vendor etc."
+msgstr ""
+
+#: admin/view.php:126
+msgid "F.e: Type here any product name you want: f.e. iphone, samsung etc."
+msgstr ""
+
+#: admin/view.php:56
+msgid "FAQ"
+msgstr ""
+
+#: admin/view.php:204
+msgid "Featured products"
+msgstr ""
+
+#: admin/view.php:75
+msgid ""
+"For example, if a user types <i>ifone</i> instead of <i>iphone</i>, or <i>kidshoe</i> instead of <i>Kids Shoes</i> this feature will understand him/her and will suggest\n"
+"      corresponding products."
+msgstr ""
+
+#: admin/view.php:1063
+msgid ""
+"For stores with >20-30K products.(currently \"autocorrection\" feature isn't supported \n"
+"       in this engine. It will be added later. All other features should work OK. )"
+msgstr "Note: For this engine, autocorrection feature is not supported for stores with more than 20-30K products at this time. It will be added in the future. Other features should function normally."
+
+#: admin/view.php:346
+msgid "FullScreen Mobile Search"
+msgstr ""
+
+#: admin/view.php:55
+msgid "Getting Updates"
+msgstr ""
+
+#. Author of the plugin
+msgid "Guaven Labs"
+msgstr ""
+
+#: admin/view.php:701
+msgid "Hide \"Catalog visibility = hidden\" products at live search box"
+msgstr ""
+
+#: admin/view.php:975
+msgid "Highlight found word's first occurence in live search results."
+msgstr ""
+
+#: admin/view.php:606
+msgid "How to rebuild"
+msgstr ""
+
+#: admin/view.php:612
+msgid "Auto-Rebuild via Scheduled Cron Jobs"
+msgstr ""
+
+#: admin/view.php:627
+msgid "To run the rebuilder command without checking for changes in the products, simply remove the <b>\"_trigger\"</b> suffix from the command."
+msgstr ""
+
+#: admin/view.php:630
+msgid "The frequency for your scheduled cron job can be set to any interval you desire, with \"5 minutes\" being the lowest recommended frequency. The highest frequency that can be set is \"daily\", \"weekly\", etc."
+msgstr ""
+
+#: admin/view.php:633
+msgid "An example command for \"5 minutes\" interval: %s"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://guaven.com"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://guaven.com/woo-search-box"
+msgstr ""
+
+#: admin/view.php:208
+msgid "ID numbers of featured products:"
+msgstr ""
+
+#: admin/view.php:1074
+msgid "If you are using \"Pure Backend Search Engine\", then you can also enable search API endpoint for using in your 3rd party apps."
+msgstr ""
+
+#: admin/view.php:1041
+msgid "If you check this, then administrators and shop managers will be able to use rebuild button and auto-rebuild feature."
+msgstr "Enabling this option grants administrators and shop managers access to the manual rebuild and auto-rebuild features."
+
+#: admin/view.php:674
+msgid ""
+"If you choose filesystem, then temporary rebuilding data would be stored in filesystem. Otherwise, it would be stored in database table.\n"
+"  In some servers there are strict database data size limits which don't allow rebuilding process to be finished. That's why, recommended option is \"FileSystem\".\n"
+"  You should choose \"Database\" option only if there is writing permission problem in the /plugins directory of your filesystem."
+msgstr ""
+
+#: admin/view.php:1019
+msgid ""
+"If you enable this feature, then it will work so: when user types f.e. Galaxy, it will  search in products which names' start with \"G\",\n"
+"    so it will find only the products which starts with Galaxy,\n"
+"    the products which start with \"Samsung Galaxy\"\n"
+"  will not be displayed."
+msgstr ""
+
+#: admin/view.php:1007
+msgid ""
+"If you enable this feature, then the algortyhm will search exact match among title,tags,attrbutes etc.. F.e. If the visitor types\n"
+"    phone, it will only display the products which have indepentent \"phone\" string in their content."
+msgstr ""
+
+#: admin/view.php:995
+msgid "If you enable this feature, then the autocorrection will work just for the product name and would not work for SKU, custom fields, attributes and so on."
+msgstr "When enabled, auto correction will only apply to product names and will not affect SKUs, custom fields, attributes, etc."
+
+#: admin/view.php:355
+msgid "If you enable this, then all search fields of your website will be turned into full-screen simple search form (for mobile devices only)"
+msgstr ""
+
+#: admin/view.php:366
+msgid "If you enable this, then live search would recognize expressions like \"smartphones under 100 usd, smartphones under $100, smartphones around 100$\" etc."
+msgstr ""
+
+#: admin/view.php:553
+msgid ""
+"If you enter here some meta key fields, the search suggestion algorithm will include their data to search metadata.\n"
+"  (e.g. you have a bookstore, you add _book_author field here. And then when a visitor types the name of the author in the search box, his/her\n"
+"  books will be suggested with a normal title. )"
+msgstr ""
+"If you enter meta key fields in this setting, the search suggestion algorithm will consider their data when searching the metadata. For example, if you have a bookstore and you add the \"_book_author\" field, when "
+"a visitor types the name of the author in the search box, their books will be suggested along with the normal title."
+
+#: admin/view.php:753
+msgid ""
+"If you uncheck this setting (default and recommended state is unchecked state), search results would appear ordered by \"relevancy (first priority) + the field you set above (second priority)\".\n"
+"      If you check this setting, then search results would appear directly ordered by the field you set in the field above."
+msgstr ""
+"When the setting is unchecked (the default and recommended state), the search results will be ordered by \"relevancy (first priority) + the field set above (second priority)\". However, if the setting is checked, "
+"the search results will be directly ordered by the field set above."
+
+#: admin/view.php:424
+msgid "If you want to use several taxonomies, type their names comma-separated."
+msgstr ""
+
+#: admin/view.php:840
+#, php-format
+msgid ""
+"If your theme's search form has its own category drop-down filter, then our live search box will consider its actual value.\n"
+"To make it work you just need to enter selector name of that drop-down filter. %s"
+msgstr ""
+
+#: admin/view.php:908
+msgid "Ignore them"
+msgstr ""
+
+#: admin/view.php:948
+msgid "Image quality in search results:"
+msgstr ""
+
+#: admin/view.php:784
+msgid "in cache rebuilding process (as pre-saved data) "
+msgstr ""
+
+#: admin/view.php:660
+msgid "In some servers you might need to use \"/usr/local/bin/php ...\" prefix instead of \"php ...\"."
+msgstr ""
+
+#: admin/view.php:692
+msgid "Include out of stock products"
+msgstr ""
+
+#: admin/view.php:847
+msgid "Increased Memory Limit for Backend-side processes:"
+msgstr ""
+
+#: admin/view.php:121
+msgid "Initial help message to the visitor when he/she focuses on search area:"
+msgstr ""
+
+#: admin/view.php:115
+msgid "Initial texts"
+msgstr ""
+
+#: admin/view.php:1125
+msgid "It is recommended to keep this value around 500 - but if you want to show the results more instantly, then instead of 500 set the value to 5, 10 or 15."
+msgstr ""
+
+#: admin/view.php:151
+msgid "Leave empty if you don't want it to appear"
+msgstr ""
+
+#: admin/view.php:51
+msgid "Live Search"
+msgstr ""
+
+#: admin/view.php:324
+msgid "Live Search Layout"
+msgstr ""
+
+#: admin/view.php:340
+msgid "Live search layout."
+msgstr ""
+
+#: admin/view.php:267
+msgid "Max number of personal suggestions:"
+msgstr ""
+
+#: admin/view.php:309
+msgid "Max number of popular products:"
+msgstr ""
+
+#: admin/view.php:406
+msgid "Max number of shown taxonomies:"
+msgstr ""
+
+#: admin/view.php:592
+msgid "Maximum numbers of products in cached data."
+msgstr ""
+
+#: admin/view.php:297
+msgid "Meta key name for product popularity:"
+msgstr ""
+
+#: admin/view.php:1101
+msgid "Miscellaneous"
+msgstr ""
+
+#: admin/view.php:934
+msgid "More Advanced Layout (for developers only)"
+msgstr ""
+
+#: admin/view.php:984
+msgid "Narrowed Search"
+msgstr ""
+
+#: admin/view.php:136
+msgid "No any products found..."
+msgstr ""
+
+#: admin/view.php:1148
+msgid ""
+"Not needed for most cases. If you are using static page caching (wp-rocket, super cache, total cache etc.) \n"
+"      and regularly rebuilding search cache (via cron job f.e.), \n"
+"      then by checking this checkbox your website visitors will see newest version of search cache, \n"
+"      although your static page cache is older. But if you usually don't have outdated page cache in your website, then no need to check this checkbox."
+msgstr ""
+
+#: admin/view.php:1136
+msgid "Not needed for the most cases. When to check this, the search box will be closed only after outside-click event."
+msgstr ""
+
+#: admin/view.php:787
+msgid "nowhere - disable search by transliterated data - default"
+msgstr ""
+
+#: admin/view.php:735
+msgid "Order by products by"
+msgstr ""
+
+#: admin/view.php:241
+msgid "Personal \"Recently Viewed Products"
+msgstr ""
+
+#: admin/view.php:383
+msgid "Plural:"
+msgstr ""
+
+#: admin/view.php:1048
+msgid "Processing Engine"
+msgstr ""
+
+#: admin/view.php:910
+msgid "Put your commonly used strings here if you want them to be skipped by our search engine"
+msgstr ""
+
+#: admin/view.php:898
+msgid "Put your product related synonyms there. Our search algorythm will take it into account."
+msgstr ""
+
+#: admin/view.php:44
+msgid "Rebuild the Cache"
+msgstr ""
+
+#: admin/view.php:664
+msgid "Rebuild the cache via"
+msgstr ""
+
+#: admin/view.php:668
+msgid "Rebuild via Database"
+msgstr ""
+
+#: admin/view.php:671
+msgid "Rebuild via Filesystem"
+msgstr ""
+
+#: admin/view.php:633
+msgid "Rebuild with cron jobs"
+msgstr ""
+
+#: admin/view.php:198
+msgid "Recommended default values are \"3\" and \"10\" which mean 3 days and 10 minutes."
+msgstr ""
+
+#: admin/view.php:854
+msgid "Recommended value: 512M or 1024M"
+msgstr ""
+
+#: admin/view.php:466
+msgid "Recommended:"
+msgstr ""
+
+#: admin/view.php:709
+msgid "Remove all filters by 3rd party plugins while fetching products for cache rebuilding  (not necessary in most cases)"
+msgstr ""
+
+#: admin/view.php:1285
+msgid "Reset all settings to default"
+msgstr ""
+
+#: admin/view.php:816
+msgid "Search box selector:"
+msgstr ""
+
+#: admin/view.php:545
+msgid "Search by custom post fields (Comma-separated names of meta_keys you want to be indexed)"
+msgstr ""
+
+#: admin/view.php:529
+msgid "Search by custom taxonomies and custom attributes (Comma-separated names)"
+msgstr ""
+
+#: admin/view.php:506
+msgid "Search by more data"
+msgstr ""
+
+#: admin/view.php:574
+msgid "Search by Product Full Description (not recommended for most cases)"
+msgstr ""
+
+#: admin/view.php:563
+msgid "Search by Product Short Description (not recommended for most cases)"
+msgstr ""
+
+#: admin/view.php:516
+msgid "Search by WooCommerce attributes and taxonomies"
+msgstr ""
+
+#: admin/view.php:923
+msgid "Search suggestions layout (Don't use line-breaks)"
+msgstr ""
+
+#: public/standalone.php:7
+msgid "Search..."
+msgstr ""
+
+#: admin/view.php:166
+#, php-format
+msgid "Show %s trending products in search suggestion box (will be shown when the cursor is in the search box, but the user has not pressed enter yet."
+msgstr ""
+
+#: admin/view.php:148
+msgid "Show all results..."
+msgstr ""
+
+#: admin/view.php:726
+msgid "Show all variations apart from each other, hide main product itself"
+msgstr ""
+
+#: admin/view.php:401
+msgid "Show categories/taxonomies block in search results?"
+msgstr ""
+
+#: admin/view.php:393
+msgid "Show found categories"
+msgstr ""
+
+#: admin/view.php:719
+msgid "Show parent product of variables"
+msgstr ""
+
+#: admin/view.php:723
+msgid "Show parent product of variables + search by variation meta data"
+msgstr ""
+
+#: admin/view.php:96
+#, php-format
+msgid "Show suggestion after %s characters entered by a visitor."
+msgstr "Display suggestions after visitor has entered %s characters."
+
+#: admin/view.php:84
+#, php-format
+msgid "Show suggestions by autocorrected key if there are %s or fewer suggestions for original input."
+msgstr "Display suggestions based on corrected key if there are equal to or less than %s suggestions for the original input."
+
+#: admin/view.php:290
+msgid "Show the most popular products below when \"no match\" (not found) message appears?"
+msgstr ""
+
+#: admin/view.php:282
+msgid "Show this below when \"not found\" appears"
+msgstr ""
+
+#: admin/view.php:418
+msgid "Shown taxonomies:"
+msgstr ""
+
+#: admin/view.php:381
+msgid "Singular:"
+msgstr ""
+
+#: admin/view.php:359
+msgid "Smart expressions"
+msgstr ""
+
+#: admin/view.php:65
+msgid "Smart Search"
+msgstr ""
+
+#: admin/view.php:1055
+msgid "Stable and recommended version for all kind of stores"
+msgstr ""
+
+#: admin/view.php:1110
+#, php-format
+msgid "Suggestion bar width should be equal to %s percent width of search input field."
+msgstr ""
+
+#: admin/view.php:741
+#, php-format
+msgid "Supported formats: default WP orders such as %s etc."
+msgstr ""
+
+#: admin/view.php:896
+msgid "Synonym list"
+msgstr ""
+
+#: admin/view.php:217
+msgid "Term ID numbers of featured categories:"
+msgstr ""
+
+#: admin/view.php:103
+msgid "The maximal number of suggestions:"
+msgstr ""
+
+#: admin/view.php:941
+msgid "Then, edit this wp_option and REBUILD the cache data. You will get search results with your custom layout."
+msgstr ""
+
+#: admin/view.php:33
+msgid "This button generates the needed cached data based on your products by using parameters below."
+msgstr ""
+
+#: admin/view.php:456
+msgid "This option works on <b>cookie</b> based algorithm - only for the websites with <=1000 products"
+msgstr ""
+
+#: admin/view.php:469
+msgid "This option works on <b>WP Transient</b> based algorithm"
+msgstr ""
+
+#: admin/view.php:479
+msgid "Replace my theme's search results page with \"SSSS\" (Standalone Simple and Smart Search) module by this plugin."
+msgstr ""
+
+#: admin/view.php:175
+msgid "Title text for \"Trending Products\" block:"
+msgstr ""
+
+#: admin/view.php:254
+msgid "Title text for personalized initial suggestions:"
+msgstr ""
+
+#: admin/view.php:229
+msgid "Title text for this block:"
+msgstr ""
+
+#: admin/view.php:929
+msgid "To restore default layout just empty the area and save settings."
+msgstr ""
+
+#: admin/view.php:486
+#, php-format
+msgid "To use this option you need to create a new page with %s URL and to put this shortcode to its content:"
+msgstr "To use this option, you must create a new page with the URL %s and insert the following shortcode into its content:"
+
+#: admin/view.php:777
+msgid "Transliterated data should be generated:"
+msgstr ""
+
+#: admin/view.php:773
+msgid "Transliterated search"
+msgstr ""
+
+#: admin/view.php:194
+#, php-format
+msgid "Trending data should be built on data for the latest %s days and refreshed each %s minutes."
+msgstr "Refresh the trending data using data from the last %s days, and update every %s minutes."
+
+#: admin/view.php:159
+msgid "Trending products"
+msgstr ""
+
+#: admin/view.php:914
+#, php-format
+msgid "Type them in Comma-separated format: f.e. product,and,machine,wearing,from,madeby. Or to ignore characters in search you can use %s"
+msgstr "Enter keywords in comma-separated format, for example: product,machine,wearing,from,madeby. To ignore characters in search, you can use %s"
+
+#. Description of the plugin
+msgid "Ultimate WordPress plugin which turns a simple search box of your WooCommerce Store to the smart, powerful and multifunctional magic box that helps you to sell more products."
+msgstr ""
+
+#: admin/view.php:715
+msgid "Variations in search process:"
+msgstr ""
+
+#: admin/view.php:683
+msgid "Which products will appear"
+msgstr ""
+
+#: admin/view.php:1030
+msgid "Who will rebuild/manage"
+msgstr ""
+
+#. Name of the plugin
+#: admin/view.php:7
+msgid "WooCommerce Search Engine"
+msgstr ""
+
+#: admin/view.php:852
+msgid ""
+"You can can set higher value for this field and let our admin & background processes to work faster. This setting is available just for this plugin\n"
+"  and it doesn't affect the website's memory limit."
+msgstr "You can set a higher value for this field to allow the plugin's admin and background processes to work faster. This setting is specific to the plugin and does not affect the website's memory limit."
+
+#: admin/view.php:380
+msgid "Your currency spelling:"
+msgstr ""

@@ -1,0 +1,16 @@
+{
+  "name": "adriansalvatori/acf-pro",
+  "description": "Constantly (manually) updated copy of ACF Pro",
+  "keywords": ["wordpress", "plugin"],
+  "homepage": "https://github.com/adriansalvatori/acf-pro",
+  "authors": [
+    {
+      "name": "WP Engine",
+      "homepage": "https://advancedcustomfields.com"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=7.4"
+  }
+}
