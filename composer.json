@@ -116,7 +116,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": [
+      "public_htmlapp/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "roots/soil", 
         "wpackagist-plugin/two-factor", 
@@ -135,18 +135,18 @@
         "wpackagist-plugin/advanced-custom-fields",
         "adriansalvatori/wp-optimize"
       ],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "public_htmlapp/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public_htmlapp/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "web/wp"
+    "wordpress-install-dir": "public_htmlwp"
   },
   "scripts": {
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ],
     "post-autoload-dump": [
-      "cd ./web/app/themes/alma && composer install",
-      "cd ./web/app/themes/alma && yarn && yarn prod"
+      "cd ./public_htmlapp/themes/alma && composer install",
+      "cd ./public_htmlapp/themes/alma && yarn && yarn prod"
     ],
     "test": [
       "phpcs"
