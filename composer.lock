@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be41ada330ed9ef63876e38f334cbf08",
+    "content-hash": "467a921ca33e117cc5bb67738cef06dc",
     "packages": [
         {
             "name": "adriansalvatori/acf-pro",
@@ -6804,24 +6804,6 @@
             "homepage": "https://wordpress.org/plugins/imsanity/"
         },
         {
-            "name": "wpackagist-plugin/indieauth",
-            "version": "4.2.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/indieauth/",
-                "reference": "tags/4.2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/indieauth.4.2.1.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/indieauth/"
-        },
-        {
             "name": "wpackagist-plugin/opengraph",
             "version": "1.11.1",
             "source": {
@@ -6928,24 +6910,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/uipress-lite/"
-        },
-        {
-            "name": "wpackagist-plugin/vibes",
-            "version": "1.6.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/vibes/",
-                "reference": "tags/1.6.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/vibes.1.6.0.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/vibes/"
         },
         {
             "name": "wpackagist-plugin/web-stories",
