@@ -9,6 +9,9 @@ public_html/app/uploads/*
 !public_html/app/uploads/.gitkeep
 public_html/app/cache/*
 
+# Web Linking for Laravel Valet
+web/*
+
 # WordPress
 public_html/wp
 public_html/.htaccess
