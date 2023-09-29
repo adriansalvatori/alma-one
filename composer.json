@@ -71,7 +71,7 @@
     "wpackagist-plugin/uipress-lite": "^3.2",
     "wpackagist-plugin/bulky-bulk-edit-products-for-woo": "^1.1",
     "wpackagist-plugin/woocommerce": "^8.0",
-    "roots/soil": "^4.1",
+    "roots/soil": "^4.1.1",
     "wpackagist-plugin/autodescription": "^4.2",
     "wpackagist-plugin/two-factor": "^0.8.1",
     "wpackagist-plugin/imsanity": "^2.8",

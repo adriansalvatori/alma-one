@@ -21,7 +21,7 @@ add_filter('excerpt_more', function (): string {
  * @return string
  */
 add_filter('script_loader_tag', function ($tag, $handle, $src): string {
-
+    
     if (!preg_match('[app|alma]', $handle)) {
         return $tag;
     }
