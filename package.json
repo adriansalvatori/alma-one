@@ -1,0 +1,14 @@
+{
+  "name": "efast-web-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/adriansalvatori/alma-one",
+  "author": "Adrián Salvatori <adriansalvatori@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd web/app/themes/alma && yarn start",
+    "build": "cd web/app/themes/alma && yarn build",
+    "zip": "yarn build && zip -r efast-web-app.zip ./ -x './web/app/themes/alma/node_modules/*' '.env' '.git/*'",
+    "dump-db": "wp db export --add-drop-table && mv ./wordpress.sql ./alma-one.sql"
+  }
+}
