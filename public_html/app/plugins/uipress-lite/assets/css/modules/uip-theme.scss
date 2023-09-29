@@ -209,6 +209,7 @@ body.import-php,
         border-radius: var(--uip-border-radius);
         background-color: var(--uip-color-base-1);
         margin-right: var(--uip-margin-xxs);
+        box-sizing: content-box;
         &:hover {
           color: var(--uip-text-color-emphasis);
           background-color: var(--uip-color-base-2);
@@ -581,25 +582,26 @@ th.desc:hover span.sorting-indicator:before {
 */
 body:not(.block-editor-page) {
   #wpcontent {
-    input[type='color'],
-    input[type='date'],
-    input[type='datetime-local'],
-    input[type='datetime'],
-    input[type='email'],
-    input[type='month'],
-    input[type='number'],
-    input[type='password'],
-    input[type='search'],
-    input[type='tel'],
-    input[type='text'],
-    input[type='time'],
-    input[type='url'],
-    input[type='week'],
-    select,
-    textarea {
-      border: var(--uip-border-width) solid var(--uip-border-color);
-      background-color: var(--uip-color-base-0);
+    input[type='color']:not(.uip-input),
+    input[type='date']:not(.uip-input),
+    input[type='datetime-local']:not(.uip-input),
+    input[type='datetime']:not(.uip-input),
+    input[type='email']:not(.uip-input),
+    input[type='month']:not(.uip-input),
+    input[type='number']:not(.uip-input),
+    input[type='password']:not(.uip-input),
+    input[type='search']:not(.uip-input),
+    input[type='tel']:not(.uip-input),
+    input[type='text']:not(.uip-input),
+    input[type='time']:not(.uip-input),
+    input[type='url']:not(.uip-input),
+    input[type='week']:not(.uip-input),
+    select:not(.uip-input),
+    textarea:not(.uip-input) {
+      border: var(--uip-border-width) solid var(--uip-color-base-1);
+      background-color: var(--uip-color-base-1);
       color: var(--uip-text-color-base);
+      border-radius: var(--uip-border-radius-large);
       &:active,
       &:focus {
         box-shadow: none;
@@ -1019,11 +1021,32 @@ div.updated,
 .star-rating .star {
   color: #ff9d27;
 }
+.plugin-install-php #the-list {
+  --grid-layout-gap: var(--uip-margin-m);
+  --grid-column-count: 3;
+  --grid-item--min-width: 400px;
+
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+  grid-gap: var(--grid-layout-gap);
+
+  margin-top: 24px;
+}
+.plugin-install-php .wp-filter {
+  margin-bottom: 24px;
+}
 .plugin-card {
-  background-color: var(--uip-color-base-0);
-  border: var(--uip-border-width) solid var(--uip-border-color);
-  border-radius: var(--uip-border-radius);
+  background-color: var(--uip-color-base-1);
+  border: var(--uip-border-width) solid transparent;
+  border-radius: var(--uip-border-radius-large);
   color: var(--uip-text-color-base);
+  padding: var(--uip-padding-s);
+  width: 100%;
+  margin: 0;
   a {
     color: var(--uip-color-primary);
   }
@@ -1032,9 +1055,87 @@ div.updated,
       color: var(--uip-text-color-emphasis);
     }
   }
+  .plugin-card-top {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    h3 {
+      margin: 0;
+    }
+  }
+  .desc,
+  .name {
+    margin-left: 88px;
+    margin-right: 0;
+  }
+  .desc {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    p {
+      margin-top: 0;
+    }
+  }
+
+  .action-links {
+    position: relative;
+    margin-left: 88px;
+    width: auto;
+    position: relative;
+    inset: 0;
+    margin-right: 0;
+    .plugin-action-buttons {
+      display: flex;
+      gap: var(--uip-margin-s);
+      clear: none;
+      float: none;
+      align-items: center;
+      .open-plugin-details-modal {
+        font-size: 13px;
+        line-height: 2.15384615;
+        min-height: 30px;
+        background: var(--uip-color-base-2);
+        display: block;
+        border-radius: var(--uip-border-radius-large);
+        padding: 0 10px;
+      }
+    }
+    ul {
+      margin: 0;
+    }
+    li {
+      margin-bottom: 0;
+    }
+  }
   .plugin-card-bottom {
     background-color: var(--uip-color-base-1);
     border-color: var(--uip-border-color);
+    padding: 0;
+    padding-top: var(--uip-padding-s);
+    position: relative;
+  }
+  .plugin-icon {
+    left: 0;
+    top: 0;
+    border-radius: var(--uip-border-radius-large);
+    width: 72px;
+    height: 72px;
+  }
+  .update-now {
+    background: var(--uip-color-green-lighter);
+    border-radius: var(--uip-border-radius-large);
+  }
+  .install-now {
+    background: var(--uip-color-primary);
+    border-radius: var(--uip-border-radius-large);
+    color: var(--uip-text-color-inverse);
+    &:hover {
+      background: var(--uip-color-primary-darker);
+      border-radius: var(--uip-border-radius-large);
+      color: var(--uip-text-color-inverse);
+    }
   }
 }
 .popular-tags {

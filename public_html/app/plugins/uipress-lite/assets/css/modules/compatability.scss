@@ -155,3 +155,19 @@ html[uip-core-app='true'] {
     display: none !important;
   }
 }
+//Wicked folders fix
+#wicked-object-folder-pane .wicked-resizer {
+  left: 0;
+}
+#wicked-object-folder-pane .wicked-content {
+  left: 0;
+}
+html[uip-core-app='true'] #wicked-object-folder-pane {
+  display: none !important;
+}
+
+html[uip-framed-page='true'] .toplevel_page_WishListMember {
+  #wpcontent {
+    padding-left: 0;
+  }
+}

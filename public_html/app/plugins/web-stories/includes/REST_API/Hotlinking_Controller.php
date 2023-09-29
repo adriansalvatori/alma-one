@@ -374,9 +374,9 @@ class Hotlinking_Controller extends REST_Controller implements HasRequirements {
 			// Other than php://memory, php://temp will use a temporary file once the amount of data stored hits a predefined limit (the default is 2 MB).
 			// The location of this temporary file is determined in the same way as the {@see sys_get_temp_dir()} function.
 			if ( WP_DEBUG ) {
-				$stream_handle = fopen( 'php://memory', 'wb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen
+				$stream_handle = fopen( 'php://memory', 'wb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
 			} else {
-				$stream_handle = @fopen( 'php://memory', 'wb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen, WordPress.PHP.NoSilencedErrors.Discouraged, Generic.PHP.NoSilencedErrors.Forbidden
+				$stream_handle = @fopen( 'php://memory', 'wb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen, WordPress.PHP.NoSilencedErrors.Discouraged, Generic.PHP.NoSilencedErrors.Forbidden
 			}
 
 			if ( $stream_handle ) {
@@ -571,7 +571,7 @@ class Hotlinking_Controller extends REST_Controller implements HasRequirements {
 		 *
 		 * @param resource $handle The cURL handle returned by curl_init() (passed by reference).
 		 */
-		return static function( $handle ) use ( $url, $url_or_ip ): void {
+		return static function ( $handle ) use ( $url, $url_or_ip ): void {
 			// Just some safeguard in case cURL is not really available,
 			// despite this method being run in the context of WP_Http_Curl.
 			if ( ! \function_exists( '\curl_setopt' ) ) {
@@ -664,6 +664,26 @@ class Hotlinking_Controller extends REST_Controller implements HasRequirements {
 	 *
 	 * @param string               $url  Request URL.
 	 * @param array<string, mixed> $args Request args.
+	 *
+	 * @phpstan-param array{
+	 *   method?: string,
+	 *   timeout?: float,
+	 *   redirection?: int,
+	 *   httpversion?: string,
+	 *   user-agent?: string,
+	 *   reject_unsafe_urls?: bool,
+	 *   blocking?: bool,
+	 *   headers?: string|array,
+	 *   cookies?: array,
+	 *   body?: string|array,
+	 *   compress?: bool,
+	 *   decompress?: bool,
+	 *   sslverify?: bool,
+	 *   sslcertificates?: string,
+	 *   stream?: bool,
+	 *   filename?: string,
+	 *   limit_response_size?: int,
+	 * } $args
 	 */
 	private function proxy_url_curl( string $url, array $args ): void {
 		add_action( 'http_api_curl', [ $this, 'modify_curl_configuration' ] );
@@ -672,7 +692,7 @@ class Hotlinking_Controller extends REST_Controller implements HasRequirements {
 
 		rewind( $this->stream_handle );
 		while ( ! feof( $this->stream_handle ) ) {
-			echo fread( $this->stream_handle, 1024 * 1024 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.AlternativeFunctions.file_system_read_fread
+			echo fread( $this->stream_handle, 1024 * 1024 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.AlternativeFunctions.file_system_operations_fread
 		}
 
 		fclose( $this->stream_handle );
@@ -685,6 +705,26 @@ class Hotlinking_Controller extends REST_Controller implements HasRequirements {
 	 *
 	 * @param string               $url  Request URL.
 	 * @param array<string, mixed> $args Request args.
+	 *
+	 * @phpstan-param array{
+	 *   method?: string,
+	 *   timeout?: float,
+	 *   redirection?: int,
+	 *   httpversion?: string,
+	 *   user-agent?: string,
+	 *   reject_unsafe_urls?: bool,
+	 *   blocking?: bool,
+	 *   headers?: string|array,
+	 *   cookies?: array,
+	 *   body?: string|array,
+	 *   compress?: bool,
+	 *   decompress?: bool,
+	 *   sslverify?: bool,
+	 *   sslcertificates?: string,
+	 *   stream?: bool,
+	 *   filename?: string,
+	 *   limit_response_size?: int,
+	 * } $args
 	 */
 	private function proxy_url_fallback( string $url, array $args ): void {
 		$response = wp_safe_remote_get( $url, $args );

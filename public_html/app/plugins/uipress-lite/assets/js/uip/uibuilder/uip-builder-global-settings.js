@@ -385,9 +385,22 @@ export function moduleData() {
                           
                           <div class="uip-flex uip-flex-center uip-gap-xs uip-h-30">
                           
-                            <uip-tooltip v-if="option.help" :message="option.help">
-                              <div class="uip-text-muted uip-flex uip-flex-center">{{option.label}}</div>
-                            </uip-tooltip>
+                              <div class="uip-text-muted uip-flex uip-flex-center uip-flex uip-gap-xs">
+                              
+                                
+                                
+                                <drop-down v-if="option.help" dropPos="left" :openOnHover="true" class="uip-flex-no-shrink" triggerClass="uip-flex-no-shrink" :hover="true">
+                                  <template class="uip-flex-no-shrink" v-slot:trigger>
+                                    <div class="uip-link-muted hover:uip-background-grey uip-text-center uip-border-round uip-background-muted uip-text-bold uip-text-xs uip-w-16 uip-ratio-1-1 uip-text-s uip-flex-no-shrink">i</div>
+                                  </template>
+                                  <template v-slot:content>
+                                    <div class="uip-text-s uip-padding-xs uip-max-w-200">{{option.help}}</div>
+                                  </template>
+                                </drop-down>
+                                
+                                <span>{{option.label}}</span>
+                                
+                              </div>
                             
                           </div>
                           

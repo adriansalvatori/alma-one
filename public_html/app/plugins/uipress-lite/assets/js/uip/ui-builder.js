@@ -13,21 +13,21 @@ import { createRouter, createWebHistory, createWebHashHistory } from './../libs/
 const pluginVersion = import.meta.url.split('?ver=')[1];
 
 //Import UiPress class
-import { uip } from './classes/uip.min.js?ver=3.2.06';
-import { uipMediaLibrary } from './classes/uip-media-library.min.js?ver=3.2.06';
+import { uip } from './classes/uip.min.js?ver=3.2.12';
+import { uipMediaLibrary } from './classes/uip-media-library.min.js?ver=3.2.12';
 const uipress = new uip('builder');
 
 ///Blocks groups
 //Register block settings groups
-import * as blockGroups from './blocks/block-settings-groups.min.js?ver=3.2.06';
+import * as blockGroups from './blocks/block-settings-groups.min.js?ver=3.2.12';
 uipress.register_new_block_groups(blockGroups.fetchGroups());
 //Import blocks
-import * as elementBlocks from './blocks/elements/loader.min.js?ver=3.2.06';
-import * as layoutBlocks from './blocks/layout/loader.min.js?ver=3.2.06';
-import * as formBlockOptions from './blocks/inputs/loader.min.js?ver=3.2.06';
-import * as dynamicBlocks from './blocks/dynamic/loader.min.js?ver=3.2.06';
-import * as analyticsBlocks from './blocks/analytics/loader.min.js?ver=3.2.06';
-import * as storeAnalyticsBlocks from './blocks/storeanalytics/loader.min.js?ver=3.2.06';
+import * as elementBlocks from './blocks/elements/loader.min.js?ver=3.2.12';
+import * as layoutBlocks from './blocks/layout/loader.min.js?ver=3.2.12';
+import * as formBlockOptions from './blocks/inputs/loader.min.js?ver=3.2.12';
+import * as dynamicBlocks from './blocks/dynamic/loader.min.js?ver=3.2.12';
+import * as analyticsBlocks from './blocks/analytics/loader.min.js?ver=3.2.12';
+import * as storeAnalyticsBlocks from './blocks/storeanalytics/loader.min.js?ver=3.2.12';
 
 let allBlocks = [].concat(
   elementBlocks.fetchBlocks(),
@@ -40,25 +40,25 @@ let allBlocks = [].concat(
 uipress.register_new_blocks(allBlocks);
 //IMPORT BLOCK SETTINGS
 //Dynamic settings
-import * as UIPDynamicss from './options/dynamic-settings.min.js?ver=3.2.06';
+import * as UIPDynamicss from './options/dynamic-settings.min.js?ver=3.2.12';
 uipress.register_new_dynamic_settings(UIPDynamicss.fetchSettings(uipress));
 uipress.uipAppData.dynamicOptions = uipress.loadDynamics();
 ///Block settings
-import * as UIPsettings from './options/settings-loader.min.js?ver=3.2.06';
+import * as UIPsettings from './options/settings-loader.min.js?ver=3.2.12';
 let dynamicSettings = UIPsettings.getSettings(uipress.uipAppData.dynamicOptions, 'builder');
 uipress.register_new_block_settings(dynamicSettings);
 //Register theme styles
-import * as UIPthemeStyles from './options/theme-styles.min.js?ver=3.2.06';
+import * as UIPthemeStyles from './options/theme-styles.min.js?ver=3.2.12';
 uipress.register_new_theme_styles(UIPthemeStyles.fetchSettings(uipress));
 uipress.uipAppData.themeStyles = uipress.loadThemeStyles();
 //Register template group settings
-import * as UIPtemplateSettings from './uibuilder/template-settings-groups.min.js?ver=3.2.06';
+import * as UIPtemplateSettings from './uibuilder/template-settings-groups.min.js?ver=3.2.12';
 uipress.register_new_template_groups(UIPtemplateSettings.fetchGroups());
 uipress.register_new_template_groups_options(UIPtemplateSettings.fetchSettings());
 uipress.uipAppData.templateGroupOptions = uipress.loadTemplateGroups();
 
 //Register global group settings
-import * as UIPGlobalSettingsGroups from './uibuilder/global-settings-groups.min.js?ver=3.2.06';
+import * as UIPGlobalSettingsGroups from './uibuilder/global-settings-groups.min.js?ver=3.2.12';
 uipress.register_new_global_groups(UIPGlobalSettingsGroups.fetchGroups());
 uipress.register_new_global_groups_options(UIPGlobalSettingsGroups.fetchSettings());
 uipress.uipAppData.globalGroupOptions = uipress.loadGlobalGroups();
@@ -75,101 +75,105 @@ uipress.uipAppData.blocks = allUIPBlocks;
 uipress.uipAppData.settings = allUIPSettings;
 
 ///Views
-import * as UIbuilderTable from './uibuilder/uip-template-list.min.js?ver=3.2.06';
-import * as UIBuilderFramework from './uibuilder/uip-builder-framework.min.js?ver=3.2.06';
-import * as UIbuilderSetupWizard from './uibuilder/uip-builder-setup-wizard.min.js?ver=3.2.06';
-import * as UIbuilderGlobalSettings from './uibuilder/uip-builder-global-settings.min.js?ver=3.2.06';
-import * as UIbuilderBlockSettingsLoader from './uibuilder/uip-settings-loader.min.js?ver=3.2.06';
+import * as UIbuilderTable from './uibuilder/uip-template-list.min.js?ver=3.2.12';
+import * as UIBuilderFramework from './uibuilder/uip-builder-framework.min.js?ver=3.2.12';
+import * as UIbuilderSetupWizard from './uibuilder/uip-builder-setup-wizard.min.js?ver=3.2.12';
+import * as UIbuilderGlobalExport from './uibuilder/uip-builder-global-export.min.js?ver=3.2.12';
+import * as UIbuilderSiteSync from './uibuilder/uip-builder-site-sync.min.js?ver=3.2.12';
+import * as UIbuilderGlobalImport from './uibuilder/uip-builder-global-import.min.js?ver=3.2.12';
+import * as UIbuilderGlobalSettings from './uibuilder/uip-builder-global-settings.min.js?ver=3.2.12';
+import * as UIbuilderBlockSettingsLoader from './uibuilder/uip-settings-loader.min.js?ver=3.2.12';
 
-import * as UIbuilderSettings from './uibuilder/uip-builder-settings.min.js?ver=3.2.06';
-import * as UIbuilderToolbar from './uibuilder/uip-builder-toolbar.min.js?ver=3.2.06';
-import * as UIbuilderPreview from './uibuilder/uip-ui-preview.min.js?ver=3.2.06';
-import * as UIbuilderblocksList from './uibuilder/uip-builder-blocks-list.min.js?ver=3.2.06';
-import * as UIbuilderDropArea from './uibuilder/uip-builder-drop-area.min.js?ver=3.2.06';
-import * as UIbuilderTreeviewDropArea from './uibuilder/uip-treeview-drop-area.min.js?ver=3.2.06';
-import * as UIbuilderBlockReturner from './uibuilder/uip-block-returner.min.js?ver=3.2.06';
-import * as UIbuilderBlockSettings from './uibuilder/uip-block-settings.min.js?ver=3.2.06';
-import * as UIbuilderHistory from './uibuilder/uip-builder-history.min.js?ver=3.2.06';
-import * as UIbuilderBlockActions from './uibuilder/uip-block-actions.min.js?ver=3.2.06';
-import * as UIbuilderLibrary from './uibuilder/uip-template-library.min.js?ver=3.2.06';
+import * as UIbuilderSettings from './uibuilder/uip-builder-settings.min.js?ver=3.2.12';
+import * as UIbuilderToolbar from './uibuilder/uip-builder-toolbar.min.js?ver=3.2.12';
+import * as UIbuilderPreview from './uibuilder/uip-ui-preview.min.js?ver=3.2.12';
+import * as UIbuilderblocksList from './uibuilder/uip-builder-blocks-list.min.js?ver=3.2.12';
+import * as UIbuilderDropArea from './uibuilder/uip-builder-drop-area.min.js?ver=3.2.12';
+import * as UIbuilderTreeviewDropArea from './uibuilder/uip-treeview-drop-area.min.js?ver=3.2.12';
+import * as UIbuilderBlockReturner from './uibuilder/uip-block-returner.min.js?ver=3.2.12';
+import * as UIbuilderBlockSettings from './uibuilder/uip-block-settings.min.js?ver=3.2.12';
+import * as UIbuilderHistory from './uibuilder/uip-builder-history.min.js?ver=3.2.12';
+import * as UIbuilderBlockActions from './uibuilder/uip-block-actions.min.js?ver=3.2.12';
+import * as UIbuilderLibrary from './uibuilder/uip-template-library.min.js?ver=3.2.12';
 
-import * as UIbuilderVariablesList from './uibuilder/uip-builder-variables.min.js?ver=3.2.06';
-import * as UIbuilderSavePattern from './uibuilder/uip-save-pattern.min.js?ver=3.2.06';
-import * as UIbuilderDynamicDataWatcher from './uibuilder/uip-dynamic-data-watcher.min.js?ver=3.2.06';
+import * as UIbuilderVariablesList from './uibuilder/uip-builder-variables.min.js?ver=3.2.12';
+import * as UIbuilderSavePattern from './uibuilder/uip-save-pattern.min.js?ver=3.2.12';
+import * as UIbuilderDynamicDataWatcher from './uibuilder/uip-dynamic-data-watcher.min.js?ver=3.2.12';
 
 //Tool import
-import * as UIToolsErrroLog from './tools/uip-php-error-log.min.js?ver=3.2.06';
+import * as UIToolsErrroLog from './tools/uip-php-error-log.min.js?ver=3.2.12';
 
 //modules
-import * as UIbuilderDropdown from './modules/uip-dropdown.min.js?ver=3.2.06';
-import * as UIbuilderMultiSelect from './modules/uip-multiselect.min.js?ver=3.2.06';
-import * as UIbuilderUserMultiSelect from './modules/uip-user-role-multiselect.min.js?ver=3.2.06';
-import * as UIbuilderUserSearch from './modules/uip-user-role-search.min.js?ver=3.2.06';
+import * as UIbuilderDropdown from './modules/uip-dropdown.min.js?ver=3.2.12';
+import * as UIbuilderMultiSelect from './modules/uip-multiselect.min.js?ver=3.2.12';
+import * as UIbuilderUserMultiSelect from './modules/uip-user-role-multiselect.min.js?ver=3.2.12';
+import * as UIbuilderUserSearch from './modules/uip-user-role-search.min.js?ver=3.2.12';
 
-import * as UIbuilderPostTypeMultiSelect from './modules/uip-post-type-select.min.js?ver=3.2.06';
-import * as UIbuilderPostMetaMultiSelect from './modules/uip-post-meta-select.min.js?ver=3.2.06';
-import * as UIbuilderAccordion from './modules/uip-accordion.min.js?ver=3.2.06';
-import * as UIbuilderSwitchToggle from './modules/uip-switch-toggle.min.js?ver=3.2.06';
-import * as UIbuilderTooltip from './modules/uip-tooltip.min.js?ver=3.2.06';
-import * as UIbuilderChartLoading from './modules/uip-loading-chart.min.js?ver=3.2.06';
-import * as UIbuilderOffcanvas from './modules/uip-offcanvas.min.js?ver=3.2.06';
-import * as UIbuilderSaveButton from './modules/uip-save-button.min.js?ver=3.2.06';
-import * as UIbuilderDynamicList from './modules/uip-dynamic-data-list.min.js?ver=3.2.06';
-import * as UIbuilderChart from './modules/uip-chart.min.js?ver=3.2.06';
-import * as UIbuilderModal from './modules/uip-modal.min.js?ver=3.2.06';
+import * as UIbuilderPostTypeMultiSelect from './modules/uip-post-type-select.min.js?ver=3.2.12';
+import * as UIbuilderPostMetaMultiSelect from './modules/uip-post-meta-select.min.js?ver=3.2.12';
+import * as UIbuilderAccordion from './modules/uip-accordion.min.js?ver=3.2.12';
+import * as UIbuilderSwitchToggle from './modules/uip-switch-toggle.min.js?ver=3.2.12';
+import * as UIbuilderTooltip from './modules/uip-tooltip.min.js?ver=3.2.12';
+import * as UIbuilderChartLoading from './modules/uip-loading-chart.min.js?ver=3.2.12';
+import * as UIbuilderOffcanvas from './modules/uip-offcanvas.min.js?ver=3.2.12';
+import * as UIbuilderSaveButton from './modules/uip-save-button.min.js?ver=3.2.12';
+import * as UIbuilderDynamicList from './modules/uip-dynamic-data-list.min.js?ver=3.2.12';
+import * as UIbuilderChart from './modules/uip-chart.min.js?ver=3.2.12';
+import * as UIbuilderModal from './modules/uip-modal.min.js?ver=3.2.12';
 import * as UIfloatingPanel from './modules/uip-floating-panel.min.js?ver=3.1.12';
 
 //Option components
-import * as UIbuilderImageSelect from './options/uip-image-select.min.js?ver=3.2.06';
-import * as UIbuilderInlineImageSelect from './options/uip-inline-image-select.min.js?ver=3.2.06';
-import * as UIbuilderBackgroundPosition from './options/uip-background-position.min.js?ver=3.2.06';
-import * as UIbuilderSwitch from './options/uip-switch-select.min.js?ver=3.2.06';
-import * as UIbuilderValueUnits from './options/uip-value-units.min.js?ver=3.2.06';
-import * as UIbuilderUnits from './options/uip-units.min.js?ver=3.2.06';
-import * as UIbuilderDimensions from './options/uip-dimensions.min.js?ver=3.2.06';
-import * as UIbuilderColorSelect from './options/uip-color-select.min.js?ver=3.2.06';
-import * as UIbuilderColorPicker from './options/uip-color-picker.min.js?ver=3.2.06';
-import * as UIbuilderBorder from './options/uip-border-designer.min.js?ver=3.2.06';
-import * as UIbuilderOutline from './options/uip-outline-designer.min.js?ver=3.2.06';
-import * as UIbuilderShadow from './options/uip-shadow-designer.min.js?ver=3.2.06';
-import * as UIbuilderInput from './options/uip-input.min.js?ver=3.2.06';
-import * as UIbuilderClasses from './options/uip-classes.min.js?ver=3.2.06';
-import * as UIbuilderNumber from './options/uip-number.min.js?ver=3.2.06';
-import * as UIbuilderPostTypes from './options/uip-post-types.min.js?ver=3.2.06';
-import * as UIbuilderPostMeta from './options/uip-post-meta.min.js?ver=3.2.06';
-import * as UIbuilderParagraphInput from './options/uip-paragraph-input.min.js?ver=3.2.06';
-import * as UIbuilderDynamicInput from './options/uip-dynamic-input.min.js?ver=3.2.06';
-import * as UIbuilderPadding from './options/uip-padding.min.js?ver=3.2.06';
-import * as UIbuilderSpacing from './options/uip-spacing.min.js?ver=3.2.06';
-import * as UIbuilderMargin from './options/uip-margin.min.js?ver=3.2.06';
-import * as UIbuilderIconSelect from './options/uip-icon-select.min.js?ver=3.2.06';
-import * as UIbuilderInlineIconSelect from './options/uip-inline-icon-select.min.js?ver=3.2.06';
-import * as UIbuilderChoiceSelect from './options/uip-choice-select.min.js?ver=3.2.06';
-import * as UIbuilderIconChoiceSelect from './options/uip-icon-choice-select.min.js?ver=3.2.06';
-import * as UIbuilderTextFormat from './options/uip-text-format.min.js?ver=3.2.06';
-import * as UIbuilderDefaultSelect from './options/uip-default-select.min.js?ver=3.2.06';
-import * as UIbuilderMenuSelect from './options/uip-custom-menu-select.min.js?ver=3.2.06';
+import * as UIbuilderImageSelect from './options/uip-image-select.min.js?ver=3.2.12';
+import * as UIbuilderInlineImageSelect from './options/uip-inline-image-select.min.js?ver=3.2.12';
+import * as UIbuilderBackgroundPosition from './options/uip-background-position.min.js?ver=3.2.12';
+import * as UIbuilderSwitch from './options/uip-switch-select.min.js?ver=3.2.12';
+import * as UIbuilderValueUnits from './options/uip-value-units.min.js?ver=3.2.12';
+import * as UIbuilderUnits from './options/uip-units.min.js?ver=3.2.12';
+import * as UIbuilderDimensions from './options/uip-dimensions.min.js?ver=3.2.12';
+import * as UIbuilderColorSelect from './options/uip-color-select.min.js?ver=3.2.12';
+import * as UIbuilderColorPicker from './options/uip-color-picker.min.js?ver=3.2.12';
+import * as UIbuilderBorder from './options/uip-border-designer.min.js?ver=3.2.12';
+import * as UIbuilderOutline from './options/uip-outline-designer.min.js?ver=3.2.12';
+import * as UIbuilderShadow from './options/uip-shadow-designer.min.js?ver=3.2.12';
+import * as UIbuilderInput from './options/uip-input.min.js?ver=3.2.12';
+import * as UIbuilderTextarea from './options/uip-textarea.min.js?ver=3.2.12';
+import * as UIbuilderClasses from './options/uip-classes.min.js?ver=3.2.12';
+import * as UIbuilderNumber from './options/uip-number.min.js?ver=3.2.12';
+import * as UIbuilderPostTypes from './options/uip-post-types.min.js?ver=3.2.12';
+import * as UIbuilderPostMeta from './options/uip-post-meta.min.js?ver=3.2.12';
+import * as UIbuilderParagraphInput from './options/uip-paragraph-input.min.js?ver=3.2.12';
+import * as UIbuilderDynamicInput from './options/uip-dynamic-input.min.js?ver=3.2.12';
+import * as UIbuilderPadding from './options/uip-padding.min.js?ver=3.2.12';
+import * as UIbuilderSpacing from './options/uip-spacing.min.js?ver=3.2.12';
+import * as UIbuilderMargin from './options/uip-margin.min.js?ver=3.2.12';
+import * as UIbuilderIconSelect from './options/uip-icon-select.min.js?ver=3.2.12';
+import * as UIbuilderInlineIconSelect from './options/uip-inline-icon-select.min.js?ver=3.2.12';
+import * as UIbuilderChoiceSelect from './options/uip-choice-select.min.js?ver=3.2.12';
+import * as UIbuilderIconChoiceSelect from './options/uip-icon-choice-select.min.js?ver=3.2.12';
+import * as UIbuilderTextFormat from './options/uip-text-format.min.js?ver=3.2.12';
+import * as UIbuilderDefaultSelect from './options/uip-default-select.min.js?ver=3.2.12';
+import * as UIbuilderMenuSelect from './options/uip-custom-menu-select.min.js?ver=3.2.12';
 
-import * as UIbuilderLinkSelect from './options/uip-link-select.min.js?ver=3.2.06';
-import * as UIbuilderBorderRadius from './options/uip-border-radius.min.js?ver=3.2.06';
-import * as UIbuilderTabBuilder from './options/uip-tab-builder.min.js?ver=3.2.06';
-import * as UIbuilderHiddenMenuItems from './options/uip-hidden-menu-items-select.min.js?ver=3.2.06';
-import * as UIbuilderHiddenToolbarItems from './options/uip-hidden-toolbar-items-select.min.js?ver=3.2.06';
-import * as UIbuilderEditToolbarItems from './options/uip-edit-toolbar-items.min.js?ver=3.2.06';
-import * as UIbuilderEditMenuItems from './options/uip-edit-menu-items.min.js?ver=3.2.06';
-import * as UIbuilderResponsive from './options/uip-responsive.min.js?ver=3.2.06';
-import * as UIbuilderMultiselectOption from './options/uip-multi-select.min.js?ver=3.2.06';
-import * as UIbuilderCodeEditor from './options/uip-code-editor.min.js?ver=3.2.06';
-import * as UIbuilderPositionEditor from './options/uip-position-designer.min.js?ver=3.2.06';
-import * as UIbuilderSubmitAction from './options/uip-submit-action.min.js?ver=3.2.06';
-import * as UIbuilderSelectOptionBuilder from './options/uip-select-option-builder.min.js?ver=3.2.06';
-import * as UIbuilderSimpleColorPicker from './options/uip-simple-color-picker.min.js?ver=3.2.06';
-import * as UIbuilderArrayList from './options/uip-array-list.min.js?ver=3.2.06';
-import * as UIbuilderSelectPostTypes from './options/uip-select-post-types.min.js?ver=3.2.06';
-import * as UIbuilderFlexLayout from './options/uip-flex-layout.min.js?ver=3.2.06';
-import * as UIbuilderQueryBuilder from './options/uip-query-builder.min.js?ver=3.2.06';
-import * as UIbuilderStyles from './options/uip-styles.min.js?ver=3.2.06';
-import * as UIbuilderEffects from './options/uip-effects.min.js?ver=3.2.06';
+import * as UIbuilderLinkSelect from './options/uip-link-select.min.js?ver=3.2.12';
+import * as UIbuilderBorderRadius from './options/uip-border-radius.min.js?ver=3.2.12';
+import * as UIbuilderTabBuilder from './options/uip-tab-builder.min.js?ver=3.2.12';
+import * as UIbuilderHiddenMenuItems from './options/uip-hidden-menu-items-select.min.js?ver=3.2.12';
+import * as UIbuilderHiddenToolbarItems from './options/uip-hidden-toolbar-items-select.min.js?ver=3.2.12';
+import * as UIbuilderEditToolbarItems from './options/uip-edit-toolbar-items.min.js?ver=3.2.12';
+import * as UIbuilderEditMenuItems from './options/uip-edit-menu-items.min.js?ver=3.2.12';
+import * as UIbuilderResponsive from './options/uip-responsive.min.js?ver=3.2.12';
+import * as UIbuilderMultiselectOption from './options/uip-multi-select.min.js?ver=3.2.12';
+import * as UIbuilderCodeEditor from './options/uip-code-editor.min.js?ver=3.2.12';
+import * as UIbuilderPositionEditor from './options/uip-position-designer.min.js?ver=3.2.12';
+import * as UIbuilderSubmitAction from './options/uip-submit-action.min.js?ver=3.2.12';
+import * as UIbuilderSelectOptionBuilder from './options/uip-select-option-builder.min.js?ver=3.2.12';
+import * as UIbuilderSimpleColorPicker from './options/uip-simple-color-picker.min.js?ver=3.2.12';
+import * as UIbuilderArrayList from './options/uip-array-list.min.js?ver=3.2.12';
+import * as UIbuilderSelectPostTypes from './options/uip-select-post-types.min.js?ver=3.2.12';
+import * as UIbuilderFlexLayout from './options/uip-flex-layout.min.js?ver=3.2.12';
+import * as UIbuilderQueryBuilder from './options/uip-query-builder.min.js?ver=3.2.12';
+import * as UIbuilderStyles from './options/uip-styles.min.js?ver=3.2.12';
+import * as UIbuilderEffects from './options/uip-effects.min.js?ver=3.2.12';
 
 /**
  * Builds main args for ui builder
@@ -220,6 +224,21 @@ const routes = [
         name: __('Setup wizard', 'uipress-lite'),
         path: '/setupwizard/',
         component: UIbuilderSetupWizard.moduleData(),
+      },
+      {
+        name: __('Global export', 'uipress-lite'),
+        path: '/globalexport/',
+        component: UIbuilderGlobalExport.moduleData(),
+      },
+      {
+        name: __('Global import', 'uipress-lite'),
+        path: '/globalimport/',
+        component: UIbuilderGlobalImport.moduleData(),
+      },
+      {
+        name: __('Site sync', 'uipress-lite'),
+        path: '/sitesync/',
+        component: UIbuilderSiteSync.moduleData(),
       },
       {
         name: __('Site settings', 'uipress-lite'),
@@ -327,6 +346,7 @@ uipUiBuilderApp.component('border-designer', UIbuilderBorder.moduleData());
 uipUiBuilderApp.component('outline-designer', UIbuilderOutline.moduleData());
 uipUiBuilderApp.component('shadow-designer', UIbuilderShadow.moduleData());
 uipUiBuilderApp.component('uip-input', UIbuilderInput.moduleData());
+uipUiBuilderApp.component('uip-textarea', UIbuilderTextarea.moduleData());
 uipUiBuilderApp.component('uip-classes', UIbuilderClasses.moduleData());
 uipUiBuilderApp.component('post-types', UIbuilderPostTypes.moduleData());
 uipUiBuilderApp.component('post-meta', UIbuilderPostMeta.moduleData());

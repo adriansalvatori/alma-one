@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
+use Roots\Acorn\Sage\SageServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use Roots\Acorn\ServiceProvider;
 
-class ThemeServiceProvider extends ServiceProvider
+class ThemeServiceProvider extends SageServiceProvider
 {
     /**
      * Register any application services.
@@ -14,7 +14,7 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        parent::register();
     }
 
     /**
@@ -22,14 +22,8 @@ class ThemeServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot() 
+    public function boot()
     {
-
-        /** Json helper Directive 
-         Blade::directive('json', function ($expression) {
-            return "<?php echo 'JSON.parse(".json_decode( $expression ).")'; ?>";
-        });*/
-
         /** Feather Directive */
         Blade::directive('feather', function ($expression) {
             return "<?php echo '<span class=icon><i data-feather='.{$expression}.'></i></span>'; ?>";
@@ -39,5 +33,7 @@ class ThemeServiceProvider extends ServiceProvider
         Blade::directive('productcat', function ($product) {
             return "<?php echo wc_get_product_category_list( $product, ', ', '', '' ); ?>";
         });
+
+        parent::boot();
     }
 }

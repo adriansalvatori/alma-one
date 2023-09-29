@@ -52,7 +52,6 @@ export function moduleData() {
     watch: {
       option: {
         handler(newValue, oldValue) {
-          console.log('hello?');
           this.returnData(this.option);
         },
         deep: true,

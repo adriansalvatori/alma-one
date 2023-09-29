@@ -7,17 +7,17 @@ import { createApp } from './../libs/vue-esm.js';
 
 //Import required classes and modules
 //Import UiPress class
-import { uip } from './classes/uip.min.js?ver=3.2.06';
-import { uipMediaLibrary } from './classes/uip-media-library.min.js?ver=3.2.06';
+import { uip } from './classes/uip.min.js?ver=3.2.12';
+import { uipMediaLibrary } from './classes/uip-media-library.min.js?ver=3.2.12';
 const uipress = new uip('production');
 
 //Import blocks
-import * as elementBlocks from './blocks/elements/loader.min.js?ver=3.2.06';
-import * as layoutBlocks from './blocks/layout/loader.min.js?ver=3.2.06';
-import * as formBlockOptions from './blocks/inputs/loader.min.js?ver=3.2.06';
-import * as dynamicBlocks from './blocks/dynamic/loader.min.js?ver=3.2.06';
-import * as analyticsBlocks from './blocks/analytics/loader.min.js?ver=3.2.06';
-import * as storeAnalyticsBlocks from './blocks/storeanalytics/loader.min.js?ver=3.2.06';
+import * as elementBlocks from './blocks/elements/loader.min.js?ver=3.2.12';
+import * as layoutBlocks from './blocks/layout/loader.min.js?ver=3.2.12';
+import * as formBlockOptions from './blocks/inputs/loader.min.js?ver=3.2.12';
+import * as dynamicBlocks from './blocks/dynamic/loader.min.js?ver=3.2.12';
+import * as analyticsBlocks from './blocks/analytics/loader.min.js?ver=3.2.12';
+import * as storeAnalyticsBlocks from './blocks/storeanalytics/loader.min.js?ver=3.2.12';
 
 let allBlocks = [].concat(
   elementBlocks.fetchBlocks(),
@@ -30,39 +30,39 @@ let allBlocks = [].concat(
 uipress.register_new_blocks(allBlocks);
 
 //Dynamic settings
-import * as UIPDynamicss from './options/dynamic-settings.min.js?ver=3.2.06';
+import * as UIPDynamicss from './options/dynamic-settings.min.js?ver=3.2.12';
 uipress.register_new_dynamic_settings(UIPDynamicss.fetchSettings(uipress));
 uipress.uipAppData.dynamicOptions = uipress.loadDynamics();
 
 ///Block settings
-import * as UIPsettings from './options/settings-loader.min.js?ver=3.2.06';
+import * as UIPsettings from './options/settings-loader.min.js?ver=3.2.12';
 let dynamicSettings = UIPsettings.getSettings(uipress.uipAppData.dynamicOptions);
 uipress.register_new_block_settings(dynamicSettings);
 
 //Register theme styles
-import * as UIPthemeStyles from './options/theme-styles.min.js?ver=3.2.06';
+import * as UIPthemeStyles from './options/theme-styles.min.js?ver=3.2.12';
 uipress.register_new_theme_styles(UIPthemeStyles.fetchSettings(uipress));
 uipress.uipAppData.themeStyles = uipress.loadThemeStyles();
 
 //Import Vue modules
-import * as uipAppDropdown from './modules/uip-dropdown.min.js?ver=3.2.06';
-import * as uipAppMultiSelect from './modules/uip-multiselect.min.js?ver=3.2.06';
-import * as uipAppUserMultiSelect from './modules/uip-user-role-multiselect.min.js?ver=3.2.06';
-import * as uipAppAccordion from './modules/uip-accordion.min.js?ver=3.2.06';
-import * as uipAppSwitchToggle from './modules/uip-switch-toggle.min.js?ver=3.2.06';
-import * as uipAppTooltip from './modules/uip-tooltip.min.js?ver=3.2.06';
-import * as uipAppChartLoading from './modules/uip-loading-chart.min.js?ver=3.2.06';
-import * as uipAppOffcanvas from './modules/uip-offcanvas.min.js?ver=3.2.06';
-import * as uipAppBlockContainer from './modules/uip-prod-block-container.min.js?ver=3.2.06';
-import * as uipAppContentArea from './modules/uip-content-area.min.js?ver=3.2.06';
-import * as uipAppChart from './modules/uip-chart.min.js?ver=3.2.06';
-import * as uipAppModal from './modules/uip-modal.min.js?ver=3.2.06';
-import * as uipAppSaveButton from './modules/uip-save-button.min.js?ver=3.2.06';
-import * as uipAppColorPicker from './options/uip-color-picker.min.js?ver=3.2.06';
-import * as uIbuilderColorSelect from './options/uip-color-select.min.js?ver=3.2.06';
+import * as uipAppDropdown from './modules/uip-dropdown.min.js?ver=3.2.12';
+import * as uipAppMultiSelect from './modules/uip-multiselect.min.js?ver=3.2.12';
+import * as uipAppUserMultiSelect from './modules/uip-user-role-multiselect.min.js?ver=3.2.12';
+import * as uipAppAccordion from './modules/uip-accordion.min.js?ver=3.2.12';
+import * as uipAppSwitchToggle from './modules/uip-switch-toggle.min.js?ver=3.2.12';
+import * as uipAppTooltip from './modules/uip-tooltip.min.js?ver=3.2.12';
+import * as uipAppChartLoading from './modules/uip-loading-chart.min.js?ver=3.2.12';
+import * as uipAppOffcanvas from './modules/uip-offcanvas.min.js?ver=3.2.12';
+import * as uipAppBlockContainer from './modules/uip-prod-block-container.min.js?ver=3.2.12';
+import * as uipAppContentArea from './modules/uip-content-area.min.js?ver=3.2.12';
+import * as uipAppChart from './modules/uip-chart.min.js?ver=3.2.12';
+import * as uipAppModal from './modules/uip-modal.min.js?ver=3.2.12';
+import * as uipAppSaveButton from './modules/uip-save-button.min.js?ver=3.2.12';
+import * as uipAppColorPicker from './options/uip-color-picker.min.js?ver=3.2.12';
+import * as uIbuilderColorSelect from './options/uip-color-select.min.js?ver=3.2.12';
 
 //Import main ui view
-import * as uipMainView from './modules/uip-app-view.min.js?ver=3.2.06';
+import * as uipMainView from './modules/uip-app-view.min.js?ver=3.2.12';
 
 //Fire hooks to register settings and blocks
 const allUIPBlocks = uipress.loadBlocks();

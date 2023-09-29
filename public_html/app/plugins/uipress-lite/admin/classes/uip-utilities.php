@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) {
   exit();
 }
-
+#[AllowDynamicProperties]
 class uip_util
 {
   public function get_user_preference($key)
@@ -62,7 +62,11 @@ class uip_util
         } elseif (is_array($in)) {
           $values->$index = $this->clean_ajax_input($in);
         } else {
-          $values->$index = wp_kses($in, []);
+          if (!$in) {
+            $values->$index = $in;
+          } else {
+            $values->$index = wp_kses($in, []);
+          }
         }
       }
     } elseif (is_array($values)) {
@@ -72,11 +76,17 @@ class uip_util
         } elseif (is_array($in)) {
           $values[$index] = $this->clean_ajax_input($in);
         } else {
-          $values[$index] = wp_kses($in, []);
+          if (!$in) {
+            $values[$index] = $in;
+          } else {
+            $values[$index] = wp_kses($in, []);
+          }
         }
       }
     } else {
-      $values = wp_kses($values, []);
+      if ($values) {
+        $values = wp_kses($values, []);
+      }
     }
 
     return $values;
@@ -268,95 +278,6 @@ class uip_util
    * @since 1.4
    * @variables $values = item to clean (array or string)
    */
-  public function clean_ajax_input_html($values)
-  {
-    global $allowedposttags;
-    $allowed_atts = [
-      'align' => [],
-      'class' => [],
-      'type' => [],
-      'id' => [],
-      'dir' => [],
-      'lang' => [],
-      'style' => [],
-      'xml:lang' => [],
-      'src' => [],
-      'alt' => [],
-      'href' => [],
-      'rel' => [],
-      'rev' => [],
-      'target' => [],
-      'novalidate' => [],
-      'type' => [],
-      'value' => [],
-      'name' => [],
-      'tabindex' => [],
-      'action' => [],
-      'method' => [],
-      'for' => [],
-      'width' => [],
-      'height' => [],
-      'data' => [],
-      'title' => [],
-      'script' => [],
-      'data-theme' => [],
-      'data-height' => [],
-    ];
-    $allowedposttags['form'] = $allowed_atts;
-    $allowedposttags['label'] = $allowed_atts;
-    $allowedposttags['input'] = $allowed_atts;
-    $allowedposttags['textarea'] = $allowed_atts;
-    $allowedposttags['iframe'] = $allowed_atts;
-    $allowedposttags['script'] = $allowed_atts;
-    $allowedposttags['style'] = $allowed_atts;
-    $allowedposttags['strong'] = $allowed_atts;
-    $allowedposttags['small'] = $allowed_atts;
-    $allowedposttags['table'] = $allowed_atts;
-    $allowedposttags['span'] = $allowed_atts;
-    $allowedposttags['abbr'] = $allowed_atts;
-    $allowedposttags['code'] = $allowed_atts;
-    $allowedposttags['pre'] = $allowed_atts;
-    $allowedposttags['div'] = $allowed_atts;
-    $allowedposttags['img'] = $allowed_atts;
-    $allowedposttags['h1'] = $allowed_atts;
-    $allowedposttags['h2'] = $allowed_atts;
-    $allowedposttags['h3'] = $allowed_atts;
-    $allowedposttags['h4'] = $allowed_atts;
-    $allowedposttags['h5'] = $allowed_atts;
-    $allowedposttags['h6'] = $allowed_atts;
-    $allowedposttags['ol'] = $allowed_atts;
-    $allowedposttags['ul'] = $allowed_atts;
-    $allowedposttags['li'] = $allowed_atts;
-    $allowedposttags['em'] = $allowed_atts;
-    $allowedposttags['hr'] = $allowed_atts;
-    $allowedposttags['br'] = $allowed_atts;
-    $allowedposttags['tr'] = $allowed_atts;
-    $allowedposttags['td'] = $allowed_atts;
-    $allowedposttags['p'] = $allowed_atts;
-    $allowedposttags['a'] = $allowed_atts;
-    $allowedposttags['b'] = $allowed_atts;
-    $allowedposttags['i'] = $allowed_atts;
-
-    if (is_array($values)) {
-      foreach ($values as $index => $in) {
-        if (is_array($in)) {
-          $values[$index] = $this->clean_ajax_input_html($in);
-        } else {
-          $values[$index] = wp_kses($in, $allowedposttags);
-        }
-      }
-    } else {
-      $values = wp_kses($values, $allowedposttags);
-    }
-
-    return $values;
-  }
-
-  /**
-   * Sanitises and strips tags of input from ajax without losing code
-   * @since 1.4
-   * @variables $values = item to clean (array or string)
-   */
   public function clean_ajax_input_width_code($values)
   {
     global $allowedposttags;
@@ -445,7 +366,11 @@ class uip_util
           }
         } else {
           try {
-            $values->$index = wp_kses($in, $allowedposttags);
+            if ($in) {
+              $values->$index = wp_kses($in, $allowedposttags);
+            } else {
+              $values->$index = $in;
+            }
           } catch (Exception $e) {
             $values->$index = '';
           }
@@ -467,53 +392,20 @@ class uip_util
           }
         } else {
           try {
-            $values[$index] = wp_kses($in, $allowedposttags);
+            if ($in) {
+              $values[$index] = wp_kses($in, $allowedposttags);
+            } else {
+              $values[$index] = $in;
+            }
           } catch (Exception $e) {
             $values[$index] = '';
           }
         }
       }
     } else {
-      $values = wp_kses($values, $allowedposttags);
-    }
-
-    return $values;
-  }
-
-  /**
-   * Sanitises and strips tags of input from ajax without losing code
-   * @since 1.4
-   * @variables $values = item to clean (array or string)
-   */
-  public function clean_ajax_input_admin_pages_editor($values)
-  {
-    $allowed_html = [
-      'span' => [
-        'class' => [],
-      ],
-    ];
-    if (is_object($values)) {
-      foreach ($values as $index => $in) {
-        if (is_object($in)) {
-          $values->$index = $this->clean_ajax_input_menu_editor($in);
-        } elseif (is_array($in)) {
-          $values->$index = $this->clean_ajax_input_menu_editor($in);
-        } else {
-          $values->$index = wp_kses_post($in, $allowed_html);
-        }
+      if ($values) {
+        $values = wp_kses($values, $allowedposttags);
       }
-    } elseif (is_array($values)) {
-      foreach ($values as $index => $in) {
-        if (is_object($in)) {
-          $values[$index] = $this->clean_ajax_input_menu_editor($in);
-        } elseif (is_array($in)) {
-          $values[$index] = $this->clean_ajax_input_menu_editor($in);
-        } else {
-          $values[$index] = wp_kses_post($in, $allowed_html);
-        }
-      }
-    } else {
-      $values = wp_kses_post($values, $allowed_html);
     }
 
     return $values;
@@ -533,6 +425,8 @@ class uip_util
     $typenow = $mastermenu['typenow'];
     $menu = $mastermenu['menu'];
     $submenu = $mastermenu['submenu'];
+
+    //error_log(json_encode($submenu));
 
     $first = true;
     $returnmenu = [];
@@ -591,7 +485,11 @@ class uip_util
 
       $title = wptexturize($item[0]);
       $nameParts = explode('<', $item[0]);
-      $strippedName = $nameParts[0];
+      if ($nameParts[0] != '') {
+        $strippedName = $nameParts[0];
+      } else {
+        $strippedName = $item[0];
+      }
       $notifications = preg_replace('/[^0-9]/', '', strip_tags($title));
       if (is_numeric($notifications)) {
         $item['notifications'] = $notifications;
@@ -608,7 +506,7 @@ class uip_util
         }
       } else {
         $item['id'] = $item[5];
-        $item['name'] = $strippedName;
+        $item['name'] = html_entity_decode($strippedName);
         $item['icon'] = $this->get_menu_icon($item);
         $item['classes'] = $class;
         $item['type'] = 'menu';
@@ -736,7 +634,13 @@ class uip_util
 
           $title = $sub_item[0];
           $nameParts = explode('<', $sub_item[0]);
-          $strippedName = $nameParts[0];
+
+          if ($nameParts[0] != '') {
+            $strippedName = $nameParts[0];
+          } else {
+            $strippedName = html_entity_decode(strip_tags($sub_item[0]));
+          }
+
           $notifications = preg_replace('/[^0-9]/', '', strip_tags($title));
 
           if (is_numeric($notifications)) {

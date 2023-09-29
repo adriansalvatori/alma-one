@@ -564,7 +564,7 @@ export function moduleData() {
                       <div v-if="!hideIcons()" v-html="returnTopIcon(item.icon)" class="uip-flex uip-flex-center uip-menu-icon uip-icon uip-icon-medium"></div>
                       
                       <div class="uip-flex-grow uip-flex uip-gap-xs uip-flex-center">
-                        <div class="uip-line-height-1">{{item.name}}</div>
+                        <div class="uip-line-height-1" v-html="item.name"></div>
                         <div v-if="item.notifications && item.notifications > 0" class="uip-border-round uip-h-14 uip-ratio-1-1 uip-background-secondary uip-text-inverse uip-text-xxs uip-text-bold uip-flex uip-flex-center uip-flex-middle uip-menu-notification"><span>{{item.notifications}}</span></div>
                       </div>
                       
@@ -582,11 +582,11 @@ export function moduleData() {
                                 <div v-if="sub.notifications && sub.notifications > 0" class="uip-border-circle uip-w-14 uip-h-14 uip-ratio-1-1 uip-background-secondary uip-text-inverse uip-text-xxs uip-flex uip-flex-center uip-flex-middle uip-menu-notification"><span>{{sub.notifications}}</span></div>
                               </div>
                               
-                              <div v-else-if="!sub.name" class="uip-margin-bottom-s uip-menu-separator"></div>
+                              <div v-else-if="!sepHasCustomName(sub)" class="uip-margin-bottom-s uip-menu-separator"></div>
                               
                               <div v-else class="uip-margin-bottom-s uip-margin-top-s uip-flex uip-flex-row uip-gap-xxs uip-menu-separator">
-                                <span v-if="sub.icon" class="uip-icon">{{sub.icon}}</span>
-                                <span>{{sub.name}}</span>
+                                <span v-if="sub.custom.icon && sub.custom.icon != 'uipblank'" class="uip-icon">{{sub.custom.icon}}</span>
+                                <span>{{sub.custom.name}}</span>
                               </div>
                             
                           </template>
@@ -598,7 +598,7 @@ export function moduleData() {
                   <div v-else-if="!sepHasCustomName(item)" class="uip-margin-bottom-s uip-menu-separator"></div>
                   
                   <div v-else class="uip-margin-bottom-xs uip-margin-top-xs uip-flex uip-flex-row uip-gap-xxs uip-menu-separator">
-                    <span v-if="item.custom.icon" class="uip-icon">{{item.custom.icon}}</span>
+                    <span v-if="item.custom.icon && item.custom.icon != 'uipblank'" class="uip-icon">{{item.custom.icon}}</span>
                     <span>{{item.custom.name}}</span>
                   </div>
                 
@@ -624,7 +624,7 @@ export function moduleData() {
                         <div v-if="!hideIcons()" v-html="returnTopIcon(item.icon)" class="uip-flex uip-flex-center uip-menu-icon uip-icon uip-icon-medium"></div>
                         
                         <div v-if="!collapsed" class="uip-flex-grow uip-flex uip-gap-xs uip-flex-center">
-                          <div>{{item.name}}</div>
+                          <div v-html="item.name"></div>
                           <div v-if="item.notifications && item.notifications > 0" class="uip-border-round uip-h-14 uip-ratio-1-1 uip-background-secondary uip-text-inverse uip-text-xxs uip-text-bold uip-flex uip-flex-center uip-flex-middle uip-menu-notification"><span>{{item.notifications}}</span></div>
                         </div>
                         
@@ -642,11 +642,11 @@ export function moduleData() {
                                 <div v-if="sub.notifications && sub.notifications > 0" class="uip-border-circle uip-w-14 uip-h-14 uip-ratio-1-1 uip-background-secondary uip-text-inverse uip-text-xxs uip-flex uip-flex-center uip-flex-middle uip-menu-notification"><span>{{sub.notifications}}</span></div>
                               </div>
                               
-                              <div v-else-if="!sub.name" class="uip-margin-bottom-s uip-menu-separator"></div>
+                              <div v-else-if="!sepHasCustomName(sub)" class="uip-margin-bottom-s uip-menu-separator"></div>
                               
                               <div v-else class="uip-margin-bottom-s uip-margin-top-s uip-flex uip-flex-row uip-gap-xxs uip-menu-separator">
-                                <span v-if="sub.icon" class="uip-icon">{{sub.icon}}</span>
-                                <span>{{sub.name}}</span>
+                                <span v-if="sub.custom.icon && sub.custom.icon != 'uipblank'" class="uip-icon">{{sub.custom.icon}}</span>
+                                <span>{{sub.custom.name}}</span>
                               </div>
                             
                           </template>
@@ -658,7 +658,7 @@ export function moduleData() {
                   <div v-else-if="!sepHasCustomName(item)" class="uip-margin-bottom-s uip-menu-separator"></div>
                   
                   <div v-else class="uip-margin-bottom-xs uip-margin-top-xs uip-flex uip-flex-row uip-gap-xxs uip-menu-separator">
-                    <span v-if="item.custom.icon" class="uip-icon">{{item.custom.icon}}</span>
+                    <span v-if="item.custom.icon && item.custom.icon != 'uipblank'" class="uip-icon">{{item.custom.icon}}</span>
                     <span>{{item.custom.name}}</span>
                   </div>
                 
@@ -684,7 +684,7 @@ export function moduleData() {
                         <div v-if="!hideIcons()" v-html="returnTopIcon(item.icon)" class="uip-flex uip-flex-center uip-menu-icon uip-icon uip-icon-medium"></div>
                         
                         <div class="uip-flex-grow uip-flex uip-gap-xs uip-flex-center">
-                          <div class="uip-line-height-1">{{item.name}}</div>
+                          <div class="uip-line-height-1" v-html="item.name"></div>
                           <div v-if="item.notifications && item.notifications > 0" class="uip-border-round uip-h-14 uip-ratio-1-1 uip-background-secondary uip-text-inverse uip-text-xxs uip-text-bold uip-flex uip-flex-center uip-flex-middle uip-menu-notification"><span>{{item.notifications}}</span></div>
                         </div>
                         
@@ -697,7 +697,7 @@ export function moduleData() {
                     <div v-else-if="!sepHasCustomName(item)" class="uip-margin-bottom-s uip-menu-separator"></div>
                     
                     <div v-else class="uip-margin-bottom-xs uip-margin-top-xs uip-flex uip-flex-row uip-gap-xxs uip-menu-separator">
-                      <span v-if="item.custom.icon" class="uip-icon">{{item.custom.icon}}</span>
+                      <span v-if="item.custom.icon && item.custom.icon != 'uipblank'" class="uip-icon">{{item.custom.icon}}</span>
                       <span>{{item.custom.name}}</span>
                     </div>
                   
@@ -723,11 +723,11 @@ export function moduleData() {
                             <div v-if="sub.notifications && sub.notifications > 0" class="uip-border-circle uip-w-14 uip-h-14 uip-ratio-1-1 uip-background-secondary uip-text-inverse uip-text-xxs uip-flex uip-flex-center uip-flex-middle uip-menu-notification"><span>{{sub.notifications}}</span></div>
                           </div>
                           
-                          <div v-else-if="!sub.name" class="uip-margin-bottom-s uip-menu-separator"></div>
+                          <div v-else-if="!sepHasCustomName(sub)" class="uip-margin-bottom-s uip-menu-separator"></div>
                           
                           <div v-else class="uip-margin-bottom-s uip-margin-top-s uip-flex uip-flex-row uip-gap-xxs uip-menu-separator">
-                            <span v-if="sub.icon" class="uip-icon">{{sub.icon}}</span>
-                            <span>{{sub.name}}</span>
+                            <span v-if="sub.custom.icon && sub.custom.icon != 'uipblank'" class="uip-icon">{{sub.custom.icon}}</span>
+                            <span>{{sub.custom.name}}</span>
                           </div>
                         
                       </template>

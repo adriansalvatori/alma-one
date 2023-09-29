@@ -9,8 +9,10 @@ export function moduleData() {
         chart: false,
         loading: false,
         acceptedData: false,
+        rendered: true,
       };
     },
+    inject: ['uipress'],
     watch: {
       chartData: {
         handler(newValue, oldValue) {
@@ -21,7 +23,9 @@ export function moduleData() {
           self.chart.destroy();
           self.chart = false;
           self.acceptedData = JSON.parse(JSON.stringify(self.chartData));
+          self.rendered = false;
           requestAnimationFrame(function () {
+            self.rendered = true;
             self.createChart();
           });
         },
@@ -54,12 +58,29 @@ export function moduleData() {
 
         let labels = self.formatLabels(this.acceptedData.labels);
 
+        let dataBackground = '';
+        let fillDataBackground = false;
+        let compBackground = '';
+        let fillCompBackground = false;
+        if (self.uipress.isObject(self.acceptedData.custom)) {
+          dataBackground = self.acceptedData.custom.dataBackground;
+          if (dataBackground) {
+            fillDataBackground = true;
+          }
+          //Comparison
+          compBackground = self.acceptedData.custom.compBackground;
+          if (compBackground) {
+            fillCompBackground = true;
+          }
+        }
+
         let data = {
           labels: labels,
           datasets: [
             {
               label: self.acceptedData.title,
-              backgroundColor: primaryColorstyle,
+              backgroundColor: dataBackground,
+              fill: fillDataBackground,
               borderColor: primaryColorstyle,
               data: self.acceptedData.data.main,
             },
@@ -69,7 +90,8 @@ export function moduleData() {
         if (self.acceptedData.data.comparison.length > 0) {
           data.datasets.push({
             label: self.acceptedData.title,
-            backgroundColor: lightColorstyle,
+            backgroundColor: compBackground,
+            fill: fillCompBackground,
             borderColor: lightColorstyle,
             data: self.acceptedData.data.comparison,
           });
@@ -99,15 +121,36 @@ export function moduleData() {
       },
       buildTheChartOptions() {
         let self = this;
+
+        let tension = 0.15;
+        let showXaxis = false;
+        let showYaxis = false;
+        let showYaxisGrid = true;
+        let showXaxisGrid = false;
+        let borderWidth = 3;
+        if (self.uipress.isObject(self.acceptedData.custom)) {
+          tension = self.acceptedData.custom.tension;
+
+          //Axis
+          showXaxis = self.acceptedData.custom.showXaxis;
+          showYaxis = self.acceptedData.custom.showYaxis;
+          //Grid
+          showYaxisGrid = self.acceptedData.custom.showYaxisGrid;
+          showXaxisGrid = self.acceptedData.custom.showXaxisGrid;
+          //Line Width
+          borderWidth = self.acceptedData.custom.borderWidth;
+        }
+
         return {
           cutout: '0%',
           spacing: 0,
           borderRadius: 0,
-          tension: 0.15,
+          tension: tension,
           pointRadius: 0,
           pointHoverRadius: 5,
           borderRadius: 8,
           animation: true,
+          borderWidth: borderWidth,
           //aspectRatio: 9,
           interaction: {
             mode: 'nearest',
@@ -157,11 +200,11 @@ export function moduleData() {
           scales: {
             x: {
               ticks: {
-                display: false,
+                display: showXaxis,
               },
               grid: {
                 borderWidth: 0,
-                display: true,
+                display: showYaxisGrid,
                 borderDash: [10, 8],
                 color: 'rgba(162, 162, 162, 0.4)',
               },
@@ -169,11 +212,11 @@ export function moduleData() {
             y: {
               beginAtZero: true,
               ticks: {
-                display: false,
+                display: showYaxis,
               },
               grid: {
                 borderWidth: 0,
-                display: false,
+                display: showXaxisGrid,
               },
             },
           },
@@ -263,6 +306,6 @@ export function moduleData() {
       },
     },
     template: `
-       <canvas class="uip-min-w-100 uip-chart-canvas" ref="uipChart"></canvas>`,
+       <canvas v-if="rendered" class="uip-min-w-100 uip-chart-canvas" ref="uipChart"></canvas>`,
   };
 }

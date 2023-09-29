@@ -55,6 +55,9 @@ export function moduleData() {
     },
     created: function () {
       if (!this.option || !this.option.includes(' ')) {
+        if (this.option != '') {
+          this.selected.push(this.option);
+        }
         this.rendered = true;
         this.getClassNames();
         return;
@@ -93,7 +96,6 @@ export function moduleData() {
         this.userInput = '';
       },
       getClassNames() {
-        console.log('started');
         let tempRules = [];
         let sSheetList = document.styleSheets;
         for (let sSheet = 0; sSheet < sSheetList.length; sSheet++) {
@@ -135,7 +137,6 @@ export function moduleData() {
             tempRules = [].concat(userClasses, tempRules);
           }
         }
-        console.log(this.allRules);
         this.allRules = [...new Set(tempRules)];
       },
       removeSelected(index) {

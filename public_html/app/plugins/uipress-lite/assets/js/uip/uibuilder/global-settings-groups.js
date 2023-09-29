@@ -397,8 +397,32 @@ export function fetchSettings() {
       },
     },
 
-    ///Theme
     //Advanced
+    {
+      component: 'uip-textarea',
+      args: { asText: true },
+      group: 'advanced',
+      uniqueKey: 'uipDisabledFor',
+      label: __('Disable uipress on pages', 'uipress-lite'),
+      help: __('Add URLs of pages here that you wish uiPress to be disabled on, separated by a comma. The URL can be an absolute URL, partial path or a query paramater.', 'uipress-lite'),
+      accepts: String,
+    },
+
+    //Advanced
+    {
+      component: 'uip-textarea',
+      args: { asText: true },
+      group: 'advanced',
+      uniqueKey: 'uipFullscreenFor',
+      label: __('Enter fullscreen on pages', 'uipress-lite'),
+      help: __(
+        'Add URLs of pages here that you wish to be fullscreen when using a uiTemplate, separated by a comma. The URL can be an absolute URL, partial path or a query paramater.',
+        'uipress-lite'
+      ),
+      accepts: String,
+    },
+
+    ///Theme
     {
       component: 'switch-select',
       args: { asText: true },

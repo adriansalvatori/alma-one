@@ -36,4 +36,5 @@ class App extends Composer
     {
         return get_bloginfo('name', 'display');
     }
+    
 }

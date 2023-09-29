@@ -3,6 +3,18 @@ if (!defined('ABSPATH')) {
   exit();
 }
 
+add_action('uip_auto_site_sync', 'uip_start_auto_site_sync');
+/**
+ * Watches for auto sync and imports settings from remote site
+ * @since 3.2.08
+ */
+function uip_start_auto_site_sync()
+{
+  require_once uip_plugin_path . 'admin/classes/uip-export-import.php';
+  $importer = new uip_export_import();
+  $importer->cron_auto_import();
+}
+
 /**
  * Handles UIP global settings
  * @since 3.0.92
@@ -42,6 +54,29 @@ class uip_site_settings extends uip_app
       return;
     }
 
+    if (isset($options['remote-sync'])) {
+      if (isset($options['remote-sync']['hostEnabled']) && $options['remote-sync']['hostEnabled'] == 'uiptrue') {
+        require_once uip_plugin_path . 'admin/classes/uip-export-import.php';
+        $uipExport = new uip_export_import();
+        $uipExport->host_site_setup();
+      }
+      if (isset($options['remote-sync']['syncOptions']) && property_exists($options['remote-sync']['syncOptions'], 'keepUpToDate')) {
+        if ($options['remote-sync']['syncOptions']->keepUpToDate == 'uiptrue') {
+          ///SCHEDULE SITE SYNC
+          if (is_multisite() && is_main_site()) {
+            if (!wp_next_scheduled('uip_auto_site_sync')) {
+              wp_schedule_event(time(), 'twicedaily', 'uip_auto_site_sync');
+            }
+          }
+          if (!is_multisite()) {
+            if (!wp_next_scheduled('uip_auto_site_sync')) {
+              wp_schedule_event(time(), 'twicedaily', 'uip_auto_site_sync');
+            }
+          }
+        }
+      }
+    }
+
     if (!isset($options['site-settings'])) {
       return;
     }
@@ -58,6 +93,102 @@ class uip_site_settings extends uip_app
     add_action('wp_default_scripts', [$this, 'dequeue_jquery_migrate']);
     add_action('admin_bar_menu', [$this, 'uip_logo_actions']);
     add_action('login_init', [$this, 'login_actions']);
+
+    //Check for user page disables: uipDisabledFor
+    $this->uip_disabled_on_page();
+    //Check for user page disables: uipFullscreenFor
+    $this->uip_fullscreen_on_page();
+  }
+
+  /**
+   * Check for user page disables: uipDisabledFor
+   * @since 3.2.08
+   */
+  public function uip_fullscreen_on_page()
+  {
+    $uipFullscreenFor = false;
+    if (isset($this->uip_site_settings_object->advanced->uipFullscreenFor)) {
+      $uipFullscreenFor = $this->uip_site_settings_object->advanced->uipFullscreenFor;
+    }
+
+    if (!$uipFullscreenFor) {
+      return;
+    }
+
+    $parts = explode(',', $uipFullscreenFor);
+
+    //No pages for fullscreen on
+    if (!is_array($parts)) {
+      return;
+    }
+
+    $url = $this->get_current_url();
+
+    if (!$url) {
+      return;
+    }
+
+    $formatted = [];
+    foreach ($parts as $part) {
+      $trimmed = trim($part);
+      $formatted[] = $trimmed;
+    }
+
+    $fullscreenJSON = json_encode($formatted);
+    add_action('admin_head', function () use ($fullscreenJSON) {
+      $variableFormatter = "const UIPFullscreenUserPages = {$fullscreenJSON};";
+      wp_print_inline_script_tag($variableFormatter, ['id' => 'uip-dynamic']);
+    });
+  }
+
+  /**
+   * Check for user page disables: uipDisabledFor
+   * @since 3.2.08
+   */
+  public function uip_disabled_on_page()
+  {
+    $disabledList = false;
+    if (isset($this->uip_site_settings_object->advanced->uipDisabledFor)) {
+      $disabledList = $this->uip_site_settings_object->advanced->uipDisabledFor;
+    }
+
+    if (!$disabledList) {
+      return;
+    }
+
+    $parts = explode(',', $disabledList);
+
+    //No pages for disabling on
+    if (!is_array($parts)) {
+      return;
+    }
+
+    $url = $this->get_current_url();
+
+    if (!$url) {
+      return;
+    }
+
+    $disabled = false;
+    $formatted = [];
+    foreach ($parts as $part) {
+      $trimmed = trim($part);
+      $formatted[] = $trimmed;
+      if ($trimmed == $url || strpos($url, $trimmed) !== false) {
+        $disabled = true;
+        break;
+      }
+    }
+
+    $disbaledJSON = json_encode($formatted);
+    add_action('admin_head', function () use ($disbaledJSON) {
+      $variableFormatter = "const UIPdisableUserPages = {$disbaledJSON};";
+      wp_print_inline_script_tag($variableFormatter, ['id' => 'uip-dynamic']);
+    });
+
+    if ($disabled) {
+      define('uip_app_running', false);
+    }
   }
 
   /**
@@ -111,6 +242,7 @@ class uip_site_settings extends uip_app
    */
   public function admin_theme_actions()
   {
+    $utils = new uip_util();
     $adminTheme = false;
     if (isset($this->uip_site_settings_object->theme->themeEnabled)) {
       $adminTheme = $this->uip_site_settings_object->theme->themeEnabled;
@@ -160,11 +292,17 @@ class uip_site_settings extends uip_app
         return;
       }
 
-      echo "<style type='text/css'>
+      global $allowedposttags;
+      $allowed_atts = [
+        'type' => [],
+      ];
+      $allowedposttags['style'] = $allowed_atts;
+      $tag = "<style type='text/css'>
           #adminmenu::before {
               background-image: url({$logo->url}) !important;
           }
       </style>";
+      echo wp_kses($tag, $allowedposttags);
     });
 
     add_action('admin_xml_ns', [$this, 'html_attributes_admin_theme']);
@@ -296,7 +434,7 @@ class uip_site_settings extends uip_app
     <div id="uip-login-form">';
     }
 
-    echo $wrapper;
+    echo wp_kses_post($wrapper);
   }
 
   /**
@@ -402,9 +540,9 @@ class uip_site_settings extends uip_app
     }
 
     if ($hideBranding != 'uiptrue') {
-      echo '<a class="uip-link-muted uip-no-underline" href="https://uipress.co?utm_source=uipresslogin&utm_medium=referral" target="_BLANK">Powered by uipress</a>';
+      echo wp_kses_post('<a class="uip-link-muted uip-no-underline" href="https://uipress.co?utm_source=uipresslogin&utm_medium=referral" target="_BLANK">Powered by uipress</a>');
     }
-    echo "</div></div><div id='uip-login-panel'>{$customHTML}</div></div><!-- END OF UIP WRAP -->";
+    echo wp_kses_post("</div></div><div id='uip-login-panel'>{$customHTML}</div></div><!-- END OF UIP WRAP -->");
 
     $customCSS = '';
     if (isset($this->uip_site_settings_object->login->loginCSS)) {
@@ -413,7 +551,7 @@ class uip_site_settings extends uip_app
       $customCSS = $utils->clean_ajax_input_width_code(html_entity_decode($customCSS));
 
       if ($customCSS != '' && $customCSS != 'uipblank') {
-        echo "<style type='text/css'>{$customCSS}</style>";
+        echo wp_kses_post("<style type='text/css'>{$customCSS}</style>");
       }
     }
   }
@@ -487,12 +625,12 @@ class uip_site_settings extends uip_app
     ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url(<?php echo $logo->url; ?>);
+            background-image: url(<?php echo esc_html($logo->url); ?>);
             margin-left: 0;
             background-size: contain;
             height: 50px;
             width: auto;
-            background-position: <?php echo $align; ?>;
+            background-position: <?php echo esc_html($align); ?>;
         }
     </style>
     <?php
@@ -505,7 +643,7 @@ class uip_site_settings extends uip_app
     ?>
     <style type="text/css">
         #uip-login-wrap #uip-login-panel, .uip-login-center #uip-login-form-wrap {
-            background-image: url(<?php echo $background->url; ?>) !important;
+            background-image: url(<?php echo esc_html($background->url); ?>) !important;
             background-size: cover;
         }
     </style>
@@ -632,16 +770,14 @@ class uip_site_settings extends uip_app
    */
   public function plugin_table_actions()
   {
-    if (!isset($this->uip_site_settings_object->plugins) || !isset($this->uip_site_settings_object->plugins->displayPluginStatus)) {
-      return;
-    }
+    if (isset($this->uip_site_settings_object->plugins) && isset($this->uip_site_settings_object->plugins->displayPluginStatus)) {
+      $showStatus = $this->uip_site_settings_object->plugins->displayPluginStatus;
 
-    $showStatus = $this->uip_site_settings_object->plugins->displayPluginStatus;
-
-    if ($showStatus == 'uiptrue') {
-      add_filter('manage_plugins_columns', [$this, 'add_plugin_status_column']);
-      add_filter('manage_plugins-network_columns', [$this, 'add_plugin_status_column']);
-      add_action('manage_plugins_custom_column', [$this, 'add_plugin_status'], 10, 3);
+      if ($showStatus == 'uiptrue') {
+        add_filter('manage_plugins_columns', [$this, 'add_plugin_status_column']);
+        add_filter('manage_plugins-network_columns', [$this, 'add_plugin_status_column']);
+        add_action('manage_plugins_custom_column', [$this, 'add_plugin_status'], 10, 3);
+      }
     }
   }
 

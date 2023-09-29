@@ -1,9 +1,9 @@
 === Web Stories ===
 
 Contributors:      google
-Tested up to:      6.2
-Requires at least: 6.0
-Stable tag: 1.32.0
+Tested up to:      6.3
+Requires at least: 6.1
+Stable tag: 1.33.0
 License:           Apache-2.0
 License URI:       https://www.apache.org/licenses/LICENSE-2.0
 Tags:              web stories, stories, amp, storytelling, google
@@ -109,6 +109,13 @@ Web Stories are powered by [AMP](https://amp.dev/), which adds some restrictions
 
 For the plugin's full changelog, please see [the Releases page on GitHub](https://github.com/googleforcreators/web-stories-wp/releases).
 
+= 1.34.0 =
+
+* Enhancement: compatibility with WordPress 6.3. New minimum version required is 6.1.
+* Enhancement: improved plugin compatibility to reduce validation errors.
+* Enhancement: improved behavior of numeric input fields such as in the date picker.
+* Various smaller bug fixes.
+
 = 1.33.0 =
 
 * Enhancement: add Google Analytics 4 (GA4) support.
@@ -123,14 +130,11 @@ For the plugin's full changelog, please see [the Releases page on GitHub](https:
 * Enhancement: filter stories in the Web Stories shortcode by categories and tags.
 * Bug fixes and performance improvements.
 
-= 1.31.0 =
-
-* Enhancement: compatibility with WordPress 6.2.
-* Enhancement: support linking to specific story pages.
-* Stability and compatibility improvements.
-* Bug fixes and performance improvements.
-
 == Upgrade Notice ==
+
+= 1.34.0 =
+
+This release includes improved compatibility with WordPress 6.3 and plugins like Ezoic, and several bug fixes.
 
 = 1.33.0 =
 
@@ -139,7 +143,3 @@ This release includes Google Analytics 4 (GA4) support, improved compatibility w
 = 1.32.0 =
 
 This release includes support for naming and searching page templates in the editor, and several bug fixes and stability improvements.
-
-= 1.31.0 =
-
-This release includes support for linking to specific story pages, compatibility with WordPress 6.2, and several bug fixes and stability improvements.

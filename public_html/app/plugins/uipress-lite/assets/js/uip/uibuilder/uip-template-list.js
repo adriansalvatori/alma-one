@@ -46,12 +46,15 @@ export function moduleData() {
           loginPage: __('Login page', 'uipress-lite'),
           frontEndToolbar: __('Frontend toolbar', 'uipress-lite'),
           setupWizard: __('Setup wizard', 'uipress-lite'),
+          globalExport: __('Global export', 'uipress-lite'),
           templateType: __('New template', 'uipress-lite'),
           userInterface: __('User interface', 'uipress-lite'),
           edit: __('Edit', 'uipress-lite'),
           duplicate: __('Duplicate', 'uipress-lite'),
           noTemplatesYet: __('No templates yet!', 'uipress-lite'),
           welcomeTov32: __('Welcome to version 3.2!', 'uipress-lite'),
+          globalImport: __('Global import', 'uipress-lite'),
+          siteSync: __('Remote sync', 'uipress-lite'),
         },
         activeTableTab: 'all',
         tabletabs: [
@@ -425,15 +428,15 @@ export function moduleData() {
             </div>
           </template>
           <template v-slot:content>
-            <div class="uip-flex uip-flex-column uip-padding-xs uip-min-w-150">
+            <div class="uip-flex uip-flex-column uip-padding-xs uip-min-w-150 uip-row-gap-xxxs">
             
               <!-- ERROR LOG --> 
               <uip-offcanvas position="right" style="max-width:90%;width:500px">
                 <template v-slot:trigger>
-                  <div class="uip-flex uip-gap-s uip-flex-between uip-link-muted uip-flex-center uip-padding-xxxs uip-padding-left-xxs uip-padding-right-xxs hover:uip-background-muted uip-border-round">
+                  <div class="uip-flex uip-gap-m uip-flex-between uip-link-default uip-flex-center uip-padding-xxxs uip-padding-left-xxs uip-padding-right-xxs hover:uip-background-muted uip-border-round">
                     
                     <div class="">{{strings.phpErrorLog}}</div>
-                    <div class="uip-icon">code</div>
+                    <div class="uip-icon uip-text-l">code</div>
                   </div>
                 </template>
                 <template v-slot:content>
@@ -444,12 +447,36 @@ export function moduleData() {
               </uip-offcanvas>
               
               
-              <div class="uip-flex uip-gap-s uip-flex-between uip-link-muted uip-flex-center uip-padding-xxxs uip-padding-left-xxs uip-padding-right-xxs hover:uip-background-muted uip-border-round" @click="router.push('/setupwizard/');">
+              <router-link to="/setupwizard/" class="uip-flex uip-gap-m uip-flex-between uip-link-default uip-no-underline uip-flex-center uip-padding-xxxs uip-padding-left-xxs uip-padding-right-xxs hover:uip-background-muted uip-border-round">
                 
                 <div class="">{{strings.setupWizard}}</div>
-                <div class="uip-icon">magic_button</div>
+                <div class="uip-icon uip-text-l">magic_button</div>
                 
-              </div>
+              </router-link>
+              
+              <div class="uip-border-top uip-margin-top-xs uip-margin-bottom-xs"></div>
+              
+              <router-link to="/globalexport/" class="uip-flex uip-gap-m uip-flex-between uip-link-default uip-no-underline uip-flex-center uip-padding-xxxs uip-padding-left-xxs uip-padding-right-xxs hover:uip-background-muted uip-border-round">
+                
+                <div class="">{{strings.globalExport}}</div>
+                <div class="uip-icon uip-text-l">file_download</div>
+                
+              </router-link>
+              
+              <router-link to="/globalimport/" class="uip-flex uip-gap-m uip-flex-between uip-link-default uip-no-underline uip-flex-center uip-padding-xxxs uip-padding-left-xxs uip-padding-right-xxs hover:uip-background-muted uip-border-round">
+                
+                <div class="">{{strings.globalImport}}</div>
+                <div class="uip-icon uip-text-l">file_upload</div>
+                
+              </router-link>
+              
+              
+              <router-link to="/sitesync/" class="uip-flex uip-gap-m uip-flex-between uip-link-default uip-no-underline uip-flex-center uip-padding-xxxs uip-padding-left-xxs uip-padding-right-xxs hover:uip-background-muted uip-border-round">
+                
+                <div class="">{{strings.siteSync}}</div>
+                <div class="uip-icon uip-text-l">sync</div>
+                
+              </router-link>
               
               
               

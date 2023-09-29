@@ -25,6 +25,9 @@ export function moduleData() {
       this.dequeueAdminBarStyles();
 
       this.toolbar = JSON.parse(JSON.stringify(this.uipData.toolbar));
+      requestAnimationFrame(() => {
+        self.updateFromDom();
+      });
       //Watch for toolbar changes in frame
       document.addEventListener(
         'uip_page_change_loaded',
@@ -93,14 +96,17 @@ export function moduleData() {
         let self = this;
         //Get frame
         let frames = document.getElementsByClassName('uip-page-content-frame');
-        //Frame does not exist so abort
+        let contentframe;
+        //Frame does not exist so use current dom
         if (!frames[0]) {
-          return;
+          contentframe = document;
+          console.log('helloooo');
+        } else {
+          contentframe = frames[0].contentWindow.document;
         }
 
-        let contentframe = frames[0];
-        let toolbarItems = contentframe.contentWindow.document.getElementById('wp-admin-bar-root-default');
-        let secondarytoolbarItems = contentframe.contentWindow.document.getElementById('wp-admin-bar-top-secondary');
+        let toolbarItems = contentframe.getElementById('wp-admin-bar-root-default');
+        let secondarytoolbarItems = contentframe.getElementById('wp-admin-bar-top-secondary');
         if (!toolbarItems) return;
 
         //Get all toolbar items
@@ -137,8 +143,10 @@ export function moduleData() {
 
             if (link) {
               let href = link.getAttribute('href');
-              if (href.startsWith(adminPath)) {
-                href = href.replace(adminPath, adminURL);
+              if (href) {
+                if (href.startsWith(adminPath)) {
+                  href = href.replace(adminPath, adminURL);
+                }
               }
 
               newObj.href = href;
@@ -166,8 +174,10 @@ export function moduleData() {
 
                 if (subLink) {
                   let subhref = subLink.getAttribute('href');
-                  if (subhref.startsWith(adminPath)) {
-                    subhref = subhref.replace(adminPath, adminURL);
+                  if (subhref) {
+                    if (subhref.startsWith(adminPath)) {
+                      subhref = subhref.replace(adminPath, adminURL);
+                    }
                   }
 
                   newSubObj.href = subhref;
@@ -333,8 +343,10 @@ export function moduleData() {
         let homeURL = self.uipData.options.domain;
         let adminPath = adminURL.replace(homeURL, '');
 
-        if (link.startsWith(adminPath)) {
-          link = link.replace(adminPath, adminURL);
+        if (link) {
+          if (link.startsWith(adminPath)) {
+            link = link.replace(adminPath, adminURL);
+          }
         }
 
         return link;

@@ -1,20 +1,19 @@
 === UiPress lite | Effortless custom dashboards, admin themes and pages ===
 Contributors: uipress
-Tags: admin theme, custom dashboard, google analytics, woocommerce analytics, white label, user management, role editor, order kanban, admin pages, page builder
+Tags: admin theme, custom dashboard, google analytics, woocommerce analytics, white label, user management, role editor, order kanban, admin pages, page builder, ui press
 Requires at least: 6.0
 Requires PHP: 7.0
-Tested up to: 6.2.2
-Stable tag: 3.2.06
+Tested up to: 6.3
+Stable tag: 3.2.12
 License: GPLv2 or later
 
 Effortless custom WordPress admin dashboards.
 
 == Description ==
 
-UiPress is an all in one solution for tailoring your WordPress admin.
-From custom dashboards, admin themes, profile pages to entire admin frameworks, the uiBuilder can do it all. Pre-made intuitive blocks and a library of professional templates make it super easy to transform the way your site users interact with your content.
+A block based visual builder for the WordPress admin. Create admin pages, dashboards and WordPress admin themes with no code. From custom dashboards, profile pages to entire admin frameworks, the uiBuilder can do it all. Pre-made intuitive blocks and a library of professional templates make it super easy to transform the way your site users interact with your content.
 
-### Major features in UiPress lite include:
+### Major features in ui press lite include:
 
 * A fast, modern and intuitive block based builder
 * Create functional admin pages and ui templates
@@ -42,7 +41,7 @@ The form block allows you to create and customise unique forms for any purpose. 
 
 ## Beautiful login pages
 
-Modernise the login experience for your site users with the UiPress login page settings. Match the login page to your brand for a smooth user experience.
+Modernise the login experience for your site users with the ui press login page settings. Match the login page to your brand for a smooth user experience.
 
 ## The uiBuilder is a modern web app and is built with Vue.js
 
@@ -55,6 +54,57 @@ Upload the UiPress plugin to your blog, activate it, and then navigate to the ui
 1, 2, 3: You're done!
 
 == Changelog ==
+
+= 3.2.12 =
+*Release Date 28 August 2023*
+
+* Fixed issue on multisitie occasionally causing links to incorrectly direct to the wrong subsites
+* Fixed issue with opening new links from within the frame in a new tab where they would open outside the frame
+
+= 3.2.10 =
+*Release Date 14 August 2023*
+
+* Fixed bug with basic theme were the logo would be outputted as a style string instead of applied as an image
+* Fixed bug where certain toolbar items were not being added when viewing without the frame
+* Fixed bug with buttons in media modal not being the correct height
+
+= 3.2.09 =
+*Release Date 5 August 2023*
+
+* Fixed bug certain toolbar items were triggering an error
+
+= 3.2.08 =
+*Release Date 2 August 2023*
+
+* Fixed bug were duplicating a block wwould cause the tooltip to become permanently synced with the origin blocks tooltip.
+* Fixed submenu issue with WP hide security plugin 
+* Added fix for auto backup setting on wp-vivid when updating plugins / core / themes
+* Fixed several php 8.3 depreciation notices
+* Fixed bug with custom theme styles not applying outside the frame on multisite on subsites
+* Fixed bug with style presets not overflowing when the list of presets was long
+* Fixed issue where some input's couldn't be styled correctly within the uiBuilder
+* Fixed issue with advanced classes in uiBuilder
+* Fixed flash of white on page content block when using dark mode
+* Added new advanced site option for disabling uipress on specific pages
+* Added new advanced site option for automatically setting fullscreen on specific pages
+* Fixed bug with colour select where clearing the current colour wouldn't remove the text value
+* Added taxonomy options to the query builder
+* Fixed depreciated wp_kses warning
+* Added new site sync option to allow you to import settings from another site
+* Several security improvements and performance enhancements
+
+= 3.2.07 =
+*Release Date 20 July 2023*
+
+* Fixed bug with importing templates using the tabs block were the tabs content could be erased
+* Added the ability to user acf options pages variables as dynamic data
+* Fixed issue with image block where the image was being set as a background image on the img tag as well as the SRC
+* Added compatibility for wicked folders plugin
+* Added flex shrink option to dimensions style stack
+* Fixed bug with navigation from links inside the iframe (content block) where the browser URL wouldn't update
+* Fixed bug with analytics connection when using a uiTemplate
+* Fixed bug with menu separators when they have been given an icon and then removed
+* Added new global import export feature
 
 = 3.2.06 =
 *Release Date 13 July 2023*

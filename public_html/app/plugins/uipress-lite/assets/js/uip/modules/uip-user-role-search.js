@@ -115,39 +115,43 @@ export function moduleData() {
       },
     },
     template: `
-    <div class="uip-position-relative" @click="openThisComponent">
     
-		  <div class="uip-padding-xxs uip-background-muted uip-border-round uip-w-100p uip-max-w-400 uip-cursor-pointer uip-border-box" :class="{'uip-active-outline' : ui.dropOpen}"> 
-		    <div class="uip-flex uip-flex-center">
-			   <span class="uip-icon uip-text-muted">search</span>
-		    </div>
-		  </div>
+    <drop-down dropPos="left">
+      <template v-slot:trigger>
+        <button class="uip-button-default uip-border-rounder uip-icon uip-padding-xxs uip-link-muted">search</button>
+      </template>
       
-		  <div v-if="ui.dropOpen" class="uip-position-absolute uip-background-default uip-border-rounder uip-shadow uip-border uip-w-250 uip-max-w-400 uip-border-box uip-z-index-9 uip-overflow-hidden uip-right-0">
-      
-		    <div class="uip-flex uip-background-default uip-padding-xs uip-border-bottom uip-flex-center">
-			   <span class="uip-icon uip-text-muted uip-margin-right-xs">search</span>
-			   <input class="uip-blank-input uip-flex-grow" type="search"  
-			   :placeholder="searchPlaceHolder" v-model="thisSearchInput" autofocus>
-		    </div>
+      <template v-slot:content>
         
-		    <div class="uip-max-h-280 uip-overflow-auto uip-padding-xxs" v-if="formattedOptions.length > 0 || loading">
-          <div v-if="loading" class="uip-padding-s uip-flex uip-flex-center uip-flex-middle"><loading-chart></loading-chart></div>
-			    <template v-if="!loading" v-for="option in formattedOptions">
-			      <div class="uip-background-default uip-padding-xxs uip-border-rounder uip-link-default hover:uip-background-muted" 
-			      @click="addSelected(option)" 
-			      v-if="ifInSearch(option, thisSearchInput)" 
-			      style="cursor: pointer">
-            
-				      <div class="uip-text-s">
-					        <div class="uip-text-bold uip-text-emphasis">{{option.label}}</div>
-					        <div class="uip-text-muted">{{option.type}}</div>
-				      </div>
-            
-			      </div>
-			    </template>
-		    </div>
-		  </div>
-	  </div>`,
+        <div class="uip-padding-xs uip-flex uip-flex-column uip-row-gap-xxs">
+          
+          <div class="uip-flex uip-background-default uip-flex-center">
+           <span class="uip-icon uip-text-muted uip-margin-right-xs">search</span>
+           <input class="uip-blank-input uip-flex-grow" type="search"  
+           :placeholder="searchPlaceHolder" v-model="thisSearchInput" autofocus>
+          </div>
+          
+          <div class="uip-max-h-280 uip-overflow-auto uip-padding-xxs" v-if="formattedOptions.length > 0 || loading">
+                  <div v-if="loading" class="uip-padding-s uip-flex uip-flex-center uip-flex-middle"><loading-chart></loading-chart></div>
+            <template v-if="!loading" v-for="option in formattedOptions">
+              <div class="uip-background-default uip-padding-xxs uip-border-rounder uip-link-default hover:uip-background-muted" 
+              @click="addSelected(option)" 
+              v-if="ifInSearch(option, thisSearchInput)" 
+              style="cursor: pointer">
+              
+                <div class="uip-text-s">
+                    <div class="uip-text-bold uip-text-emphasis">{{option.label}}</div>
+                    <div class="uip-text-muted">{{option.type}}</div>
+                </div>
+              
+              </div>
+            </template>
+          </div>
+          
+        </div>
+        
+      </template>
+    </drop-down>
+    `,
   };
 }

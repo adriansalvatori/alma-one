@@ -35,6 +35,12 @@ class uip_ajax
     add_action('wp_ajax_uip_pre_populate_form_data', [$this, 'uip_pre_populate_form_data']);
     add_action('wp_ajax_uip_create_frame_switch', [$this, 'uip_create_frame_switch']);
     add_action('wp_ajax_uip_get_php_errors', [$this, 'uip_get_php_errors']);
+
+    add_action('wp_ajax_uip_get_sync_options', [$this, 'uip_get_sync_options']);
+    add_action('wp_ajax_uip_refresh_sync_key', [$this, 'uip_refresh_sync_key']);
+    add_action('wp_ajax_uip_save_sync_options', [$this, 'uip_save_sync_options']);
+    add_action('wp_ajax_uip_start_site_sync', [$this, 'uip_start_site_sync']);
+
     //add_action('wp_ajax_uip_get_login_form', [$this, 'uip_get_login_form']);
     //add_action('wp_ajax_nopriv_uip_get_login_form', [$this, 'uip_get_login_form']);
     add_action('wp_ajax_uip_check_for_template_updates', [$this, 'uip_check_for_template_updates']);
@@ -44,6 +50,215 @@ class uip_ajax
     add_action('wp_ajax_uip_send_message_to_gpt', [$this, 'uip_send_message_to_gpt']);
     add_action('wp_ajax_uip_get_all_custom_menus', [$this, 'uip_get_all_custom_menus']);
     add_action('wp_ajax_uip_get_static_custom_menu', [$this, 'uip_get_static_custom_menu']);
+    add_action('wp_ajax_uip_global_export', [$this, 'uip_global_export']);
+    add_action('wp_ajax_uip_global_import', [$this, 'uip_global_import']);
+  }
+
+  /**
+   * Starts remote site sync
+   * @since 3.2.08
+   */
+  public function uip_start_site_sync()
+  {
+    if (defined('DOING_AJAX') && DOING_AJAX && check_ajax_referer('uip-security-nonce', 'security') > 0) {
+      $utils = new uip_util();
+      $options = $utils->clean_ajax_input_width_code(json_decode(stripslashes($_POST['options'])));
+
+      if (is_null($options)) {
+        $returndata['error'] = true;
+        $returndata['message'] = __('Unable to get import options', 'uipress-lite');
+        wp_send_json($returndata);
+      }
+      if (!is_object($options)) {
+        $returndata['error'] = true;
+        $returndata['message'] = __('Unable to get import options', 'uipress-lite');
+        wp_send_json($returndata);
+      }
+
+      require_once uip_plugin_path . 'admin/classes/uip-export-import.php';
+      $uipExport = new uip_export_import();
+      $export = $uipExport->get_remote_import($options);
+
+      if (isset($export['error'])) {
+        $returndata['error'] = true;
+        $returndata['message'] = $export['message'];
+        wp_send_json($returndata);
+      }
+
+      $returndata = [];
+      $returndata['success'] = true;
+      $returndata['message'] = 'Success';
+
+      wp_send_json($returndata);
+    }
+    die();
+  }
+
+  /**
+   * Gets new site sync key
+   * @since 3.2.08
+   */
+  public function uip_refresh_sync_key()
+  {
+    if (defined('DOING_AJAX') && DOING_AJAX && check_ajax_referer('uip-security-nonce', 'security') > 0) {
+      $utils = new uip_util();
+
+      $options = $utils->get_uip_option('remote-sync');
+      $options['key'] = uniqid('uip-', true);
+      $utils->update_uip_option('remote-sync', $options);
+
+      $returndata = [];
+      $returndata['success'] = true;
+      $returndata['message'] = 'Success';
+      $returndata['options'] = $options;
+
+      wp_send_json($returndata);
+    }
+    die();
+  }
+
+  /**
+   * Saves site sync options
+   * @since 3.2.08
+   */
+  public function uip_save_sync_options()
+  {
+    if (defined('DOING_AJAX') && DOING_AJAX && check_ajax_referer('uip-security-nonce', 'security') > 0) {
+      $utils = new uip_util();
+      $options = $utils->clean_ajax_input_width_code(json_decode(stripslashes($_POST['options'])));
+      $syncOptions = $utils->clean_ajax_input_width_code(json_decode(stripslashes($_POST['syncOptions'])));
+
+      if (!$options || !is_object($options) || !$syncOptions || !is_object($syncOptions)) {
+        $returndata['error'] = true;
+        $returndata['message'] = __('Unable to save site sync options', 'uipress-lite');
+        wp_send_json($returndata);
+      }
+
+      $update = $utils->get_uip_option('remote-sync');
+      $update['hostEnabled'] = $options->hostEnabled;
+      $update['syncOptions'] = $syncOptions;
+
+      $utils->update_uip_option('remote-sync', $update);
+
+      $returndata = [];
+      $returndata['success'] = true;
+      $returndata['message'] = 'Success';
+
+      wp_send_json($returndata);
+    }
+    die();
+  }
+
+  /**
+   * Get site sync options
+   * @since 3.2.08
+   */
+  public function uip_get_sync_options()
+  {
+    if (defined('DOING_AJAX') && DOING_AJAX && check_ajax_referer('uip-security-nonce', 'security') > 0) {
+      $utils = new uip_util();
+
+      $options = $utils->get_uip_option('remote-sync');
+
+      if (!$options || !is_array($options)) {
+        $options = [];
+        $options['key'] = uniqid('uip-', true);
+        $utils->update_uip_option('remote-sync', $options);
+      }
+
+      $returndata = [];
+      $returndata['success'] = true;
+      $returndata['message'] = 'Success';
+      $returndata['options'] = $options;
+      $returndata['restURL'] = get_rest_url(null, '/uipress/v1/export');
+
+      wp_send_json($returndata);
+    }
+    die();
+  }
+
+  /**
+   * Global import controller
+   * @since 3.0.0
+   */
+  public function uip_global_import()
+  {
+    if (defined('DOING_AJAX') && DOING_AJAX && check_ajax_referer('uip-security-nonce', 'security') > 0) {
+      $utils = new uip_util();
+      $content = $utils->clean_ajax_input_width_code(json_decode(stripslashes($_POST['content'])));
+
+      if (is_null($content)) {
+        $returndata['error'] = true;
+        $returndata['message'] = __('Unable to get import options', 'uipress-lite');
+        wp_send_json($returndata);
+      }
+
+      if (!is_object($content)) {
+        $returndata['error'] = true;
+        $returndata['message'] = __('Unable to get import options', 'uipress-lite');
+        wp_send_json($returndata);
+      }
+
+      require_once uip_plugin_path . 'admin/classes/uip-export-import.php';
+      $uipImport = new uip_export_import();
+
+      //Templates
+      if (property_exists($content, 'templates')) {
+        $uipImport->import_templates($content->templates);
+      }
+
+      //Settings
+      if (property_exists($content, 'siteSettings')) {
+        $uipImport->import_settings($content->siteSettings);
+      }
+
+      //Menus
+      if (property_exists($content, 'menus')) {
+        $uipImport->import_menus($content->menus);
+      }
+
+      $returndata = [];
+      $returndata['success'] = true;
+      $returndata['message'] = 'Success';
+
+      wp_send_json($returndata);
+    }
+    die();
+  }
+
+  /**
+   * Saves ui template
+   * @since 3.0.0
+   */
+  public function uip_global_export()
+  {
+    if (defined('DOING_AJAX') && DOING_AJAX && check_ajax_referer('uip-security-nonce', 'security') > 0) {
+      $utils = new uip_util();
+      $options = $utils->clean_ajax_input_width_code(json_decode(stripslashes($_POST['options'])));
+
+      if (is_null($options)) {
+        $returndata['error'] = true;
+        $returndata['message'] = __('Unable to get export options', 'uipress-lite');
+        wp_send_json($returndata);
+      }
+      if (!is_object($options)) {
+        $returndata['error'] = true;
+        $returndata['message'] = __('Unable to get export options', 'uipress-lite');
+        wp_send_json($returndata);
+      }
+
+      require_once uip_plugin_path . 'admin/classes/uip-export-import.php';
+      $uipExport = new uip_export_import();
+      $export = $uipExport->format_export($options);
+
+      $returndata = [];
+      $returndata['success'] = true;
+      $returndata['message'] = 'Success';
+      $returndata['export'] = $export;
+
+      wp_send_json($returndata);
+    }
+    die();
   }
 
   /**
@@ -327,10 +542,51 @@ class uip_ajax
             }
 
             $args['meta_query'] = $metaQuery;
-            error_log(json_encode($args['meta_query']));
           }
         }
       }
+
+      if (property_exists($query, 'taxQuery')) {
+        if (is_array($query->taxQuery)) {
+          if (count($query->taxQuery) > 0) {
+            $taxQuery = [];
+            $taxQuery['relation'] = $query->taxRelation;
+
+            foreach ($query->taxQuery as $opt) {
+              $temp = [];
+
+              if ($opt->value == '') {
+                continue;
+              }
+
+              $terms = $opt->value;
+              if (strpos($opt->value, ',') !== false) {
+                $parts = explode(',', $opt->value);
+                $formatted = [];
+                if (is_array($temp)) {
+                  foreach ($parts as $part) {
+                    $formatted[] = trim($part);
+                  }
+
+                  $terms = $formatted;
+                }
+              }
+
+              $temp['taxonomy'] = $opt->taxonomy;
+              $temp['terms'] = $terms;
+              $temp['field'] = $opt->fieldType;
+              $temp['include_children'] = $opt->includeChildren;
+              $temp['operator'] = $opt->compare;
+
+              $taxQuery[] = $temp;
+            }
+
+            $args['tax_query'] = $taxQuery;
+          }
+        }
+      }
+
+      error_log(json_encode($args));
 
       if ($query->type == 'post') {
         $postQuery = new WP_Query($args);
@@ -1609,7 +1865,7 @@ class uip_ajax
       foreach ($editable_roles as $role => $details) {
         $rolename = $role;
 
-        if (strpos(strtolower($rolename), $term) !== false) {
+        if (!$searcher || strpos(strtolower($rolename), $searcher) !== false) {
           $temp = [];
           $temp['label'] = $rolename;
           $temp['name'] = $rolename;
@@ -1622,7 +1878,7 @@ class uip_ajax
         }
       }
 
-      if (strpos(strtolower('Super Admin'), $term) !== false) {
+      if (!$searcher || strpos(strtolower('Super Admin'), $searcher) !== false) {
         $temp = [];
         $temp['name'] = 'Super Admin';
         $temp['label'] = 'Super Admin';

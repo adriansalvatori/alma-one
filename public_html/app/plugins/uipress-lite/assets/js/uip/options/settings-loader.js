@@ -31,6 +31,12 @@ export function getSettings(globalDynamic, context) {
       type: String,
       dynamic: false,
     },
+    textArea: {
+      value: '',
+      component: 'uip-textarea',
+      type: String,
+      dynamic: false,
+    },
     paragraph: {
       value: __('I am a paragraph', 'uipress-lite'),
       component: 'uip-paragraph-input',
@@ -48,24 +54,8 @@ export function getSettings(globalDynamic, context) {
     imageSelect: {
       dark: true,
       component: 'inline-image-select',
-      type: 'style',
+      type: 'option',
       renderStyle(value) {
-        let light = value;
-        let src;
-
-        if (light.dynamic) {
-          if (light.dynamicKey in globalDynamic) {
-            src = globalDynamic[light.dynamicKey].value;
-          } else {
-            src = light.url;
-          }
-        } else {
-          src = light.url;
-        }
-
-        if (src && src != '') {
-          return 'background-image: url(' + src + ');background-size:cover;';
-        }
         return '';
       },
     },
@@ -914,6 +904,14 @@ export function getSettings(globalDynamic, context) {
         let grow = uipcheckNestedValue(value, ['grow']);
         if (grow == 'grow') {
           style += `flex-grow:1;`;
+        }
+
+        let shrink = uipcheckNestedValue(value, ['flexShrink']);
+        if (shrink == 'shrink') {
+          style += `flex-shrink:1;`;
+        }
+        if (shrink == 'none') {
+          style += `flex-shrink:0;`;
         }
 
         return style;

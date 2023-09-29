@@ -7,14 +7,26 @@
 namespace App;
 
 /**
- * Add "… Ver más" to the excerpt.
+ * Add "… Continued" to the excerpt.
  *
  * @return string
  */
-add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Ver más', 'sage') . '</a>';
+add_filter('excerpt_more', function (): string {
+    return sprintf(' &hellip; <a href="%s">%s</a>', get_permalink(), __('Continued', 'sage'));
 });
 
-add_filter ('woocommerce_enqueue_styles', '__return_empty_array'); 
+/**
+ * Load scripts asset as module
+ *
+ * @return string
+ */
+add_filter('script_loader_tag', function ($tag, $handle, $src): string {
 
+    if (!preg_match('[app|alma]', $handle)) {
+        return $tag;
+    }
 
+    $tag = '<script type="module" src="' . esc_url($src) . '"></script>';
+
+    return $tag;
+}, 10, 3);

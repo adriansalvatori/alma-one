@@ -10,11 +10,13 @@ export function moduleData() {
       return {
         option: {
           grow: 'none',
+          flexShrink: 'none',
           enabled: {
             maxHeight: false,
             minHeight: false,
             maxWidth: false,
             minWidth: false,
+            flexShrink: false,
           },
           width: {
             value: '',
@@ -51,6 +53,16 @@ export function moduleData() {
             label: __('No', 'uipress-lite'),
           },
         },
+        shrinkOptions: {
+          none: {
+            value: 'none',
+            label: __('No', 'uipress-lite'),
+          },
+          shrink: {
+            value: 'shrink',
+            label: __('Yes', 'uipress-lite'),
+          },
+        },
         strings: {
           height: __('Height', 'uipress-light'),
           width: __('Width', 'uipress-light'),
@@ -59,6 +71,7 @@ export function moduleData() {
           minHeight: __('Min height', 'uipress-light'),
           minWidth: __('Min width', 'uipress-light'),
           grow: __('Grow', 'uipress-lite'),
+          flexShrink: __('Shrink', 'uipress-lite'),
         },
       };
     },
@@ -121,8 +134,10 @@ export function moduleData() {
         
           <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.minHeight}}</span></div>
             
-          <div class="uip-position-relative">
+          <div class="uip-position-relative uip-flex">
            <value-units :value="returnOption.minHeight" :returnData="function(data) {option.minHeight = data}"></value-units>
+           
+           <button @click="option.enabled.minHeight = false; option.minHeight.value = ''" class="uip-button-default uip-border-rounder uip-icon uip-padding-xxs uip-link-muted uip-margin-left-xs">close</button>
           </div>
           
         </div>
@@ -132,8 +147,10 @@ export function moduleData() {
         
           <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.maxHeight}}</span></div>
             
-          <div class="uip-position-relative">
+          <div class="uip-position-relative uip-flex">
            <value-units :value="returnOption.maxHeight" :returnData="function(data) {option.maxHeight = data}"></value-units>
+           
+           <button @click="option.enabled.maxHeight = false; option.maxHeight.value = ''" class="uip-button-default uip-border-rounder uip-icon uip-padding-xxs uip-link-muted uip-margin-left-xs">close</button>
           </div>
           
         </div>
@@ -154,8 +171,10 @@ export function moduleData() {
         
           <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.minWidth}}</span></div>
             
-          <div class="uip-position-relative">
+          <div class="uip-position-relative uip-flex">
            <value-units :value="returnOption.minWidth" :returnData="function(data) {option.minWidth = data}"></value-units>
+           
+           <button @click="option.enabled.minWidth = false; option.minWidth.value = ''" class="uip-button-default uip-border-rounder uip-icon uip-padding-xxs uip-link-muted uip-margin-left-xs">close</button>
           </div>
           
         </div>
@@ -165,8 +184,23 @@ export function moduleData() {
         
           <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.maxWidth}}</span></div>
             
-          <div class="uip-position-relative">
+          <div class="uip-position-relative uip-flex">
            <value-units :value="returnOption.maxWidth" :returnData="function(data) {option.maxWidth = data}"></value-units>
+           
+           <button @click="option.enabled.maxWidth = false; option.maxWidth.value = ''" class="uip-button-default uip-border-rounder uip-icon uip-padding-xxs uip-link-muted uip-margin-left-xs">close</button>
+          </div>
+          
+        </div>
+        
+        <!--Flex shrink-->
+        <div v-if="option.enabled.flexShrink" class="uip-grid-col-1-3">
+        
+          <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.flexShrink}}</span></div>
+            
+          <div class="uip-position-relative uip-flex">
+           <toggle-switch :options="shrinkOptions" :activeValue="option.flexShrink" :returnValue="function(data){ option.flexShrink = data}"></toggle-switch>
+           
+           <button @click="option.enabled.flexShrink = false; option.flexShrink = false" class="uip-button-default uip-border-rounder uip-icon uip-padding-xxs uip-link-muted uip-margin-left-xs">close</button>
           </div>
           
         </div>
@@ -187,6 +221,9 @@ export function moduleData() {
                   <div @click="option.enabled.maxHeight = true" class="uip-link-muted hover:uip-background-muted uip-border-round uip-padding-xxs">{{strings.maxHeight}}</div>
                   <div @click="option.enabled.minWidth = true" class="uip-link-muted hover:uip-background-muted uip-border-round uip-padding-xxs">{{strings.minWidth}}</div>
                   <div @click="option.enabled.maxWidth = true" class="uip-link-muted hover:uip-background-muted uip-border-round uip-padding-xxs">{{strings.maxWidth}}</div>
+                  <div @click="option.enabled.flexShrink = true" class="uip-link-muted hover:uip-background-muted uip-border-round uip-padding-xxs">{{strings.flexShrink}}</div>
+                  
+                  
                   
                 </div>
               </template>

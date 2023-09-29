@@ -1,92 +1,110 @@
-# [Alma.salvatori.co](https://alma.salvatori.co)
 
-Alma is a WordPress starter theme with a modern development workflow.
+# ⚡️ Alma Lightning (5.0.0) Wordpress Theme. (yeah, right, it's just a wordpress theme 😂)
 
-**Alma  is in active development and is currently in alpha. The `master` branch tracks Alma  development.**
+- Based on [Sage](https://roots.io/sage/) version [10](https://github.com/roots/sage/)
+- Using [Vite](https://vitejs.dev)
 
 ## Features
+- Solar (Sugary implementation of: Locomotive with Lenis, Gsap, Barba, Mouse Follower, Bulma, and some other nice stuff)
+- Laravel Routing
+- Laravel Blade
+- Laravel Components, Composers and Controllers
+- Sage Directives
+- Sage Wooocommerce
+- Alpine
 
-* Sass for stylesheets
-* Modern JavaScript
-* [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) for compiling assets and concatenating and minifying files
-* [Browsersync](http://www.browsersync.io/) for synchronized browser testing
-* [Blade](https://laravel.com/docs/5.8/blade) as a templating engine
-* [Bulma](https://bulma.io/) as the default framework (extended with bulma-helpers and bulma.js)
-* [Jarallax](https://github.com/nk-o/jarallax)
-* [Feather Icons](https://feathericons.com/)
+## Tech
 
-See a working example at [example-alma.salvatori.co](https://example-alma.salvatori.co/).
-
-## Requirements
-
-Make sure all dependencies have been installed before moving on:
-
-* [WordPress](https://wordpress.org/) >= 5.4
-* [PHP](https://secure.php.net/manual/en/install.php) >= 7.2.0 (with [`php-mbstring`](https://secure.php.net/manual/en/book.mbstring.php) enabled)
-* [Composer](https://getcomposer.org/download/)
-* [Node.js](http://nodejs.org/) >= 8.0.0
-* [Yarn](https://yarnpkg.com/en/docs/install)
+- [Acorn](https://roots.io/acorn/docs/installation/) v3
+- [PHP](https://secure.php.net/manual/en/install.php) >= 8.0 (
+  with [`php-mbstring`](https://secure.php.net/manual/en/book.mbstring.php) enabled)
+- [Composer](https://getcomposer.org/download/)
+- [Vite](https://vitejs.dev) >= 3.1.0
+- [Node.js](http://nodejs.org/) >= 16.0.0
+- [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Theme installation
 
-Install Alma using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
+- **This framework is shipped with Acorn v3. Read the docs, please (https://roots.io/acorn/docs/)**
+- Install Alma using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of
+  your theme):
 
-```sh
+```shell
 # @ app/themes/ or wp-content/themes/
-$ composer create-project salvatori/alma new-theme-name dev-master
+$ composer create-project salvatori/alma your-theme-name
+```
+
+To install the latest development version of Alma, add `dev-lightning` to the end of the command:
+
+```shell
+$ composer create-project salvatori/alma your-theme-name dev-lightning
 ```
 
 ## Theme structure
 
 ```sh
-themes/your-theme-name/   # → Root of your Alma based theme
+themes/alma/              # → Root of your Alma based theme
 ├── app/                  # → Theme PHP
-│   ├── Composers/        # → View composers
 │   ├── Providers/        # → Service providers
-│   ├── admin.php         # → Theme customizer setup
+│   ├── View/             # → View models
 │   ├── filters.php       # → Theme filters
-│   ├── helpers.php       # → Helper functions
+│   ├── helpers.php       # → Global helpers
+│   ├── medias.php        # → Medias helper
 │   └── setup.php         # → Theme setup
-├── config/               # → Config files
-│   ├── app.php           # → Application configuration
-│   ├── assets.php        # → Asset configuration
-│   ├── filesystems.php   # → Filesystems configuration
-│   └── view.php          # → View configuration
 ├── composer.json         # → Autoloading for `app/` files
-├── composer.lock         # → Composer lock file (never edit)
-├── dist/                 # → Built theme assets (never edit)
-├── functions.php         # → Composer autoloader, Acorn bootloader
-├── index.php             # → Never manually edit
+├── routes/web.php        # → Place non WP routes here.
+├── public/               # → Built theme assets (never edit)
+├── functions.php         # → Theme bootloader
+├── index.php             # → Theme template wrapper
 ├── node_modules/         # → Node.js packages (never edit)
 ├── package.json          # → Node.js dependencies and scripts
 ├── resources/            # → Theme assets and templates
-│   ├── assets/           # → Front-end assets
-│   │   ├── fonts/        # → Theme fonts
-│   │   ├── images/       # → Theme images
-│   │   ├── scripts/      # → Theme JS
-│   │   └── styles/       # → Theme stylesheets
+│   ├── fonts/            # → Theme fonts
+│   ├── images/           # → Theme images
+│   ├── scripts/          # → Theme javascript
+│   ├── styles/           # → Theme stylesheets
 │   └── views/            # → Theme templates
 │       ├── components/   # → Component templates
+│       ├── forms/        # → Form templates
 │       ├── layouts/      # → Base templates
-│       └── partials/     # → Partial templates
+│       ├── partials/     # → Partial templates
+        └── woocommerce/  # → Woocommerce templates
 ├── screenshot.png        # → Theme screenshot for WP admin
-├── storage/              # → Storage location for cache (never edit)
 ├── style.css             # → Theme meta information
 ├── vendor/               # → Composer packages (never edit)
-└── webpack.mix.js        # → Laravel Mix configuration
+└── vite.config.js        # → Vite configuration
 ```
-
-## Theme setup
-
-Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
 
 ## Theme development
 
-* Run `yarn` from the theme directory to install dependencies
-* Update `webpack.mix.js` with your local dev URL
+- Run `yarn` from the theme directory to install dependencies
+- Update `vite.config.js` for bundler fine tuning
 
 ### Build commands
 
-* `yarn start` — Compile assets when file changes are made, start Browsersync session
-* `yarn build` — Compile and optimize the files in your assets directory
-* `yarn build:production` — Compile assets for production
+- `yarn dev` — Start dev server and hot module replacement
+- `yarn build` — Compile assets
+- `yarn lint` — Lint stylesheets & javascripts
+- `yarn lint:css` — Lint stylesheets
+- `yarn lint:js` — Lint javascripts
+
+### Hot Module Replacement
+
+#### Project Side
+
+Add the following variables in your project `.env`
+
+```sh
+# Hot module reload enabled? This should be turned off in production.
+HMR_ENABLED=true
+# Endpoint where the bundler serve your assets
+HMR_ENTRYPOINT=http://localhost:5173
+# Enable the Experimental Router for Laravel Routing
+ACORN_ENABLE_EXPIRIMENTAL_ROUTER=true
+```
+
+## Documentation
+
+- [Sage documentation](https://roots.io/sage/docs/)
+- [Controller documentation](https://github.com/soberwp/controller#usage)
+- [Vite](https://vitejs.dev/guide/)

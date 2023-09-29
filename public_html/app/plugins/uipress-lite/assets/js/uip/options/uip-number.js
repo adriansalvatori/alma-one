@@ -4,10 +4,12 @@ export function moduleData() {
       returnData: Function,
       value: [String, Number],
       placeHolder: String,
+      customStep: [String, Number],
     },
     data: function () {
       return {
         option: this.value,
+        step: 1,
       };
     },
     watch: {
@@ -18,6 +20,11 @@ export function moduleData() {
         deep: true,
       },
     },
+    created: function () {
+      if (this.customStep) {
+        this.step = this.customStep;
+      }
+    },
     template: `
       
       
@@ -26,9 +33,9 @@ export function moduleData() {
         <input  type="number" class="uip-input-small uip-w-100p uip-flex-grow" v-model="option" :placeholder="placeHolder">
         
         <div class="uip-padding-xxxs uip-border-rounder uip-background-muted uip-flex uip-gap-xxs uip-no-text-select">
-          <div class="uip-link-muted uip-icon uip-text-l" @click="option = parseFloat(option) - 1">remove</div>
+          <div class="uip-link-muted uip-icon uip-text-l" @click="option = +parseFloat(parseFloat(option) - step).toFixed( 2 )">remove</div>
           <div class="uip-border-right"></div>
-          <div class="uip-link-muted uip-icon uip-text-l" @click="option = parseFloat(option) + 1">add</div>
+          <div class="uip-link-muted uip-icon uip-text-l" @click="option = +parseFloat(parseFloat(option) + step).toFixed( 2 )">add</div>
         </div>
         
       </div>

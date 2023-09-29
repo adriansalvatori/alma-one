@@ -6,7 +6,7 @@
 
 namespace App;
 
-use function Roots\asset;
+use function Roots\bundle;
 
 $directives      = new \Log1x\SageDirectives\Directives();
 $directives_util = new \Log1x\SageDirectives\Util();
@@ -16,33 +16,47 @@ $directives_util = new \Log1x\SageDirectives\Util();
  *
  * @return void
  */
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), ['jquery'], null, true);
-    wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js', 'jquery'], null, true);
+add_action('wp_enqueue_scripts', function (): void {
+    /**
+     * Cleanup styles
+     */
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
 
-    wp_add_inline_script('sage/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
+    $localized_object_name = 'sage';
+    $localized_vars = [
+        'primary' => __('Primary', 'sage')
+    ];
 
-    if (is_single() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
+    /**
+     * Enqueue theme stylesheets
+     */
+    $namespace = strtolower(wp_get_theme()->get('Name'));
+    if (hmr_enabled()) {
+        $asset = 'resources/scripts/app.js';
+        wp_enqueue_script($namespace, hmr_assets($asset), array(), null, true);
+        wp_localize_script($namespace, $localized_object_name, $localized_vars);
+    } else {
+        bundle('app')->enqueue()->localize($localized_object_name, $localized_vars);
     }
-
-    wp_enqueue_style('sage/app.css', asset('styles/app.css')->uri(), false, null);
 }, 100);
+
 
 /**
  * Register the theme assets with the block editor.
  *
  * @return void
  */
-add_action('enqueue_block_editor_assets', function () {
-    if ($manifest = asset('scripts/manifest.asset.php')->load()) {
-        wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), $manifest['dependencies'], null, true);
-        wp_enqueue_script('sage/editor.js', asset('scripts/editor.js')->uri(), ['sage/vendor.js'], null, true);
+add_action('enqueue_block_editor_assets', function (): void {
+    $namespace = strtolower(wp_get_theme()->get('Name'));
+    if (hmr_enabled()) {
+        $asset = 'resources/scripts/editor.js';
+        $namespace = strtolower(wp_get_theme()->get('Name'));
 
-        wp_add_inline_script('sage/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
+        wp_enqueue_script($namespace, hmr_assets($asset), array(), null, true);
+    } else {
+        bundle('editor')->enqueue();
     }
-
-    wp_enqueue_style('sage/editor.css', asset('styles/editor.css')->uri(), false, null);
 }, 100);
 
 /**
@@ -50,24 +64,29 @@ add_action('enqueue_block_editor_assets', function () {
  *
  * @return void
  */
-add_action('after_setup_theme', function () {
+add_action('after_setup_theme', function (): void {
     /**
-     * Enable features from Soil when plugin is activated
+     * Enable features from the Soil plugin if activated.
+     *
      * @link https://roots.io/plugins/soil/
      */
-    add_theme_support('soil-clean-up');
-    add_theme_support('soil-nav-walker');
-    add_theme_support('soil-nice-search');
-    add_theme_support('soil-relative-urls');
+    add_theme_support('soil', [
+        'clean-up',
+        'nav-walker',
+        'nice-search',
+        'relative-urls'
+    ]);
 
     /**
-     * Enable plugins to manage the document title
-     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
+     * Disable full-site editing support.
+     *
+     * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
      */
-    add_theme_support('title-tag');
+    remove_theme_support('block-templates');
 
     /**
-     * Register navigation menus
+     * Register the navigation menus.
+     *
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
@@ -75,62 +94,61 @@ add_action('after_setup_theme', function () {
     ]);
 
     /**
-     * Enable post thumbnails
+     * Disable the default block patterns.
+     *
+     * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-the-default-block-patterns
+     */
+    remove_theme_support('core-block-patterns');
+
+    /**
+     * Enable plugins to manage the document title.
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
+     */
+    add_theme_support('title-tag');
+
+    /**
+     * Enable post thumbnail support.
+     *
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
 
     /**
-     * Add theme support for Wide Alignment
-     * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#wide-alignment
-     */
-    add_theme_support('align-wide');
-
-    /**
-     * Enable responsive embeds
+     * Enable responsive embed support.
+     *
      * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content
      */
     add_theme_support('responsive-embeds');
 
     /**
-     * Enable HTML5 markup support
+     * Enable HTML5 markup support.
+     *
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
      */
-    add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
+    add_theme_support('html5', [
+        'caption',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'search-form',
+        'script',
+        'style'
+    ]);
 
     /**
-     * Enable selective refresh for widgets in customizer
+     * Enable selective refresh for widgets in customizer.
+     *
      * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
      */
     add_theme_support('customize-selective-refresh-widgets');
 
     /**
-     * Enable theme color palette support
-     * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes
+     * Register custom image sizes
+     *
+     * @see app/medias.php
      */
-    add_theme_support('editor-color-palette', [
-        [
-            'name'  => __('Primary', 'sage'),
-            'slug'  => 'primary',
-            'color' => '#525ddc',
-        ]
-    ]);
-
-    /**
-     * Enable Woocommerce theme support
-     * @link https://github.com/generoi/sage-woocommerce
-     */
-    add_theme_support('wc-product-gallery-zoom');
-    add_theme_support('wc-product-gallery-lightbox');
-    add_theme_support('wc-product-gallery-slider');
-
-    /**
-     * Add support for WooCommerce Subscription templates.
-     */
-    add_filter('sage-woocommerce/templates', function ($paths) {
-        $paths[] = WP_PLUGIN_DIR . '/woocommerce-subscriptions/templates/';
-        return $paths;
-    });
+    set_image_sizes();
 }, 20);
 
 /**
@@ -147,61 +165,19 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Primary', 'sage'),
-        'id' => 'sidebar-primary'
-    ] + $config);
+            'name' => __('Primary', 'sage'),
+            'id' => 'sidebar-primary'
+        ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer'
-    ] + $config);
+            'name' => __('Footer', 'sage'),
+            'id' => 'sidebar-footer'
+        ] + $config);
 });
 
+add_filter('acorn/router/do_parse_request', function ($do_parse) {
+    global $wp_query;
+    $wp_query->is_acorn_route = true;
 
-add_action( 'pre_get_posts', function( $query ){
-    if( $query->is_category() && $query->is_main_query() ){
-        $query->set( 'post_type', array( 'post' /** aquí se colocan los nuevos cpt que soporten cats */ ) );
-    }
-} );
-
-/**
- * Product Loop Items.
- *
- * @see woocommerce_template_loop_product_link_open()
- * @see woocommerce_template_loop_product_link_close()
- * @see woocommerce_template_loop_add_to_cart()
- * @see woocommerce_template_loop_product_thumbnail()
- * @see woocommerce_template_loop_product_title()
- * @see woocommerce_template_loop_category_link_open()
- * @see woocommerce_template_loop_category_title()
- * @see woocommerce_template_loop_category_link_close()
- * @see woocommerce_template_loop_price()
- * @see woocommerce_template_loop_rating()
- */
-// remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
-// remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
-// remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
-// remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
-// remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
-
-// remove_action('woocommerce_before_subcategory', 'woocommerce_template_loop_category_link_open', 10);
-// remove_action('woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10);
-// remove_action('woocommerce_after_subcategory', 'woocommerce_template_loop_category_link_close', 10);
-
-// remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
-// remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5);
-
-
-
-
-/**
- * Importing Breadcrumb function.
- */
-include('Setup/breadcrumbs.php');
-
-//Mailer-3000
-include('Setup/mailer.php');
-//Ajax add to cart function
-include('Setup/add_to_cart.php');
-// modelos 3d en desarrollo
-include('Setup/models3d.php');
+    return $do_parse;
+});

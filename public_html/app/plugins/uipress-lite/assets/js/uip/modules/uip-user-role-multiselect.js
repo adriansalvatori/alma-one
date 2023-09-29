@@ -71,7 +71,11 @@ export function moduleData() {
         self.queryUsersRoles(newValue);
       },
     },
-    mounted: function () {},
+    created: function () {
+      if (!Array.isArray(this.selectedOptions)) {
+        this.selectedOptions = [];
+      }
+    },
     methods: {
       maybeQueryUsersRoles() {
         if (!this.rendered) {
@@ -102,9 +106,18 @@ export function moduleData() {
             return;
           }
 
-          self.options = response.roles;
-          self.all_roles = response.all_roles;
-          self.paged_users = response.paged_users;
+          if (Array.isArray(response.roles)) {
+            self.options = response.roles;
+          }
+
+          if (Array.isArray(response.all_roles)) {
+            self.all_roles = response.all_roles;
+          }
+
+          if (Array.isArray(response.paged_users)) {
+            self.paged_users = response.paged_users;
+          }
+
           self.totalUsers = response.users_total;
         });
       },

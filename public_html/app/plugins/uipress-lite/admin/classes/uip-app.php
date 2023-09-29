@@ -7,6 +7,7 @@ if (!defined('ABSPATH')) {
  * Main uipress class. Loads scripts and styles and builds the main admin framework
  * @since 3.0.0
  */
+
 #[AllowDynamicProperties]
 class uip_app
 {
@@ -100,7 +101,11 @@ class uip_app
 
         //
         add_action('admin_head', function () {
-          ?>
+          if (defined('uip_admin_page')) {
+            if (uip_admin_page) {
+              return;
+            }
+          } ?>
           <script>
             //Small function to prevent same origin errors when browsing in the iframe
             const uipWindowOpenMethod = window.open;
@@ -109,7 +114,7 @@ class uip_app
               if(target){
                 let tempTarget = target.toLowerCase();
                 if(tempTarget == '_blank' || tempTarget == '_top' || tempTarget == '_parent'){
-                  uipWindowOpenMethod(url, '_top', windowFeatures);
+                  uipWindowOpenMethod(url, '_blank', windowFeatures);
                   return;
                 }
               }
@@ -818,6 +823,8 @@ class uip_app
         $adminURL = network_admin_url('');
       }
     }
+    $homeURL = get_home_url();
+    $adminPath = str_replace($homeURL, '', $adminURL);
 
     $all_plugins = get_plugins();
     $formattedPlugins = [];
@@ -835,21 +842,20 @@ class uip_app
     }
 
     $customClasses = [];
-    add_filter('uip_register_custom_class', 'add_custom_class', 1, 2);
-    function add_custom_class($classes)
-    {
-      if (!is_array($classes)) {
-        $classes = [];
-      }
-
-      $myCustomClasses = ['custom-background', 'custom-color', 'custom-typeface'];
-      return array_merge($classes, $myCustomClasses);
-    }
     $customClasses = apply_filters('uip_register_custom_class', false, $customClasses);
+
+    $args = [
+      'public' => true,
+      '_builtin' => true,
+    ];
+    $output = 'objects'; // or objects
+    $operator = 'and'; // 'and' or 'or'
+    $taxonomies = get_taxonomies($args, $output, $operator);
 
     $options['pluginURL'] = uip_plugin_url;
     $options['uipVersion'] = uip_plugin_version;
     $options['adminURL'] = $adminURL;
+    $options['adminPath'] = $adminPath;
     $options['domain'] = get_home_url();
     $options['dynamicData'] = $this->getDynamicData();
     $options['maxUpload'] = wp_max_upload_size();
@@ -864,6 +870,7 @@ class uip_app
     $options['block_preset_styles'] = $utils->get_uip_option('block_preset_styles');
     $options['site_name'] = get_bloginfo('name');
     $options['customClasses'] = $customClasses;
+    $options['taxonomies'] = $taxonomies;
 
     return $options;
   }
@@ -1078,38 +1085,18 @@ class uip_app
     }
     //All user meta
 
-    if (1 == 2) {
-      $meta = array_map(function ($a) {
-        return $a[0];
-      }, get_user_meta($current_user->ID));
+    //Get ACF user fields
+    if (function_exists('get_fields')) {
+      $fields = get_fields('user_' . $current_user->ID);
 
-      if (is_array($meta)) {
-        foreach ($meta as $name => $value) {
+      if (is_array($fields)) {
+        foreach ($fields as $name => $value) {
           try {
-            if ($name == 'session_tokens') {
-              continue;
-            }
-            if (is_serialized($value)) {
-              $value = maybe_unserialize($value);
-            }
-
-            if (is_object($value)) {
-              if (get_class($value) == '__PHP_Incomplete_Class') {
-                continue;
-              }
-            }
-
-            if (is_string($value)) {
-              if (strpos($value, '\\') !== false) {
-                continue;
-              }
-            }
-
-            $formatted = ucfirst(str_replace('_', ' ', $name)) . ' (WP)';
+            $formatted = $name . ' (ACF user meta)';
             $options[$name] = [
               'label' => $formatted,
               'value' => $value,
-              'type' => 'user_meta',
+              'type' => 'text',
             ];
           } catch (Exception $e) {
             //error_log('Caught exception: ', $e->getMessage());
@@ -1117,22 +1104,19 @@ class uip_app
         }
       }
 
-      //Get ACF user fields
-      if (function_exists('get_fields')) {
-        $fields = get_fields('user_' . $current_user->ID);
+      $ACFoptions = get_fields('options');
 
-        if (is_array($fields)) {
-          foreach ($fields as $name => $value) {
-            try {
-              $formatted = ucfirst(str_replace('_', ' ', $name)) . ' (ACF)';
-              $options[$name] = [
-                'label' => $formatted,
-                'value' => $value,
-                'type' => 'user_meta',
-              ];
-            } catch (Exception $e) {
-              //error_log('Caught exception: ', $e->getMessage());
-            }
+      if (is_array($ACFoptions)) {
+        foreach ($ACFoptions as $name => $value) {
+          try {
+            $formatted = $name . ' (ACF options)';
+            $options[$name] = [
+              'label' => $formatted,
+              'value' => $value,
+              'type' => 'text',
+            ];
+          } catch (Exception $e) {
+            //error_log('Caught exception: ', $e->getMessage());
           }
         }
       }
@@ -1341,7 +1325,20 @@ class uip_app
     }
 
     $utils = new uip_util();
+
+    //Patch for multisite
+    $multiSiteActive = false;
+    if (is_multisite() && is_plugin_active_for_network(uip_plugin_path_name . '/uipress-lite.php') && !is_main_site()) {
+      $mainSiteId = get_main_site_id();
+      switch_to_blog($mainSiteId);
+      $multiSiteActive = true;
+    }
     $styles = $utils->get_uip_option('theme-styles');
+
+    if ($multiSiteActive) {
+      restore_current_blog();
+    }
+
     $stylesString = html_entity_decode(json_encode($utils->clean_ajax_input_width_code($styles)));
 
     //Checks if a template is running, if it is then we need to load up that var
@@ -1473,7 +1470,7 @@ class uip_app
           }
         } ?>
     }
-    <?php echo htmlspecialchars_decode(esc_html($css)); ?>
+    <?php echo esc_html(htmlspecialchars_decode($css)); ?>
     </style>
     <?php print ob_get_clean();
   }

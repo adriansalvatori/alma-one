@@ -13,11 +13,13 @@ export function moduleData() {
           updated: this.formatTemplate(uipUserTemplate.updated),
           id: uipUserTemplate.id,
           styles: uipUserStyles,
+          iconFile: './',
         },
         loading: true,
         updateAvailable: false,
         blocksForUpdating: [],
         windowWidth: window.innerWidth,
+        iconsLoading: true,
       };
     },
     watch: {
@@ -108,6 +110,12 @@ export function moduleData() {
           return 'uip-phone-view';
         }
       },
+      isLoading() {
+        if (!this.loading) {
+          return false;
+        }
+        return true;
+      },
     },
     methods: {
       getNotifications() {
@@ -188,22 +196,28 @@ export function moduleData() {
           return false;
         }
       },
+      appReady() {
+        let self = this;
+        self.iconsLoading = false;
+      },
     },
+
     template: `
     
     <component is="style" scoped >
-    .uip-user-frame:not(.uip-app-frame){
-    <template v-for="(item, index) in template.styles">
-      <template v-if="item.value">{{index}}:{{item.value}};</template>
-    </template>
-    }
-    [data-theme="dark"] :not(.uip-app-frame) *{
-    <template v-for="(item, index) in template.styles">
-      <template v-if="item.darkValue"> {{index}}:{{item.darkValue}};</template>
-    </template>
-    }
-    {{returnTemplateCSS}}
+      .uip-user-frame:not(.uip-app-frame){
+        <template v-for="(item, index) in template.styles">
+          <template v-if="item.value">{{index}}:{{item.value}};</template>
+        </template>
+      }
+      [data-theme="dark"] :not(.uip-app-frame) *{
+        <template v-for="(item, index) in template.styles">
+          <template v-if="item.darkValue"> {{index}}:{{item.darkValue}};</template>
+        </template>
+      }
+      {{returnTemplateCSS}}
     </component>
+    
     <component is="script" scoped>
       {{returnTemplateJS}}
     </component>
@@ -213,14 +227,16 @@ export function moduleData() {
       .v-enter-from, .v-leave-to {opacity: 0;}
     </component>
     
+    <!--<link rel="stylesheet" :href="uipData.options.pluginURL + 'assets/css/uip-icons.css'" id="uip-icons" @load="appReady">-->
+    
     <TransitionGroup>
     
-      <div v-if="loading" class="uip-background-default uip-body-font uip-h-viewport uip-max-h-viewport uip-flex uip-flex-center uip-flex-middle uip-position-fixed uip-z-index-9" 
+      <div v-if="isLoading" class="uip-background-default uip-body-font uip-h-viewport uip-max-h-viewport uip-flex uip-flex-center uip-flex-middle uip-position-fixed uip-z-index-9" 
       style="min-height: 100vh; max-height: 100vh; min-width: 100vw; max-width: 100vw">
         <loading-chart></loading-chart>
       </div>
       
-      <uip-content-area v-if="!loading" :content="template.content" :class="returnResponsiveClass"
+      <uip-content-area v-else :content="template.content" :class="returnResponsiveClass"
       :returnData="function(data) {template.content = data} ">
       </uip-content-area>
     

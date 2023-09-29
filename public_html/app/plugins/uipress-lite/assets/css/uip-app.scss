@@ -3545,8 +3545,9 @@ body.macos .uip-alt-icon {
 
 .ui-template {
   .uip-desktop-view {
-    min-width: 1200px;
-    aspect-ratio: 16/10;
+    min-width: 100vw;
+    min-height: 100vh;
+    //aspect-ratio: 16/10;
   }
 
   .uip-tablet-view {

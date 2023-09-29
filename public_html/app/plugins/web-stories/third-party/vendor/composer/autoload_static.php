@@ -4,7 +4,7 @@
 
 namespace Google_Web_Stories_Composer\Autoload;
 
-class ComposerStaticInite47c741bd634d30fcb9a7edb4ea3cb07
+class ComposerStaticInit232f18315efa942e19a780653673f143
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -1215,7 +1215,7 @@ class ComposerStaticInite47c741bd634d30fcb9a7edb4ea3cb07
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInite47c741bd634d30fcb9a7edb4ea3cb07::$classMap;
+            $loader->classMap = ComposerStaticInit232f18315efa942e19a780653673f143::$classMap;
 
         }, null, ClassLoader::class);
     }

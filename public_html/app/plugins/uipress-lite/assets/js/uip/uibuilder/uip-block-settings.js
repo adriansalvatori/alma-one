@@ -66,6 +66,7 @@ export function moduleData() {
           tablet: __('Tablet', 'uipress-lite'),
           mobile: __('Mobile', 'uipress-lite'),
           clearState: __('Clear state', 'uipress-lite'),
+          discontinued: __('This block has now been discontinued. We recommend replacing it with the new menu block from the blocks list.', 'uipress-lite'),
         },
         pseudoSelectors: [
           {
@@ -921,6 +922,10 @@ export function moduleData() {
             <div class="uip-margin-bottom-m" v-if="section == 'settings'">
               <div class=" uip-flex uip-flex-column uip-gap-s">
               
+                <div v-if="block.moduleName == 'uip-admin-menu'" class="uip-border-rounder uip-background-orange-wash uip-padding-xs">
+                  {{strings.discontinued}}
+                </div>
+              
                 <div class="uip-padding-s uip-padding-right-remove">
                   
                   <div class="uip-grid-col-1-3">
@@ -942,7 +947,8 @@ export function moduleData() {
                       
                       <!--Tooltip text -->
                       <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.tooltip}}</span></div>
-                      <input  class="uip-input uip-input-small" type="text" v-model="block.tooltip.message">
+                      
+                      <uip-input :value="block.tooltip.message" :returnData="function(d){block.tooltip.message = d}"/>
                                           
                   </div>
                   
@@ -1270,7 +1276,7 @@ export function moduleData() {
                           
                           <template v-slot:content>
                             
-                              <div class="uip-padding-xs uip-flex uip-flex-column uip-w-200">
+                              <div class="uip-padding-xs uip-flex uip-flex-column uip-w-200 uip-overflow-auto" style="max-height:300px">
                                 
                                 <div class="uip-link-muted uip-padding-xxs uip-border-rounder hover:uip-background-muted uip-flex uip-flex-between" @click="updatePresetValue(false)"
                                 :class="!componenetSettings[returnActiveComp].preset ? 'uip-background-muted' : ''">

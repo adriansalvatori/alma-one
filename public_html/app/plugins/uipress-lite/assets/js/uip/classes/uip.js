@@ -89,7 +89,11 @@ export class uip {
       .then((res) => res.text())
       .then((data) => {
         try {
-          return self.uipParsJson(data);
+          let parsedData = self.uipParsJson(data);
+          if (!parsedData) {
+            return { error: true, message: __('Bad request', 'uipress-lite') };
+          }
+          return parsedData;
         } catch (error) {
           if (!suppressMessages) {
             self.notify(__('Parse error', 'uipress-lite'), __('Unable to parse JSON response', 'uipress-lite'), 'error');
@@ -102,6 +106,7 @@ export class uip {
       .catch((err) => {
         if (!suppressMessages) {
           self.notify(err, '', 'error');
+
           return err;
         } else {
           return true;
@@ -1195,6 +1200,21 @@ export class uip {
 
     let url = new URL(newURL);
 
+    if (typeof UIPdisableUserPages != 'undefined') {
+      if (UIPdisableUserPages) {
+        if (this.enviroment != 'builder') {
+          if (Array.isArray(UIPdisableUserPages)) {
+            for (let part of UIPdisableUserPages) {
+              if (url.href == part || url.href.includes(part)) {
+                window.location.assign(url);
+                return;
+              }
+            }
+          }
+        }
+      }
+    }
+
     if (typeof UIPdisableDynamicLoading != 'undefined') {
       if (UIPdisableDynamicLoading) {
         if (this.enviroment != 'builder') {
@@ -1333,7 +1353,7 @@ export class uip {
     url.searchParams.delete('uip-hide-notices', 1);
     url.searchParams.delete('uipid', 1);
 
-    return url.href.replace('#/', '').replace(this.uipAppData.dynamicOptions.viewadmin.value, '');
+    return url.href.replace(this.uipAppData.dynamicOptions.viewadmin.value, '');
   }
 
   /**
@@ -1356,7 +1376,6 @@ export class uip {
 
     fullURL = fullURL.replace('about:blank', '');
     shortURL = shortURL.replace('about:blank', '');
-    fullURL = fullURL.replace('#/', '');
 
     this.activeLink = shortURL;
     let self = this;
@@ -1377,7 +1396,7 @@ export class uip {
 
     //Only update window history if we are in production
     if (this.enviroment != 'builder') {
-      history.pushState({}, null, url);
+      //history.pushState({}, null, url);
     }
 
     this.uipActiveLinkChange = new CustomEvent('uip_page_change', { detail: { url: this.stripUIPparams(self.activeLink) } });
@@ -1447,11 +1466,11 @@ export class uip {
    * Recursively goes over template and checks for required fields. Used for validating imported templates & patterns
    * @since 3.0.0
    */
-  async validDateTemplate(content) {
+  async validDateTemplate(content, keepUID) {
     let self = this;
 
     let freshList = content.map(async (block) => {
-      return await self.validateBlock(block);
+      return await self.validateBlock(block, keepUID);
     });
 
     return Promise.all(freshList).then((completed) => {
@@ -1462,7 +1481,7 @@ export class uip {
    * Validates a block from an imported template
    * @since 3.0.0
    */
-  async validateBlock(block) {
+  async validateBlock(block, keepUID) {
     let self = this;
     if (!('name' in block)) {
       return false;
@@ -1475,11 +1494,13 @@ export class uip {
     }
 
     //Update UID to avoid duplicates
-    block.uid = this.createUID();
+    if (!keepUID) {
+      block.uid = this.createUID();
+    }
 
     if ('content' in block) {
       let newList = block.content.map(async (block) => {
-        return await self.validateBlock(block);
+        return await self.validateBlock(block, keepUID);
       });
       return Promise.all(newList).then((completed) => {
         if (completed.includes(false)) {

@@ -768,7 +768,7 @@ class uip_ui_builder extends uip_app
       $template = get_post_meta($templateID, 'uip-ui-template', true);
 
       //Check if template exists and isn't empty
-      if ((!isset($template) && !is_array($template)) || !$template || count($template) < 1) {
+      if (!is_array($template)) {
         $template = [];
       }
 

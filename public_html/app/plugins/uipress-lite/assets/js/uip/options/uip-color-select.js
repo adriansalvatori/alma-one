@@ -158,6 +158,7 @@ export function moduleData() {
       resetColor() {
         this.colour.value = '';
         this.colour.type = 'solid';
+        this.manualColorInput = '';
         this.returnData(this.colour);
       },
       formatValue(value) {

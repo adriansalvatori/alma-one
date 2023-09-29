@@ -520,7 +520,7 @@ export function moduleData() {
               }
             }
 
-            self.uipress.validDateTemplate(temper).then((response) => {
+            self.uipress.validDateTemplate(temper, true).then((response) => {
               if (!response.includes(false)) {
                 if (type == 'template') {
                   self.uiTemplate.content = temper;
@@ -581,7 +581,7 @@ export function moduleData() {
         formData.append('templateType', 'ui-template');
 
         self.uipress.callServer(uip_ajax.ajax_url, formData).then((response) => {
-          self.uipress.notify('New template created', '', 'success', true, false);
+          self.uipress.notify(__('New template created', 'uipress-lite'), '', 'success', true, false);
           self.router.push('/');
           self.router.push('/uibuilder/' + response.id + '/');
           self.returnAllUiTemplates;

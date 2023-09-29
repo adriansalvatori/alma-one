@@ -115,10 +115,9 @@ export function moduleData() {
             //Block found
             currentContent = response;
             //Duplicate it
-            let item = Object.assign({}, block);
+            let item = JSON.parse(JSON.stringify(block));
             item.uid = this.uipress.createUID();
             item.options = [];
-            item.settings = JSON.parse(JSON.stringify(item.settings));
 
             if (item.content) {
               item.content = this.duplicateChildren(item.content);

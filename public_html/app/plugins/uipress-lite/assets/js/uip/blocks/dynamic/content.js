@@ -15,6 +15,7 @@ export function moduleData() {
         startPage: this.returnAdminPage(),
         cornertickle: false,
         currentURL: false,
+        rendered: false,
       };
     },
     inject: ['uipData', 'uipress', 'uiTemplate', 'router'],
@@ -78,7 +79,7 @@ export function moduleData() {
         url = self.formatUserUrlOptions(url);
 
         self.frame.contentWindow.location.replace(url);
-        self.uipress.updateActiveLink(self.startPage.replace('#/', ''));
+        self.uipress.updateActiveLink(self.startPage);
 
         //Watch for history state changes
         window.onpopstate = function () {
@@ -118,7 +119,8 @@ export function moduleData() {
 
           url = self.formatUserUrlOptions(url);
           if (self.frame.contentWindow) {
-            self.frame.contentWindow.location.replace(url);
+            self.frame.contentWindow.location.assign(url);
+            //self.frame.contentWindow.location.reload();
           }
         },
         { once: false }
@@ -128,15 +130,11 @@ export function moduleData() {
       //this.frame.contentWindow.console.log = function () {};
 
       this.frame.onload = function () {
-        if (self.frame.contentDocument.body.classList.contains('is-fullscreen-mode')) {
-          self.setFullScreen();
-        } else {
-          self.removeFullScreen();
-        }
+        self.rendered = true;
 
-        self.frame.contentDocument.addEventListener('locationchange', function () {
-          console.log('location changed!');
-        });
+        self.mountUpdateListWatchers();
+        self.ammendPageLinks();
+        self.checkForUserFullSreen(self.frame.contentWindow.location.href);
 
         //Try to get contents to see if frame was loaded or blocked
         try {
@@ -149,30 +147,22 @@ export function moduleData() {
         }
         self.frame.contentWindow;
         self.loading = false;
+
         self.injectStyles();
+
         let title = self.frame.contentDocument.title;
         if (title && title != '') {
           document.title = title;
         }
 
-        if (self.uiTemplate.display != 'prod') {
-          self.frame.contentDocument.body.addEventListener('click', function () {
-            self.$refs.frameContainer.click();
-          });
-          self.frame.contentDocument.body.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-            //event = document.createEvent('Event');
-            //event.initEvent('contextmenu', true, true);
-            let clickPos = {
-              x: e.pageX,
-              y: e.pageY,
-            };
-            let event = new CustomEvent('right_click_frame', { 'detail': { pos: clickPos, uid: self.block.uid } });
-            document.dispatchEvent(event);
-          });
+        self.addRightClickWatchers();
+
+        if (self.uiTemplate.display == 'prod') {
+          self.updateBrowserAddress(self.frame.contentWindow.location.href);
         }
-        this.uipPageChangeLoaded = new CustomEvent('uip_page_change_loaded');
-        document.dispatchEvent(this.uipPageChangeLoaded);
+
+        self.uipPageChangeLoaded = new CustomEvent('uip_page_change_loaded');
+        document.dispatchEvent(self.uipPageChangeLoaded);
         self.updatePageUrls();
       };
 
@@ -232,13 +222,24 @@ export function moduleData() {
 
           return;
         }
-
+        self.frame.src = 'about:blank';
         url = self.formatUserUrlOptions(url);
 
         self.frame.contentWindow.location.replace(url);
       });
     },
     computed: {
+      returnStartPage() {
+        if (this.uiTemplate.display != 'prod') {
+          return this.startPage;
+        }
+        return '';
+      },
+      returnLoadingStyle() {
+        if (!this.rendered) {
+          return 'opacity:0';
+        }
+      },
       returnHomePage() {
         let src = this.uipress.get_block_option(this.block, 'block', 'loginRedirect', true);
         if (this.uipress.isObject(src)) {
@@ -336,9 +337,132 @@ export function moduleData() {
       },
     },
     methods: {
+      checkForUserFullSreen(url) {
+        if (typeof UIPFullscreenUserPages != 'undefined') {
+          if (UIPFullscreenUserPages) {
+            if (this.enviroment != 'builder') {
+              if (Array.isArray(UIPFullscreenUserPages)) {
+                for (let part of UIPFullscreenUserPages) {
+                  if (url == part || url.includes(part)) {
+                    this.setFullScreen();
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      addRightClickWatchers() {
+        let self = this;
+        if (self.uiTemplate.display != 'prod') {
+          self.frame.contentDocument.body.addEventListener('click', function () {
+            self.$refs.frameContainer.click();
+          });
+          self.frame.contentDocument.body.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            //event = document.createEvent('Event');
+            //event.initEvent('contextmenu', true, true);
+            let clickPos = {
+              x: e.pageX,
+              y: e.pageY,
+            };
+            let event = new CustomEvent('right_click_frame', { 'detail': { pos: clickPos, uid: self.block.uid } });
+            document.dispatchEvent(event);
+          });
+        }
+      },
+      ammendPageLinks() {
+        return;
+        let self = this;
+
+        if (this.uipData.options.multisite) return;
+        const links = self.frame.contentWindow.document.querySelectorAll('a');
+        if (links) {
+          links.forEach((link) => {
+            let href = link.getAttribute('href');
+
+            if (href) {
+              if (href.charAt(0) != '#') {
+                //Check for absolute
+                let absoluteCheck = new RegExp('^(?:[a-z+]+:)?//', 'i');
+                if (!absoluteCheck.test(href)) {
+                  let admin = this.returnAdminPage();
+                  if (!admin.endsWith('/')) {
+                    admin += '/';
+                  }
+                  if (href.startsWith(this.returnAdminPath())) {
+                    href = href.replace(this.returnAdminPath(), '');
+                  }
+                  if (href.startsWith('/')) {
+                    href = href.replace('/', '');
+                  }
+                  href = admin + href;
+                }
+                let url = new URL(href);
+                url = self.formatUserUrlOptions(url);
+                link.setAttribute('href', url.href);
+              }
+            }
+          });
+        }
+      },
+      mountUpdateListWatchers() {
+        let self = this;
+        const form = self.frame.contentWindow.document.querySelector('form[name="upgrade-plugins"]');
+        if (form) {
+          form.addEventListener('submit', function (evt) {
+            let url = new URL(form.action);
+
+            if (!url.searchParams.get('uip-framed-page')) {
+              evt.preventDefault();
+              self.formatUserUrlOptions(url);
+              form.action = url.href;
+              form.submit();
+            }
+          });
+        }
+
+        const themeform = self.frame.contentWindow.document.querySelector('form[name="upgrade-themes"]');
+        if (themeform) {
+          themeform.addEventListener('submit', function (evt) {
+            let url = new URL(themeform.action);
+
+            if (!url.searchParams.get('uip-framed-page')) {
+              evt.preventDefault();
+              self.formatUserUrlOptions(url);
+              themeform.action = url.href;
+              themeform.submit();
+            }
+          });
+        }
+
+        const coreform = self.frame.contentWindow.document.querySelector('form[name="upgrade"]');
+        if (coreform) {
+          coreform.addEventListener('submit', function (evt) {
+            let url = new URL(coreform.action);
+
+            if (!url.searchParams.get('uip-framed-page')) {
+              evt.preventDefault();
+              self.formatUserUrlOptions(url);
+              coreform.action = url.href;
+              coreform.submit();
+            }
+          });
+        }
+
+        return;
+      },
+      updateBrowserAddress(url) {
+        let self = this;
+        let processed = self.uipress.stripUIPparams(url);
+        history.pushState({}, null, processed);
+      },
       returnAdminPage() {
         let url = this.uipress.checkNestedValue(this.uipData, ['dynamicOptions', 'viewadmin', 'value']);
         return url;
+      },
+      returnAdminPath() {
+        return this.uipData.options.adminPath;
       },
       updatePageUrls() {
         let self = this;
@@ -561,10 +685,7 @@ export function moduleData() {
         </div>
       </div>
       
-      <iframe v-if="uiTemplate.display == 'prod'" ref="contentframe" 
-      class="uip-page-content-frame uip-background-default uip-scrollbar uip-w-100p uip-flex-grow"></iframe>
-      
-      <iframe v-else :src="startPage" ref="contentframe" 
+      <iframe :style="returnLoadingStyle" :src="returnStartPage" ref="contentframe" 
       class="uip-page-content-frame uip-background-default uip-scrollbar uip-w-100p uip-flex-grow"></iframe>
        
       <div @mouseover="cornertickle = true" @mouseleave="cornertickle = false" class="uip-position-absolute uip-text-muted uip-top-0 uip-right-0 uip-cursor-pointer uip-flex uip-flex-column uip-flex-middle uip-padding-xs" v-if="!disableFullScreen">

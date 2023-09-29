@@ -19,6 +19,7 @@ export function moduleData() {
           perPage: 20,
           status: ['publish'],
           relation: 'AND',
+          taxRelation: 'AND',
           offset: '',
           taxQuery: [],
           metaQuery: [],
@@ -38,6 +39,7 @@ export function moduleData() {
           searchPostTypes: __('Search post types', 'uipress-lite'),
           metaKey: __('Meta key', 'uipress-lite'),
           metaValue: __('Meta value', 'uipress-lite'),
+          terms: __('Terms', 'uipress-lite'),
           compare: __('Compare', 'uipress-lite'),
           order: __('Order', 'uipress-lite'),
           metaKey: __('Meta key', 'uipress-lite'),
@@ -49,7 +51,29 @@ export function moduleData() {
           roles: __('Roles', 'uipress-lite'),
           searchRoles: __('Search roles', 'uipress-lite'),
           search: __('Search', 'uipress-lite'),
-          usersOwnContent: __('Limit to users own content'),
+          usersOwnContent: __('Limit to users own content', 'uipress-lite'),
+          taxonomy: __('Taxonomy', 'uipress-lite'),
+          field: __('Field', 'uipress-lite'),
+          taxValue: __('Tax value', 'uipress-lite'),
+          includeChildren: __('Include children', 'uipress-lite'),
+        },
+        fieldTypes: {
+          term_id: {
+            value: 'term_id',
+            label: 'term_id',
+          },
+          name: {
+            value: 'name',
+            label: 'name',
+          },
+          slug: {
+            value: 'slug',
+            label: 'slug',
+          },
+          term_taxonomy_id: {
+            value: 'term_taxonomy_id',
+            label: 'term_taxonomy_id',
+          },
         },
         queryType: {
           post: {
@@ -355,6 +379,18 @@ export function moduleData() {
           type: 'CHAR',
         });
       },
+      defaultTaxQuery() {
+        return structuredClone({
+          taxonomy: '',
+          value: '',
+          fieldType: 'term_id',
+          compare: '=',
+          includeChildren: true,
+        });
+      },
+      returnTaxPostTypes(postTypes) {
+        return postTypes.toString();
+      },
     },
     template: `
       <div class="uip-flex uip-flex-column uip-row-gap-xs">
@@ -476,7 +512,7 @@ export function moduleData() {
         
         
         
-        
+        <div class="uip-border-top uip-margin-top-xs uip-margin-bottom-xs"></div>
         
         <!--Per page -->
         <div class="uip-grid-col-1-3">
@@ -516,6 +552,8 @@ export function moduleData() {
           
         </div>
         
+        <div class="uip-border-top uip-margin-top-xs uip-margin-bottom-xs"></div>
+        
         
         <!--Meta query-->
         <div class="uip-grid-col-1-3">
@@ -546,51 +584,60 @@ export function moduleData() {
                   </div>
                 </template>
                 <template v-slot:content>
-                  <div class="uip-padding-s uip-border-bottom uip-text-bold">
-                    {{strings.metaQuery}}
-                  </div>
-                  <div class="uip-padding-s uip-flex uip-flex-column uip-row-gap-xs">
+                
+                
+                  <div class="uip-flex uip-flex-column uip-gap-s uip-padding-s">
                   
-                    <!--Meta key-->
-                    <div class="uip-grid-col-1-3">
-                      <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.metaKey}}</span></div>
-                      <div class="uip-position-relative">
-                        <input type="text" min="0" class="uip-input uip-remove-steps uip-background-remove uip-padding-xxxs uip-flex-grow" v-model="meta.key">
-                      </div>
+                    <div class="uip-text-bold">
+                      {{strings.metaQuery}}
                     </div>
                     
-                    <!--Meta value-->
-                    <div class="uip-grid-col-1-3">
-                      <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.metaValue}}</span></div>
-                      <div class="uip-position-relative">
-                        <input type="text" min="0" class="uip-input uip-remove-steps uip-background-remove uip-padding-xxxs uip-flex-grow" v-model="meta.value">
-                      </div>
-                    </div>
+                    <div class="uip-border-bottom"></div>
                     
-                    <!--Compare-->
-                    <div class="uip-grid-col-1-3">
-                      <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.compare}}</span></div>
-                      <div class="uip-position-relative">
-                        <select class="uip-input-small uip-padding-top-xxxs uip-padding-bottom-xxxs uip-max-w-100p  uip-w-100p uip-border-rounder" style="padding-top:2px;padding-bottom:2px;border-radius:var(--uip-border-radius-large)" v-model="meta.compare">
-                          <template v-for="item in comparisons">
-                            <option :value="item.value">{{item.label}}</option>
-                          </template>
-                        </select>
-                      </div>
-                    </div>
+                    <div class="uip-flex uip-flex-column uip-row-gap-xs">
                     
-                    <!--Compare-->
-                    <div class="uip-grid-col-1-3">
-                      <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.type}}</span></div>
-                      <div class="uip-position-relative">
-                        <select class="uip-input-small uip-padding-top-xxxs uip-padding-bottom-xxxs uip-max-w-100p  uip-w-100p uip-border-rounder" style="padding-top:2px;padding-bottom:2px;border-radius:var(--uip-border-radius-large)" v-model="meta.type">
-                          <template v-for="item in dataTypes">
-                            <option :value="item.value">{{item.label}}</option>
-                          </template>
-                        </select>
+                      <!--Meta key-->
+                      <div class="uip-grid-col-1-3">
+                        <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.metaKey}}</span></div>
+                        <div class="uip-position-relative">
+                          <input type="text" min="0" class="uip-input uip-remove-steps uip-background-remove uip-padding-xxxs uip-flex-grow" v-model="meta.key">
+                        </div>
                       </div>
+                      
+                      <!--Meta value-->
+                      <div class="uip-grid-col-1-3">
+                        <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.metaValue}}</span></div>
+                        <div class="uip-position-relative">
+                          <input type="text" min="0" class="uip-input uip-remove-steps uip-background-remove uip-padding-xxxs uip-flex-grow" v-model="meta.value">
+                        </div>
+                      </div>
+                      
+                      <!--Compare-->
+                      <div class="uip-grid-col-1-3">
+                        <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.compare}}</span></div>
+                        <div class="uip-position-relative">
+                          <select class="uip-input-small uip-padding-top-xxxs uip-padding-bottom-xxxs uip-max-w-100p  uip-w-100p uip-border-rounder" style="padding-top:2px;padding-bottom:2px;border-radius:var(--uip-border-radius-large)" v-model="meta.compare">
+                            <template v-for="item in comparisons">
+                              <option :value="item.value">{{item.label}}</option>
+                            </template>
+                          </select>
+                        </div>
+                      </div>
+                      
+                      <!--Compare-->
+                      <div class="uip-grid-col-1-3">
+                        <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.type}}</span></div>
+                        <div class="uip-position-relative">
+                          <select class="uip-input-small uip-padding-top-xxxs uip-padding-bottom-xxxs uip-max-w-100p  uip-w-100p uip-border-rounder" style="padding-top:2px;padding-bottom:2px;border-radius:var(--uip-border-radius-large)" v-model="meta.type">
+                            <template v-for="item in dataTypes">
+                              <option :value="item.value">{{item.label}}</option>
+                            </template>
+                          </select>
+                        </div>
+                      </div>
+                      
                     </div>
-                    
+                  
                   </div>
                 </template>
               </drop-down>
@@ -619,6 +666,8 @@ export function moduleData() {
         </div>
         
         
+        
+        
         <!--Relation -->
         <div class="uip-grid-col-1-3" v-if="options.metaQuery.length > 0">
         
@@ -630,7 +679,209 @@ export function moduleData() {
           
         </div>
         
-        <!--Query builder -->
+        <div class="uip-border-top uip-margin-top-xs uip-margin-bottom-xs"></div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--Tax query-->
+        <template v-if="options.type == 'post'">
+        
+          <div class="uip-grid-col-1-3">
+          
+            <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.taxQuery}}</span></div>
+              
+            <div v-if="options.taxQuery.length === 0" class="uip-position-relative">
+              
+              <button class="uip-button-default uip-icon uip-border-rounder uip-padding-xxs uip-link-muted uip-w-100p" 
+              @click="options.taxQuery.push(defaultTaxQuery())">add</button>
+              
+            </div>
+            
+            <template v-for="(tax, index) in options.taxQuery">
+            
+              <div v-if="index > 0"></div>
+            
+              <div class="uip-flex uip-gap-xs uip-row-gap-xs uip-flex-center">
+              
+                <drop-down dropPos="left" triggerClass="uip-flex uip-flex-grow uip-w-100p" containerClass="uip-flex uip-flex-grow uip-w-100p">
+                  <template v-slot:trigger>
+                    <div class="uip-background-muted uip-border-rounder uip-padding-xxs uip-padding-left-xs uip-flex uip-gap-xs uip-w-100p">
+                      <div class="uip-flex uip-gap-xxs">
+                        <span class="uip-text-muted">{{tax.taxonomy}}</span>
+                        <span v-if="tax.taxonomy && tax.fieldType" class="uip-text-muted">|</span>
+                        <span class="uip-text-muted">{{tax.fieldType}}</span>
+                      </div>
+                    </div>
+                  </template>
+                  <template v-slot:content>
+                  
+                    <div class="uip-flex uip-flex-column uip-gap-s uip-padding-s">
+                    
+                      <div class="uip-text-bold">
+                        {{strings.taxQuery}}
+                      </div>
+                      
+                      <div class="uip-border-bottom"></div>
+                      
+                      <div class="uip-flex uip-flex-column uip-row-gap-xs">
+                      
+                        <!--tax key-->
+                        <div class="uip-grid-col-1-3">
+                          <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.taxonomy}}</span></div>
+                          <div class="uip-position-relative">
+                          
+                            <select class="uip-input-small uip-padding-top-xxxs uip-padding-bottom-xxxs uip-max-w-100p  uip-w-100p uip-border-rounder" style="padding-top:2px;padding-bottom:2px;border-radius:var(--uip-border-radius-large)" v-model="tax.taxonomy">
+                              <template v-for="item in uipData.options.taxonomies">
+                                <option :value="item.name">
+                                  {{item.label}} 
+                                  ({{returnTaxPostTypes(item.object_type)}})
+                                </option>
+                              </template>
+                            </select>
+                            
+                          </div>
+                         
+                        </div>
+                        
+                        <!--tax value-->
+                        <div class="uip-grid-col-1-3">
+                          <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.taxValue}}</span></div>
+                          <div class="uip-position-relative">
+                            <input placeholder="term_1, term_2"
+                            type="text" min="0" class="uip-input-small uip-w-100p" v-model="tax.value">
+                          </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        <!--Field type-->
+                        <div class="uip-grid-col-1-3">
+                          <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.field}}</span></div>
+                          <div class="uip-position-relative">
+                            <select class="uip-input-small uip-padding-top-xxxs uip-padding-bottom-xxxs uip-max-w-100p  uip-w-100p uip-border-rounder" style="padding-top:2px;padding-bottom:2px;border-radius:var(--uip-border-radius-large)" v-model="tax.fieldType">
+                              <template v-for="item in fieldTypes">
+                                <option :value="item.value">{{item.label}}</option>
+                              </template>
+                            </select>
+                          </div>
+                        </div>
+                        
+                        <!--Compare-->
+                        <div class="uip-grid-col-1-3">
+                          <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.compare}}</span></div>
+                          <div class="uip-position-relative">
+                            <select class="uip-input-small uip-padding-top-xxxs uip-padding-bottom-xxxs uip-max-w-100p  uip-w-100p uip-border-rounder" style="padding-top:2px;padding-bottom:2px;border-radius:var(--uip-border-radius-large)" v-model="tax.compare">
+                              <template v-for="item in comparisons">
+                                <option :value="item.value">{{item.label}}</option>
+                              </template>
+                            </select>
+                          </div>
+                        </div>
+                        
+                        <!--Include children-->
+                        <div class="uip-grid-col-1-3">
+                          <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.includeChildren}}</span></div>
+                          <div class="uip-position-relative">
+                            <switch-select :args="{asText: true}" :activeValue="tax.includeChildren" :returnValue="function(data){ tax.includeChildren = data}"/>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    
+                    </div>
+                    
+                  </template>
+                </drop-down>
+                
+                <button class="uip-button-default uip-icon uip-border-rounder uip-padding-xxs uip-link-muted" @click="options.taxQuery.splice(index, 1)">close</button>
+              
+              </div>
+            
+            
+            </template>
+            
+            
+            <template v-if="options.taxQuery.length > 0">
+            
+              <div></div>
+                
+              <div class="uip-position-relative">
+                
+                <button class="uip-button-default uip-icon uip-border-rounder uip-padding-xxs uip-link-muted uip-w-100p" 
+                @click="options.taxQuery.push(defaultTaxQuery())">add</button>
+                
+              </div>
+            
+            </template>
+            
+          </div>
+          
+          
+          
+          
+          <!--Relation -->
+          <div class="uip-grid-col-1-3" v-if="options.taxQuery.length > 0">
+          
+            <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.relation}}</span></div>
+              
+            <div class="uip-position-relative">
+              <toggle-switch :options="relationOptions" :activeValue="options.taxRelation" :returnValue="function(data){ options.taxRelation = data}"></toggle-switch>
+            </div>
+            
+          </div>
+          
+          <div class="uip-border-top uip-margin-top-xs uip-margin-bottom-xs"></div>
+        
+        
+        
+        
+        </template>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--Has own content -->
         <div class="uip-grid-col-1-3">
         
           <div class="uip-text-muted uip-flex uip-flex-center"><span>{{strings.usersOwnContent}}</span></div>

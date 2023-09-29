@@ -183,7 +183,7 @@ export function moduleData() {
       },
     },
     template: `
-      <div >
+      <div class="uip-text-normal">
        <div class="uip-flex uip-flex-row">
          <template v-for="(tab, index) in returnTabs">
             <div class="uip-padding-xs uip-cursor-pointer uip-tab-item" @click="updateIndex(index)"

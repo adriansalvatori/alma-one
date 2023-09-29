@@ -59,7 +59,7 @@ html[uip-theme-basic='true'] {
     width: 100%;
     height: 30px;
     position: relative;
-    background-image: url(https://uipress.co/wp-content/uploads/2022/11/default_logo_dark.svg);
+    background-image: var(--uip-logo);
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;

@@ -9,7 +9,7 @@
         {!!__('Making life easier, <br> one appliance at a time.','sage')!!}
       </h1>
       <div data-inertia data-inertia-reveal data-inertia-delay="600"  class="buttons">
-        <a href="/shop" class="button is-primary is-outlined">
+        <a href="{{home_url('/shop')}}" class="button is-primary is-outlined">
           <span class="icon"><i data-feather="phone"></i></span>
           <span class="has-margin-left-40">{{__('Go shop','sage')}}</span>
         </a>
