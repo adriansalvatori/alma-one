@@ -71,60 +71,14 @@ body.theme-alma:not(.wp-admin) {
     opacity: 1;
   }
 
-  &[data-inertia-delay="100"]{
-    transition-delay: 100ms;
+  @mixin inertia-delay($delay) {
+    &[data-inertia-delay="#{$delay}"] {
+      transition-delay: #{$delay}ms;
+    }
   }
 
-  &[data-inertia-delay="200"]{
-    transition-delay: 200ms;
-  }
-
-  &[data-inertia-delay="300"]{
-    transition-delay: 300ms;
-  }
-
-  &[data-inertia-delay="400"]{
-    transition-delay: 400ms;
-  }
-
-  &[data-inertia-delay="500"]{
-    transition-delay: 500ms;
-  }
-
-  &[data-inertia-delay="600"]{
-    transition-delay: 600ms;
-  }
-
-  &[data-inertia-delay="700"]{
-    transition-delay: 700ms;
-  }
-
-  &[data-inertia-delay="800"]{
-    transition-delay: 800ms;
-  }
-
-  &[data-inertia-delay="900"]{
-    transition-delay: 900ms;
-  }
-
-  &[data-inertia-delay="1000"]{
-    transition-delay: 1000ms;
-  }
-
-  &[data-inertia-delay="1100"]{
-    transition-delay: 1100ms;
-  }
-
-  &[data-inertia-delay="1200"]{
-    transition-delay: 1200ms;
-  }
-
-  &[data-inertia-delay="1500"]{
-    transition-delay: 1500ms;
-  }
-
-  &[data-inertia-delay="1800"]{
-    transition-delay: 1800ms;
+  @for $i from 1 through 18 {
+    @include inertia-delay($i * 100);
   }
 }
 
