@@ -88,7 +88,7 @@
     "adriansalvatori/checkout" : "*",
     "adriansalvatori/woocommerce-search-engine" : "*",
     "adriansalvatori/wp-optimize" : "*",
-    "salvatori/alma": "dev-lightning || 4.0.63"
+    "salvatori/alma": "dev-lightning"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
@@ -106,7 +106,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": [
+      "public_html/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "roots/soil", 
         "wpackagist-plugin/two-factor", 
@@ -122,8 +122,8 @@
         "wpackagist-plugin/acf-extended", 
         "adriansalvatori/wp-optimize"
       ],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "public_html/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public_html/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "public_html/wp"
   },
