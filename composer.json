@@ -85,8 +85,6 @@
     "wpackagist-plugin/web-stories": "^1.32",
     "wpackagist-plugin/google-site-kit": "^1.102",
     "adriansalvatori/acf-pro" : "*",
-    "adriansalvatori/checkout" : "*",
-    "adriansalvatori/woocommerce-search-engine" : "*",
     "adriansalvatori/wp-optimize" : "*",
     "salvatori/alma": "dev-lightning"
   },
