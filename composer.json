@@ -24,38 +24,6 @@
       "type": "vcs",
       "url": "https://github.com/afragen/git-updater"
     },
-    {
-      "type": "vcs",
-      "url": "git@github.com:adriansalvatori/acf-pro.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:adriansalvatori/checkout.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:adriansalvatori/learndash.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:adriansalvatori/supportboard.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:adriansalvatori/uipress-pro.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:adriansalvatori/wishlists.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:adriansalvatori/woocommerce-search-engine.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:adriansalvatori/wp-optimize.git"
-    }
   ],
   "require": {
     "php": ">=8.1",
@@ -73,6 +41,7 @@
     "wpackagist-plugin/woocommerce": "^8.0",
     "roots/soil": "^4.1.1",
     "wpackagist-plugin/autodescription": "^4.2",
+    "wpackagist-plugin/acf": "*",
     "wpackagist-plugin/two-factor": "^0.8.1",
     "wpackagist-plugin/imsanity": "^2.8",
     "wpackagist-plugin/duplicate-post": "^4.5",
@@ -84,8 +53,6 @@
     "wpackagist-plugin/acf-extended": "0.8.9.3",
     "wpackagist-plugin/web-stories": "^1.32",
     "wpackagist-plugin/google-site-kit": "^1.102",
-    "adriansalvatori/acf-pro" : "*",
-    "adriansalvatori/wp-optimize" : "*",
     "salvatori/alma": "dev-lightning"
   },
   "require-dev": {
@@ -108,6 +75,7 @@
         "type:wordpress-muplugin",
         "roots/soil", 
         "wpackagist-plugin/two-factor", 
+        "wpackagist-plugin/acf", 
         "wpackagist-plugin/imsanity", 
         "wpackagist-plugin/opengraph",
         "wpackagist-plugin/duplicate-post", 
@@ -116,9 +84,7 @@
         "wpackagist-plugin/wp-term-order", 
         "wpackagist-plugin/wp-user-avatars", 
         "wpackagist-plugin/wp-user-profiles",
-        "adriansalvatori/acf-pro", 
         "wpackagist-plugin/acf-extended", 
-        "adriansalvatori/wp-optimize"
       ],
       "public_html/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "public_html/app/themes/{$name}/": ["type:wordpress-theme"]
