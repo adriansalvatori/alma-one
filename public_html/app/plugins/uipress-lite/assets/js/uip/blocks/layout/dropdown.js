@@ -1,151 +1,136 @@
 const { __, _x, _n, _nx } = wp.i18n;
-export function moduleData() {
-  return {
-    props: {
-      display: String,
-      name: String,
-      block: Object,
+import { renderKeyShortCut } from '../../v3.5/utility/functions.min.js';
+export default {
+  props: {
+    display: String,
+    name: String,
+    block: Object,
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    /**
+     * Returns custom text for button trigger
+     *
+     * @since 3.2.13
+     */
+    returnText() {
+      const item = this.get_block_option(this.block, 'block', 'buttonText', true);
+      if (!item) return '';
+
+      if (!this.isObject(item)) return item;
+      if (item.string) return item.string;
+      return '';
     },
-    data: function () {
-      return {
-        loading: true,
-        dynamics: this.uipData.dynamicOptions,
-      };
+
+    /**
+     * Gets the block shortcut and returns the visual shortcut
+     *
+     * @since 3.2.13
+     */
+    getShortcut() {
+      const shortcut = this.getShortcutValue;
+      if (!shortcut) return;
+      return renderKeyShortCut(shortcut);
     },
-    inject: ['uipData', 'uipress', 'uiTemplate'],
-    watch: {},
-    mounted: function () {},
-    computed: {
-      returnText() {
-        let item = this.uipress.get_block_option(this.block, 'block', 'buttonText', true);
-        if (!item) {
-          return '';
-        }
-        if (this.uipress.isObject(item)) {
-          if ('string' in item) {
-            return item.string;
-          } else {
-            return '';
-          }
-        }
-        return item;
-      },
-      getShortcut() {
-        let shortcut = this.uipress.get_block_option(this.block, 'block', 'keyboardShortcut');
 
-        if (!shortcut) {
-          return false;
-        }
-        if ('enabled' in shortcut) {
-          if (!shortcut.enabled) {
-            return false;
-          }
-        } else {
-          return false;
-        }
+    /**
+     * Gets shortcut value
+     *
+     * @since 3.2.13
+     */
+    getShortcutValue() {
+      const shortcut = this.get_block_option(this.block, 'block', 'keyboardShortcut');
+      if (!this.isObject(shortcut)) return;
 
-        if (!('selected' in shortcut)) {
-          return;
-        }
+      // Shortcut is not enabled so bail
+      if (!shortcut.enabled || !shortcut.display || !shortcut.selected) return false;
+      // No keys set for shortcut so bail
 
-        //No shortcut set
-        if (shortcut.selected.length < 1) {
-          return false;
-        }
+      //No shortcut set
+      if (shortcut.selected.length < 1) return;
 
-        if (!shortcut.display) {
-          return false;
-        }
-
-        return this.uipress.renderKeyShortCut(shortcut.selected);
-      },
-      getShortcutValue() {
-        let shortcut = this.uipress.get_block_option(this.block, 'block', 'keyboardShortcut');
-
-        if (!shortcut) {
-          return false;
-        }
-        if ('enabled' in shortcut) {
-          if (!shortcut.enabled) {
-            return false;
-          }
-        } else {
-          return false;
-        }
-
-        if (!('selected' in shortcut)) {
-          return;
-        }
-
-        //No shortcut set
-        if (shortcut.selected.length < 1) {
-          return false;
-        }
-
-        return shortcut.selected;
-      },
-      returnDropPosition() {
-        let posis = this.uipress.get_block_option(this.block, 'block', 'dropDirection', true);
-        if (posis) {
-          if (this.uipress.isObject(posis)) {
-            if ('value' in posis) {
-              return posis.value;
-            }
-          }
-          return posis;
-        } else {
-          return 'bottom-left';
-        }
-      },
+      return shortcut.selected;
     },
-    methods: {
-      returnClasses() {
-        let classes = '';
 
-        let advanced = this.uipress.get_block_option(this.block, 'advanced', 'classes');
-        classes += advanced;
-        return classes;
-      },
-      returnIconPos() {
-        let classes = '';
+    /**
+     * Returns dropdown position
+     *
+     *  @since 3.2.13
+     */
+    returnDropPosition() {
+      let dropPosition = this.get_block_option(this.block, 'block', 'dropDirection');
+      if (this.isObject(dropPosition)) return dropPosition.value;
 
-        let posis = this.uipress.get_block_option(this.block, 'block', 'iconPosition');
-        if (posis) {
-          if (posis.value == 'right') {
-            classes += 'uip-flex-reverse';
-          }
-        }
-        let advanced = this.uipress.get_block_option(this.block, 'advanced', 'classes');
-        classes += advanced;
-        return classes;
-      },
-
-      getIcon() {
-        let icon = this.uipress.get_block_option(this.block, 'block', 'iconSelect');
-        if (!icon) {
-          return '';
-        }
-        if ('value' in icon) {
-          return icon.value;
-        }
-        return icon;
-      },
+      if (!dropPosition) return 'bottom left';
+      return dropPosition;
     },
-    template: `
-        <drop-down :dropPos="returnDropPosition" :shortCut="getShortcutValue">
-          <template v-slot:trigger>
+
+    /**
+     * Returns whether to open on hover
+     *
+     * @since 3.2.13
+     */
+    returnOpenHover() {
+      const mode = this.get_block_option(this.block, 'block', 'openMode');
+      if (!mode) return false;
+      if (!this.isObject(mode) && mode == 'hover') return true;
+      if (mode.value && mode.value == 'hover') return true;
+      return false;
+    },
+
+    /**
+     * Returns the reverse class if icon position is right
+     *
+     * @since 3.2.13
+     */
+    returnClasses() {
+      const position = this.get_block_option(this.block, 'block', 'iconPosition');
+      if (!position) return;
+      if (!this.isObject(position) && position == 'right') return 'uip-flex-reverse';
+      if (position.value && position.value == 'right') return 'uip-flex-reverse';
+    },
+
+    /**
+     * Returns icon for button
+     *
+     * @since 3.2.13
+     */
+    returnIcon() {
+      let icon = this.get_block_option(this.block, 'block', 'iconSelect');
+      if (!icon) return '';
+      if (!this.isObject(icon)) return icon;
+      if (icon.value) return icon.value;
+      return '';
+    },
+  },
+
+  methods: {},
+  template: `
+        <dropdown :pos="returnDropPosition" :shortCut="getShortcutValue" :disableTeleport="true" :hover="returnOpenHover">
+        
+          <template #trigger>
+          
             <button class="uip-button uip-button-default uip-flex uip-gap-xxs uip-flex-center uip-drop-trigger"
-            :class="returnIconPos()" >
-              <span class="uip-icon" v-if="getIcon()">{{getIcon()}}</span>
+            :class="returnClasses" >
+            
+              <span class="uip-icon" v-if="returnIcon">{{returnIcon}}</span>
               <span class="uip-flex-grow" v-if="returnText != ''">{{returnText}}</span>
-              <div v-if="getShortcut" class="uip-flex uip-flex-row uip-padding-left-xxxs uip-padding-right-xxxs uip-border uip-border-round uip-text-s uip-flex-row uip-inline-flex uip-flex-center" v-html="getShortcut">
-              </div>
+                
+              <!-- Shortcut display -->
+              <div v-if="getShortcut" class="uip-flex uip-flex-row uip-padding-left-xxxs uip-padding-right-xxxs uip-border uip-border-round uip-text-s uip-flex-row uip-inline-flex uip-flex-center" v-html="getShortcut"></div>
+              
             </button>
+            
           </template>
-          <template v-slot:content>
-             <uip-content-area :content="block.content" :returnData="function(data) {block.content = data} " layout="vertical"></uip-content-area>
+          
+          <template #content>
+          
+             <uip-content-area :content="block.content" :returnData="(data)=>{block.content = data} "/>
+             
           </template>
-        </drop-down>
+          
+        </dropdown>
         `,
-  };
-}
+};

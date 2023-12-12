@@ -1,3 +1,0 @@
-interface JQuery {
-    wpColorPicker: any;
-}

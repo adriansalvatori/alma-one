@@ -58,6 +58,8 @@ class Editor {
 		$full_screen_icon  = get_option( 'vi_wbe_full_screen_option' ) ? 'window close outline' : 'external alternate';
 		$full_screen_title = get_option( 'vi_wbe_full_screen_option' ) ? esc_html__( 'Exit full screen', 'bulky-woocommerce-bulk-edit-products' ) : esc_html__( 'Full screen', 'bulky-woocommerce-bulk-edit-products' );
 
+		add_filter( 'bulky_filter_behaviors_list', [ $this, 'add_sku_behavior' ], 10, 2 );
+
 		?>
 
         <div id="vi-wbe-container">
@@ -768,6 +770,8 @@ class Editor {
 			'empty' => esc_html__( 'Empty', 'bulky-bulk-edit-products-for-woo' ),
 		];
 
+		$behaviors = apply_filters( 'bulky_filter_behaviors_list', $behaviors, $id );
+
 		$saved_behavior = $this->filter_saved['behavior'][ $id ] ?? '';
 		ob_start();
 		?>
@@ -801,5 +805,14 @@ class Editor {
         </select>
 		<?php
 		return ob_get_clean();
+	}
+
+
+	public function add_sku_behavior( $behaviors, $id ) {
+		if ( $id == 'sku' ) {
+			$behaviors = [ 'in' => 'In' ] + $behaviors;
+		}
+
+		return $behaviors;
 	}
 }

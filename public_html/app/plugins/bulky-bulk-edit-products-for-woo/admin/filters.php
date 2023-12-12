@@ -294,7 +294,7 @@ class Filters {
 			}
 
 			$type  = $item['type'];
-			$value = sanitize_text_field( wp_specialchars_decode( trim(  $item['value']  ) ) );
+			$value = sanitize_text_field( wp_specialchars_decode( trim( $item['value'] ) ) );
 
 			$query = '';
 			switch ( $item['behavior'] ) {
@@ -356,7 +356,7 @@ class Filters {
 				return '';
 			}
 
-			$sku           = sanitize_text_field( wp_specialchars_decode( trim(  $sku  ) ) );
+			$sku           = sanitize_text_field( wp_specialchars_decode( trim( $sku ) ) );
 			$sku_condition = '';
 
 			switch ( $sku_behavior ) {
@@ -376,8 +376,15 @@ class Filters {
 					$sku_condition .= "postmeta.meta_value REGEXP '{$sku}$'";
 					break;
 
-				default:
+				case 'like':
 					$sku_condition .= "postmeta.meta_value LIKE '%{$sku}%'";
+					break;
+
+				default:
+					$skus          = explode( ',', $sku );
+					$skus          = array_map( 'trim', $skus );
+					$skus          = implode( "','", $skus );
+					$sku_condition .= "postmeta.meta_value IN ('{$skus}') ";
 					break;
 			}
 

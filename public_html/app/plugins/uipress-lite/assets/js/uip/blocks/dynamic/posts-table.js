@@ -1,198 +1,239 @@
 const { __, _x, _n, _nx } = wp.i18n;
-export function moduleData() {
-  return {
-    props: {
-      display: String,
-      name: String,
-      block: Object,
-    },
-    data: function () {
-      return {
-        searchString: '',
-        results: [],
-        columns: [],
-        page: 1,
-        totalPages: 0,
-        totalFound: 0,
-        initialLoading: false,
-        perPage: this.block.settings.block.options.postsPerPage.value,
-        postTypes: this.block.settings.block.options.activePostTypes.value,
+import { deleteRemotePost } from '../../v3.5/utility/functions.min.js';
+import { defineAsyncComponent, nextTick } from '../../../libs/vue-esm.js';
 
-        customColumns: this.block.settings.block.options.activeColumns.value,
-        loading: false,
-        strings: {
-          nothingFound: __('Nothing posts found', 'uipress-lite'),
-          by: __('By', 'uipress-lite'),
-          results: __('items', 'uipress-lite'),
-          searchPlaceHolder: __('Search items', 'uipress-lite'),
-          gridView: __('Grid view', 'uipress-lite'),
-          listView: __('List view', 'uipress-lite'),
-        },
-        ui: {
-          view: 'list',
-        },
-        searching: false,
-      };
+export default {
+  components: {
+    Confirm: defineAsyncComponent(() => import('../../v3.5/utility/confirm.min.js?ver=3.3.094')),
+  },
+  props: {
+    display: String,
+    name: String,
+    block: Object,
+  },
+  data() {
+    return {
+      searchString: '',
+      results: [],
+      columns: [],
+      page: 1,
+      totalPages: 0,
+      totalFound: 0,
+      initialLoading: false,
+      postTypes: [],
+      loading: false,
+      strings: {
+        nothingFound: __('Nothing posts found', 'uipress-lite'),
+        by: __('By', 'uipress-lite'),
+        results: __('items', 'uipress-lite'),
+        searchPlaceHolder: __('Search items', 'uipress-lite'),
+        gridView: __('Grid view', 'uipress-lite'),
+        listView: __('List view', 'uipress-lite'),
+      },
+      ui: {
+        view: 'list',
+      },
+      searching: false,
+    };
+  },
+  
+  mounted() {
+    this.getPosts();
+    this.updateView();
+  },
+  watch: {
+    searchString: {
+      handler(newValue, oldValue) {
+        this.page = 1;
+        this.getPosts();
+      },
     },
-    inject: ['uipData', 'uipress', 'uiTemplate'],
-    mounted: function () {
-      this.getPosts();
-      if (this.uipData.userPrefs.prefersGridView) {
-        this.ui.view = 'grid';
-      } else {
-        this.ui.view = 'list';
+    page: {
+      handler(newValue, oldValue) {
+        if (newValue) this.getPosts();
+      },
+    },
+    postTypes: {
+      handler(newValue, oldValue) {
+        this.getPosts();
+      },
+      deep: true,
+    },
+    perPage: {
+      handler(newValue, oldValue) {
+        this.getPosts();
+      },
+    },
+    'block.settings.block.options': {
+      handler(newValue, oldValue) {
+        this.getPosts();
+      },
+      deep: true,
+    },
+    'ui.view': {
+      handler(newValue, oldVaklue) {
+        let view = false;
+        if (newValue == 'grid') view = true;
+        this.saveUserPreference('prefersGridView', view, false);
+      },
+    },
+  },
+  computed: {
+    /**
+     * Returns items per page
+     *
+     * @since 3.2.13
+     */
+    returnPerPage() {
+      return this.hasNestedPath(this.block, 'settings', 'block', 'options', 'postsPerPage', 'value');
+    },
+
+    /**
+     * Returns amount of columns from settings
+     *
+     * @since 3.2.13
+     */
+    getColumns() {
+      return this.hasNestedPath(this.block, 'settings', 'block', 'options', 'activeColumns', 'value');
+    },
+
+    /**
+     * Returns enabled actions for table
+     *
+     * @since 3.2.13
+     */
+    getActions() {
+      return this.hasNestedPath(this.block, 'settings', 'block', 'options', 'actionsEnabled', 'value');
+    },
+
+    /**
+     * Returns whether the posts should be limited to the current author's own
+     *
+     * @since 3.2.13
+     */
+    limitToAuthor() {
+      let limit = this.get_block_option(this.block, 'block', 'limitToAuthor');
+      if (!limit) return false;
+      if (!this.isObject(limit)) return limit;
+      if (limit.value) return limit.value;
+      return false;
+    },
+
+    /**
+     * Returns whether the table's search is disabled
+     *
+     * @since 3.2.13
+     */
+    searchDisabled() {
+      let disabled = this.get_block_option(this.block, 'block', 'searchDisabled');
+      if (!disabled) return false;
+      if (!this.isObject(disabled)) return disabled;
+      if (disabled.value) return disabled.value;
+      return false;
+    },
+  },
+  methods: {
+    /**
+     * Updates the users prefered view for table
+     *
+     * @since 3.2.13
+     */
+    updateView() {
+      const grid = this.uipApp.data.userPrefs.prefersGridView;
+      if (grid) return (this.ui.view = 'grid');
+      this.ui.view = 'list';
+    },
+
+    /**
+     * Main function for fetching posts
+     *
+     * @since 3.2.13
+     */
+    async getPosts() {
+      // Query already running so exit
+      if (this.loading) return;
+
+      this.loading = true;
+      this.postTypes = this.get_block_option(this.block, 'block', 'activePostTypes');
+
+      //Build form data for fetch request
+      let formData = new FormData();
+      formData.append('action', 'uip_get_posts_for_table');
+      formData.append('security', uip_ajax.security);
+      formData.append('search', this.searchString);
+      formData.append('page', this.page);
+      formData.append('postTypes', JSON.stringify(this.postTypes));
+      formData.append('perPage', this.returnPerPage);
+      formData.append('limitToAuthor', this.limitToAuthor);
+      formData.append('search', this.searchString);
+      formData.append('columns', JSON.stringify(this.getColumns));
+      formData.append('actions', JSON.stringify(this.getActions));
+
+      // Fetch posts
+      const response = await this.sendServerRequest(uip_ajax.ajax_url, formData);
+
+      // Something went very wrong
+      if (!response) {
+        this.uipApp.notifications.notify(__('Unable to fetch posts at this tiem', 'uipress-lite'), '', '', 'error', true);
+        this.searching = false;
+        return;
+      }
+
+      // Error response
+      if (response.error) {
+        this.uipApp.notifications.notify(response.message, '', '', 'error', true);
+        this.searching = false;
+      }
+
+      // Success response
+      if (response.success) {
+        this.loading = false;
+        this.results = response.posts;
+        this.columns = response.columns;
+        this.totalFound = response.total;
+        this.totalPages = response.totalPages;
       }
     },
-    watch: {
-      searchString: {
-        handler(newValue, oldValue) {
-          this.page = 1;
-          this.getPosts();
-        },
-        deep: true,
-      },
-      page: {
-        handler(newValue, oldValue) {
-          if (newValue != '') {
-            this.getPosts();
-          }
-        },
-        deep: true,
-      },
-      postTypes: {
-        handler(newValue, oldValue) {
-          this.getPosts();
-        },
-        deep: true,
-      },
-      perPage: {
-        handler(newValue, oldValue) {
-          this.getPosts();
-        },
-        deep: true,
-      },
-      'block.settings.block.options.postsPerPage.value': {
-        handler(newValue, oldValue) {
-          this.getPosts();
-        },
-        deep: true,
-      },
-      'block.settings.block.options.activeColumns.value': {
-        handler(newValue, oldValue) {
-          this.getPosts();
-        },
-        deep: true,
-      },
-      'block.settings.block.options.actionsEnabled.value': {
-        handler(newValue, oldValue) {
-          this.getPosts();
-        },
-        deep: true,
-      },
-      'ui.view': {
-        handler(newValue, oldVaklue) {
-          let view = false;
-          if (newValue == 'grid') {
-            view = true;
-          }
 
-          this.uipress.saveUserPreference('prefersGridView', view, false);
-        },
-        deep: true,
-      },
+    /**
+     * Handles previous page requests
+     *
+     * @since 3.2.13
+     */
+    goBack() {
+      if (this.page > 1) this.page--;
     },
-    computed: {
-      returnPerPage() {
-        return this.block.settings.block.options.postsPerPage.value;
-      },
-      getColumns() {
-        return this.block.settings.block.options.activeColumns.value;
-      },
-      getActions() {
-        return this.block.settings.block.options.actionsEnabled.value;
-      },
-      limitToAuthor() {
-        let temp = this.uipress.get_block_option(this.block, 'block', 'limitToAuthor');
-        if (this.uipress.isObject(temp)) {
-          if ('value' in temp) {
-            return temp.value;
-          }
-          return true;
-        }
-        return temp;
-      },
-      searchDisabled() {
-        let temp = this.uipress.get_block_option(this.block, 'block', 'searchDisabled');
-        if (this.uipress.isObject(temp)) {
-          if ('value' in temp) {
-            return temp.value;
-          }
-        }
-        return temp;
-      },
+
+    /**
+     * Handles next page requests
+     *
+     * @since 3.2.13
+     */
+    goForward() {
+      if (this.page < this.totalPages) this.page++;
     },
-    methods: {
-      getPosts() {
-        let self = this;
-        //Query already running
-        if (self.loading) {
-          return;
-        }
-        self.loading = true;
 
-        let posties = this.uipress.get_block_option(this.block, 'block', 'activePostTypes');
-        self.postTypes = posties;
+    /**
+     * Deletes an item based on its post ID and refreshes the patterns.
+     *
+     * @param {number|string} postID - The ID of the post to be deleted.
+     * @since 3.2.13
+     */
+    async deleteThisItem(postID) {
+      const confirm = await this.$refs.confirm.show({
+        title: __('Delete post', 'uipress-lite'),
+        message: __('Are you sure you want to delete this post?', 'uipress-lite'),
+        okButton: __('Delete post', 'uipress-lite'),
+      });
 
-        //Build form data for fetch request
-        let formData = new FormData();
-        formData.append('action', 'uip_get_posts_for_table');
-        formData.append('security', uip_ajax.security);
-        formData.append('search', self.searchString);
-        formData.append('page', self.page);
-        formData.append('postTypes', JSON.stringify(self.postTypes));
-        formData.append('perPage', self.returnPerPage);
-        formData.append('limitToAuthor', self.limitToAuthor);
-        formData.append('search', self.searchString);
-        formData.append('columns', JSON.stringify(self.getColumns));
-        formData.append('actions', JSON.stringify(self.getActions));
+      if (!confirm) return;
 
-        self.uipress.callServer(uip_ajax.ajax_url, formData).then((response) => {
-          if (response.error) {
-            self.uipress.notify(response.message, 'uipress-lite', '', 'error', true);
-            self.searching = false;
-          }
-          if (response.success) {
-            self.loading = false;
-            self.results = response.posts;
-            self.columns = response.columns;
-            self.totalFound = response.total;
-            self.totalPages = response.totalPages;
-          }
-        });
-      },
-      goBack() {
-        if (this.page > 1) {
-          this.page = this.page - 1;
-        }
-      },
-      goForward() {
-        if (this.page < this.totalPages) {
-          this.page = this.page + 1;
-        }
-      },
-      formatResults(results) {
-        return new Intl.NumberFormat(self.uipress.uipAppData.options.locale).format(results);
-      },
-      deleteThisItem(postID) {
-        let self = this;
-        this.uipress.deletePost(postID).then((response) => {
-          if (response) {
-            self.getPosts();
-          }
-        });
-      },
+      await deleteRemotePost(postID);
+      this.uipApp.notifications.notify(__('Post deleted', 'uipress-lite'), '', 'success', true);
+      this.getPosts();
     },
-    template: `
+  },
+  template: `
           <div class="uip-flex uip-flex-column uip-self-flex-start uip-max-w-100p uip-table-wrap">
             <div class="uip-margin-bottom-xs uip-flex uip-flex-between">
             
@@ -228,9 +269,9 @@ export function moduleData() {
                   </div>
                   <div class="uip-padding-xs uip-flex uip-flex-column uip-row-gap-xxs">
                     <div class="uip-flex uip-flex-row uip-flex-between">
-                      <div class="uip-text-bold uip-link-emphasis uip-grid-item-title" @click="uipress.updatePage(item.link)">{{item.name}}</div>
+                      <div class="uip-text-bold uip-link-emphasis uip-grid-item-title" @click="updateAppPage(item.link)">{{item.name}}</div>
                       <div>
-                        <drop-down dropPos="left">
+                        <dropdown pos="left center">
                           <template v-slot:trigger>
                             <div class="uip-icon uip-icon-medium uip-text-l uip-link-muted hover:uip-background-muted uip-padding-xxs uip-border-round">more_vert</div>
                           </template>
@@ -241,19 +282,19 @@ export function moduleData() {
                                   <div class="uip-icon uip-icon-small-emphasis">{{action.icon}}</div>
                                   <div>{{action.label}}</div>
                                 </div>
-                                <div v-else class="uip-flex uip-gap-xxs uip-flex-center uip-link-muted" @click="uipress.updatePage(action.link)">
+                                <div v-else class="uip-flex uip-gap-xxs uip-flex-center uip-link-muted" @click="updateAppPage(action.link)">
                                   <div class="uip-icon uip-icon-small-emphasis">{{action.icon}}</div>
                                   <div>{{action.label}}</div>
                                 </div>
                               </template>
                             </div>
                           </template>
-                        </drop-down>
+                        </dropdown>
                       </div>
                     </div>
                     <div class="uip-text-s">
                       <span class="uip-text-muted">{{strings.by}}</span>
-                      <span class="uip-link-default " @click="uipress.updatePage(item.authorLink)">{{item.author}}</span>
+                      <span class="uip-link-default " @click="updateAppPage(item.authorLink)">{{item.author}}</span>
                       <span class="uip-text-muted">{{item.modified}}</span>
                     </div>
                   </div>
@@ -306,22 +347,22 @@ export function moduleData() {
                           <td v-if="column.name == 'name'" class="uip-padding-xxs uip-post-table-cell" :class="column.name">
                             <div>
                               <div class="uip-flex uip-flex-row uip-gap-xxs uip-flex-center" >
-                                <div class="uip-text-bold uip-post-title uip-link-default  uip-cursor-pointer"  @click="uipress.updatePage(item.editLink)">{{item.name}}</div>
+                                <div class="uip-text-bold uip-post-title uip-link-default  uip-cursor-pointer"  @click="updateAppPage(item.editLink)">{{item.name}}</div>
                                 <div class="uip-flex uip-gap-xxs uip-flex-center" v-if="item.hover">
-                                  <div @click="uipress.updatePage(item.editLink)" :href="item.editLink" class="uip-icon uip-cursor-pointer uip-link-default">edit_document</div>
+                                  <div @click="updateAppPage(item.editLink)" :href="item.editLink" class="uip-icon uip-cursor-pointer uip-link-default">edit_document</div>
                                   <a :href="item.link" target="_BLANK" class="uip-icon uip-cursor-pointer uip-link-default uip-no-underline">open_in_new</a>
                                 </div>
                               </div>
                               <div class="uip-text-s uip-post-meta uip-flex uip-flex-row uip-gap-xxxs">
                                 <span class="uip-text-muted">{{strings.by}}</span>
-                                <span class="uip-link-default " @click="uipress.updatePage(item.authorLink)">{{item.author}}</span>
+                                <span class="uip-link-default " @click="updateAppPage(item.authorLink)">{{item.author}}</span>
                                 <span class="uip-text-muted">{{item.modified}}</span>
                               </div>
                             </div>
                           </td>
                           <td v-else-if="column.name == 'actions'" class="uip-padding-xxs uip-post-table-cell" :class="column.name">
                             <div class="uip-flex uip-flex-row uip-flex-wrap uip-gap-xs uip-row-gap-xs uip-flex-right">
-                              <drop-down dropPos="bottom-right">
+                              <dropdown pos="bottom right">
                                 <template v-slot:trigger>
                                   <div class="uip-icon uip-icon-medium uip-text-l uip-link-muted hover:uip-background-muted uip-padding-xxs uip-border-round">more_vert</div>
                                 </template>
@@ -332,14 +373,14 @@ export function moduleData() {
                                         <div class="uip-icon uip-icon-small-emphasis">{{action.icon}}</div>
                                         <div class="">{{action.label}}</div>
                                       </div>
-                                      <div v-else class="uip-flex uip-gap-xxs uip-flex-center uip-link-muted" @click="uipress.updatePage(action.link)">
+                                      <div v-else class="uip-flex uip-gap-xxs uip-flex-center uip-link-muted" @click="updateAppPage(action.link)">
                                         <div class="uip-icon uip-icon-small-emphasis">{{action.icon}}</div>
                                         <div>{{action.label}}</div>
                                       </div>
                                     </template>
                                   </div>
                                 </template>
-                              </drop-down>
+                              </dropdown>
                             </div>
                           </td>
                           <td v-else-if="column.name == 'categories'" class="uip-padding-xxs uip-post-table-cell" :class="column.name">
@@ -380,7 +421,7 @@ export function moduleData() {
               </div>
             </div>
           
+        <Confirm ref="confirm"/>  
       </div>
       `,
-  };
-}
+};

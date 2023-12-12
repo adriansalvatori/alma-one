@@ -4,7 +4,7 @@ Donate link: http://www.villatheme.com/donate
 Tags:  bulk edit products, ecommerce, woocommerce, wordpress
 Requires PHP: 7.0
 Requires at least: 5.0
-Tested up to: 6.2
+Tested up to: 6.4
 Stable tag: 1.0.7
 License: GPLv2 or later
 
@@ -259,6 +259,13 @@ You can bulk edit/update product properties including
 7. Bulk edit product variations
 
 == Changelog ==
+
+/** 1.1.6 - 2023.11.29 **/
+– Fixed: Set sale date to
+
+/** 1.1.5 - 2023.10.07 **/
+– Added: Filter multiple SKU with comma separate
+– Fixed: Sort by SKU
 
 /** 1.1.4 - 2023.07.03 **/
 – Updated: Compatible with WooCommerce HPOS(COT)

@@ -988,7 +988,7 @@ class AMP_Validation_Manager
         $source = ['block_name' => $matches['name'], 'post_id' => \get_the_ID()];
         if (empty($matches['closing'])) {
             $source['block_content_index'] = self::$block_content_index;
-            self::$block_content_index++;
+            ++self::$block_content_index;
         }
         // Make implicit core namespace explicit.
         $is_implicit_core_namespace = \false === \strpos($source['block_name'], '/');
@@ -1559,12 +1559,12 @@ class AMP_Validation_Manager
         foreach (self::$validation_results as $validation_result) {
             $sanitization = \Google\Web_Stories_Dependencies\AMP_Validation_Error_Taxonomy::get_validation_error_sanitization($validation_result['error']);
             if (!((int) $sanitization['status'] & \Google\Web_Stories_Dependencies\AMP_Validation_Error_Taxonomy::ACCEPTED_VALIDATION_ERROR_BIT_MASK)) {
-                $kept_count++;
+                ++$kept_count;
             }
             if (!((int) $sanitization['status'] & \Google\Web_Stories_Dependencies\AMP_Validation_Error_Taxonomy::ACKNOWLEDGED_VALIDATION_ERROR_BIT_MASK)) {
-                $unreviewed_count++;
+                ++$unreviewed_count;
             }
-            $total_count++;
+            ++$total_count;
         }
         /*
          * Override AMP status in admin bar set in \AMP_Validation_Manager::add_admin_bar_menu_items()
@@ -1933,19 +1933,16 @@ class AMP_Validation_Manager
             \esc_url('https://wordpress.org/support/plugin/amp/'),
             \esc_url('https://wordpress.org/support/plugin/amp/#new-topic-0')
         );
-        $site_health_message = '';
-        if (\version_compare(\get_bloginfo('version'), '5.2', '>=')) {
-            $site_health_message .= \sprintf(
-                /* translators: %s is link to Site Health */
-                \__('Please check your <a href="%s">Site Health</a> to verify it can perform loopback requests.', 'amp'),
-                \esc_url(\admin_url('site-health.php'))
-            );
-            $support_forum_message .= ' ' . \sprintf(
-                /* translators: %s is the URL to Site Health Info. */
-                \__('Please include your <a href="%s">Site Health Info</a>.', 'amp'),
-                \esc_url(\admin_url('site-health.php?tab=debug'))
-            );
-        }
+        $site_health_message = \sprintf(
+            /* translators: %s is link to Site Health */
+            \__('Please check your <a href="%s">Site Health</a> to verify it can perform loopback requests.', 'amp'),
+            \esc_url(\admin_url('site-health.php'))
+        );
+        $support_forum_message .= ' ' . \sprintf(
+            /* translators: %s is the URL to Site Health Info. */
+            \__('Please include your <a href="%s">Site Health Info</a>.', 'amp'),
+            \esc_url(\admin_url('site-health.php?tab=debug'))
+        );
         $implode_non_empty_strings_with_spaces_and_sanitize = static function ($strings) {
             return \wp_kses(\implode(' ', \array_filter($strings)), ['a' => \array_fill_keys(['href', 'target'], \true), 'code' => []]);
         };

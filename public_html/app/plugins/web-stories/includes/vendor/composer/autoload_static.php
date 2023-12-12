@@ -4,7 +4,7 @@
 
 namespace Google_Web_Stories_Composer\Autoload;
 
-class ComposerStaticInitf4afbf7e2e03654b82df306a26be1b87
+class ComposerStaticInit7332ac3859d2c670778a251896f13cf2
 {
     public static $files = array (
         '4fd4eff0e3c3662a20875366933cfd84' => __DIR__ . '/../..' . '/polyfills/mbstring.php',
@@ -31,7 +31,6 @@ class ComposerStaticInitf4afbf7e2e03654b82df306a26be1b87
         'Google\\Web_Stories\\Admin\\Dashboard' => __DIR__ . '/../..' . '/Admin/Dashboard.php',
         'Google\\Web_Stories\\Admin\\Editor' => __DIR__ . '/../..' . '/Admin/Editor.php',
         'Google\\Web_Stories\\Admin\\Google_Fonts' => __DIR__ . '/../..' . '/Admin/Google_Fonts.php',
-        'Google\\Web_Stories\\Admin\\ImgAreaSelect_Patch' => __DIR__ . '/../..' . '/Admin/ImgAreaSelect_Patch.php',
         'Google\\Web_Stories\\Admin\\Meta_Boxes' => __DIR__ . '/../..' . '/Admin/Meta_Boxes.php',
         'Google\\Web_Stories\\Admin\\PluginActionLinks' => __DIR__ . '/../..' . '/Admin/PluginActionLinks.php',
         'Google\\Web_Stories\\Admin\\PluginRowMeta' => __DIR__ . '/../..' . '/Admin/PluginRowMeta.php',
@@ -200,7 +199,7 @@ class ComposerStaticInitf4afbf7e2e03654b82df306a26be1b87
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitf4afbf7e2e03654b82df306a26be1b87::$classMap;
+            $loader->classMap = ComposerStaticInit7332ac3859d2c670778a251896f13cf2::$classMap;
 
         }, null, ClassLoader::class);
     }

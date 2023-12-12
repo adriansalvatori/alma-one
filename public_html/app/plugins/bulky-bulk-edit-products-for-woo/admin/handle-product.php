@@ -347,7 +347,8 @@ class Handle_Product {
 	}
 
 	public function parse_product_data_to_save( \WC_Product &$product, $type, $value ) {
-		$pid = $product->get_id();
+		$pid    = $product->get_id();
+		$p_type = $product->get_type();
 
 		switch ( $type ) {
 			case 'parent_id':
@@ -407,7 +408,12 @@ class Handle_Product {
 				break;
 
 			case 'sale_date_to':
-				$product->set_date_on_sale_to( $value );
+				if ( $p_type !== 'variable' ) {
+					if ( ! empty( $value ) ) {
+						$value = date( 'Y-m-d 23:59:59', strtotime( $value ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+					}
+					$product->set_date_on_sale_to( $value );
+				}
 				break;
 
 			case 'manage_stock':

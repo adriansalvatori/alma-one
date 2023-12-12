@@ -376,7 +376,7 @@ class Data {
 				get_option( 'vi_wbe_settings', [] ),
 				[
 					'edit_fields'          => [],
-					'products_per_page'    => 20,
+					'products_per_page'    => 10,
 					'load_variations'      => 'yes',
 					'order_by'             => 'ID',
 					'order'                => 'DESC',

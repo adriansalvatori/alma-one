@@ -1018,7 +1018,7 @@ if ( ! class_exists( 'VillaTheme_Require_Environment' ) ) {
 					switch ( $status['status'] ) {
 
 						case 'install':
-							$this->notices[] = sprintf( "%s to be installed. <a href='%s' target='_blank' class='button button-primary' style='vertical-align: middle'>Install %s</a>",
+							$this->notices[] = sprintf( "%s to be installed. <br><a href='%s' target='_blank' class='button button-primary' style='vertical-align: middle; margin-top: 5px;'>Install %s</a>",
 								esc_html( $require_plugin_name ),
 								esc_url( ! empty( $status['url'] ) ? $status['url'] : '#' ),
 								esc_html( $require_plugin_name ) );
@@ -1037,7 +1037,7 @@ if ( ! class_exists( 'VillaTheme_Require_Environment' ) ) {
 									network_admin_url( 'plugins.php' )
 								);
 
-								$this->notices[] = sprintf( "%s is installed and activated. <a href='%s' target='_blank' class='button button-primary' style='vertical-align: middle'>Active %s</a>",
+								$this->notices[] = sprintf( "%s is installed and activated. <br> <a href='%s' target='_blank' class='button button-primary' style='vertical-align: middle; margin-top: 5px;'>Active %s</a>",
 									esc_html( $require_plugin_name ),
 									esc_url( $activate_url ),
 									esc_html( $require_plugin_name ) );

@@ -278,7 +278,7 @@ class AMP_Style_Sanitizer extends \Google\Web_Stories_Dependencies\AMP_Base_Sani
      *
      * @var array
      */
-    private $video_autoplay_elements = ['amp-3q-player', 'amp-brid-player', 'amp-brightcove', 'amp-dailymotion', 'amp-delight-player', 'amp-gfycat', 'amp-ima-video', 'amp-mowplayer', 'amp-nexxtv-player', 'amp-ooyala-player', 'amp-powr-player', 'amp-story-auto-ads', 'amp-video', 'amp-video-iframe', 'amp-vimeo', 'amp-viqeo-player', 'amp-wistia-player', 'amp-youtube'];
+    private $video_autoplay_elements = ['amp-3q-player', 'amp-brid-player', 'amp-brightcove', 'amp-dailymotion', 'amp-delight-player', 'amp-ima-video', 'amp-mowplayer', 'amp-nexxtv-player', 'amp-ooyala-player', 'amp-powr-player', 'amp-story-auto-ads', 'amp-video', 'amp-video-iframe', 'amp-vimeo', 'amp-viqeo-player', 'amp-wistia-player', 'amp-youtube'];
     /**
      * Remote request instance.
      *

@@ -26,7 +26,6 @@ return array(
     'Google\\Web_Stories\\Admin\\Dashboard' => $baseDir . '/Admin/Dashboard.php',
     'Google\\Web_Stories\\Admin\\Editor' => $baseDir . '/Admin/Editor.php',
     'Google\\Web_Stories\\Admin\\Google_Fonts' => $baseDir . '/Admin/Google_Fonts.php',
-    'Google\\Web_Stories\\Admin\\ImgAreaSelect_Patch' => $baseDir . '/Admin/ImgAreaSelect_Patch.php',
     'Google\\Web_Stories\\Admin\\Meta_Boxes' => $baseDir . '/Admin/Meta_Boxes.php',
     'Google\\Web_Stories\\Admin\\PluginActionLinks' => $baseDir . '/Admin/PluginActionLinks.php',
     'Google\\Web_Stories\\Admin\\PluginRowMeta' => $baseDir . '/Admin/PluginRowMeta.php',

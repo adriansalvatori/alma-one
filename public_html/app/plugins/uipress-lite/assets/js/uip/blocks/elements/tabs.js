@@ -1,201 +1,127 @@
 const { __, _x, _n, _nx } = wp.i18n;
-export function moduleData() {
-  return {
-    props: {
-      display: String,
-      name: String,
-      block: Object,
+export default {
+  props: {
+    display: String,
+    name: String,
+    block: Object,
+  },
+  data() {
+    return {
+      activeTab: 0,
+      contentIndex: 0,
+    };
+  },
+  watch: {
+    /**
+     * Watches changes to block tabs
+     *
+     * @since 3.2.13
+     */
+    'block.settings.block.options.tabs.value.tabs': {
+      handler(newValue, oldValue) {
+        //this.processContent();
+      },
+      deep: true,
     },
-    data: function () {
-      return {
-        activeTab: 0,
-        contentIndex: 0,
-      };
+  },
+  mounted() {
+    if (this.block.content.length) return;
+    this.pushNewContentBlock();
+  },
+  computed: {
+    /**
+     * Returns block tabs
+     *
+     * @since 3.2.13
+     */
+    returnTabs() {
+      if (!this.block.content) return [];
+      console.log(this.block.content);
+      return this.block.content.map((block) => block.name);
     },
-    inject: ['uipData', 'uipress', 'uiTemplate'],
-    watch: {
-      'block.settings.block.options.tabs.value.tabs': {
-        handler(newValue, oldValue) {
-          this.processContent();
-        },
-        deep: true,
-      },
+
+    /**
+     * Returns block content
+     *
+     * @since 3.2.13
+     */
+    returnBlockContent() {
+      return this.block.content;
     },
-    mounted: function () {
-      this.processContent();
+
+    /**
+     * Returns active block content
+     *
+     * @since 3.2.13
+     */
+    returnActiveTabContent() {
+      if (!this.block.content[this.activeTab]) return [];
+      const content = this.block.content[this.activeTab].content;
+      if (!Array.isArray(content)) return [];
+      return content;
     },
-    computed: {
-      returnTabs() {
-        if (typeof this.block.settings.block.options.tabs.value.tabs === 'undefined') {
-          return [];
-        }
-        return this.block.settings.block.options.tabs.value.tabs;
-      },
-      returnBlockContent() {
-        return this.block.content;
-      },
-      returnTabContent() {
-        return this.block.content[this.returnContentIndex].content;
-      },
-      returnContentIndex() {
-        //Set active index
-        let activeID = this.returnTabs[this.activeTab].id;
-        this.contentIndex = this.block.content.findIndex((obj) => {
-          return obj.uid === activeID;
-        });
-        if (this.contentIndex < 0) {
-          this.contentIndex = 0;
-        }
+  },
+  methods: {
+    /**
+     * Pushes new content block
+     *
+     * @since 3.2.13
+     */
+    pushNewContentBlock() {
+      const containerBlock = this.uipApp.data.blocks.filter((obj) => {
+        return obj.moduleName == 'uip-container';
+      });
 
-        return this.contentIndex;
-      },
+      let copiedConatiner = JSON.parse(JSON.stringify(containerBlock[0]));
+
+      delete copiedConatiner.path;
+      delete copiedConatiner.args;
+      delete copiedConatiner.category;
+      delete copiedConatiner.description;
+      delete copiedConatiner.optionsEnabled;
+
+      copiedConatiner.uid = this.createUID();
+      copiedConatiner.name = __('Tab', 'uipress-lite');
+      copiedConatiner.settings = {};
+      copiedConatiner.tooltip = {};
+
+      this.block.content.push(copiedConatiner);
     },
-    methods: {
-      processContent() {
-        let tabs = this.returnTabs;
-        let content = this.returnBlockContent;
 
-        if (typeof tabs === 'undefined') {
-          tabs = [];
-        }
-
-        if (tabs.length < 1) {
-          return;
-        }
-
-        if (tabs.length == content.length) {
-          //return;
-        }
-
-        //Loop through tabs and ensure they have content areas
-        for (let i = 0; i < tabs.length; i++) {
-          //Create id for tab
-          if (tabs[i].id == '') {
-            tabs[i].id = this.uipress.createUID();
-          }
-
-          let tabContent = content.filter((obj) => {
-            return obj.uid === tabs[i].id;
-          });
-
-          //Content area doesn't exist so create one
-          if (tabContent.length === 0) {
-            content[i] = {
-              name: tabs[i].name,
-              moduleName: 'uip-container',
-              icon: 'view_agenda',
-              settings: {
-                block: {
-                  options: {
-                    flexAlignSelf: { value: '', settingName: 'flexAlignSelf' },
-                    flexJustifyContent: { value: '', settingName: 'flexJustifyContent' },
-                    flexAlignItems: { value: '', settingName: 'flexAlignItems' },
-                    flexDirection: { value: '', settingName: 'flexDirection' },
-                    flexWrap: { value: { value: 'wrap' }, settingName: 'flexWrap' },
-                    columnGap: { value: { value: '', units: '%' }, settingName: 'columnGap' },
-                    rowGap: { value: { value: '', units: '%' }, settingName: 'rowGap' },
-                  },
-                  name: 'block',
-                },
-                container: {
-                  options: {
-                    verticalAlign: { value: { value: 'none' }, settingName: 'verticalAlign' },
-                    horizontalAlign: { value: { value: 'none' }, settingName: 'horizontalAlign' },
-                    flexGrow: { value: { value: 'none' }, settingName: 'flexGrow' },
-                    stretchDirection: { value: { value: 'none' }, settingName: 'stretchDirection' },
-                    dimensions: { settingName: 'dimensions' },
-                  },
-                  styleType: 'style',
-                  class: '',
-                  name: 'container',
-                },
-                style: {
-                  options: {
-                    colorSelect: { settingName: 'colorSelect' },
-                    imageSelect: { settingName: 'imageSelect' },
-                    dimensions: { settingName: 'dimensions' },
-                    padding: { settingName: 'padding' },
-                    margin: { settingName: 'margin ' },
-                    textFormat: { settingName: 'textFormat' },
-                    border: { settingName: 'border' },
-                    positionDesigner: { settingName: 'positionDesigner' },
-                    shadow: { settingName: 'shadow' },
-                  },
-                  styleType: 'style',
-                  class: '',
-                  name: 'style',
-                },
-                advanced: {
-                  options: {
-                    classes: { value: '', settingName: 'classes' },
-                    conditionalShow: { component: 'conditionalShow ', label: 'Conditional show ' },
-                    customTemplate: { component: 'customTemplate ', label: 'Custom block template ' },
-                    css: { value: '', settingName: 'customCode ' },
-                    js: { value: '', settingName: 'customCode ' },
-                  },
-                  name: 'advanced',
-                },
-              },
-              content: [],
-              uid: tabs[i].id,
-            };
-          } else {
-            //Content block already exists so update it's name
-            tabContent[0].name = tabs[i].name;
-          }
-        }
-        //Loop through content areas and remove ones that no longer have tabs
-        for (var i = 0; i < content.length; i++) {
-          let contentArea = content[i];
-
-          let tabID = tabs.filter((obj) => {
-            return obj.id === contentArea.uid;
-          });
-
-          //Tab has been removed so let's remove the content area too
-          if (tabID.length === 0) {
-            content.splice(i, 1);
-            continue;
-          }
-        }
-
-        if (this.activeTab > this.returnTabs.length - 1) {
-          this.activeTab = 0;
-        }
-
-        //Gte content active index
-        let activeID = this.returnTabs[this.activeTab].id;
-        this.contentIndex = this.block.content.findIndex((obj) => {
-          return obj.uid === activeID;
-        });
-
-        if (this.contentIndex < 0) {
-          this.contentIndex = 0;
-        }
-
-        this.block.settings.block.options.tabs.value.tabs = tabs;
-      },
-      updateIndex(index) {
-        this.activeTab = index;
-      },
-      arraymove(arr, fromIndex, toIndex) {
-        arr.splice(fromIndex + 1, 0, arr.splice(toIndex, 1)[0]);
-      },
+    /**
+     * Updates tab index
+     *
+     * @param {Number} index - the index to update to being active
+     */
+    updateIndex(index) {
+      this.activeTab = index;
     },
-    template: `
+
+    /**
+     * Updates the tab content
+     *
+     * @param {Array} data - list of tabs children
+     * @since 3.2.13
+     */
+    updateBlockContent(data) {
+      if (!this.block.content[this.activeTab]) return;
+      this.block.content[this.activeTab].content = data;
+    },
+  },
+  template: `
       <div class="uip-text-normal">
+      
        <div class="uip-flex uip-flex-row">
          <template v-for="(tab, index) in returnTabs">
             <div class="uip-padding-xs uip-cursor-pointer uip-tab-item" @click="updateIndex(index)"
-            :class="{'uip-border-bottom-primary uip-text-bold uip-tab-item-active' : index == activeTab}">{{tab.name}}</div>
+            :class="{'uip-border-bottom-primary uip-text-bold uip-tab-item-active' : index == activeTab}">{{tab}}</div>
          </template>
        </div>
-       <div class="uip-tab-content-area uip-margin-top" v-if="returnTabs.length > 0">
-           <template v-for="(item, index) in returnBlockContent">
-            <uip-content-area v-if="returnContentIndex == index" :content="item.content" :returnData="function(data) {item.content = data} "></uip-content-area>
-           </template>
-        </div>
+       
+      <uip-content-area
+      class="uip-tab-content-area"
+      :content="returnActiveTabContent" :returnData="(data)=>{updateBlockContent(data)} "/>
+        
       </div>
       `,
-  };
-}
+};

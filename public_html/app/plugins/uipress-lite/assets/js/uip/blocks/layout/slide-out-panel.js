@@ -1,159 +1,141 @@
 const { __, _x, _n, _nx } = wp.i18n;
-export function moduleData() {
-  return {
-    props: {
-      display: String,
-      name: String,
-      block: Object,
+import { renderKeyShortCut } from "../../v3.5/utility/functions.min.js";
+export default {
+  props: {
+    display: String,
+    name: String,
+    block: Object,
+  },
+  data() {
+    return {};
+  },
+
+  computed: {
+    /**
+     * Returns custom text for button trigger
+     *
+     * @since 3.2.13
+     */
+    returnText() {
+      const item = this.get_block_option(this.block, "block", "buttonText", true);
+      if (!item) return "";
+
+      if (!this.isObject(item)) return item;
+      if (item.string) return item.string;
+      return "";
     },
-    data: function () {
-      return {
-        loading: true,
-        dynamics: this.uipData.dynamicOptions,
-        open: false,
-      };
+
+    /**
+     * Returns whether to close on page change
+     *
+     * @since 3.2.13
+     */
+    closeOnPageChange() {
+      let status = this.get_block_option(this.block, "block", "closeOnPageChange");
+      if (!status) return false;
+      if (!this.isObject(status)) return status;
+      return status.value ? true : false;
     },
-    inject: ['uipData', 'uipress', 'uiTemplate'],
-    watch: {},
-    mounted: function () {},
-    computed: {
-      returnText() {
-        let item = this.uipress.get_block_option(this.block, 'block', 'buttonText', true);
-        if (!item) {
-          return '';
-        }
-        if (this.uipress.isObject(item)) {
-          if ('string' in item) {
-            return item.string;
-          } else {
-            return '';
-          }
-        }
-        return item;
-      },
-      closeOnPageChange() {
-        let status = this.uipress.get_block_option(this.block, 'block', 'closeOnPageChange');
-        if (!status) {
-          return false;
-        }
-        if ('value' in status) {
-          return status.value;
-        }
-        return status;
-      },
-      getPanelPos() {
-        let pos = this.uipress.get_block_option(this.block, 'block', 'panelSide');
-
-        if (!pos) {
-          return 'right';
-        } else {
-          return pos.value;
-        }
-      },
-      getPanelStyle() {
-        let pos = this.uipress.get_block_option(this.block, 'block', 'overlayStyle');
-
-        if (!pos) {
-          return 'slide';
-        } else {
-          return pos.value;
-        }
-      },
-
-      getIcon() {
-        let icon = this.uipress.get_block_option(this.block, 'block', 'iconSelect');
-        if (!icon) {
-          return '';
-        }
-        if ('value' in icon) {
-          return icon.value;
-        }
-        return icon;
-      },
-
-      getShortcut() {
-        let shortcut = this.uipress.get_block_option(this.block, 'block', 'keyboardShortcut');
-
-        if (!shortcut) {
-          return false;
-        }
-        if ('enabled' in shortcut) {
-          if (!shortcut.enabled) {
-            return false;
-          }
-        } else {
-          return false;
-        }
-
-        if (!('selected' in shortcut)) {
-          return;
-        }
-
-        //No shortcut set
-        if (shortcut.selected.length < 1) {
-          return false;
-        }
-
-        if (!shortcut.display) {
-          return false;
-        }
-
-        return this.uipress.renderKeyShortCut(shortcut.selected);
-      },
-      getShortcutValue() {
-        let shortcut = this.uipress.get_block_option(this.block, 'block', 'keyboardShortcut');
-
-        if (!shortcut) {
-          return false;
-        }
-        if ('enabled' in shortcut) {
-          if (!shortcut.enabled) {
-            return false;
-          }
-        } else {
-          return false;
-        }
-
-        if (!('selected' in shortcut)) {
-          return;
-        }
-
-        //No shortcut set
-        if (shortcut.selected.length < 1) {
-          return false;
-        }
-
-        return shortcut.selected;
-      },
+    /**
+     * Returns panel position. Default is 'right'
+     *
+     * @since 3.2.13
+     */
+    getPanelPos() {
+      const position = this.get_block_option(this.block, "block", "panelSide");
+      if (!position) return "right";
+      return position.value;
     },
-    methods: {
-      returnIconPos() {
-        let classes = '';
 
-        let posis = this.uipress.get_block_option(this.block, 'block', 'iconPosition');
-        if (posis) {
-          if (posis.value == 'right') {
-            classes += 'uip-flex-reverse';
-          }
-        }
-        return classes;
-      },
+    /**
+     * Returns panel style. Default is slide
+     *
+     * @since 3.2.13
+     */
+    getPanelStyle() {
+      const style = this.get_block_option(this.block, "block", "overlayStyle");
+      return this.isObject(style) ? style.value : "overlay";
     },
-    template: `
+
+    /**
+     * Returns icon for button
+     *
+     * @since 3.2.13
+     */
+    returnIcon() {
+      let icon = this.get_block_option(this.block, "block", "iconSelect");
+      if (!icon) return "";
+      if (!this.isObject(icon)) return icon;
+      if (icon.value) return icon.value;
+      return "";
+    },
+
+    /**
+     * Gets the block shortcut and returns the visual shortcut
+     *
+     * @since 3.2.13
+     */
+    getShortcut() {
+      const shortcut = this.getShortcutValue;
+      if (!shortcut) return;
+      return renderKeyShortCut(shortcut);
+    },
+
+    /**
+     * Gets shortcut value
+     *
+     * @since 3.2.13
+     */
+    getShortcutValue() {
+      const shortcut = this.get_block_option(this.block, "block", "keyboardShortcut");
+      if (!this.isObject(shortcut)) return;
+
+      // Shortcut is not enabled so bail
+      if (!shortcut.enabled || !shortcut.display || !shortcut.selected) return false;
+      // No keys set for shortcut so bail
+
+      //No shortcut set
+      if (shortcut.selected.length < 1) return;
+
+      return shortcut.selected;
+    },
+
+    /**
+     * Returns the reverse class if icon position is right
+     *
+     * @since 3.2.13
+     */
+    returnClasses() {
+      const position = this.get_block_option(this.block, "block", "iconPosition");
+      if (!position) return;
+      if (!this.isObject(position) && position == "right") return "uip-flex-reverse";
+      if (position.value && position.value == "right") return "uip-flex-reverse";
+    },
+  },
+  methods: {},
+  template: `
         <uip-offcanvas :position="getPanelPos" :shortCut="getShortcutValue" :overlayStyle="getPanelStyle" :closeOnLoad="closeOnPageChange">
-          <template v-slot:trigger>
+        
+          <template #trigger>
+          
             <button class="uip-button-default uip-flex uip-gap-xxs uip-flex-center uip-panel-trigger"
-            :class="returnIconPos()" >
-              <span class="uip-icon" v-if="getIcon">{{getIcon}}</span>
+            :class="returnClasses">
+            
+              <span class="uip-icon" v-if="returnIcon">{{returnIcon}}</span>
               <span class="uip-flex-grow" v-if="returnText != ''">{{returnText}}</span>
-              <div v-if="getShortcut" class="uip-flex uip-flex-row uip-padding-left-xxxs uip-padding-right-xxxs uip-border uip-border-round uip-text-s uip-flex-row uip-inline-flex uip-flex-center" v-html="getShortcut">
-              </div>
+              
+              <div v-if="getShortcut" class="uip-flex uip-flex-row uip-padding-left-xxxs uip-padding-right-xxxs uip-border uip-border-round uip-text-s uip-flex-row uip-inline-flex uip-flex-center" v-html="getShortcut"></div>
+              
             </button>
+            
           </template>
-          <template v-slot:content>
-            <uip-content-area :content="block.content" :returnData="function(data) {block.content = data} " layout="vertical"></uip-content-area>
+          
+          <template #content>
+          
+            <uip-content-area :content="block.content" :returnData="(data)=>{block.content = data}"/>
+            
           </template>
+          
         </uip-offcanvas>
         `,
-  };
-}
+};

@@ -122,18 +122,33 @@ class Ajax {
 		$orderby        = $settings['order_by'];
 
 		$args = [
-			'posts_per_page' => $settings['products_per_page'],
+			'posts_per_page' => 10,
 			'paged'          => $page,
 			'paginate'       => true,
 			'order'          => $settings['order'],
-			'orderby'        => $settings['order_by'],
+			'orderby'        => 'ID',
 			'status'         => array( 'publish', 'pending', 'draft', 'auto-draft', 'future', 'private', 'inherit' ),
 		];
 
-		if ( $orderby == 'price' ) {
-			$args['orderby'] = [ 'meta_value_num' => $settings['order'] ];
-			add_filter( 'woocommerce_product_data_store_cpt_get_products_query', [ $this, 'orderby_price' ] );
+		switch ( $orderby ) {
+			case 'price':
+				$args['orderby'] = [ 'meta_value_num' => $settings['order'] ];
+				add_filter( 'woocommerce_product_data_store_cpt_get_products_query', [ $this, 'orderby_price' ] );
+				break;
+
+			case 'sku':
+				$args['orderby']  = 'meta_value';
+				$args['meta_key'] = '_sku';
+				break;
+
+			default:
+				$args['orderby'] = $orderby;
+
+				break;
 		}
+
+		remove_all_filters( 'woocommerce_product_object_query_args' );
+		remove_all_filters( 'woocommerce_product_object_query' );
 
 		$args   = $filter->set_args( $args );
 		$result = wc_get_products( $args );

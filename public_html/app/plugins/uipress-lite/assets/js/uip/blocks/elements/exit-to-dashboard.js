@@ -1,85 +1,91 @@
 const { __, _x, _n, _nx } = wp.i18n;
-export function moduleData() {
-  return {
-    props: {
-      display: String,
-      name: String,
-      block: Object,
-    },
-    data: function () {
-      return {
-        loading: true,
-        dynamics: this.uipData.dynamicOptions,
-      };
-    },
-    inject: ['uipData', 'uipress', 'uiTemplate'],
-    watch: {},
-    mounted: function () {},
-    computed: {
-      returnText() {
-        let item = this.uipress.get_block_option(this.block, 'block', 'buttonText', true);
-        if (!item) {
-          return '';
-        }
-        if (this.uipress.isObject(item)) {
-          if ('string' in item) {
-            return item.string;
-          } else {
-            return '';
-          }
-        }
-        return item;
-      },
-      getIcon() {
-        let icon = this.uipress.get_block_option(this.block, 'block', 'iconSelect');
-        if (!icon) {
-          return '';
-        }
-        if ('value' in icon) {
-          return icon.value;
-        }
-        return icon;
-      },
-    },
-    methods: {
-      returnClasses() {
-        let classes = '';
+import { defineAsyncComponent, nextTick } from '../../../libs/vue-esm.js';
 
-        let posis = this.uipress.get_block_option(this.block, 'block', 'iconPosition');
-        if (posis) {
-          if (posis.value == 'right') {
-            classes += 'uip-flex-reverse';
-          }
-        }
-        let advanced = this.uipress.get_block_option(this.block, 'advanced', 'classes');
-        classes += advanced;
-        return classes;
-      },
-      destroyUI() {
-        let url = false;
+export default {
+  components: {
+    Confirm: defineAsyncComponent(() => import('../../v3.5/utility/confirm.min.js?ver=3.3.094')),
+  },
+  props: {
+    display: String,
+    name: String,
+    block: Object,
+  },
+  data() {
+    return {};
+  },
+  
+  watch: {},
+  mounted: function () {},
+  computed: {
+    /**
+     * Returns text for button if exists
+     *
+     * @since 3.2.13
+     */
+    returnText() {
+      const item = this.get_block_option(this.block, 'block', 'buttonText', true);
+      if (!item) return '';
 
-        this.uipress.confirm(__('Are you sure?', 'uipress-lite'), __('This will remove the current UI and revert to the default admin page', 'uipress-lite')).then((response) => {
-          if (response) {
-            document.documentElement.setAttribute('uip-core-app', 'false');
-
-            let frame = document.getElementById('uip-app-container');
-
-            if (frame) {
-              frame.remove();
-            }
-          } else {
-            return false;
-          }
-        });
-      },
+      if (!this.isObject(item)) return item;
+      if (item.string) return item.string;
+      return '';
     },
-    template: `
+    /**
+     * Returns icon for button
+     *
+     * @since 3.2.13
+     */
+    returnIcon() {
+      let icon = this.get_block_option(this.block, 'block', 'iconSelect');
+      if (!icon) return '';
+      if (!this.isObject(icon)) return icon;
+      if (icon.value) return icon.value;
+      return '';
+    },
+
+    /**
+     * Returns the reverse class if icon position is right
+     *
+     * @since 3.2.13
+     */
+    returnClasses() {
+      const position = this.get_block_option(this.block, 'block', 'iconPosition');
+      if (!position) return;
+      if (!this.isObject(position) && position == 'right') return 'uip-flex-reverse';
+      if (position.value && position.value == 'right') return 'uip-flex-reverse';
+    },
+  },
+  methods: {
+    /**
+     * Confirms if user wats to destroy the ui and return to default wp
+     *
+     * @since 3.2.13
+     */
+    async destroyUI() {
+      const confirm = await this.$refs.confirm.show({
+        title: __('Are you sure', 'uipress-lite'),
+        message: __('This will remove the current UI and revert to the default admin page', 'uipress-lite'),
+        okButton: __('Confirm', 'uipress-lite'),
+      });
+
+      // Response was go so destroy
+      if (!confirm) return;
+
+      document.documentElement.setAttribute('uip-core-app', 'false');
+      let frame = document.querySelector('#uip-app-container');
+      if (frame) frame.remove();
+    },
+  },
+  template: `
           <button class="uip-button-default uip-flex uip-gap-xxs uip-flex-center"
-         @click="destroyUI()">
-            <span class="uip-icon" v-if="getIcon">{{getIcon}}</span>
+         @click="destroyUI()" :returnClasses="returnClasses">
+         
+            <span class="uip-icon" v-if="returnIcon">{{returnIcon}}</span>
             <span class="uip-flex-grow" v-if="returnText != ''">{{returnText}}</span>
             <a ref="newTab" href="" target="_BLANK" style="display:hidden"></a>
+            
+            <Confirm ref="confirm"/>
+            
           </button>
           `,
-  };
-}
+};

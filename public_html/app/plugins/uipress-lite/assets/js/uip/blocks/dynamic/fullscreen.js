@@ -1,73 +1,71 @@
 const { __, _x, _n, _nx } = wp.i18n;
-export function moduleData() {
-  return {
-    props: {
-      display: String,
-      name: String,
-      block: Object,
-    },
-    data: function () {
-      return {
-        loading: true,
-        dynamics: this.uipData.dynamicOptions,
-      };
-    },
-    inject: ['uipData', 'uipress', 'uiTemplate'],
-    watch: {},
-    mounted: function () {},
-    computed: {
-      returnText() {
-        let item = this.uipress.get_block_option(this.block, 'block', 'buttonText', true);
-        if (!item) {
-          return '';
-        }
-        if (this.uipress.isObject(item)) {
-          if ('string' in item) {
-            return item.string;
-          } else {
-            return '';
-          }
-        }
-        return item;
-      },
-      getIcon() {
-        let icon = this.uipress.get_block_option(this.block, 'block', 'iconSelect');
-        if (!icon) {
-          return '';
-        }
-        if ('value' in icon) {
-          return icon.value;
-        }
-        return icon;
-      },
-    },
-    methods: {
-      returnClasses() {
-        let classes = '';
+export default {
+  props: {
+    display: String,
+    name: String,
+    block: Object,
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    /**
+     * Returns text for button if exists
+     *
+     * @since 3.2.13
+     */
+    returnText() {
+      let item = this.get_block_option(this.block, "block", "buttonText", true);
+      if (!item) return "";
 
-        let posis = this.uipress.get_block_option(this.block, 'block', 'iconPosition');
-        if (posis) {
-          if (posis.value == 'right') {
-            classes += 'uip-flex-reverse';
-          }
-        }
-        return classes;
-      },
-      followLink() {
-        let frames = document.getElementsByClassName('uip-content-frame');
-        if (frames[0]) {
-          frames[0].classList.add('uip-fullscreen-mode');
-          frames[0].classList.add('uip-scale-in-bottom-right');
-        }
-      },
+      if (!this.isObject(item)) return item;
+      if (item.string) return item.string;
+      return "";
     },
-    template: `
+
+    /**
+     * Returns icon for button
+     *
+     * @since 3.2.13
+     */
+    returnIcon() {
+      let icon = this.get_block_option(this.block, "block", "iconSelect");
+      if (!icon) return "";
+      if (!this.isObject(icon)) return icon;
+      if (icon.value) return icon.value;
+      return "";
+    },
+
+    /**
+     * Returns the reverse class if icon position is right
+     *
+     * @since 3.2.13
+     */
+    returnClasses() {
+      const position = this.get_block_option(this.block, "block", "iconPosition");
+      if (!position) return;
+      if (!this.isObject(position) && position == "right") return "uip-flex-reverse";
+      if (position.value && position.value == "right") return "uip-flex-reverse";
+    },
+  },
+  methods: {
+    /**
+     * Sets fullscreen mode
+     *
+     * @since 3.2.13
+     */
+    openFullScreen() {
+      document.dispatchEvent(new CustomEvent("uipress/app/window/fullscreen"));
+    },
+  },
+  template: `
+    
           <button class="uip-button-default uip-flex uip-gap-xxs uip-flex-center"
-          :class="returnClasses()" @click="followLink()">
-            <span class="uip-icon" v-if="getIcon">{{getIcon}}</span>
+          :class="returnClasses" @click="openFullScreen()">
+          
+            <span class="uip-icon" v-if="returnIcon">{{returnIcon}}</span>
             <span class="uip-flex-grow" v-if="returnText != ''">{{returnText}}</span>
-            <a ref="newTab" target="_BLANK" class="uip-hidden"></a>
+            
           </button>
           `,
-  };
-}
+};

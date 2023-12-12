@@ -178,7 +178,7 @@ class AMP_Tag_And_Attribute_Sanitizer extends \Google\Web_Stories_Dependencies\A
     public function __construct($dom, $args = [])
     {
         // @todo It is pointless to have this DEFAULT_ARGS copying the array values. We should only get the data from AMP_Allowed_Tags_Generated.
-        $this->DEFAULT_ARGS = ['amp_allowed_tags' => \Google\Web_Stories_Dependencies\AMP_Allowed_Tags_Generated::get_allowed_tags(), 'amp_globally_allowed_attributes' => \Google\Web_Stories_Dependencies\AMP_Allowed_Tags_Generated::get_allowed_attributes(), 'amp_layout_allowed_attributes' => \Google\Web_Stories_Dependencies\AMP_Allowed_Tags_Generated::get_layout_attributes(), 'prefer_bento' => \false, 'allow_localhost_http_protocol' => \false];
+        $this->DEFAULT_ARGS = ['amp_allowed_tags' => \Google\Web_Stories_Dependencies\AMP_Allowed_Tags_Generated::get_allowed_tags(), 'amp_globally_allowed_attributes' => \Google\Web_Stories_Dependencies\AMP_Allowed_Tags_Generated::get_allowed_attributes(), 'amp_layout_allowed_attributes' => \Google\Web_Stories_Dependencies\AMP_Allowed_Tags_Generated::get_layout_attributes(), 'allow_localhost_http_protocol' => \false];
         parent::__construct($dom, $args);
         // Prepare allowlists.
         $this->allowed_tags = $this->args['amp_allowed_tags'];
@@ -384,12 +384,6 @@ class AMP_Tag_And_Attribute_Sanitizer extends \Google\Web_Stories_Dependencies\A
         $validation_errors = [];
         $rule_spec_list = $this->allowed_tags[$node->nodeName];
         foreach ($rule_spec_list as $id => $rule_spec) {
-            // When there are multiple versions of a rule spec, with one specifically for Bento and another for
-            // non-Bento make sure that only the preferred version is considered. Otherwise, the wrong requires_extension
-            // constraint may be applied.
-            if (isset($rule_spec['tag_spec']['bento']) && $this->args['prefer_bento'] !== $rule_spec['tag_spec']['bento']) {
-                continue;
-            }
             $validity = $this->validate_tag_spec_for_node($node, $rule_spec[\Google\Web_Stories_Dependencies\AMP_Rule_Spec::TAG_SPEC]);
             if (\true === $validity) {
                 $rule_spec_list_to_validate[$id] = $this->get_rule_spec_list_to_validate($node, $rule_spec);

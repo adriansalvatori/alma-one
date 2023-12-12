@@ -1,3 +1,10 @@
+/** 1.1.6 - 2023.11.29 **/
+– Fixed: Set sale date to
+
+/** 1.1.5 - 2023.10.07 **/
+– Added: Filter multiple SKU with comma separate
+– Fixed: Sort by SKU
+
 /** 1.1.4 - 2023.07.03 **/
 – Updated: Compatible with WooCommerce HPOS(COT)
 

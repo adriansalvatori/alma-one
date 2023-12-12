@@ -2591,8 +2591,15 @@ class AMP_Validation_Error_Taxonomy
                 $updated_count++;
             }
         }
+        if ($updated_count) {
+            \delete_transient(\Google\Web_Stories_Dependencies\AMP_Validated_URL_Post_Type::NEW_VALIDATION_ERROR_URLS_COUNT_TRANSIENT);
+        }
         if (\false !== $has_pre_term_description_filter) {
             \add_filter('pre_term_description', 'wp_filter_kses', $has_pre_term_description_filter);
+        }
+        // Bail if `$redirect_to` is passed as null.
+        if (null === $redirect_to) {
+            return $redirect_to;
         }
         $term_ids_count = \count($term_ids);
         if ('edit.php' === $pagenow && 1 === $updated_count) {
@@ -2600,9 +2607,6 @@ class AMP_Validation_Error_Taxonomy
             $redirect_to = \add_query_arg(['amp_actioned' => $action, 'amp_actioned_count' => $term_ids_count], \esc_url(\get_admin_url(null, 'edit-tags.php?taxonomy=' . self::TAXONOMY_SLUG . '&post_type=' . \Google\Web_Stories_Dependencies\AMP_Validated_URL_Post_Type::POST_TYPE_SLUG)));
         } else {
             $redirect_to = \add_query_arg(['amp_actioned' => $action, 'amp_actioned_count' => $term_ids_count], $redirect_to);
-        }
-        if ($updated_count) {
-            \delete_transient(\Google\Web_Stories_Dependencies\AMP_Validated_URL_Post_Type::NEW_VALIDATION_ERROR_URLS_COUNT_TRANSIENT);
         }
         return $redirect_to;
     }

@@ -1,40 +1,49 @@
 const { __, _x, _n, _nx } = wp.i18n;
-export function moduleData() {
-  return {
-    props: {
-      display: String,
-      name: String,
-      block: Object,
+export default {
+  props: {
+    display: String,
+    name: String,
+    block: Object,
+  },
+  data: function () {
+    return {};
+  },
+
+  computed: {
+    /**
+     * Returns video URL
+     *
+     * @since 3.2.13
+     */
+    returnVideo() {
+      const video = this.get_block_option(this.block, "block", "videoURL");
+      if (!video) return;
+      return video;
     },
-    data: function () {
-      return {};
+
+    /**
+     * Returns youtube video URL
+     *
+     * @since 3.2.13
+     */
+    returnYoutube() {
+      const video = this.get_block_option(this.block, "block", "youtube");
+      if (!video) return;
+      return video;
     },
-    inject: ['uipress'],
-    watch: {},
-    computed: {
-      returnVideo() {
-        let item = this.uipress.get_block_option(this.block, 'block', 'videoURL');
-        if (!item) {
-          return '';
-        } else {
-          return item;
-        }
-      },
-      returnYoutube() {
-        let item = this.uipress.get_block_option(this.block, 'block', 'youtube');
-        if (!item) {
-          return false;
-        } else {
-          return item;
-        }
-      },
+
+    /**
+     * Returns video tag
+     *
+     * @since 3.2.0
+     */
+    returnVideoTag() {
+      const url = this.returnVideo ? this.returnVideo : "";
+      return url.includes("vimeo") || url.includes("youtu") ? "iframe" : "video";
     },
-    methods: {},
-    template: `
-            <div class="uip-flex">\
-              <video v-if="returnVideo" :src="returnVideo" class="uip-video uip-w-100p" controls playsinline hidden></video>\
-              <div v-if="returnYoutube" v-html="returnYoutube" class="uip-video"></div>
-            </div>
+  },
+  template: `
+              <component :is="returnVideoTag" v-if="returnVideo" :src="returnVideo" class="uip-video uip-h-100 uip-w-300 uip-display-block" controls playsinline hidden/>
+              <div v-else-if="returnYoutube" v-html="returnYoutube" class="uip-video"></div>
             `,
-  };
-}
+};

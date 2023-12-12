@@ -3,14 +3,14 @@
  * Plugin Name: Bulky - Bulk Edit Products for WooCommerce
  * Plugin URI: https://villatheme.com/extensions/bulky-woocommerce-bulk-edit-products/
  * Description: Bulky - Bulk Edit Products for WooCommerce helps easily work with products in bulk. The plugin offers sufficient simple and advanced tools to help filter various available attributes of simple and variable products such as  ID, Title, Content, Excerpt, Slugs, SKU, Post date, range of regular price and sale price, Sale date, range of stock quantity, Product type, Categories.... Users can quickly search for wanted products fields and work with the product fields in bulk. The plugin promises to help users to save time and optimize manipulation when working with products in bulk.
- * Version: 1.1.4
+ * Version: 1.1.6
  * Author: VillaTheme
  * Author URI: https://villatheme.com
  * Text Domain: bulky-bulk-edit-products-for-woo
  * Domain Path: /languages
  * Copyright 2021-2022 VillaTheme.com. All rights reserved.
  * Requires at least: 5.0
- * Tested up to: 6.2
+ * Tested up to: 6.3
  * WC requires at least: 5.0
  * WC tested up to: 7.7
  * Requires PHP: 7.0
@@ -36,7 +36,7 @@ if ( ! is_plugin_active( 'bulky-woocommerce-bulk-edit-products/bulky-woocommerce
 	class  WooCommerce_Products_Bulk_Editor_F {
 		public $plugin_name = 'Bulky - Bulk Edit Products for WooCommerce';
 
-		public $version = '1.1.4';
+		public $version = '1.1.6';
 
 		public $conditional = '';
 

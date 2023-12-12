@@ -1,149 +1,165 @@
 const { __, _x, _n, _nx } = wp.i18n;
-export function moduleData() {
-  return {
-    props: {
-      display: String,
-      name: String,
-      block: Object,
-    },
-    data: function () {
-      return {
-        searchString: '',
-        results: [],
-        types: [],
-        activeType: 'all',
-        page: 1,
-        totalPages: 0,
-        totalFound: 0,
-        strings: {
-          searchPlaceHolder: __('Search content', 'uipress-lite'),
-          nothingFound: __('Nothing found for query', 'uipress-lite'),
-          by: __('by', 'uipress-lite'),
-          found: __('found', 'uipress-lite'),
-          all: __('All', 'uipress-lite'),
-          edit: __('Edit', 'uipress-lite'),
-          view: __('View', 'uipress-lite'),
-          copy: __('Copy url', 'uipress-lite'),
-        },
-        searching: false,
-      };
-    },
-    inject: ['uipData', 'uipress', 'uiTemplate'],
-    watch: {
-      searchString: {
-        handler(newValue, oldValue) {
-          if (newValue != '') {
-            this.page = 1;
-            this.searchContent();
-          } else {
-            this.results = [];
-          }
-        },
-        deep: true,
+export default {
+  props: {
+    display: String,
+    name: String,
+    block: Object,
+  },
+  data() {
+    return {
+      searchString: "",
+      results: [],
+      types: [],
+      activeType: "all",
+      page: 1,
+      totalPages: 0,
+      totalFound: 0,
+      strings: {
+        searchPlaceHolder: __("Search content", "uipress-lite"),
+        nothingFound: __("Nothing found for query", "uipress-lite"),
+        by: __("by", "uipress-lite"),
+        found: __("found", "uipress-lite"),
+        all: __("All", "uipress-lite"),
+        edit: __("Edit", "uipress-lite"),
+        view: __("View", "uipress-lite"),
+        copy: __("Copy url", "uipress-lite"),
       },
-      page: {
-        handler(newValue, oldValue) {
-          if (newValue != '') {
-            this.searchContent();
-          }
-        },
-        deep: true,
-      },
-      activeType: {
-        handler(newValue, oldValue) {
-          if (newValue != '') {
-            this.searchContent();
-          }
-        },
-        deep: true,
-      },
-    },
-    computed: {
-      getPostTypes() {
-        let types = this.uipress.get_block_option(this.block, 'block', 'searchPostTypes');
-        return types;
-      },
-      limitToAuthor() {
-        let temp = this.uipress.get_block_option(this.block, 'block', 'limitToAuthor');
-        if (this.uipress.isObject(temp)) {
-          if ('value' in temp) {
-            return temp.value;
-          }
-          return true;
+      searching: false,
+    };
+  },
+  watch: {
+    searchString: {
+      handler(newValue, oldValue) {
+        if (newValue) {
+          this.page = 1;
+          this.searchContent();
+        } else {
+          this.results = [];
         }
-        return temp;
       },
     },
-    methods: {
-      searchContent() {
-        let self = this;
-        //Query already running
-        if (self.searching) {
-          return;
-        }
-        self.searching = true;
-        let postTypes = [];
-        if (typeof self.getPostTypes != 'undefined') {
-          if (Array.isArray(self.getPostTypes)) {
-            postTypes = self.getPostTypes;
-          }
-        }
+    page: {
+      handler(newValue, oldValue) {
+        if (newValue) this.searchContent();
+      },
+    },
+    activeType: {
+      handler(newValue, oldValue) {
+        if (newValue) this.searchContent();
+      },
+    },
+  },
+  computed: {
+    /**
+     * Returns custom post types for search
+     *
+     * @since 3.2.13
+     */
+    getPostTypes() {
+      return this.get_block_option(this.block, "block", "searchPostTypes");
+    },
 
-        postTypes = JSON.stringify(postTypes);
-
-        let limitToauthor = self.limitToauthor;
-        //Build form data for fetch request
-        let formData = new FormData();
-        formData.append('action', 'uip_search_content');
-        formData.append('security', uip_ajax.security);
-        formData.append('search', self.searchString);
-        formData.append('page', self.page);
-        formData.append('limitToauthor', limitToauthor);
-        formData.append('postTypes', postTypes);
-        formData.append('filter', this.activeType);
-
-        self.uipress.callServer(uip_ajax.ajax_url, formData).then((response) => {
-          if (response.error) {
-            self.uipress.notify(response.message, 'uipress-lite', '', 'error', true);
-            self.searching = false;
-          }
-          if (response.success) {
-            self.searching = false;
-            self.results = response.posts;
-            self.totalPages = response.totalPages;
-            self.totalFound = response.totalFound;
-            self.types = response.types;
-          }
-        });
-      },
-      goBack() {
-        if (this.page > 1) {
-          this.page = this.page - 1;
-        }
-      },
-      goForward() {
-        if (this.page < this.totalPages) {
-          this.page = this.page + 1;
-        }
-      },
-      formatHighlight(name) {
-        return name;
-      },
+    /**
+     * Returns whether the posts should be limited to the current author's own
+     *
+     * @since 3.2.13
+     */
+    limitToAuthor() {
+      let limit = this.get_block_option(this.block, "block", "limitToAuthor");
+      if (!limit) return false;
+      if (!this.isObject(limit)) return limit;
+      if (limit.value) return limit.value;
+      return false;
     },
-    template: `
+  },
+  methods: {
+    /**
+     * Search blog content
+     *
+     * @returns {Promise}
+     * @since 3.2.13
+     */
+    async searchContent() {
+      // Query already running so exit
+      if (this.searching) return;
+
+      this.searching = true;
+
+      let postTypes = [];
+      const limitToauthor = this.limitToauthor;
+
+      if (Array.isArray(this.getPostTypes)) {
+        postTypes = this.getPostTypes;
+      }
+
+      postTypes = JSON.stringify(postTypes);
+
+      //Build form data for fetch request
+      let formData = new FormData();
+      formData.append("action", "uip_search_content");
+      formData.append("security", uip_ajax.security);
+      formData.append("search", this.searchString);
+      formData.append("page", this.page);
+      formData.append("limitToauthor", limitToauthor);
+      formData.append("postTypes", postTypes);
+      formData.append("filter", this.activeType);
+
+      const response = await this.sendServerRequest(uip_ajax.ajax_url, formData);
+
+      // Something went very wrong
+      if (!response) {
+        this.uipApp.notifications.notify(__("Unable to fetch posts at this tiem", "uipress-lite"), "", "", "error", true);
+        this.searching = false;
+        return;
+      }
+
+      // Handle error
+      if (response.error) {
+        this.uipApp.notifications.notify(response.message, "", "", "error", true);
+        this.searching = false;
+      }
+
+      // Handle success
+      if (response.success) {
+        this.searching = false;
+        this.results = response.posts;
+        this.totalPages = response.totalPages;
+        this.totalFound = response.totalFound;
+        this.types = response.types;
+      }
+    },
+
+    /**
+     * Handles previous page requests
+     *
+     * @since 3.2.13
+     */
+    goBack() {
+      if (this.page > 1) this.page--;
+    },
+
+    /**
+     * Handles next page requests
+     *
+     * @since 3.2.13
+     */
+    goForward() {
+      if (this.page < this.totalPages) this.page++;
+    },
+  },
+  template: `
             <div class="uip-flex uip-flex-column">
-              <div class="">
-                <div class="uip-flex uip-padding-xxs uip-border uip-search-block uip-border-round uip-flex-center uip-margin-bottom-s uip-position-relative">
-                  <span class="uip-icon uip-text-muted uip-margin-right-xs">search</span> 
-                  <input class="uip-blank-input uip-flex-grow uip-text-s" type="search" :placeholder="strings.searchPlaceHolder" v-model="searchString" autofocus="">
-                  
-                  <div class="uip-position-absolute uip-left-0 uip-bottom-0 uip-w-100p" v-if="searching">
-                    <div ref="loader" class="uip-ajax-loader">
-                      <div class="uip-loader-bar"></div>
-                    </div>
+            
+              <div class="uip-flex uip-padding-xxs uip-border uip-search-block uip-border-round uip-flex-center uip-margin-bottom-s uip-position-relative">
+                <span class="uip-icon uip-text-muted uip-margin-right-xs">search</span> 
+                <input class="uip-blank-input uip-flex-grow uip-text-s" type="search" :placeholder="strings.searchPlaceHolder" v-model="searchString" autofocus>
+                
+                <div class="uip-position-absolute uip-left-0 uip-bottom-0 uip-w-100p" v-if="searching">
+                  <div ref="loader" class="uip-ajax-loader">
+                    <div class="uip-loader-bar"></div>
                   </div>
-                  
                 </div>
+                
               </div>
               
               
@@ -184,7 +200,7 @@ export function moduleData() {
                         <div class="">
                           <div class="uip-flex uip-flex-row uip-gap-xxs uip-flex-center" >
                           
-                            <div class="uip-text-bold uip-search-result-title uip-link-default uip-cursor-pointer"  @click="uipress.updatePage(item.link)" v-html="formatHighlight(item.name)"></div>
+                            <div class="uip-text-bold uip-search-result-title uip-link-default uip-cursor-pointer"  @click="updateAppPage(item.link)" v-html="item.name"></div>
                             
                             <div class="uip-text-xs uip-background-primary-wash uip-border-round uip-padding-xxxs uip-hidden">{{item.type}}</div>
                             
@@ -200,7 +216,7 @@ export function moduleData() {
                         <!--Options Dropdown-->
                         <div class="uip-flex-grow uip-flex uip-flex-right">
                         
-                          <drop-down dropPos="bottom-right">
+                          <dropdown pos="bottom right">
                           
                             <template v-slot:trigger>
                               <div class="uip-icon uip-link-muted uip-text-l">more_vert</div>
@@ -214,7 +230,7 @@ export function moduleData() {
                                   <div class="uip-no-wrap">{{strings.edit + ' ' + item.type}}</div>
                                 </a>
                                 
-                                <a :href="item.link" class="uip-link-muted hover:uip-background-muted uip-border-round uip-padding-xxxs uip-flex uip-flex-row uip-gap-xs uip-flex-center uip-no-underline" @click="uipress.updatePage(item.link)">
+                                <a :href="item.link" class="uip-link-muted hover:uip-background-muted uip-border-round uip-padding-xxxs uip-flex uip-flex-row uip-gap-xs uip-flex-center uip-no-underline" @click="updateAppPage(item.link)">
                                   <div class="uip-icon uip-text-l">visibility</div>
                                   <div class="uip-no-wrap">{{strings.view + ' ' + item.type}}</div>
                                 </a>
@@ -223,7 +239,7 @@ export function moduleData() {
                               </div>
                             </template>
                             
-                          </drop-down>
+                          </dropdown>
                         </div>
                         <!--End-->
                       </div>
@@ -247,5 +263,4 @@ export function moduleData() {
               
               
             </div>`,
-  };
-}
+};
