@@ -1,20 +1,18 @@
 # Application
-public_html/app/plugins/*
-!public_html/app/plugins/.gitkeep
-public_html/app/mu-plugins/*/
-public_html/app/themes/twentytwentythree/
-public_html/app/upgrade
-public_html/app/uploads/*
-!public_html/app/uploads/2023/06/*
-!public_html/app/uploads/.gitkeep
-public_html/app/cache/*
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/themes/twentytwentythree/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/2023/06/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
 
-# Web Linking for Laravel Valet
-web/*
 
 # WordPress
-public_html/wp
-public_html/.htaccess
+web/wp
+web/.htaccess
 
 # Logs
 *.log
