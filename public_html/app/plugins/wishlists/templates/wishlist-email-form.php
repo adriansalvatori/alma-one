@@ -1,1 +1,0 @@
-<?php woocommerce_wishlist_register_email_form( $wishlist ); ?>

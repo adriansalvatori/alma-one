@@ -71,7 +71,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "public_html/app/mu-plugins/{$name}/": [
+      "web/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "roots/soil", 
         "wpackagist-plugin/two-factor", 
@@ -86,10 +86,10 @@
         "wpackagist-plugin/wp-user-profiles",
         "wpackagist-plugin/acf-extended"
       ],
-      "public_html/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "public_html/app/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "public_html/wp"
+    "wordpress-install-dir": "web/wp"
   },
   "scripts": {
     "post-root-package-install": [

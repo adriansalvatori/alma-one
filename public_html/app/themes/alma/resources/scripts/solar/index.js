@@ -1,1 +1,0 @@
-export { Solar } from './Solar';
