@@ -23,7 +23,7 @@
     {
       "type": "vcs",
       "url": "https://github.com/afragen/git-updater"
-    },
+    }
   ],
   "require": {
     "php": ">=8.1",
@@ -84,7 +84,7 @@
         "wpackagist-plugin/wp-term-order", 
         "wpackagist-plugin/wp-user-avatars", 
         "wpackagist-plugin/wp-user-profiles",
-        "wpackagist-plugin/acf-extended", 
+        "wpackagist-plugin/acf-extended"
       ],
       "public_html/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "public_html/app/themes/{$name}/": ["type:wordpress-theme"]
