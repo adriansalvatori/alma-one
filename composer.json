@@ -26,20 +26,18 @@
     }
   ],
   "require": {
-    "php": ">=8.1",
+    "php": ">=8.2",
     "composer/installers": "^2.2",
     "vlucas/phpdotenv": "^5.5",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "^6.3.1",
+    "roots/wordpress": "^6.4.3",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
-    "wpackagist-theme/twentytwentythree": "^1.0",
     "wpackagist-plugin/uipress-lite": "^3.2",
     "wpackagist-plugin/bulky-bulk-edit-products-for-woo": "^1.1",
     "wpackagist-plugin/woocommerce": "^8.0",
-    "roots/soil": "^4.1.1",
     "wpackagist-plugin/autodescription": "^4.2",
     "wpackagist-plugin/advanced-custom-fields": "*",
     "wpackagist-plugin/two-factor": "^0.8.1",
@@ -53,7 +51,7 @@
     "wpackagist-plugin/acf-extended": "0.8.9.3",
     "wpackagist-plugin/web-stories": "^1.32",
     "wpackagist-plugin/google-site-kit": "^1.102",
-    "salvatori/alma": "dev-lightning"
+    "salvatori/alma":"^6.0.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
