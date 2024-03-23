@@ -45,7 +45,7 @@
     "wpackagist-plugin/duplicate-post": "^4.5",
     "wpackagist-plugin/safe-svg": "^2.1",
     "wpackagist-plugin/simple-page-ordering": "^2.5",
-    "wpackagist-plugin/wp-term-order": "^1.0",
+    "wpackagist-plugin/wp-term-order": "*",
     "wpackagist-plugin/wp-user-avatars": "^1.4",
     "wpackagist-plugin/wp-user-profiles": "^2.6",
     "wpackagist-plugin/acf-extended": "0.8.9.3",
